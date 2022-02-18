@@ -1,5 +1,7 @@
-# Nuke, 64 ticks
-Molo top of hut from roof. Running jump throw, just when passing small ladder.
+```
+Ticks: 64
+```
+#### Molo top of hut from roof. Running jump throw, just when passing small ladder.
 
 | Aim| Pos |
 |----|-----|
