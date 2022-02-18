@@ -3,7 +3,7 @@ Short smoke from second
 
 | Aim| Pos |
 |----|-----|
-| ![infernoshortaim](https://user-images.githubusercontent.com/77322/144116455-a0b7d39a-9a13-4381-8205-8f6db7ff11d7.png) | ![infernoshotpos](https://user-images.githubusercontent.com/77322/144116608-08ca4165-b971-461d-ad84-667f1283fec3.png) |
+| ![](inferno-aim-2mid-short-smoke.png) | ![](inferno-pos-2mid-short-smoke.png) |
 
 Hay smoke from apps
 
@@ -18,7 +18,8 @@ Pit/A smoke from apps
 
 
 Short smoke from t-ramp
+Jump throw
 
 | Aim | Pos |
 |----|-----|
-| ![inferno-mid-short-smoke](https://user-images.githubusercontent.com/77322/144915424-68235436-0433-45e1-80d3-8e71c09c5056.png) | - |
+| ![](inferno-aim-mid-short-smoke.png) | ![](inferno-pos-mid-short-smoke.png) |
