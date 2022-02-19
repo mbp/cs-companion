@@ -4,4 +4,8 @@ Ticks: 64
 
 #### Overpass barrels smoke from short tunnel
 
-![ancient-wood-molo-from-ramp](overpass-barrels-smoke-from-short-tunnel.png)
+![](overpass-result-barrels-smoke-from-short-tunnel.png)
+
+| Aim| Pos |
+|----|-----|
+| ![](overpass-aim-barrels-smoke-from-short-tunnel.png) | ![](overpass-pos-barrels-smoke-short-tunnel.png)
