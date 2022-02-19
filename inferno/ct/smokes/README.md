@@ -17,6 +17,6 @@ Type: Jump throw
 
 ![](inferno-result-mid-short-smoke.png)
 
-| Aim | Pos | Result | 
-|----|-----| ---- |
-| ![](inferno-aim-mid-short-smoke.png) | ![](inferno-pos-mid-short-smoke.png) | | ![](inferno-result-mid-short-smoke.png) | 
+| Aim | Pos | 
+|----|-----| 
+| ![](inferno-aim-mid-short-smoke.png) | ![](inferno-pos-mid-short-smoke.png) | 
