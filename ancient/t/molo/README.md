@@ -8,4 +8,8 @@ Ticks: 64
 Type: Normal throw
 ```
 
-![ancient-wood-molo-from-ramp](ancient-wood-molo-from-ramp.png)
+![](ancient-result-wood-molo-from-ramp.png)
+
+| Aim| Pos |
+|----|-----|
+| ![](ancient-aim-wood-molo-from-ramp.png) | | 
