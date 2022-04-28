@@ -1,11 +1,8 @@
-```
-Ticks: 64
-```
 #### Long B smoke from ruins
 
-```
-Type: Jump throw
-```
+| Ticks  | Throw type |
+| ------ | ---------- |
+| 64/128 | Jump       |
 
 ![](ancient-result-long-smoke-from-ruins.png)
 
@@ -15,9 +12,9 @@ Type: Jump throw
 
 #### Short B smoke from ruins
 
-```
-Type: Jump throw
-```
+| Ticks  | Throw type |
+| ------ | ---------- |
+| 64/128 | Jump       |
 
 | Aim| Pos |
 |----|-----|
@@ -25,9 +22,9 @@ Type: Jump throw
 
 #### Cave smoke from ruins
 
-```
-Type: Jump throw
-```
+| Ticks  | Throw type |
+| ------ | ---------- |
+| 64/128 | Jump       |
 
 | Aim| Pos |
 |----|-----|
@@ -35,9 +32,9 @@ Type: Jump throw
 
 ### Ancient mid smoke from t spawn
 
-```
-Type: Jump throw
-```
+| Ticks  | Throw type |
+| ------ | ---------- |
+| 64/128 | Jump       |
 
 ![](ancient-result-mid-smoke-from-spawn.png)
 
@@ -47,9 +44,9 @@ Type: Jump throw
 
 ### Ancient donut smoke from stairs
 
-```
-Type: Jump throw
-```
+| Ticks  | Throw type |
+| ------ | ---------- |
+| 64/128 | Jump       |
 
 ![](ancient-result-donut-smoke-from-stairs.png)
 
@@ -59,9 +56,9 @@ Type: Jump throw
 
 ### Ancient CT smoke from stairs
 
-```
-Type: Jump throw
-```
+| Ticks  | Throw type |
+| ------ | ---------- |
+| 64     | Jump       |
 
 ![](ancient-result-ct-smoke-from-stairs.png)
 
