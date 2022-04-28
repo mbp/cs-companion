@@ -2,7 +2,7 @@
 
 | Ticks  | Throw type |
 | ------ | ---------- |
-| 64/128 | Nromal     |
+| 64/128 | Normal     |
 
 | Aim| Pos |
 |----|-----|
