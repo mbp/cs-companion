@@ -1,13 +1,10 @@
-```
-Ticks: 64
-```
 #### Molo top of hut from roof
 
 ![](nuke-result-molo-hut.png)
-```
-Type: Running jump throw (just when passing small ladder)
-Note: Shoot windows first!
-```
+
+| Ticks  | Throw type | Notes |
+| ------ | ------------ | ---- |
+| 64/128 | Running jump | Just when passing small ladder. Shoot windows first! |
 
 | Aim| Pos |
 |----|-----|
