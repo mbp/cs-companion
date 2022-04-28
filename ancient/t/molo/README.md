@@ -1,8 +1,5 @@
 #### Ancient wood molo from ruins
 
-```
-Type: Normal throw
-```
 | Ticks  | Throw type |
 | ------ | ---------- |
 | 64/128 | Normal     |
