@@ -1,8 +1,8 @@
-```
-Ticks: 64
-```
-
 #### Short red smoke yard
+
+| Ticks  | Throw type |
+| ------ | ---------- |
+| 64     | Jump       |
 
 ![](nuke-result-yard-short-red.png)
 
@@ -12,9 +12,9 @@ Ticks: 64
 
 #### Long red smoke yard
 
-```
-Type: Jump throw
-```
+| Ticks  | Throw type |
+| ------ | ---------- |
+| 64/128 | Normal     |
 
 ![](nuke-result-yard-long-red.png)
 
@@ -24,9 +24,9 @@ Type: Jump throw
 
 #### Ramp smoke from trophy
 
-```
-Type: Running throw (immediately)
-```
+| Ticks  | Throw type |
+| ------ | ---------- |
+| 64/128 | Running    |
 
 ![](nuke-result-ramp-smoke-from-trophy.png)
 
