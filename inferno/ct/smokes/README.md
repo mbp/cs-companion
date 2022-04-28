@@ -1,19 +1,18 @@
-```
-Ticks: 64
-```
 #### Short smoke from second
-```
-Type: Normal throw
-```
+
+| Ticks  | Throw type |
+| ------ | ---------- |
+| 64/128 | Nromal     |
 
 | Aim| Pos |
 |----|-----|
 | ![](inferno-aim-2mid-short-smoke.png) | ![](inferno-pos-2mid-short-smoke.png) |
 
 #### Short smoke from t-ramp
-```
-Type: Jump throw
-```
+
+| Ticks  | Throw type |
+| ------ | ---------- |
+| 64     | Jump       |
 
 ![](inferno-result-mid-short-smoke.png)
 
