@@ -1,12 +1,11 @@
-```
-Ticks: 64
-```
-
 #### Ancient wood molo from ruins
 
 ```
 Type: Normal throw
 ```
+| Ticks  | Throw type |
+| ------ | ---------- |
+| 64/128 | Normal     |
 
 ![](ancient-result-wood-molo-from-ramp.png)
 
