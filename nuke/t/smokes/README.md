@@ -32,4 +32,4 @@ Type: Running throw (immediately)
 
 | Aim| Pos |
 |----|-----|
-| ![](nuke-aim-ramp-smoke-from-trophy.png) | ![](nuke-pos-yard-smoke-red.png) |
+| ![](nuke-aim-ramp-smoke-from-trophy.png) | ![](nuke-pos-ramp-smoke-from-trophy.png) |
