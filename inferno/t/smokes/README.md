@@ -1,4 +1,4 @@
-#### Short smoke from second
+#### Short smoke from second mid
 
 | Ticks  | Throw type |
 | ------ | ---------- |
@@ -19,3 +19,15 @@
 | Aim | Pos | 
 |----|-----| 
 | ![](inferno-aim-mid-short-smoke.png) | ![](inferno-pos-mid-short-smoke.png) | 
+
+#### Deep long smoke from second mid
+
+| Ticks  | Throw type |
+| ------ | ---------- |
+| 64     | Normal     |
+
+![](inferno-result-deep-long-smoke.png)
+
+| Aim | Pos | 
+|----|-----| 
+| ![](inferno-aim-deep-long-smoke.png) | ![](inferno-pos-deep-long-smoke.png) | 
