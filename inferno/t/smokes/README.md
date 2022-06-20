@@ -1,3 +1,15 @@
+#### CT smoke from banana
+
+| Ticks  | Throw type |
+| ------ | ---------- |
+| 64     | Normal     |
+
+![](inferno-result-ct-smoke-from-banana.png)
+
+| Aim | Pos | 
+|----|-----| 
+| ![](inferno-aim-ct-smoke-from-banana.png) |  | 
+
 #### Short smoke from second mid
 
 | Ticks  | Throw type |
