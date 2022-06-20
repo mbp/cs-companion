@@ -43,3 +43,15 @@
 | Aim | Pos | 
 |----|-----| 
 | ![](inferno-aim-deep-long-smoke.png) | ![](inferno-pos-deep-long-smoke.png) | 
+
+#### Cross pit smoke from second mid
+
+| Ticks  | Throw type |
+| ------ | ---------- |
+| 64     | Normal     |
+
+![](inferno-result-cross-pit-smoke-from-second.png)
+
+| Aim | Pos | 
+|----|-----| 
+| ![](inferno-aim-cross-pit-smoke-from-second.png) | ![](inferno-pos-cross-pit-smoke-from-second.png) | 
