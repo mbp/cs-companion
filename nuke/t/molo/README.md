@@ -1,7 +1,7 @@
 #### Molo top of hut from roof
 
-| Ticks  | Throw type | Notes |
-| ------ | ------------ | ---- |
+| Ticks  | Throw type   | Notes |
+| ------ | ------------ | ----- |
 | 64/128 | Running jump | Just when passing small ladder. Shoot windows first! |
 
 ![](nuke-result-molo-hut.png)
