@@ -10,6 +10,18 @@
 |----|-----| 
 | ![](inferno-aim-ct-smoke-from-banana.png) |  | 
 
+#### Coffin smoke from banana
+
+| Ticks  | Throw type |
+| ------ | ---------- |
+| 64     | Normal     |
+
+![](inferno-result-coffin-smoke-from-banana.png)
+
+| Aim | Pos | 
+|----|-----| 
+| ![](inferno-aim-coffin-smoke-from-banana.png) |  ![](inferno-pos-coffin-smoke-from-banana.png) | 
+
 #### Short smoke from second mid
 
 | Ticks  | Throw type |
