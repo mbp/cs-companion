@@ -8,6 +8,16 @@
 |----|-----|
 | ![](b-site-flash-from-car-aim.png) | ![](b-site-flash-from-car-pos.png) |
 
+#### Pop flash out of boiler
+
+| Ticks  | Throw type |
+| ------ | ---------- |
+| 64/128 | Normal     |
+
+| Aim| Pos |
+|----|-----|
+| ![](pop-flash-from-boiler-aim.png) | ![](pop-flash-from-boiler-pos.png) |
+
 
 #### Pit(A) flash from apps
 
