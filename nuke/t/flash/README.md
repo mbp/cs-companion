@@ -21,3 +21,15 @@
 | Aim| Pos |
 |----|-----|
 | ![](nuke-aim-flash-a-site-through-hut-from-lobby.png) | ![](nuke-pos-flash-a-site-through-hut-from-lobby.png) |
+
+#### Flash b ramp from trophy
+
+| Ticks  | Throw type |
+| ------ | ---------- |
+| 64     | Run+Normal |
+
+![](nuke-result-flash-b-ramp-from-trophy.png)
+
+| Aim| Pos |
+|----|-----|
+| ![](nuke-aim-flash-b-ramp-from-trophy.png) | ![](nuke-pos-flash-b-ramp-from-trophy.png) |
