@@ -1,4 +1,4 @@
-#### Short red smoke yard
+#### Short red smoke yard (2nd smoke)
 
 | Ticks  | Throw type |
 | ------ | ---------- |
@@ -10,7 +10,7 @@
 |----|-----|
 | ![](nuke-aim-yard-short-red.png) | ![](nuke-pos-yard-smoke-red.png) |
 
-#### Long red smoke yard
+#### Long red smoke yard (3rd smoke)
 
 | Ticks  | Throw type |
 | ------ | ---------- |
