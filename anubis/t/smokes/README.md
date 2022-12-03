@@ -1,3 +1,15 @@
+#### A Connector from water
+
+| Ticks  | Throw type |
+| ------ | ---------- |
+| 64     | Normal     |
+
+![](anubis-result-a-con-smoke-from-water.png)
+
+| Aim | Pos | 
+|----|-----| 
+| ![](anubis-aim-a-con-smoke-from-water.png) | ![](anubis-pos-a-con-smoke-from-water.png) | 
+
 #### Connector outside smoke from street
 
 | Ticks  | Throw type |
