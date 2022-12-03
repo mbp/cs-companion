@@ -1,3 +1,15 @@
+#### Connector outside smoke from street
+
+| Ticks  | Throw type |
+| ------ | ---------- |
+| 64     | Jump       |
+
+![](anubis-result-connector-outside-smoke-from-street.png)
+
+| Aim | Pos | 
+|----|-----| 
+| ![](anubis-aim-connector-outside-smoke-from-street.png) | ![](anubis-pos-connector-outside-smoke-from-street.png) | 
+
 #### Mid house smoke from T spawn
 
 | Ticks  | Throw type |
