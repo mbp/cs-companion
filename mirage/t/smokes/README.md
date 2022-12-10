@@ -1,31 +1,42 @@
-```
-Ticks: 64
-```
-
 #### Connector smoke from T apps
-Pos: Corner. Aim lower mid carpet.
 
-| Aim| Pos |
-|----|-----|
-| ![carpet](https://user-images.githubusercontent.com/77322/144114525-d65754b2-1a21-4c87-9025-d9cab3432623.png) | |
+| Ticks  | Throw type | Description  |
+| ------ | ---------- | ------------ |
+| 64     | Jump       | Stand in corner, aim lower mid carpet |
 
+![](mirage-result-con-smoke-lower-from-t.png)
+
+| Aim | Pos |
+| ---- |-----|
+| ![](mirage-aim-con-smoke-lower-from-t.png) | ![](mirage-pos-con-smoke-lower-from-t.png) |
 
 #### Top connector smoke from t mid.
-Pos: Boxes. Aim below plant.
+
+| Ticks  | Throw type | Description |
+| ------ | ---------- | ----------- |
+| 64     | Normal     | Stand behind boxes, aim below plant |
 
 | Aim| Pos |
 |----|-----|
 | ![topconn](https://user-images.githubusercontent.com/77322/144115556-8a3c7a9f-98e5-41a7-a7d4-691e66182b32.png) | |
 
 #### Stairs smoke from T ramp.
-Pos: Small hinge. Aim middle of some lines.
 
-| Aim| Pos |
-|----|-----|
-| ![midthing](https://user-images.githubusercontent.com/77322/144114976-f6f5d1f8-5a54-4f3d-aa76-47cdd35e728b.png) | |
+| Ticks  | Throw type | Description |
+| ------ | ---------- | ----------- |
+| 64     | Normal     | At small hinge. Aim middle of some lines |
+
+![](mirage-result-stairs-smoke-from-t-ramp.png)
+
+| Aim | Pos |
+| ---- |-----|
+| ![](mirage-aim-stairs-smoke-from-t-ramp.png) | ![](mirage-pos-con-smoke-lower-from-t.png) |
 
 #### CT car platform
-Pos: Next to under stairs. Aim in the sky (see image)
+
+| Ticks  | Throw type | Description | 
+| ------ | ---------- | ----------- |
+| 64     | Normal     | Next to under stairs. Aim in the sky |
 
 | Aim| Pos |
 |---|---|
