@@ -14,7 +14,7 @@
 
 | Ticks  | Throw type |
 | ------ | ---------- |
-| 64     | Normal     |
+| 64     | Jump       |
 
 ![](vertigo-result-smoke-a-site-from-ramp.png)
 
