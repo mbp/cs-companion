@@ -22,6 +22,18 @@
 |----|-----|
 | ![](nuke-aim-yard-long-red.png) | ![](nuke-pos-yard-smoke-red.png) |
 
+#### Left garage smoke (no peek silo)
+
+| Ticks  | Throw type |
+| ------ | ---------- |
+| 64/128 | Normal     |
+
+![](nuke-result-left-garage-no-peek-silo.png)
+
+| Aim| Pos |
+|----|-----|
+| ![](nuke-aim-left-garage-no-peek-silo.png) | ![](nuke-pos-left-garage-no-peek-silo.png) |
+
 #### Ramp smoke from trophy
 
 | Ticks  | Throw type |
