@@ -1,3 +1,15 @@
+#### Molo B dark from car
+
+| Ticks  | Throw type |
+| ------ | ---------- |
+| 64     | Jump       |
+
+![](inferno-result-b-dark-from-car.png)
+
+| Aim | Pos | 
+|----|-----| 
+| ![](inferno-aim-b-dark-from-car.png) |  ![](inferno-pos-a-short-molo-from-mid.png) | 
+
 #### Molo short A from mid
 
 | Ticks  | Throw type |
