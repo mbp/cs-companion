@@ -1,0 +1,75 @@
+import { MapLineups } from "../components/composables/types";
+
+export const ancientLineups: MapLineups = {
+  map: "Ancient",
+  smokes: [
+    {
+      name: "Long B smoke from ruins",
+      resultImage: "ancient/t/smokes/ancient-result-long-smoke-from-ruins.png",
+      aimImage: "ancient/t/smokes/ancient-aim-long-smoke-from-ruins.png",
+      posImage: "ancient/t/smokes/ancient-pos-long-smoke-from-ruins.png",
+      ticks: "64/128",
+      throwType: "jump",
+      side: "t",
+    },
+    {
+      name: "Short B smoke from ruins",
+      resultImage: "missing.png",
+      aimImage: "ancient/t/smokes/ancient-short-smoke-from-ruins.png",
+      posImage: "missing.png",
+      ticks: "64/128",
+      throwType: "jump",
+      side: "t",
+    },
+    {
+      name: "Cave smoke from ruins",
+      resultImage: "missing.png",
+      aimImage: "ancient/t/smokes/ancient-cave-smoke-from-ruins.png",
+      posImage: "missing.png",
+      ticks: "64/128",
+      throwType: "jump",
+      side: "t",
+    },
+    {
+      name: "Ancient mid smoke from t spawn",
+      resultImage: "ancient/t/smokes/ancient-result-mid-smoke-from-spawn.png",
+      aimImage: "ancient/t/smokes/ancient-aim-mid-smoke-from-spawn.png",
+      posImage: "ancient/t/smokes/ancient-pos-mid-smoke-from-spawn.png",
+      ticks: "64/128",
+      throwType: "jump",
+      side: "t",
+    },
+    {
+      name: "Ancient donut smoke from stairs",
+      resultImage:
+        "ancient/t/smokes/ancient-result-donut-smoke-from-stairs.png",
+      aimImage: "ancient/t/smokes/ancient-aim-donut-smoke-from-stairs.png",
+      posImage: "ancient/t/smokes/ancient-pos-donut-smoke-from-stairs.png",
+      ticks: "64/128",
+      throwType: "jump",
+      side: "t",
+    },
+    {
+      name: "Ancient CT smoke from stairs",
+      resultImage: "ancient/t/smokes/ancient-result-ct-smoke-from-stairs.png",
+      aimImage: "ancient/t/smokes/ancient-aim-ct-smoke-from-stairs.png",
+      posImage: "ancient/t/smokes/ancient-pos-ct-smoke-from-stairs.png",
+      ticks: "64",
+      throwType: "jump",
+      side: "t",
+    },
+  ],
+  fragGrenades: [],
+  molotovs: [
+    {
+      name: "Ancient wood molo from ruins",
+      resultImage: "ancient/t/molo/ancient-result-wood-molo-from-ramp.png",
+      aimImage: "ancient/t/molo/ancient-aim-wood-molo-from-ramp.png",
+      posImage: "missing.png",
+      ticks: "64",
+      throwType: "normal",
+      side: "t",
+    },
+  ],
+  flashBangs: [],
+};
