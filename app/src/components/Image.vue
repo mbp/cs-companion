@@ -23,4 +23,7 @@ img.zoom {
 img.default {
   width: 280px;
 }
+figcaption {
+  font: italic smaller sans-serif;
+}
 </style>
