@@ -6,18 +6,21 @@ const zoom = ref(false);
 const doZoom = () => {
   zoom.value = !zoom.value;
 };
-const width = computed(() => {
-  return zoom.value ? "640px" : "280px";
-});
 </script>
 
 <template>
-  <img @click="doZoom" :src="src" :style="{ width: width }" />
+  <img @click="doZoom" :src="src" :class="{ zoom: zoom, default: !zoom }" />
   <figcaption>{{ caption }}</figcaption>
 </template>
 
 <style scoped>
 img {
   cursor: pointer;
+}
+img.zoom {
+  width: 640px;
+}
+img.default {
+  width: 280px;
 }
 </style>
