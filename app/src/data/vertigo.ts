@@ -57,7 +57,8 @@ export const vertigoLineups: MapLineups = {
     },
     {
       name: "Smoke a short from t spawn",
-      resultImage: "vertigo/t/smokes/vertigo-result-smoke-short-a-from-spawn.png",
+      resultImage:
+        "vertigo/t/smokes/vertigo-result-smoke-short-a-from-spawn.png",
       aimImage: "vertigo/t/smokes/vertigo-aim-smoke-short-a-from-spawn.png",
       posImage: "vertigo/t/smokes/vertigo-pos-smoke-short-a-from-spawn.png",
       ticks: "64",
