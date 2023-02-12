@@ -17,17 +17,13 @@ const visible = ref(false);
     ><span v-if="!visible">⮝</span>
   </button>
   <div v-if="visible">
-    <p>
-      <span class="info">
+    <div class="info-image">
+      <div class="info">
         Throw type:
         {{ utilityLineup.throwType }}
-      </span>
-      <span class="info">
         Ticks type:
         {{ utilityLineup.ticks }}
-      </span>
-    </p>
-    <div>
+      </div>
       <div>
         <Image
           :src="utilityLineup.resultImage ?? 'missing.png'"
@@ -35,7 +31,7 @@ const visible = ref(false);
         />
       </div>
     </div>
-    <div class="wrapper">
+    <div class="aim-pos-images">
       <div>
         <Image
           :src="utilityLineup.aimImage ?? 'missing.png'"
@@ -53,13 +49,14 @@ const visible = ref(false);
 </template>
 
 <style scoped>
-.wrapper {
+.aim-pos-images {
   display: grid;
   grid-template-columns: 640px 640px;
 }
-span.info {
-  background-color: orange;
-  color: black;
-  margin-right: 2px;
+div.info {
+  background-color: grey;
+  padding: 2px;
+  border: 1px solid black;
+  color: white;
 }
 </style>
