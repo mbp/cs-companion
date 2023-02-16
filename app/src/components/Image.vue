@@ -21,7 +21,7 @@ img.zoom {
   width: 640px;
 }
 img.default {
-  width: 280px;
+  width: 320px;
 }
 figcaption {
   font: italic smaller sans-serif;
