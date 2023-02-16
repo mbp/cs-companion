@@ -14,12 +14,11 @@ export const overpassLineups: MapLineups = {
       side: "t",
     },
     {
-      name: "Barrels smoke from short tunnel",
+      name: "Bridge smoke from monster",
       resultImage:
-        "overpass/t/smokes/overpass-result-barrels-smoke-short-tunnel.png",
-      aimImage:
-        "overpass/t/smokes/overpass-aim-barrels-smoke-from-short-tunnel.png",
-      posImage: "overpass/t/smokes/overpass-pos-barrels-smoke-short-tunnel.png",
+        "overpass/t/smokes/overpass-result-bridge-smoke-from-monster.png",
+      aimImage: "overpass/t/smokes/overpass-aim-bridge-smoke-from-monster.png",
+      posImage: "overpass/t/smokes/overpass-pos-bridge-smoke-from-monster.png",
       ticks: "64",
       throwType: "normal",
       side: "t",
@@ -40,7 +39,7 @@ export const overpassLineups: MapLineups = {
   fragGrenades: [],
   molotovs: [
     {
-      name: "Overpass barrels molo from short",
+      name: "Barrels molo from short",
       resultImage:
         "overpass/t/molos/overpass-result-barrels-molo-from-short.png",
       aimImage: "overpass/t/molos/overpass-aim-barrels-molo-from-short.png",
