@@ -14,7 +14,7 @@ export const overpassLineups: MapLineups = {
       side: "t",
     },
     {
-      name: "Overpass barrels smoke from short tunnel",
+      name: "Barrels smoke from short tunnel",
       resultImage:
         "overpass/t/smokes/overpass-result-barrels-smoke-short-tunnel.png",
       aimImage:
@@ -22,6 +22,18 @@ export const overpassLineups: MapLineups = {
       posImage: "overpass/t/smokes/overpass-pos-barrels-smoke-short-tunnel.png",
       ticks: "64",
       throwType: "normal",
+      side: "t",
+    },
+    {
+      name: "Mid toilet smoke from t spawn",
+      resultImage:
+        "overpass/t/smokes/overpass-result-mid-toilet-smoke-from-spawn.png",
+      aimImage:
+        "overpass/t/smokes/overpass-result-aim-toilet-smoke-from-spawn.png",
+      posImage:
+        "overpass/t/smokes/overpass-result-pos-toilet-smoke-from-spawn.png",
+      ticks: "64",
+      throwType: "jump",
       side: "t",
     },
   ],
