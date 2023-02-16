@@ -29,24 +29,38 @@ export const overpassLineups: MapLineups = {
       resultImage:
         "overpass/t/smokes/overpass-result-mid-toilet-smoke-from-spawn.png",
       aimImage:
-        "overpass/t/smokes/overpass-result-aim-toilet-smoke-from-spawn.png",
+        "overpass/t/smokes/overpass-aim-mid-toilet-smoke-from-spawn.png",
       posImage:
-        "overpass/t/smokes/overpass-result-pos-toilet-smoke-from-spawn.png",
+        "overpass/t/smokes/overpass-pos-mid-toilet-smoke-from-spawn.png",
       ticks: "64",
       throwType: "jump",
       side: "t",
     },
   ],
   fragGrenades: [],
-  molotovs: [],
+  molotovs: [
+    {
+      name: "Overpass barrels molo from short",
+      resultImage:
+        "overpass/t/molos/overpass-result-barrels-molo-from-short.png",
+      aimImage: "overpass/t/molos/overpass-aim-barrels-molo-from-short.png",
+      posImage: "overpass/t/molos/overpass-pos-barrels-molo-from-short.png",
+      ticks: "64",
+      throwType: "runjump",
+      side: "t",
+    },
+  ],
   flashBangs: [
     {
       name: "Overpass barrels flash from short tunnel",
-      resultImage: "missing.png",
-      aimImage: "overpass/t/flash/overpass-site-flash-from-short-tunnel.png",
-      posImage: "missing.png",
+      resultImage:
+        "overpass/t/flash/overpass-result-b-site-flash-from-short-tunnel.png",
+      aimImage:
+        "overpass/t/flash/overpass-aim-b-site-flash-from-short-tunnel.png",
+      posImage:
+        "overpass/t/flash/overpass-pos-b-site-flash-from-short-tunnel.png",
       ticks: "64",
-      throwType: "normal",
+      throwType: "runjump",
       side: "t",
     },
   ],
