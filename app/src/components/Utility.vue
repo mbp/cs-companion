@@ -41,7 +41,7 @@ const visible = ref(false);
       <div>
         <Image
           :src="utilityLineup.posImage ?? 'missing.png'"
-          :caption="'Pos'"
+          :caption="'Position'"
         />
       </div>
     </div>
