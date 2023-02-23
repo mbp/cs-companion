@@ -5,9 +5,7 @@ export const nukeLineups: MapLineups = {
   smokes: [
     {
       name: "Yard smoke from ct",
-      resultImage: "nuke/ct/smokes/nuke-result-yard-from-ct.png",
-      aimImage: "nuke/ct/smokes/nuke-aim-yard-from-ct.png",
-      posImage: "nuke/ct/smokes/nuke-pos-yard-from-ct.png",
+      folder: "nuke/ct/smokes/yard-from-ct",
       ticks: "64",
       throwType: "jump",
       side: "ct",
@@ -64,28 +62,21 @@ export const nukeLineups: MapLineups = {
   flashBangs: [
     {
       name: "Flash a site heaven from t roof",
-      resultImage:
-        "nuke/t/flash/nuke-result-flash-a-site-heaven-from-t-roof.png",
-      aimImage: "nuke/t/flash/nuke-aim-flash-a-site-heaven-from-t-roof.png",
-      posImage: "nuke/t/flash/nuke-pos-flash-a-site-heaven-from-t-roof.png",
+      folder: "nuke/t/flash/a-site-heaven-from-t-roof",
       ticks: "64",
       throwType: "normal",
       side: "t",
     },
     {
       name: "Flash a through hut from lobby",
-      resultImage:
-        "nuke/t/flash/nuke-result-flash-a-site-through-hut-from-lobby.png",
-      aimImage: "nuke/t/flash/nuke-aim-flash-a-site-through-hut-from-lobby.png",
+      folder: "nuke/t/flash/a-site-via-hut-from-lobby",
       ticks: "64",
       throwType: "run",
       side: "t",
     },
     {
       name: "Flash b ramp from trophy",
-      resultImage: "nuke/t/flash/nuke-result-flash-b-ramp-from-trophy.png",
-      aimImage: "nuke/t/flash/nuke-aim-flash-b-ramp-from-trophy.png",
-      posImage: "nuke/t/flash/nuke-pos-flash-b-ramp-from-trophy.png",
+      folder: "nuke/t/flash/b-ramp-from-trophy",
       ticks: "64",
       throwType: "run",
       side: "t",
