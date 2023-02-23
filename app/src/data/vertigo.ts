@@ -68,9 +68,7 @@ export const vertigoLineups: MapLineups = {
   flashBangs: [
     {
       name: "Flash b site from t",
-      resultImage: "vertigo/t/flash/vertigo-result-flash-b-site-from-t.png",
-      aimImage: "vertigo/t/flash/vertigo-aim-flash-b-site-from-t.png",
-      posImage: "vertigo/t/flash/vertigo-pos-flash-b-site-from-t.png",
+      folder: "vertigo/t/flash/b-site-from-t",
       ticks: "64",
       throwType: "normal",
       side: "t",
