@@ -5,6 +5,7 @@ export type Side = "t" | "ct";
 export type UtilityLineup = {
   name: string;
   description?: string;
+  folder?: string;
   resultImage?: string;
   aimImage?: string;
   posImage?: string;
