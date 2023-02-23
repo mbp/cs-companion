@@ -35,6 +35,15 @@ export const overpassLineups: MapLineups = {
       throwType: "jump",
       side: "t",
     },
+    {
+      name: "Dumpster from divider",
+      resultImage: "overpass/t/smokes/dumpster-from-divider/result.png",
+      aimImage: "overpass/t/smokes/dumpster-from-divider/aim.png",
+      posImage: "overpass/t/smokes/dumpster-from-divider/pos.png",
+      ticks: "64",
+      throwType: "normal",
+      side: "t",
+    },
   ],
   fragGrenades: [],
   molotovs: [
@@ -47,6 +56,15 @@ export const overpassLineups: MapLineups = {
       ticks: "64",
       throwType: "runjump",
       side: "t",
+    },
+    {
+      name: "Short tunnel molo from abc",
+      resultImage: "overpass/ct/molos/short-from-abc/result.png",
+      aimImage: "overpass/ct/molos/short-from-abc/aim.png",
+      posImage: "overpass/ct/molos/short-from-abc/pos.png",
+      ticks: "64/128",
+      throwType: "normal",
+      side: "ct",
     },
   ],
   flashBangs: [
