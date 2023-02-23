@@ -77,7 +77,6 @@ export const nukeLineups: MapLineups = {
       resultImage:
         "nuke/t/flash/nuke-result-flash-a-site-through-hut-from-lobby.png",
       aimImage: "nuke/t/flash/nuke-aim-flash-a-site-through-hut-from-lobby.png",
-      posImage: "missing.png",
       ticks: "64",
       throwType: "run",
       side: "t",

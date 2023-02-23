@@ -84,7 +84,6 @@ export const infernoLineups: MapLineups = {
   flashBangs: [
     {
       name: "B site flash from car",
-      resultImage: "missing.png",
       aimImage: "inferno/t/flash/b-site-flash-from-car-aim.png",
       posImage: "inferno/t/flash/b-site-flash-from-car-pos.png",
       ticks: "64/128",
@@ -93,7 +92,6 @@ export const infernoLineups: MapLineups = {
     },
     {
       name: "Pop flash out of boiler",
-      resultImage: "missing.png",
       aimImage: "inferno/t/flash/pop-flash-from-boiler-aim.png",
       posImage: "inferno/t/flash/pop-flash-from-boiler-pos.png",
       ticks: "64/128",
@@ -102,9 +100,7 @@ export const infernoLineups: MapLineups = {
     },
     {
       name: "Pit(A) flash from apps",
-      resultImage: "missing.png",
       aimImage: "inferno/t/flash/pit-a-flash-from-apps-aim.png",
-      posImage: "missing.png",
       ticks: "64/128",
       throwType: "normal",
       side: "t",

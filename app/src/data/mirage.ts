@@ -53,10 +53,8 @@ export const mirageLineups: MapLineups = {
   flashBangs: [
     {
       name: "Pop flash b site",
-      resultImage: "missing.png",
       aimImage:
         "mirage/t/flash/mirage-aim-pop-flash-b-site-from-apartments.png",
-      posImage: "missing.png",
       ticks: "64",
       throwType: "normal",
       side: "t",
