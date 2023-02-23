@@ -5,32 +5,21 @@ export const overpassLineups: MapLineups = {
   smokes: [
     {
       name: "Heaven smoke from short",
-      resultImage:
-        "overpass/t/smokes/overpass-result-heaven-smoke-from-short.png",
-      aimImage: "overpass/t/smokes/overpass-aim-heaven-smoke-from-short.png",
-      posImage: "overpass/t/smokes/overpass-pos-heaven-smoke-from-short.png",
+      folder: "overpass/t/smokes/heaven-from-short",
       ticks: "64",
       throwType: "normal",
       side: "t",
     },
     {
       name: "Bridge smoke from monster",
-      resultImage:
-        "overpass/t/smokes/overpass-result-bridge-smoke-from-monster.png",
-      aimImage: "overpass/t/smokes/overpass-aim-bridge-smoke-from-monster.png",
-      posImage: "overpass/t/smokes/overpass-pos-bridge-smoke-from-monster.png",
+      folder: "overpass/t/smokes/bridge-from-monster",
       ticks: "64",
       throwType: "normal",
       side: "t",
     },
     {
       name: "Mid toilet smoke from t spawn",
-      resultImage:
-        "overpass/t/smokes/overpass-result-mid-toilet-smoke-from-spawn.png",
-      aimImage:
-        "overpass/t/smokes/overpass-aim-mid-toilet-smoke-from-spawn.png",
-      posImage:
-        "overpass/t/smokes/overpass-pos-mid-toilet-smoke-from-spawn.png",
+      folder: "overpass/t/smokes/mid-toilet-from-t-spawn",
       ticks: "64",
       throwType: "jump",
       side: "t",
@@ -47,10 +36,7 @@ export const overpassLineups: MapLineups = {
   molotovs: [
     {
       name: "Barrels molo from short",
-      resultImage:
-        "overpass/t/molos/overpass-result-barrels-molo-from-short.png",
-      aimImage: "overpass/t/molos/overpass-aim-barrels-molo-from-short.png",
-      posImage: "overpass/t/molos/overpass-pos-barrels-molo-from-short.png",
+      folder: "overpass/t/molos/barrels-from-short",
       ticks: "64",
       throwType: "runjump",
       side: "t",
@@ -68,12 +54,7 @@ export const overpassLineups: MapLineups = {
   flashBangs: [
     {
       name: "Overpass barrels flash from short tunnel",
-      resultImage:
-        "overpass/t/flash/overpass-result-b-site-flash-from-short-tunnel.png",
-      aimImage:
-        "overpass/t/flash/overpass-aim-b-site-flash-from-short-tunnel.png",
-      posImage:
-        "overpass/t/flash/overpass-pos-b-site-flash-from-short-tunnel.png",
+      folder: "overpass/t/flash/b-site-from-short-tunnel",
       ticks: "64",
       throwType: "runjump",
       side: "t",
