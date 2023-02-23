@@ -5,62 +5,42 @@ export const anubisLineups: MapLineups = {
   smokes: [
     {
       name: "A Connector from water",
-      resultImage: "anubis/t/smokes/anubis-result-a-con-smoke-from-water.png",
-      aimImage: "anubis/t/smokes/anubis-aim-a-con-smoke-from-water.png",
-      posImage: "anubis/t/smokes/anubis-pos-a-con-smoke-from-water.png",
+      folder: "anubis/t/smokes/a-connector-from-water",
       ticks: "64",
       throwType: "normal",
       side: "t",
     },
     {
-      name: "Connector outside smoke from street",
-      resultImage:
-        "anubis/t/smokes/anubis-result-connector-outside-smoke-from-street.png",
-      aimImage:
-        "anubis/t/smokes/anubis-aim-connector-outside-smoke-from-street.png",
-      posImage:
-        "anubis/t/smokes/anubis-pos-connector-outside-smoke-from-street.png",
+      name: "B Connector outside smoke from street",
+      folder: "anubis/t/smokes/anubis/b-connector-outside-from-street",
       ticks: "64",
       throwType: "jump",
       side: "t",
     },
     {
       name: "Mid house smoke from T spawn",
-      resultImage: "anubis/t/smokes/anubis-result-mid-smoke-from-spawn.png",
-      aimImage: "anubis/t/smokes/anubis-aim-mid-smoke-from-spawn.png",
-      posImage: "anubis/t/smokes/anubis-pos-mid-smoke-from-spawn.png",
+      folder: "anubis/t/smokes/mid-house-smoke-from-t-spawn",
       ticks: "64",
       throwType: "jump",
       side: "t",
     },
     {
       name: "Palace smoke from B outside",
-      resultImage:
-        "anubis/t/smokes/anubis-result-palace-smoke-from-b-outside.png",
-      aimImage: "anubis/t/smokes/anubis-aim-palace-smoke-from-b-outside.png",
-      posImage: "anubis/t/smokes/anubis-pos-palace-smoke-from-b-outside.png",
+      folder: "anubis/t/smokes/palace-from-b-outside",
       ticks: "64",
       throwType: "normal",
       side: "t",
     },
     {
       name: "Connector inside smoke from B outside",
-      resultImage:
-        "anubis/t/smokes/anubis-result-connector-inside-smoke-from-b-outside.png",
-      aimImage:
-        "anubis/t/smokes/anubis-aim-connector-inside-smoke-from-b-outside.png",
-      posImage:
-        "anubis/t/smokes/anubis-pos-connector-inside-smoke-from-b-outside.png",
+      folder: "anubis/t/smokes/connector-inside-from-b-outside",
       ticks: "64",
       throwType: "jump",
       side: "t",
     },
     {
       name: "CT long smoke from B outside",
-      resultImage:
-        "anubis/t/smokes/anubis-result-ct-long-smoke-from-b-outside.png",
-      aimImage: "anubis/t/smokes/anubis-aim-ct-long-smoke-from-b-outside.png",
-      posImage: "anubis/t/smokes/anubis-pos-ct-long-smoke-from-b-outside.png",
+      folder: "anubis/t/smokes/ct-long-from-b-outside",
       ticks: "64",
       throwType: "normal",
       side: "t",
