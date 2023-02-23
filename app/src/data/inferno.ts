@@ -100,7 +100,8 @@ export const infernoLineups: MapLineups = {
     },
     {
       name: "Pit(A) flash from apps",
-      aimImage: "inferno/t/flash/pit-a-flash-from-apps-aim.png",
+      description: "Must be crouched",
+      folder: "inferno/t/flash/a-site-from-apps",
       ticks: "64/128",
       throwType: "normal",
       side: "t",
