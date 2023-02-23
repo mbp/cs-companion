@@ -37,9 +37,7 @@ export const overpassLineups: MapLineups = {
     },
     {
       name: "Dumpster from divider",
-      resultImage: "overpass/t/smokes/dumpster-from-divider/result.png",
-      aimImage: "overpass/t/smokes/dumpster-from-divider/aim.png",
-      posImage: "overpass/t/smokes/dumpster-from-divider/pos.png",
+      folder: "overpass/t/smokes/dumpster-from-divider",
       ticks: "64",
       throwType: "normal",
       side: "t",
