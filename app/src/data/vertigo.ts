@@ -29,10 +29,7 @@ export const vertigoLineups: MapLineups = {
     },
     {
       name: "Smoke guardian from mid",
-      resultImage:
-        "vertigo/t/smokes/vertigo-result-smoke-guardian-from-mid.png",
-      aimImage: "vertigo/t/smokes/vertigo-aim-smoke-guardian-from-mid.png",
-      posImage: "missing.png",
+      folder: "vertigo/t/smokes/guardian-from-mid",
       ticks: "64",
       throwType: "normal",
       side: "t",
