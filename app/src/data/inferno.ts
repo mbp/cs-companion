@@ -64,18 +64,14 @@ export const infernoLineups: MapLineups = {
   molotovs: [
     {
       name: "Molo B dark from car",
-      resultImage: "inferno/t/molos/inferno-result-b-dark-from-car.png",
-      aimImage: "inferno/t/molos/inferno-aim-b-dark-from-car.png",
-      posImage: "inferno/t/molos/inferno-pos-a-short-molo-from-mid.png",
+      folder: "inferno/t/molos/b-dark-from-car",
       ticks: "64",
       throwType: "jump",
       side: "t",
     },
     {
       name: "Molo short A from mid",
-      resultImage: "inferno/t/molos/inferno-result-a-short-molo-from-mid.png",
-      aimImage: "inferno/t/molos/inferno-aim-a-short-molo-from-mid.png",
-      posImage: "inferno/t/molos/inferno-pos-a-short-molo-from-mid.png",
+      folder: "inferno/t/molos/short-a-from-mid",
       ticks: "64",
       throwType: "jump",
       side: "t",
@@ -84,16 +80,14 @@ export const infernoLineups: MapLineups = {
   flashBangs: [
     {
       name: "B site flash from car",
-      aimImage: "inferno/t/flash/b-site-flash-from-car-aim.png",
-      posImage: "inferno/t/flash/b-site-flash-from-car-pos.png",
+      folder: "inferno/t/flash/b-site-flash-from-car",
       ticks: "64/128",
       throwType: "jump",
       side: "t",
     },
     {
       name: "Pop flash out of boiler",
-      aimImage: "inferno/t/flash/pop-flash-from-boiler-aim.png",
-      posImage: "inferno/t/flash/pop-flash-from-boiler-pos.png",
+      folder: "inferno/t/flash/pop-flash-boiler-from-apps",
       ticks: "64/128",
       throwType: "normal",
       side: "t",
