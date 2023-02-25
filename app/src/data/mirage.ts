@@ -28,6 +28,13 @@ export const mirageLineups: MapLineups = {
       side: "t",
     },
     {
+      name: "Ticket booth smoke from T ramp",
+      folder: "mirage/t/smokes/ticket-booth-from-t-ramp",
+      ticks: "64",
+      throwType: "throw",
+      side: "t",
+    },
+    {
       name: "CT car platform",
       description: "Next to under stairs. Aim in the sky",
       folder: "mirage/t/smokes/ct-car-platform",
