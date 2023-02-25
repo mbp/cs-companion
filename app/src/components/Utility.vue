@@ -25,12 +25,15 @@ defineExpose({
     ><span v-if="!visible">⮝</span>
   </button>
   <div v-if="visible">
-    <div class="info-image">
-      <div class="info">
+    <div class="info-area">
+      <div class="info info-type">
         Throw type:
         {{ utilityLineup.throwType }}
         Ticks type:
         {{ utilityLineup.ticks }}
+      </div>
+      <div class="info info-description" v-if="utilityLineup.description">
+        {{ utilityLineup.description }}
       </div>
       <div>
         <Image
@@ -59,9 +62,20 @@ defineExpose({
   grid-template-columns: 640px 640px;
 }
 div.info {
-  background-color: grey;
   padding: 2px;
+  width: 50%;
+  margin: auto;
+}
+
+div.info-type {
+  background-color: lightgreen;
   border: 1px solid black;
-  color: white;
+  color: black;
+}
+
+div.info-description {
+  background-color: orange;
+  border: 1px solid black;
+  color: black;
 }
 </style>

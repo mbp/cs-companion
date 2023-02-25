@@ -43,6 +43,7 @@ export const nukeLineups: MapLineups = {
   molotovs: [
     {
       name: "Molo top of hut from roof",
+      description: "Throw when reaching ladder on right",
       folder: "nuke/t/molo/top-hut-from-roof",
       ticks: "64/128",
       throwType: "runjump",
