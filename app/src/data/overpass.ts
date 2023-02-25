@@ -43,9 +43,7 @@ export const overpassLineups: MapLineups = {
     },
     {
       name: "Short tunnel molo from abc",
-      resultImage: "overpass/ct/molos/short-from-abc/result.png",
-      aimImage: "overpass/ct/molos/short-from-abc/aim.png",
-      posImage: "overpass/ct/molos/short-from-abc/pos.png",
+      folder: "overpass/ct/molos/short-from-abc",
       ticks: "64/128",
       throwType: "normal",
       side: "ct",
