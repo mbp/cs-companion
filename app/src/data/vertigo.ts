@@ -5,24 +5,14 @@ export const vertigoLineups: MapLineups = {
   smokes: [
     {
       name: "Smoke ramp from a default plant",
-      resultImage:
-        "vertigo/ct/smokes/vertigo-result-smoke-ramp-from-default-plant.png",
-      aimImage:
-        "vertigo/ct/smokes/vertigo-aim-smoke-ramp-from-default-plant.png",
-      posImage:
-        "vertigo/ct/smokes/vertigo-pos-smoke-ramp-from-default-plant.png",
+      folder: "vertigo/ct/smokes/ramp-from-a-default-plant",
       ticks: "64",
       throwType: "normal",
       side: "ct",
     },
     {
       name: "Smoke top ramp (one way) from backsite",
-      resultImage:
-        "vertigo/ct/smokes/vertigo-result-smoke-top-ramp-one-way-from-backsite.png",
-      aimImage:
-        "vertigo/ct/smokes/vertigo-aim-smoke-top-ramp-one-way-from-backsite.png",
-      posImage:
-        "vertigo/ct/smokes/vertigo-pos-smoke-top-ramp-one-way-from-backsite.png",
+      folder: "vertigo/ct/smokes/top-ramp-one-way-from-backsite",
       ticks: "64",
       throwType: "normal",
       side: "ct",
@@ -36,28 +26,21 @@ export const vertigoLineups: MapLineups = {
     },
     {
       name: "Smoke a site from ramp",
-      resultImage: "vertigo/t/smokes/vertigo-result-smoke-a-site-from-ramp.png",
-      aimImage: "vertigo/t/smokes/vertigo-aim-smoke-a-site-from-ramp.png",
-      posImage: "vertigo/t/smokes/vertigo-pos-smoke-a-site-from-ramp.png",
+      folder: "vertigo/t/smokes/a-site-from-ramp",
       ticks: "64",
       throwType: "jump",
       side: "t",
     },
     {
       name: "Smoke b site from t",
-      resultImage: "vertigo/t/smokes/vertigo-result-smoke-b-site-from-t.png",
-      aimImage: "vertigo/t/smokes/vertigo-aim-smoke-b-site-from-t.png",
-      posImage: "vertigo/t/smokes/vertigo-pos-smoke-b-site-from-t.png",
+      folder: "vertigo/t/smokes/b-site-from-t",
       ticks: "64",
       throwType: "normal",
       side: "t",
     },
     {
       name: "Smoke a short from t spawn",
-      resultImage:
-        "vertigo/t/smokes/vertigo-result-smoke-short-a-from-spawn.png",
-      aimImage: "vertigo/t/smokes/vertigo-aim-smoke-short-a-from-spawn.png",
-      posImage: "vertigo/t/smokes/vertigo-pos-smoke-short-a-from-spawn.png",
+      folder: "vertigo/t/smokes/a-short-from-t-spawn",
       ticks: "64",
       throwType: "jump",
       side: "t",
