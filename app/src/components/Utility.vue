@@ -9,14 +9,8 @@ const open = () => {
 };
 const visible = ref(false);
 
-const getImage = (part: string, image?: string, folder?: string) => {
-  if (folder) {
-    return folder + "/" + part + ".png";
-  }
-  if (image) {
-    return image;
-  }
-  return "missing.png";
+const getImage = (part: string, folder: string) => {
+  return folder + "/" + part + ".png";
 };
 
 defineExpose({
@@ -40,23 +34,18 @@ defineExpose({
       </div>
       <div>
         <Image
-          :src="
-            getImage('result', utilityLineup.resultImage, utilityLineup.folder)
-          "
+          :src="getImage('result', utilityLineup.folder)"
           :caption="'Result'"
         />
       </div>
     </div>
     <div class="aim-pos-images">
       <div>
-        <Image
-          :src="getImage('aim', utilityLineup.aimImage, utilityLineup.folder)"
-          :caption="'Aim'"
-        />
+        <Image :src="getImage('aim', utilityLineup.folder)" :caption="'Aim'" />
       </div>
       <div>
         <Image
-          :src="getImage('pos', utilityLineup.posImage, utilityLineup.folder)"
+          :src="getImage('pos', utilityLineup.folder)"
           :caption="'Position'"
         />
       </div>
