@@ -49,7 +49,6 @@ sv_cheats 1;bot_kick;mp_limitteams 0;mp_autoteambalance 0;mp_maxmoney 60000;mp_s
   <button @click="copyCmd2">Copy to clipboard (#2)</button>
   <pre id="perfect2">
 sv_grenade_trajectory 1;sv_grenade_trajectory_time 15;sv_showimpacts 1;sv_showimpacts_time 10;ammo_grenade_limit_total 5;mp_warmup_end;mp_restartgame 1
-
   </pre>
   <p class="footer">Rethrow last grenade</p>
   <pre>
@@ -91,9 +90,13 @@ sv_rethrow_last_grenade
 }
 
 pre {
+  background-color: grey;
+  border: 1px dotted white;
+  margin: auto;
   height: auto;
   max-height: 200px;
   overflow: auto;
+  max-width: 300px;
   word-break: normal !important;
   word-wrap: normal !important;
   white-space: pre !important;
