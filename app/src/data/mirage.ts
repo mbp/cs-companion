@@ -31,7 +31,7 @@ export const mirageLineups: MapLineups = {
       name: "Ticket booth smoke from T ramp",
       folder: "mirage/t/smokes/ticket-booth-from-t-ramp",
       ticks: "64",
-      throwType: "throw",
+      throwType: "jump",
       side: "t",
     },
     {
