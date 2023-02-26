@@ -16,6 +16,10 @@ export const anubisLineups: MapLineups = {
       ticks: "64",
       throwType: "jump",
       side: "t",
+      coordinates: {
+        x: 371.5,
+        y: 546.09375,
+      },
     },
     {
       name: "Mid house smoke from T spawn",

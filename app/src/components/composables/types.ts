@@ -9,6 +9,12 @@ export type UtilityLineup = {
   ticks: Ticks;
   throwType: ThrowType;
   side: Side;
+  coordinates?: Coordinates;
+};
+
+export type Coordinates = {
+  x: number;
+  y: number;
 };
 
 export type MapLineups = {
