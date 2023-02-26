@@ -56,6 +56,13 @@ export const infernoLineups: MapLineups = {
       side: "t",
     },
     {
+      name: "Molo nuke box from car",
+      folder: "inferno/t/molos/b-nuke-box-from-car",
+      ticks: "64",
+      throwType: "jump",
+      side: "t",
+    },
+    {
       name: "Molo short A from mid",
       folder: "inferno/t/molos/short-a-from-mid",
       ticks: "64",
