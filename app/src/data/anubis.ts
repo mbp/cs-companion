@@ -12,7 +12,7 @@ export const anubisLineups: MapLineups = {
     },
     {
       name: "B Connector outside smoke from street",
-      folder: "anubis/t/smokes/anubis/b-connector-outside-from-street",
+      folder: "anubis/t/smokes/b-connector-outside-from-street",
       ticks: "64",
       throwType: "jump",
       side: "t",
