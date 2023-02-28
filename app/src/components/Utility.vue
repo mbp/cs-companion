@@ -4,10 +4,6 @@ import { UtilityLineup } from "./composables/types";
 import Image from "./Image.vue";
 
 defineProps<{ utilityLineup: UtilityLineup }>();
-const open = () => {
-  visible.value = !visible.value;
-};
-const visible = ref(false);
 
 const getImage = (part: string, folder: string) => {
   return folder + "/" + part + ".png";
@@ -19,12 +15,8 @@ defineExpose({
 </script>
 
 <template>
-  <button @click="open">
-    {{ utilityLineup.name }} ({{ utilityLineup.side }})<span v-if="visible"
-      >⮟</span
-    ><span v-if="!visible">⮝</span>
-  </button>
-  <div v-if="visible">
+  <button>{{ utilityLineup.name }} ({{ utilityLineup.side }})</button>
+  <div>
     <div class="info-area">
       <div class="info info-type">
         Throw type:

@@ -26,7 +26,7 @@ onMounted(() => {
 });
 
 const radarImage = computed(() => {
-  return "url(" + (props.mapName as string).toLowerCase() + "/radar.jpg" + ")";
+  return "url(" + (props.mapName as string).toLowerCase() + "/radar.webp" + ")";
 });
 
 let radarCanvas = ref<HTMLCanvasElement>();
@@ -39,7 +39,6 @@ const clickRadar = (event: MouseEvent) => {
   if (rectangle) {
     emit("selectedUtility", rectangle.utility);
   }
-  console.log("found", rectangle);
 };
 
 const mouseMoveRadar = (event: MouseEvent) => {
@@ -99,9 +98,10 @@ const drawSmokeCoordinates = (x: number, y: number, utility: UtilityLineup) => {
       render: () => {
         const ctx = radarCanvas.value!.getContext("2d")!;
         ctx.strokeStyle = "blue";
-        ctx.fillStyle = "yellow";
+        ctx.fillStyle = "white";
         ctx.beginPath();
         ctx.rect(x, y, pointSize, pointSize);
+        ctx.fillText(utility.name, x, y);
         ctx.fill();
         ctx.stroke();
       },
@@ -134,8 +134,8 @@ const drawCoordinates = (
     ref="radarCanvas"
     @click="clickRadar"
     @mousemove="mouseMoveRadar"
-    width="900"
-    height="900"
+    width="1024"
+    height="1024"
     :style="{ background: radarImage }"
   ></canvas>
 </template>

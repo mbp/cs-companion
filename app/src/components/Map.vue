@@ -13,7 +13,11 @@ const utilites = computed(() => {
 });
 
 const selectedUtility = ref<UtilityLineup | undefined>();
-const callback = (utility: UtilityLineup) => {
+const setSelectedUtility = (utility: UtilityLineup) => {
+  selectedUtility.value = utility;
+};
+
+const openUtility = (utility: UtilityLineup) => {
   selectedUtility.value = utility;
 };
 </script>
@@ -22,25 +26,32 @@ const callback = (utility: UtilityLineup) => {
   <h1>
     {{ mapName }}
   </h1>
-  <h2>{{ selectedUtility?.name }}</h2>
 
-  <Radar :utilites="utilites" :mapName="mapName" @selectedUtility="callback" />
+  <Radar
+    :utilites="utilites"
+    :mapName="mapName"
+    @selectedUtility="setSelectedUtility"
+  />
+
+  <div v-if="selectedUtility">
+    <Utility :utilityLineup="selectedUtility" />
+  </div>
 
   <h2>Smoke Grenade</h2>
   <div v-for="smoke in utilites.smokes">
-    <Utility :utilityLineup="smoke" />
+    <button @click="openUtility(smoke)">{{ smoke.name }}</button>
   </div>
   <h2>Molotov / Incendiary Grenade</h2>
   <div v-for="molo in utilites.molotovs">
-    <Utility :utilityLineup="molo" />
+    <button @click="openUtility(molo)">{{ molo.name }}</button>
   </div>
   <h2>Flashbang</h2>
   <div v-for="flash in utilites.flashBangs">
-    <Utility :utilityLineup="flash" />
+    <button @click="openUtility(flash)">{{ flash.name }}</button>
   </div>
   <h2>Frag Grenade</h2>
   <div v-for="nade in utilites.fragGrenades">
-    <Utility :utilityLineup="nade" />
+    <button @click="openUtility(nade)">{{ nade.name }}</button>
   </div>
 </template>
 

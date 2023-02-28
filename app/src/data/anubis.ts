@@ -9,6 +9,10 @@ export const anubisLineups: MapLineups = {
       ticks: "64",
       throwType: "normal",
       side: "t",
+      coordinates: {
+        x: 671,
+        y: 384,
+      },
     },
     {
       name: "B Connector outside smoke from street",
@@ -17,8 +21,8 @@ export const anubisLineups: MapLineups = {
       throwType: "jump",
       side: "t",
       coordinates: {
-        x: 371.5,
-        y: 546.09375,
+        x: 436,
+        y: 619,
       },
     },
     {
@@ -27,6 +31,10 @@ export const anubisLineups: MapLineups = {
       ticks: "64",
       throwType: "jump",
       side: "t",
+      coordinates: {
+        x: 519,
+        y: 507,
+      },
     },
     {
       name: "Palace smoke from B outside",
@@ -34,6 +42,10 @@ export const anubisLineups: MapLineups = {
       ticks: "64",
       throwType: "normal",
       side: "t",
+      coordinates: {
+        x: 357,
+        y: 440,
+      },
     },
     {
       name: "Connector inside smoke from B outside",
@@ -41,6 +53,10 @@ export const anubisLineups: MapLineups = {
       ticks: "64",
       throwType: "jump",
       side: "t",
+      coordinates: {
+        x: 371,
+        y: 572,
+      },
     },
     {
       name: "CT long smoke from B outside",
@@ -48,6 +64,10 @@ export const anubisLineups: MapLineups = {
       ticks: "64",
       throwType: "normal",
       side: "t",
+      coordinates: {
+        x: 300,
+        y: 431,
+      },
     },
   ],
   fragGrenades: [],
