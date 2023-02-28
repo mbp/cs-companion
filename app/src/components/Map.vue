@@ -23,9 +23,10 @@ const openUtility = (utility: UtilityLineup) => {
 </script>
 
 <template>
-  <h1>
+  <router-link to="/">Home</router-link>
+  <h2>
     {{ mapName }}
-  </h1>
+  </h2>
 
   <Radar
     :utilites="utilites"

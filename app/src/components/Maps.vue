@@ -27,6 +27,7 @@ const copyCmd2 = async () => {
 </script>
 
 <template>
+  <h1>CSGO Companion</h1>
   <div>
     <img src="/cs-go-1024x576.jpg" class="logo csgo" alt="CSGO" />
   </div>
