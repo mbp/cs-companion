@@ -1,13 +1,17 @@
 <script setup lang="ts">
-import { ref } from "vue";
+import { computed } from "vue";
 import { UtilityLineup } from "./composables/types";
 import Image from "./Image.vue";
 
-defineProps<{ utilityLineup: UtilityLineup }>();
+const props = defineProps<{ utilityLineup: UtilityLineup }>();
 
 const getImage = (part: string, folder: string) => {
   return folder + "/" + part + ".png";
 };
+
+const getSideImage = computed(() => {
+  return props.utilityLineup.side === "ct" ? "ct-icon.webp" : "t-icon.webp";
+});
 
 defineExpose({
   getImage,
@@ -15,7 +19,10 @@ defineExpose({
 </script>
 
 <template>
-  <button>{{ utilityLineup.name }} ({{ utilityLineup.side }})</button>
+  <h3>
+    {{ utilityLineup.name }}
+    <img :src="getSideImage" class="side-icon-header" />
+  </h3>
   <div>
     <div class="info-area">
       <div class="info info-type">
@@ -51,7 +58,7 @@ defineExpose({
 <style scoped>
 .aim-pos-images {
   display: grid;
-  grid-template-columns: 640px 640px;
+  grid-template-columns: 50% 50%;
 }
 div.info {
   padding: 2px;
@@ -69,5 +76,8 @@ div.info-description {
   background-color: orange;
   border: 1px solid black;
   color: black;
+}
+.side-icon-header {
+  width: 50px;
 }
 </style>

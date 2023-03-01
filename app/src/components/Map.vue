@@ -20,6 +20,9 @@ const setSelectedUtility = (utility: UtilityLineup) => {
 const openUtility = (utility: UtilityLineup) => {
   selectedUtility.value = utility;
 };
+const closeModal = () => {
+  selectedUtility.value = undefined;
+};
 </script>
 
 <template>
@@ -34,8 +37,11 @@ const openUtility = (utility: UtilityLineup) => {
     @selectedUtility="setSelectedUtility"
   />
 
-  <div v-if="selectedUtility">
-    <Utility :utilityLineup="selectedUtility" />
+  <div v-if="selectedUtility" class="modal">
+    <div class="modal-content">
+      <span class="close" @click="closeModal">&times;</span>
+      <Utility :utilityLineup="selectedUtility" />
+    </div>
   </div>
 
   <h2>Smoke Grenade</h2>
@@ -55,3 +61,38 @@ const openUtility = (utility: UtilityLineup) => {
     <button @click="openUtility(nade)">{{ nade.name }}</button>
   </div>
 </template>
+
+<style>
+.modal {
+  position: fixed;
+  z-index: 1;
+  left: 0;
+  top: 0;
+  width: 100%;
+  height: 100%;
+  overflow: auto;
+  background-color: rgba(0, 0, 0, 0.4);
+}
+
+.modal-content {
+  background-color: #242424;
+  margin: 15% auto;
+  padding: 20px;
+  border: 1px solid #888;
+  width: 80%;
+}
+
+.close {
+  color: #aaa;
+  float: right;
+  font-size: 28px;
+  font-weight: bold;
+}
+
+.close:hover,
+.close:focus {
+  color: black;
+  text-decoration: none;
+  cursor: pointer;
+}
+</style>
