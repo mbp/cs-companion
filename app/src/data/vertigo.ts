@@ -9,6 +9,10 @@ export const vertigoLineups: MapLineups = {
       ticks: "64",
       throwType: "normal",
       side: "ct",
+      coordinates: {
+        x: 595,
+        y: 646,
+      },
     },
     {
       name: "Smoke top ramp (one way) from backsite",
@@ -16,6 +20,10 @@ export const vertigoLineups: MapLineups = {
       ticks: "64",
       throwType: "normal",
       side: "ct",
+      coordinates: {
+        x: 696,
+        y: 690,
+      },
     },
     {
       name: "Smoke guardian from mid",
@@ -23,6 +31,10 @@ export const vertigoLineups: MapLineups = {
       ticks: "64",
       throwType: "normal",
       side: "t",
+      coordinates: {
+        x: 421,
+        y: 314,
+      },
     },
     {
       name: "Smoke a site from ramp",
@@ -30,6 +42,10 @@ export const vertigoLineups: MapLineups = {
       ticks: "64",
       throwType: "jump",
       side: "t",
+      coordinates: {
+        x: 677,
+        y: 564,
+      },
     },
     {
       name: "Smoke b site from t",
@@ -37,6 +53,10 @@ export const vertigoLineups: MapLineups = {
       ticks: "64",
       throwType: "normal",
       side: "t",
+      coordinates: {
+        x: 214,
+        y: 302,
+      },
     },
     {
       name: "Smoke a short from t spawn",
@@ -44,6 +64,10 @@ export const vertigoLineups: MapLineups = {
       ticks: "64",
       throwType: "jump",
       side: "t",
+      coordinates: {
+        x: 214,
+        y: 517,
+      },
     },
   ],
   fragGrenades: [],
@@ -55,6 +79,10 @@ export const vertigoLineups: MapLineups = {
       ticks: "64",
       throwType: "normal",
       side: "t",
+      coordinates: {
+        x: 204,
+        y: 505,
+      },
     },
   ],
 };
