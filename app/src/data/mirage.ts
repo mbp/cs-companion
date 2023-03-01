@@ -10,6 +10,10 @@ export const mirageLineups: MapLineups = {
       ticks: "64",
       throwType: "jump",
       side: "t",
+      coordinates: {
+        x: 514,
+        y: 505,
+      },
     },
     {
       name: "Top connector smoke from t mid",
@@ -18,6 +22,10 @@ export const mirageLineups: MapLineups = {
       ticks: "64",
       throwType: "normal",
       side: "t",
+      coordinates: {
+        x: 511,
+        y: 596,
+      },
     },
     {
       name: "Stairs smoke from T ramp",
@@ -26,6 +34,10 @@ export const mirageLineups: MapLineups = {
       ticks: "64",
       throwType: "normal",
       side: "t",
+      coordinates: {
+        x: 550,
+        y: 662,
+      },
     },
     {
       name: "Ticket booth smoke from T ramp",
@@ -33,6 +45,10 @@ export const mirageLineups: MapLineups = {
       ticks: "64",
       throwType: "jump",
       side: "t",
+      coordinates: {
+        x: 467,
+        y: 816,
+      },
     },
     {
       name: "CT car platform",
@@ -41,13 +57,21 @@ export const mirageLineups: MapLineups = {
       ticks: "64",
       throwType: "normal",
       side: "t",
+      coordinates: {
+        x: 234,
+        y: 196,
+      },
     },
     {
-      name: "Mirage CT mid one way smoke",
+      name: "CT mid one way smoke",
       folder: "mirage/ct/smokes/mid-one-way",
       ticks: "64",
       throwType: "normal",
       side: "ct",
+      coordinates: {
+        x: 425,
+        y: 471,
+      },
     },
   ],
   fragGrenades: [],
@@ -59,6 +83,10 @@ export const mirageLineups: MapLineups = {
       ticks: "64",
       throwType: "normal",
       side: "t",
+      coordinates: {
+        x: 313,
+        y: 220,
+      },
     },
   ],
 };
