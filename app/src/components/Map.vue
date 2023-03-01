@@ -76,7 +76,7 @@ const closeModal = () => {
 
 .modal-content {
   background-color: #242424;
-  margin: 15% auto;
+  margin: 1% auto;
   padding: 20px;
   border: 1px solid #888;
   width: 80%;

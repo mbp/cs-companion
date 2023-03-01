@@ -1,5 +1,5 @@
 <script setup lang="ts">
-import { computed, ref } from "vue";
+import { ref } from "vue";
 
 defineProps<{ src: string; caption: string }>();
 const zoom = ref(false);
@@ -18,10 +18,12 @@ img {
   cursor: pointer;
 }
 img.zoom {
-  width: 640px;
+  width: 100%;
+  max-width: 640px;
 }
 img.default {
-  width: 320px;
+  width: 50%;
+  max-width: 320px;
 }
 figcaption {
   font: italic smaller sans-serif;
