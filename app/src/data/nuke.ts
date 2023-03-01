@@ -9,6 +9,10 @@ export const nukeLineups: MapLineups = {
       ticks: "64",
       throwType: "jump",
       side: "ct",
+      coordinates: {
+        x: 582,
+        y: 692,
+      },
     },
     {
       name: "Short red smoke yard (2nd smoke)",
@@ -16,6 +20,10 @@ export const nukeLineups: MapLineups = {
       ticks: "64",
       throwType: "jump",
       side: "t",
+      coordinates: {
+        x: 618,
+        y: 734,
+      },
     },
     {
       name: "Long red smoke yard (3rd smoke)",
@@ -23,6 +31,10 @@ export const nukeLineups: MapLineups = {
       ticks: "64/128",
       throwType: "jump",
       side: "t",
+      coordinates: {
+        x: 647,
+        y: 734,
+      },
     },
     {
       name: "Left garage smoke (no peek silo)",
@@ -30,6 +42,10 @@ export const nukeLineups: MapLineups = {
       ticks: "64/128",
       throwType: "normal",
       side: "t",
+      coordinates: {
+        x: 707,
+        y: 627,
+      },
     },
     {
       name: "Ramp smoke from trophy",
@@ -37,6 +53,10 @@ export const nukeLineups: MapLineups = {
       ticks: "64",
       throwType: "run",
       side: "t",
+      coordinates: {
+        x: 543,
+        y: 384,
+      },
     },
   ],
   fragGrenades: [],
@@ -48,6 +68,10 @@ export const nukeLineups: MapLineups = {
       ticks: "64/128",
       throwType: "runjump",
       side: "t",
+      coordinates: {
+        x: 550,
+        y: 566,
+      },
     },
   ],
   flashBangs: [
@@ -57,6 +81,10 @@ export const nukeLineups: MapLineups = {
       ticks: "64",
       throwType: "normal",
       side: "t",
+      coordinates: {
+        x: 591,
+        y: 481,
+      },
     },
     {
       name: "Flash a through hut from lobby",
@@ -64,6 +92,10 @@ export const nukeLineups: MapLineups = {
       ticks: "64",
       throwType: "run",
       side: "t",
+      coordinates: {
+        x: 549,
+        y: 531,
+      },
     },
     {
       name: "Flash b ramp from trophy",
@@ -71,6 +103,10 @@ export const nukeLineups: MapLineups = {
       ticks: "64",
       throwType: "run",
       side: "t",
+      coordinates: {
+        x: 545,
+        y: 352,
+      },
     },
   ],
 };
