@@ -9,6 +9,10 @@ export const overpassLineups: MapLineups = {
       ticks: "64",
       throwType: "normal",
       side: "t",
+      coordinates: {
+        x: 600,
+        y: 251,
+      },
     },
     {
       name: "Bridge smoke from monster",
@@ -16,6 +20,10 @@ export const overpassLineups: MapLineups = {
       ticks: "64",
       throwType: "normal",
       side: "t",
+      coordinates: {
+        x: 682,
+        y: 382,
+      },
     },
     {
       name: "Mid toilet smoke from t spawn",
@@ -23,6 +31,10 @@ export const overpassLineups: MapLineups = {
       ticks: "64",
       throwType: "jump",
       side: "t",
+      coordinates: {
+        x: 412,
+        y: 537,
+      },
     },
     {
       name: "Dumpster from divider",
@@ -30,6 +42,10 @@ export const overpassLineups: MapLineups = {
       ticks: "64",
       throwType: "normal",
       side: "t",
+      coordinates: {
+        x: 540,
+        y: 160,
+      },
     },
   ],
   fragGrenades: [],
@@ -40,6 +56,10 @@ export const overpassLineups: MapLineups = {
       ticks: "64",
       throwType: "runjump",
       side: "t",
+      coordinates: {
+        x: 767,
+        y: 266,
+      },
     },
     {
       name: "Short tunnel molo from abc",
@@ -47,6 +67,10 @@ export const overpassLineups: MapLineups = {
       ticks: "64/128",
       throwType: "normal",
       side: "ct",
+      coordinates: {
+        x: 698,
+        y: 524,
+      },
     },
   ],
   flashBangs: [
@@ -56,6 +80,10 @@ export const overpassLineups: MapLineups = {
       ticks: "64",
       throwType: "runjump",
       side: "t",
+      coordinates: {
+        x: 734,
+        y: 325,
+      },
     },
   ],
 };
