@@ -55,9 +55,3 @@ const openUtility = (utility: UtilityLineup) => {
     <button @click="openUtility(nade)">{{ nade.name }}</button>
   </div>
 </template>
-
-<style>
-canvas {
-  cursor: crosshair;
-}
-</style>

@@ -9,6 +9,10 @@ export const ancientLineups: MapLineups = {
       ticks: "64/128",
       throwType: "jump",
       side: "t",
+      coordinates: {
+        x: 826,
+        y: 369,
+      },
     },
     {
       name: "Short B smoke from ruins",
@@ -16,6 +20,10 @@ export const ancientLineups: MapLineups = {
       ticks: "64/128",
       throwType: "jump",
       side: "t",
+      coordinates: {
+        x: 726,
+        y: 354,
+      },
     },
     {
       name: "Cave smoke from ruins",
@@ -23,6 +31,10 @@ export const ancientLineups: MapLineups = {
       ticks: "64/128",
       throwType: "jump",
       side: "t",
+      coordinates: {
+        x: 708,
+        y: 395,
+      },
     },
     {
       name: "Ancient mid smoke from t spawn",
@@ -30,6 +42,10 @@ export const ancientLineups: MapLineups = {
       ticks: "64/128",
       throwType: "jump",
       side: "t",
+      coordinates: {
+        x: 486,
+        y: 386,
+      },
     },
     {
       name: "Inside donut smoke from stairs",
@@ -37,6 +53,10 @@ export const ancientLineups: MapLineups = {
       ticks: "64/128",
       throwType: "jump",
       side: "t",
+      coordinates: {
+        x: 315,
+        y: 329,
+      },
     },
     {
       name: "CT smoke from stairs",
@@ -44,6 +64,10 @@ export const ancientLineups: MapLineups = {
       ticks: "64",
       throwType: "jump",
       side: "t",
+      coordinates: {
+        x: 367,
+        y: 221,
+      },
     },
   ],
   fragGrenades: [],
@@ -54,6 +78,10 @@ export const ancientLineups: MapLineups = {
       ticks: "64",
       throwType: "normal",
       side: "t",
+      coordinates: {
+        x: 726,
+        y: 489,
+      },
     },
   ],
   flashBangs: [],

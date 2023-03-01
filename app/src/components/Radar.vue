@@ -19,11 +19,40 @@ const smokes = computed(() => {
   return props.utilites.smokes.filter((x) => x.coordinates);
 });
 
+const nades = computed(() => {
+  return props.utilites.fragGrenades.filter((x) => x.coordinates);
+});
+
+const molos = computed(() => {
+  return props.utilites.molotovs.filter((x) => x.coordinates);
+});
+
+const flashBangs = computed(() => {
+  return props.utilites.flashBangs.filter((x) => x.coordinates);
+});
+
 onMounted(() => {
+  drawAll();
+});
+
+const drawAll = () => {
   for (const smoke of smokes.value) {
     drawSmokeCoordinates(smoke.coordinates!.x, smoke.coordinates!.y, smoke);
   }
-});
+  for (const nade of nades.value) {
+    drawNadeCoordinates(nade.coordinates!.x, nade.coordinates!.y, nade);
+  }
+  for (const molo of molos.value) {
+    drawMoloCoordinates(molo.coordinates!.x, molo.coordinates!.y, molo);
+  }
+  for (const flashBang of flashBangs.value) {
+    drawFlashCoordinates(
+      flashBang.coordinates!.x,
+      flashBang.coordinates!.y,
+      flashBang
+    );
+  }
+};
 
 const radarImage = computed(() => {
   return "url(" + (props.mapName as string).toLowerCase() + "/radar.webp" + ")";
@@ -43,6 +72,12 @@ const clickRadar = (event: MouseEvent) => {
 
 const mouseMoveRadar = (event: MouseEvent) => {
   const { x, y } = getPosition(event);
+  document.body.style.cursor = "auto";
+
+  const ctx = radarCanvas.value!.getContext("2d")!;
+  ctx.clearRect(0, 0, 1024, 1024);
+  drawAll();
+
   const rectangle = findMatchingRectangle(x, y);
   rectangle?.tooltip.render();
 };
@@ -56,9 +91,9 @@ const getPosition = (event: MouseEvent) => {
 
 const contains = (rect: Rectangle, x: number, y: number) => {
   return (
-    x >= rect.x &&
+    x >= rect.x - rect.width &&
     x <= rect.x + rect.width &&
-    y >= rect.y &&
+    y >= rect.y - rect.height &&
     y <= rect.y + rect.height
   );
 };
@@ -77,18 +112,42 @@ type Tooltip = {
 };
 
 const findMatchingRectangle = (x: number, y: number) => {
-  for (const rectangle of rectangles) {
-    if (contains(rectangle, x, y)) {
-      {
-        return rectangle;
-      }
-    }
-  }
+  return rectangles.find((rectangle) => contains(rectangle, x, y));
 };
 
 const drawSmokeCoordinates = (x: number, y: number, utility: UtilityLineup) => {
   const color = "grey";
   const strokeColor = "white";
+  const rectangle = createRectangle(x, y, utility);
+  rectangles.push(rectangle);
+  drawCoordinates(rectangle, color, strokeColor);
+};
+
+const drawMoloCoordinates = (x: number, y: number, utility: UtilityLineup) => {
+  const color = "orange";
+  const strokeColor = "black";
+  const rectangle = createRectangle(x, y, utility);
+  rectangles.push(rectangle);
+  drawCoordinates(rectangle, color, strokeColor);
+};
+
+const drawNadeCoordinates = (x: number, y: number, utility: UtilityLineup) => {
+  const color = "black";
+  const strokeColor = "white";
+  const rectangle = createRectangle(x, y, utility);
+  rectangles.push(rectangle);
+  drawCoordinates(rectangle, color, strokeColor);
+};
+
+const drawFlashCoordinates = (x: number, y: number, utility: UtilityLineup) => {
+  const color = "white";
+  const strokeColor = "black";
+  const rectangle = createRectangle(x, y, utility);
+  rectangles.push(rectangle);
+  drawCoordinates(rectangle, color, strokeColor);
+};
+
+const createRectangle = (x: number, y: number, utility: UtilityLineup) => {
   const rectangle: Rectangle = {
     x: x,
     y: y,
@@ -96,11 +155,13 @@ const drawSmokeCoordinates = (x: number, y: number, utility: UtilityLineup) => {
     height: pointSize,
     tooltip: {
       render: () => {
+        document.body.style.cursor = "pointer";
         const ctx = radarCanvas.value!.getContext("2d")!;
         ctx.strokeStyle = "blue";
         ctx.fillStyle = "white";
+        ctx.font = "15px Arial";
         ctx.beginPath();
-        ctx.rect(x, y, pointSize, pointSize);
+        ctx.arc(x, y, pointSize, 0, Math.PI * 2, true);
         ctx.fillText(utility.name, x, y);
         ctx.fill();
         ctx.stroke();
@@ -108,8 +169,7 @@ const drawSmokeCoordinates = (x: number, y: number, utility: UtilityLineup) => {
     },
     utility: utility,
   };
-  rectangles.push(rectangle);
-  drawCoordinates(rectangle, color, strokeColor);
+  return rectangle;
 };
 
 const rectangles: Rectangle[] = [];

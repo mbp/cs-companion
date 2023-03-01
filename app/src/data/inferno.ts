@@ -9,6 +9,10 @@ export const infernoLineups: MapLineups = {
       ticks: "64",
       throwType: "normal",
       side: "t",
+      coordinates: {
+        x: 609,
+        y: 224,
+      },
     },
     {
       name: "Coffin smoke from banana",
@@ -16,6 +20,10 @@ export const infernoLineups: MapLineups = {
       ticks: "64",
       throwType: "normal",
       side: "t",
+      coordinates: {
+        x: 523,
+        y: 145,
+      },
     },
     {
       name: "Short smoke from second mid",
@@ -23,6 +31,10 @@ export const infernoLineups: MapLineups = {
       ticks: "64",
       throwType: "normal",
       side: "t",
+      coordinates: {
+        x: 715,
+        y: 706,
+      },
     },
     {
       name: "Short smoke from t-ramp",
@@ -30,6 +42,10 @@ export const infernoLineups: MapLineups = {
       ticks: "64",
       throwType: "jump",
       side: "t",
+      coordinates: {
+        x: 715,
+        y: 706,
+      },
     },
     {
       name: "Deep long smoke from second mid",
@@ -37,6 +53,10 @@ export const infernoLineups: MapLineups = {
       ticks: "64",
       throwType: "normal",
       side: "t",
+      coordinates: {
+        x: 715,
+        y: 589,
+      },
     },
     {
       name: "Cross pit smoke from second mid",
@@ -44,6 +64,10 @@ export const infernoLineups: MapLineups = {
       ticks: "64",
       throwType: "normal",
       side: "t",
+      coordinates: {
+        x: 889,
+        y: 781,
+      },
     },
   ],
   fragGrenades: [],
@@ -54,6 +78,10 @@ export const infernoLineups: MapLineups = {
       ticks: "64",
       throwType: "jump",
       side: "t",
+      coordinates: {
+        x: 433,
+        y: 138,
+      },
     },
     {
       name: "Molo nuke box from car",
@@ -61,6 +89,10 @@ export const infernoLineups: MapLineups = {
       ticks: "64",
       throwType: "jump",
       side: "t",
+      coordinates: {
+        x: 432,
+        y: 260,
+      },
     },
     {
       name: "Molo short A from mid",
@@ -68,6 +100,10 @@ export const infernoLineups: MapLineups = {
       ticks: "64",
       throwType: "jump",
       side: "t",
+      coordinates: {
+        x: 712,
+        y: 790,
+      },
     },
   ],
   flashBangs: [
@@ -77,6 +113,10 @@ export const infernoLineups: MapLineups = {
       ticks: "64/128",
       throwType: "jump",
       side: "t",
+      coordinates: {
+        x: 608,
+        y: 238,
+      },
     },
     {
       name: "Pop flash out of boiler",
@@ -84,6 +124,10 @@ export const infernoLineups: MapLineups = {
       ticks: "64/128",
       throwType: "normal",
       side: "t",
+      coordinates: {
+        x: 692,
+        y: 724,
+      },
     },
     {
       name: "Pit(A) flash from apps",
@@ -92,6 +136,10 @@ export const infernoLineups: MapLineups = {
       ticks: "64/128",
       throwType: "normal",
       side: "t",
+      coordinates: {
+        x: 863,
+        y: 868,
+      },
     },
   ],
 };
