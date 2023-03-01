@@ -9,7 +9,7 @@ export type UtilityLineup = {
   ticks: Ticks;
   throwType: ThrowType;
   side: Side;
-  coordinates?: Coordinates;
+  coordinates: Coordinates;
 };
 
 export type Coordinates = {
