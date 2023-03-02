@@ -37,7 +37,12 @@ const closeModal = () => {
     @selectedUtility="setSelectedUtility"
   />
 
-  <div v-if="selectedUtility" class="modal">
+  <div
+    v-if="selectedUtility"
+    class="modal"
+    @keydown.esc="closeModal"
+    tabindex="0"
+  >
     <div class="modal-content">
       <span class="close" @click="closeModal">&times;</span>
       <Utility :utilityLineup="selectedUtility" />
