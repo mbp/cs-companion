@@ -1,5 +1,5 @@
 <script setup lang="ts">
-import { computed, ref } from "vue";
+import { computed, nextTick, ref, watch } from "vue";
 import { useRoute } from "vue-router";
 import { allUtilities } from "../data";
 import Utility from "./Utility.vue";
@@ -11,6 +11,7 @@ const mapName = route.params.mapName as string;
 const utilites = computed(() => {
   return allUtilities.find((x) => x.map == (mapName as string))!;
 });
+let modalElement = ref<HTMLElement>();
 
 const selectedUtility = ref<UtilityLineup | undefined>();
 const setSelectedUtility = (utility: UtilityLineup) => {
@@ -23,6 +24,13 @@ const openUtility = (utility: UtilityLineup) => {
 const closeModal = () => {
   selectedUtility.value = undefined;
 };
+watch(selectedUtility, async (newState) => {
+  if (newState) {
+    await nextTick();
+
+    modalElement.value?.focus();
+  }
+});
 </script>
 
 <template>
@@ -44,7 +52,9 @@ const closeModal = () => {
     tabindex="0"
   >
     <div class="modal-content">
-      <span class="close" @click="closeModal">&times;</span>
+      <button class="close" @click="closeModal" ref="modalElement">
+        &times;
+      </button>
       <Utility :utilityLineup="selectedUtility" />
     </div>
   </div>
