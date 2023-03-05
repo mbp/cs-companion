@@ -196,6 +196,13 @@ const drawCoordinates = (
     @mousemove="mouseMoveRadar"
     width="1024"
     height="1024"
-    :style="{ background: radarImage }"
+    :style="{ 'background-image': radarImage }"
   ></canvas>
 </template>
+
+<style>
+canvas {
+  width: 1024px;
+  height: 1024px;
+}
+</style>
