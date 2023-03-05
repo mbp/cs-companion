@@ -4,6 +4,7 @@ import { useRoute } from "vue-router";
 import { allUtilities } from "../data";
 import Utility from "./Utility.vue";
 import Radar from "./Radar.vue";
+import Toggle from "./Toggle.vue";
 import { UtilityLineup } from "./composables/types";
 
 const route = useRoute();
@@ -38,6 +39,8 @@ watch(selectedUtility, async (newState) => {
   <h2>
     {{ mapName }}
   </h2>
+
+  <Toggle />
 
   <Radar
     :utilites="utilites"
