@@ -10,16 +10,8 @@ const goMap = (mapName: string) => {
     params: { mapName: mapName },
   });
 };
-
-const copyCmd1 = async () => {
-  const text = document.getElementById("perfect1")?.innerText;
-  if (text) {
-    await navigator.clipboard.writeText(text);
-  }
-};
-
-const copyCmd2 = async () => {
-  const text = document.getElementById("perfect2")?.innerText;
+const copyCmd = async (id: string) => {
+  const text = document.getElementById(id)?.innerText;
   if (text) {
     await navigator.clipboard.writeText(text);
   }
@@ -41,25 +33,35 @@ const copyCmd2 = async () => {
     </button>
   </div>
 
-  <p class="footer">Perfect practice config</p>
+  <div class="command-tiles">
+    <div>
+      <p class="footer">Perfect practice config (#1)</p>
+      <pre id="perfect1">
+sv_cheats 1;bot_kick;mp_limitteams 0;mp_autoteambalance 0;mp_maxmoney 60000;mp_startmoney 60000;mp_buytime 9999;mp_buy_anywhere 1;mp_freezetime 0;mp_roundtime 60;mp_roundtime_defuse 60;mp_respawn_on_death_ct 1;mp_respawn_on_death_t 1;sv_infinite_ammo 1</pre
+      >
+      <button @click="copyCmd('perfect1')">Copy</button>
+    </div>
+    <div>
+      <p class="footer">Perfect practice config (#2)</p>
+      <pre id="perfect2">
+sv_grenade_trajectory 1;sv_grenade_trajectory_time 15;sv_showimpacts 1;sv_showimpacts_time 10;ammo_grenade_limit_total 5;mp_warmup_end;mp_restartgame 1</pre
+      >
+      <button @click="copyCmd('perfect2')">Copy</button>
+    </div>
+    <div>
+      <p class="footer">Rethrow last grenade</p>
+      <pre id="rethrow">sv_rethrow_last_grenade</pre>
+      <button @click="copyCmd('rethrow')">Copy</button>
+    </div>
 
-  <button @click="copyCmd1">Copy to clipboard (#1)</button>
-  <pre id="perfect1">
-sv_cheats 1;bot_kick;mp_limitteams 0;mp_autoteambalance 0;mp_maxmoney 60000;mp_startmoney 60000;mp_buytime 9999;mp_buy_anywhere 1;mp_freezetime 0;mp_roundtime 60;mp_roundtime_defuse 60;mp_respawn_on_death_ct 1;mp_respawn_on_death_t 1;sv_infinite_ammo 1
-  </pre>
-  <button @click="copyCmd2">Copy to clipboard (#2)</button>
-  <pre id="perfect2">
-sv_grenade_trajectory 1;sv_grenade_trajectory_time 15;sv_showimpacts 1;sv_showimpacts_time 10;ammo_grenade_limit_total 5;mp_warmup_end;mp_restartgame 1
-  </pre>
-  <p class="footer">Rethrow last grenade</p>
-  <pre>
-sv_rethrow_last_grenade
-  </pre>
-
-  <p class="footer">Fly command</p>
-  <pre>
+    <div>
+      <p class="footer">Fly command</p>
+      <pre id="fly">
     noclip
-  </pre>
+      </pre>
+      <button @click="copyCmd('fly')">Copy</button>
+    </div>
+  </div>
 </template>
 
 <style scoped>
@@ -80,6 +82,13 @@ sv_rethrow_last_grenade
   background-color: black;
   filter: drop-shadow(0 0 1em yellow);
 }
+
+.command-tiles {
+  display: grid;
+  grid-column-gap: 30px;
+  grid-row-gap: 30px;
+  grid-template-columns: repeat(auto-fit, minmax(200px, 1fr));
+}
 .logo {
   height: 10em;
   padding: 1.5em;
@@ -96,6 +105,7 @@ pre {
   margin: auto;
   height: auto;
   max-height: 200px;
+  padding: 5px;
   overflow: auto;
   max-width: 300px;
   word-break: normal !important;
