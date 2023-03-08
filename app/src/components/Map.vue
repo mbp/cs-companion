@@ -5,6 +5,7 @@ import { allUtilities } from "../data";
 import Utility from "./Utility.vue";
 import Radar from "./Radar.vue";
 import Toggle from "./Toggle.vue";
+import Navigation from "./Navigation.vue";
 import { UtilityLineup } from "./composables/types";
 
 const route = useRoute();
@@ -35,10 +36,7 @@ watch(selectedUtility, async (newState) => {
 </script>
 
 <template>
-  <router-link to="/">Home</router-link>
-  <h2>
-    {{ mapName }}
-  </h2>
+  <Navigation :current="mapName" />
 
   <Toggle />
 
