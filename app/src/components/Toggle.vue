@@ -1,9 +1,24 @@
 <template>
   <label class="switch">
-    <input type="checkbox" />
+    <input type="checkbox" @click="toggle" />
     <span class="slider round"></span>
   </label>
 </template>
+
+<script setup lang="ts">
+import { ref } from "vue";
+
+const toggled = ref(false);
+
+const emit = defineEmits<{
+  (e: "checked", value: boolean): void;
+}>();
+
+const toggle = () => {
+  toggled.value = !toggled.value;
+  emit("checked", toggled.value);
+};
+</script>
 
 <style scoped>
 .switch {

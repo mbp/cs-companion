@@ -33,18 +33,24 @@ watch(selectedUtility, async (newState) => {
     modalElement.value?.focus();
   }
 });
+const showList = ref(false);
+const onToggleChecked = () => {
+  showList.value = !showList.value;
+};
 </script>
 
 <template>
   <Navigation :current="mapName" />
 
-  <Toggle />
+  <Toggle @checked="onToggleChecked" />
 
-  <Radar
-    :utilites="utilites"
-    :mapName="mapName"
-    @selectedUtility="setSelectedUtility"
-  />
+  <div v-if="!showList">
+    <Radar
+      :utilites="utilites"
+      :mapName="mapName"
+      @selectedUtility="setSelectedUtility"
+    />
+  </div>
 
   <div
     v-if="selectedUtility"
@@ -60,21 +66,23 @@ watch(selectedUtility, async (newState) => {
     </div>
   </div>
 
-  <h2>Smoke Grenade</h2>
-  <div v-for="smoke in utilites.smokes">
-    <button @click="openUtility(smoke)">{{ smoke.name }}</button>
-  </div>
-  <h2>Molotov / Incendiary Grenade</h2>
-  <div v-for="molo in utilites.molotovs">
-    <button @click="openUtility(molo)">{{ molo.name }}</button>
-  </div>
-  <h2>Flashbang</h2>
-  <div v-for="flash in utilites.flashBangs">
-    <button @click="openUtility(flash)">{{ flash.name }}</button>
-  </div>
-  <h2>Frag Grenade</h2>
-  <div v-for="nade in utilites.fragGrenades">
-    <button @click="openUtility(nade)">{{ nade.name }}</button>
+  <div v-if="showList">
+    <h2>Smoke Grenade</h2>
+    <div v-for="smoke in utilites.smokes">
+      <button @click="openUtility(smoke)">{{ smoke.name }}</button>
+    </div>
+    <h2>Molotov / Incendiary Grenade</h2>
+    <div v-for="molo in utilites.molotovs">
+      <button @click="openUtility(molo)">{{ molo.name }}</button>
+    </div>
+    <h2>Flashbang</h2>
+    <div v-for="flash in utilites.flashBangs">
+      <button @click="openUtility(flash)">{{ flash.name }}</button>
+    </div>
+    <h2>Frag Grenade</h2>
+    <div v-for="nade in utilites.fragGrenades">
+      <button @click="openUtility(nade)">{{ nade.name }}</button>
+    </div>
   </div>
 </template>
 
