@@ -58,7 +58,10 @@ const onToggleChecked = () => {
 </script>
 
 <template>
-  <Navigation :current="mapName" />
+  <Navigation
+    :current="mapName"
+    :parents="[{ routeName: 'Home', title: 'Home' }]"
+  />
 
   <Toggle @checked="onToggleChecked" />
 

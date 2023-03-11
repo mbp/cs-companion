@@ -1,8 +1,10 @@
 <template>
   <nav class="crumbs">
     <ol>
-      <li class="crumb">
-        <router-link to="/">Home</router-link>
+      <li class="crumb" v-for="parent in parents">
+        <router-link :to="{ name: parent.routeName, params: parent.params }">
+          {{ parent.title }}
+        </router-link>
       </li>
       <li class="crumb">{{ current }}</li>
     </ol>
@@ -10,8 +12,20 @@
 </template>
 
 <script setup lang="ts">
+import { PropType } from "vue";
+import { RouteParamsRaw } from "vue-router";
+
+interface RouteParent {
+  routeName: string;
+  title: string;
+  params?: RouteParamsRaw;
+}
+
 defineProps({
   current: String,
+  parents: {
+    type: Object as PropType<Array<RouteParent>>,
+  },
 });
 </script>
 

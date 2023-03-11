@@ -7,7 +7,7 @@ import Image from "./Image.vue";
 
 const route = useRoute();
 
-const id = route.params.id;
+const id = route.params.id as string;
 const mapName = route.params.mapName as string;
 
 const utility = computed(() => {
@@ -32,9 +32,14 @@ defineExpose({
 </script>
 
 <template>
-  <Navigation :current="mapName" />
+  <Navigation
+    :current="utility.name"
+    :parents="[
+      { routeName: 'Home', title: 'Home' },
+      { routeName: 'Map', title: mapName, params: { mapName: mapName } },
+    ]"
+  />
   <h3>
-    {{ utility.name }}
     <img :src="getSideImage" class="side-icon-header" />
   </h3>
   <div>

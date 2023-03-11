@@ -7,7 +7,7 @@ import Utility from "./components/Utility.vue";
 import { createRouter, createWebHashHistory } from "vue-router";
 
 const routes = [
-  { path: "/", component: Maps },
+  { path: "/", name: "Home", component: Maps },
   { path: "/map/:mapName", component: Map, name: "Map" },
   { path: "/map/:mapName/utility/:id", component: Utility, name: "Utility" },
 ];
