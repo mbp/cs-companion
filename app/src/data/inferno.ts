@@ -64,6 +64,18 @@ export const infernoLineups: MapLineups = {
       },
     },
     {
+      name: "Long smoke from second mid",
+      id: "long-from-second-mid",
+      nadeType: "smoke",
+      ticks: "64",
+      throwType: "jump",
+      side: "t",
+      coordinates: {
+        x: 714,
+        y: 659,
+      },
+    },
+    {
       name: "Cross pit smoke from second mid",
       id: "cross-pit-from-second-mid",
       nadeType: "smoke",
