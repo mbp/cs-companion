@@ -1,18 +1,29 @@
 <script setup lang="ts">
 import { computed } from "vue";
-import { UtilityLineup } from "./composables/types";
+import { useRoute } from "vue-router";
+import { allUtilities } from "../data";
+import Navigation from "./Navigation.vue";
 import Image from "./Image.vue";
 
-const props = defineProps<{ utilityLineup: UtilityLineup; mapName: String }>();
+const route = useRoute();
+
+const id = route.params.id;
+const mapName = route.params.mapName as string;
+
+const utility = computed(() => {
+  return allUtilities
+    .find((x) => x.map == mapName)
+    ?.lineUps.find((x) => x.id == id)!;
+});
 
 const getImage = (part: string) => {
-  return `${props.mapName.toLocaleLowerCase()}/${props.utilityLineup.side}/${
-    props.utilityLineup.nadeType
-  }/${props.utilityLineup.id}/${part}.png`;
+  return `${mapName.toLocaleLowerCase()}/${utility.value.side}/${
+    utility.value.nadeType
+  }/${utility.value.id}/${part}.png`;
 };
 
 const getSideImage = computed(() => {
-  return props.utilityLineup.side === "ct" ? "ct-icon.webp" : "t-icon.webp";
+  return utility.value.side === "ct" ? "ct-icon.webp" : "t-icon.webp";
 });
 
 defineExpose({
@@ -21,20 +32,21 @@ defineExpose({
 </script>
 
 <template>
+  <Navigation :current="mapName" />
   <h3>
-    {{ utilityLineup.name }}
+    {{ utility.name }}
     <img :src="getSideImage" class="side-icon-header" />
   </h3>
   <div>
     <div class="info-area">
       <div class="info info-type">
         Throw type:
-        {{ utilityLineup.throwType }}
+        {{ utility.throwType }}
         Ticks type:
-        {{ utilityLineup.ticks }}
+        {{ utility.ticks }}
       </div>
-      <div class="info info-description" v-if="utilityLineup.description">
-        {{ utilityLineup.description }}
+      <div class="info info-description" v-if="utility.description">
+        {{ utility.description }}
       </div>
       <div>
         <Image :src="getImage('result')" :caption="'Result'" />

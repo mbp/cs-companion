@@ -1,14 +1,14 @@
 <script setup lang="ts">
-import { computed, nextTick, ref, watch } from "vue";
-import { useRoute } from "vue-router";
+import { computed, ref } from "vue";
+import { useRoute, useRouter } from "vue-router";
 import { allUtilities } from "../data";
-import Utility from "./Utility.vue";
 import Radar from "./Radar.vue";
 import Toggle from "./Toggle.vue";
 import Navigation from "./Navigation.vue";
 import { UtilityLineup } from "./composables/types";
 
 const route = useRoute();
+const router = useRouter();
 const mapName = route.params.mapName as string;
 const utilites = computed(() => {
   return allUtilities.find((x) => x.map == (mapName as string))!;
@@ -37,26 +37,20 @@ const flashBangs = computed(() => {
     (x) => x.nadeType == "flashbang" && x.coordinates
   );
 });
-let modalElement = ref<HTMLElement>();
 
-const selectedUtility = ref<UtilityLineup | undefined>();
 const setSelectedUtility = (utility: UtilityLineup) => {
-  selectedUtility.value = utility;
+  openUtility(utility);
 };
 
 const openUtility = (utility: UtilityLineup) => {
-  selectedUtility.value = utility;
+  router.push({
+    name: "Utility",
+    params: {
+      mapName: mapName,
+      id: utility.id,
+    },
+  });
 };
-const closeModal = () => {
-  selectedUtility.value = undefined;
-};
-watch(selectedUtility, async (newState) => {
-  if (newState) {
-    await nextTick();
-
-    modalElement.value?.focus();
-  }
-});
 const showList = ref(false);
 const onToggleChecked = () => {
   showList.value = !showList.value;
@@ -74,20 +68,6 @@ const onToggleChecked = () => {
       :mapName="mapName"
       @selectedUtility="setSelectedUtility"
     />
-  </div>
-
-  <div
-    v-if="selectedUtility"
-    class="modal"
-    @keydown.esc="closeModal"
-    tabindex="0"
-  >
-    <div class="modal-content">
-      <button class="close" @click="closeModal" ref="modalElement">
-        &times;
-      </button>
-      <Utility :utilityLineup="selectedUtility" :mapName="mapName" />
-    </div>
   </div>
 
   <div v-if="showList">
@@ -109,38 +89,3 @@ const onToggleChecked = () => {
     </div>
   </div>
 </template>
-
-<style>
-.modal {
-  position: fixed;
-  z-index: 1;
-  left: 0;
-  top: 0;
-  width: 100%;
-  height: 100%;
-  overflow: auto;
-  background-color: rgba(0, 0, 0, 0.4);
-}
-
-.modal-content {
-  background-color: #242424;
-  margin: 1% auto;
-  padding: 20px;
-  border: 1px solid #888;
-  width: 80%;
-}
-
-.close {
-  color: #aaa;
-  float: right;
-  font-size: 28px;
-  font-weight: bold;
-}
-
-.close:hover,
-.close:focus {
-  color: black;
-  text-decoration: none;
-  cursor: pointer;
-}
-</style>
