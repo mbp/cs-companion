@@ -78,6 +78,18 @@ export const nukeLineups: MapLineups = {
       },
     },
     {
+      name: "Molo silo from credit card",
+      nadeType: "molo",
+      id: "silo-from-credit-card",
+      ticks: "64/128",
+      throwType: "jump",
+      side: "ct",
+      coordinates: {
+        x: 528,
+        y: 638,
+      },
+    },
+    {
       name: "Flash a site heaven from t roof",
       id: "a-site-heaven-from-t-roof",
       nadeType: "flashbang",
