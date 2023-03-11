@@ -1,8 +1,12 @@
 <script setup lang="ts">
 import { ref } from "vue";
 
-defineProps<{ src: string; caption: string }>();
-const zoom = ref(false);
+const props = defineProps<{
+  src: string;
+  caption: string;
+  initialZoom: boolean;
+}>();
+const zoom = ref(props.initialZoom);
 const doZoom = () => {
   zoom.value = !zoom.value;
 };

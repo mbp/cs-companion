@@ -39,14 +39,22 @@ defineExpose({
   <div>
     <UtilityInfo :utility="utility" />
     <div>
-      <Image :src="getImage('result')" :caption="'Result'" />
+      <Image
+        :src="getImage('result')"
+        :caption="'Result'"
+        :initial-zoom="false"
+      />
     </div>
     <div class="aim-pos-images">
       <div>
-        <Image :src="getImage('aim')" :caption="'Aim'" />
+        <Image :src="getImage('aim')" :caption="'Aim'" :initial-zoom="true" />
       </div>
       <div>
-        <Image :src="getImage('pos')" :caption="'Position'" />
+        <Image
+          :src="getImage('pos')"
+          :caption="'Position'"
+          :initial-zoom="true"
+        />
       </div>
     </div>
   </div>
