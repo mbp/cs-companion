@@ -1,7 +1,7 @@
 <template>
   <div class="parent info-type">
-    <div class="div1 info-cell header-cell">Throw type</div>
-    <div class="div2 info-cell">
+    <div class="div1 header-cell">Throw type</div>
+    <div class="div2">
       {{ utility.throwType }}
     </div>
     <div class="div3 info-cell header-cell">Ticks</div>
@@ -33,6 +33,7 @@ const getSideImage = computed(() => {
 </script>
 <style scoped>
 .parent {
+  border-radius: 15px;
   display: grid;
   grid-template-columns: repeat(3, 1fr);
   grid-template-rows: repeat(2, 1fr);

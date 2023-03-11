@@ -33,6 +33,7 @@ defineProps({
 .crumbs ol {
   list-style-type: none;
   padding-left: 0;
+  margin-top: 0;
 }
 
 .crumb {
