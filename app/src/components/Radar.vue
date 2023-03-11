@@ -212,5 +212,6 @@ const drawCoordinates = (
 canvas {
   width: 1024px;
   height: 1024px;
+  background-repeat: no-repeat;
 }
 </style>
