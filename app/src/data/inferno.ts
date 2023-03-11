@@ -172,5 +172,17 @@ export const infernoLineups: MapLineups = {
         y: 868,
       },
     },
+    {
+      name: "Second mid from long",
+      id: "second-mid-from-long",
+      nadeType: "flashbang",
+      ticks: "64/128",
+      throwType: "jump",
+      side: "ct",
+      coordinates: {
+        x: 594,
+        y: 810,
+      },
+    },
   ],
 };
