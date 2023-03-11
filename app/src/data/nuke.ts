@@ -125,5 +125,17 @@ export const nukeLineups: MapLineups = {
         y: 352,
       },
     },
+    {
+      name: "Flash b ramp (top) from trophy",
+      id: "b-ramp-top-from-trophy",
+      nadeType: "flashbang",
+      ticks: "64",
+      throwType: "run",
+      side: "t",
+      coordinates: {
+        x: 551,
+        y: 405,
+      },
+    },
   ],
 };
