@@ -59,11 +59,11 @@ const toggle = () => {
 }
 
 input:checked + .slider {
-  background-color: #646cff;;
+  background-color: #646cff;
 }
 
 input:focus + .slider {
-  box-shadow: 0 0 1px #646cff;;
+  box-shadow: 0 0 1px #646cff;
 }
 
 input:checked + .slider:before {
