@@ -69,6 +69,17 @@ export const infernoLineups: MapLineups = {
         y: 781,
       },
     },
+    {
+      name: "Moto smoke from top mid",
+      folder: "inferno/t/smokes/moto-from-top-mid",
+      ticks: "64",
+      throwType: "normal",
+      side: "t",
+      coordinates: {
+        x: 894,
+        y: 610,
+      },
+    },
   ],
   fragGrenades: [],
   molotovs: [
@@ -103,6 +114,17 @@ export const infernoLineups: MapLineups = {
       coordinates: {
         x: 712,
         y: 790,
+      },
+    },
+    {
+      name: "Lower mid from long",
+      folder: "inferno/ct/molos/lower-mid-from-long",
+      ticks: "64",
+      throwType: "jump",
+      side: "ct",
+      coordinates: {
+        x: 448,
+        y: 638,
       },
     },
   ],
