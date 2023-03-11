@@ -2,10 +2,11 @@ import { MapLineups } from "../components/composables/types";
 
 export const anubisLineups: MapLineups = {
   map: "Anubis",
-  smokes: [
+  lineUps: [
     {
       name: "A Connector from water",
-      folder: "anubis/t/smokes/a-connector-from-water",
+      id: "a-connector-from-water",
+      nadeType: "smoke",
       ticks: "64",
       throwType: "normal",
       side: "t",
@@ -16,7 +17,8 @@ export const anubisLineups: MapLineups = {
     },
     {
       name: "B Connector outside smoke from street",
-      folder: "anubis/t/smokes/b-connector-outside-from-street",
+      id: "b-connector-outside-from-street",
+      nadeType: "smoke",
       ticks: "64",
       throwType: "jump",
       side: "t",
@@ -27,7 +29,8 @@ export const anubisLineups: MapLineups = {
     },
     {
       name: "Mid house smoke from T spawn",
-      folder: "anubis/t/smokes/mid-house-smoke-from-t-spawn",
+      id: "mid-house-smoke-from-t-spawn",
+      nadeType: "smoke",
       ticks: "64",
       throwType: "jump",
       side: "t",
@@ -38,7 +41,8 @@ export const anubisLineups: MapLineups = {
     },
     {
       name: "Palace smoke from B outside",
-      folder: "anubis/t/smokes/palace-from-b-outside",
+      id: "palace-from-b-outside",
+      nadeType: "smoke",
       ticks: "64",
       throwType: "normal",
       side: "t",
@@ -49,7 +53,8 @@ export const anubisLineups: MapLineups = {
     },
     {
       name: "Connector inside smoke from B outside",
-      folder: "anubis/t/smokes/connector-inside-from-b-outside",
+      id: "connector-inside-from-b-outside",
+      nadeType: "smoke",
       ticks: "64",
       throwType: "jump",
       side: "t",
@@ -60,7 +65,8 @@ export const anubisLineups: MapLineups = {
     },
     {
       name: "CT long smoke from B outside",
-      folder: "anubis/t/smokes/ct-long-from-b-outside",
+      id: "ct-long-from-b-outside",
+      nadeType: "smoke",
       ticks: "64",
       throwType: "normal",
       side: "t",
@@ -70,7 +76,4 @@ export const anubisLineups: MapLineups = {
       },
     },
   ],
-  fragGrenades: [],
-  molotovs: [],
-  flashBangs: [],
 };

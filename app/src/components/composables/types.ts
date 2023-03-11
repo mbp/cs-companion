@@ -1,11 +1,13 @@
 export type Ticks = "64" | "128" | "64/128";
 export type ThrowType = "normal" | "jump" | "runjump" | "run";
 export type Side = "t" | "ct";
+export type NadeType = "smoke" | "frag" | "molo" | "flashbang";
 
 export type UtilityLineup = {
   name: string;
   description?: string;
-  folder: string;
+  id: string;
+  nadeType: NadeType;
   ticks: Ticks;
   throwType: ThrowType;
   side: Side;
@@ -19,8 +21,5 @@ export type Coordinates = {
 
 export type MapLineups = {
   map: string;
-  smokes: UtilityLineup[];
-  fragGrenades: UtilityLineup[];
-  molotovs: UtilityLineup[];
-  flashBangs: UtilityLineup[];
+  lineUps: UtilityLineup[];
 };

@@ -2,10 +2,11 @@ import { MapLineups } from "../components/composables/types";
 
 export const vertigoLineups: MapLineups = {
   map: "Vertigo",
-  smokes: [
+  lineUps: [
     {
       name: "Smoke ramp from a default plant",
-      folder: "vertigo/ct/smokes/ramp-from-a-default-plant",
+      id: "ramp-from-a-default-plant",
+      nadeType: "smoke",
       ticks: "64",
       throwType: "normal",
       side: "ct",
@@ -16,7 +17,8 @@ export const vertigoLineups: MapLineups = {
     },
     {
       name: "Smoke top ramp (one way) from backsite",
-      folder: "vertigo/ct/smokes/top-ramp-one-way-from-backsite",
+      id: "top-ramp-one-way-from-backsite",
+      nadeType: "smoke",
       ticks: "64",
       throwType: "normal",
       side: "ct",
@@ -27,7 +29,8 @@ export const vertigoLineups: MapLineups = {
     },
     {
       name: "Smoke guardian from mid",
-      folder: "vertigo/t/smokes/guardian-from-mid",
+      id: "guardian-from-mid",
+      nadeType: "smoke",
       ticks: "64",
       throwType: "normal",
       side: "t",
@@ -38,7 +41,8 @@ export const vertigoLineups: MapLineups = {
     },
     {
       name: "Smoke a site from ramp",
-      folder: "vertigo/t/smokes/a-site-from-ramp",
+      id: "a-site-from-ramp",
+      nadeType: "smoke",
       ticks: "64",
       throwType: "jump",
       side: "t",
@@ -49,7 +53,8 @@ export const vertigoLineups: MapLineups = {
     },
     {
       name: "Smoke b site from t",
-      folder: "vertigo/t/smokes/b-site-from-t",
+      id: "b-site-from-t",
+      nadeType: "smoke",
       ticks: "64",
       throwType: "normal",
       side: "t",
@@ -60,7 +65,8 @@ export const vertigoLineups: MapLineups = {
     },
     {
       name: "Smoke a short from t spawn",
-      folder: "vertigo/t/smokes/a-short-from-t-spawn",
+      id: "a-short-from-t-spawn",
+      nadeType: "smoke",
       ticks: "64",
       throwType: "jump",
       side: "t",
@@ -69,13 +75,10 @@ export const vertigoLineups: MapLineups = {
         y: 517,
       },
     },
-  ],
-  fragGrenades: [],
-  molotovs: [],
-  flashBangs: [
     {
       name: "Flash b site from t",
-      folder: "vertigo/t/flash/b-site-from-t",
+      id: "b-site-from-t",
+      nadeType: "flashbang",
       ticks: "64",
       throwType: "normal",
       side: "t",

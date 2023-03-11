@@ -16,19 +16,27 @@ const emit = defineEmits<{
 const pointSize = 8;
 
 const smokes = computed(() => {
-  return props.utilites.smokes.filter((x) => x.coordinates);
+  return props.utilites.lineUps.filter(
+    (x) => x.nadeType == "smoke" && x.coordinates
+  );
 });
 
 const nades = computed(() => {
-  return props.utilites.fragGrenades.filter((x) => x.coordinates);
+  return props.utilites.lineUps.filter(
+    (x) => x.nadeType == "frag" && x.coordinates
+  );
 });
 
 const molos = computed(() => {
-  return props.utilites.molotovs.filter((x) => x.coordinates);
+  return props.utilites.lineUps.filter(
+    (x) => x.nadeType == "molo" && x.coordinates
+  );
 });
 
 const flashBangs = computed(() => {
-  return props.utilites.flashBangs.filter((x) => x.coordinates);
+  return props.utilites.lineUps.filter(
+    (x) => x.nadeType == "flashbang" && x.coordinates
+  );
 });
 
 onMounted(() => {

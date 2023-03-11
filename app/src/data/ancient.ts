@@ -2,10 +2,11 @@ import { MapLineups } from "../components/composables/types";
 
 export const ancientLineups: MapLineups = {
   map: "Ancient",
-  smokes: [
+  lineUps: [
     {
       name: "Long B smoke from ruins",
-      folder: "ancient/t/smokes/long-b-from-ruins",
+      id: "long-b-from-ruins",
+      nadeType: "smoke",
       ticks: "64/128",
       throwType: "jump",
       side: "t",
@@ -16,7 +17,8 @@ export const ancientLineups: MapLineups = {
     },
     {
       name: "Short B smoke from ruins",
-      folder: "ancient/t/smokes/short-b-from-ruins",
+      id: "short-b-from-ruins",
+      nadeType: "smoke",
       ticks: "64/128",
       throwType: "jump",
       side: "t",
@@ -27,7 +29,8 @@ export const ancientLineups: MapLineups = {
     },
     {
       name: "Cave smoke from ruins",
-      folder: "ancient/t/smokes/cave-from-ruins",
+      id: "cave-from-ruins",
+      nadeType: "smoke",
       ticks: "64/128",
       throwType: "jump",
       side: "t",
@@ -38,7 +41,8 @@ export const ancientLineups: MapLineups = {
     },
     {
       name: "Ancient mid smoke from t spawn",
-      folder: "ancient/t/smokes/mid-from-t-spawn",
+      id: "mid-from-t-spawn",
+      nadeType: "smoke",
       ticks: "64/128",
       throwType: "jump",
       side: "t",
@@ -49,7 +53,8 @@ export const ancientLineups: MapLineups = {
     },
     {
       name: "Inside donut smoke from stairs",
-      folder: "ancient/t/smokes/inside-donut-from-stairs",
+      id: "inside-donut-from-stairs",
+      nadeType: "smoke",
       ticks: "64/128",
       throwType: "jump",
       side: "t",
@@ -60,7 +65,8 @@ export const ancientLineups: MapLineups = {
     },
     {
       name: "CT smoke from stairs",
-      folder: "ancient/t/smokes/ct-from-stairs",
+      id: "ct-from-stairs",
+      nadeType: "smoke",
       ticks: "64",
       throwType: "jump",
       side: "t",
@@ -69,12 +75,10 @@ export const ancientLineups: MapLineups = {
         y: 221,
       },
     },
-  ],
-  fragGrenades: [],
-  molotovs: [
     {
       name: "Ancient wood molo from ruins",
-      folder: "ancient/t/molo/wood-from-ramp",
+      id: "wood-from-ramp",
+      nadeType: "molo",
       ticks: "64",
       throwType: "normal",
       side: "t",
@@ -84,5 +88,4 @@ export const ancientLineups: MapLineups = {
       },
     },
   ],
-  flashBangs: [],
 };

@@ -2,10 +2,11 @@ import { MapLineups } from "../components/composables/types";
 
 export const overpassLineups: MapLineups = {
   map: "Overpass",
-  smokes: [
+  lineUps: [
     {
       name: "Heaven smoke from short",
-      folder: "overpass/t/smokes/heaven-from-short",
+      id: "heaven-from-short",
+      nadeType: "smoke",
       ticks: "64",
       throwType: "normal",
       side: "t",
@@ -16,7 +17,8 @@ export const overpassLineups: MapLineups = {
     },
     {
       name: "Bridge smoke from monster",
-      folder: "overpass/t/smokes/bridge-from-monster",
+      id: "bridge-from-monster",
+      nadeType: "smoke",
       ticks: "64",
       throwType: "normal",
       side: "t",
@@ -27,7 +29,8 @@ export const overpassLineups: MapLineups = {
     },
     {
       name: "Mid toilet smoke from t spawn",
-      folder: "overpass/t/smokes/mid-toilet-from-t-spawn",
+      id: "mid-toilet-from-t-spawn",
+      nadeType: "smoke",
       ticks: "64",
       throwType: "jump",
       side: "t",
@@ -38,7 +41,8 @@ export const overpassLineups: MapLineups = {
     },
     {
       name: "Dumpster from divider",
-      folder: "overpass/t/smokes/dumpster-from-divider",
+      id: "dumpster-from-divider",
+      nadeType: "smoke",
       ticks: "64",
       throwType: "normal",
       side: "t",
@@ -47,12 +51,10 @@ export const overpassLineups: MapLineups = {
         y: 160,
       },
     },
-  ],
-  fragGrenades: [],
-  molotovs: [
     {
       name: "Barrels molo from short",
-      folder: "overpass/t/molos/barrels-from-short",
+      id: "barrels-from-short",
+      nadeType: "molo",
       ticks: "64",
       throwType: "runjump",
       side: "t",
@@ -63,7 +65,8 @@ export const overpassLineups: MapLineups = {
     },
     {
       name: "Short tunnel molo from abc",
-      folder: "overpass/ct/molos/short-from-abc",
+      id: "short-from-abc",
+      nadeType: "molo",
       ticks: "64/128",
       throwType: "normal",
       side: "ct",
@@ -72,11 +75,10 @@ export const overpassLineups: MapLineups = {
         y: 524,
       },
     },
-  ],
-  flashBangs: [
     {
       name: "Overpass barrels flash from short tunnel",
-      folder: "overpass/t/flash/b-site-from-short-tunnel",
+      id: "b-site-from-short-tunnel",
+      nadeType: "flashbang",
       ticks: "64",
       throwType: "runjump",
       side: "t",

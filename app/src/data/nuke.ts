@@ -2,10 +2,11 @@ import { MapLineups } from "../components/composables/types";
 
 export const nukeLineups: MapLineups = {
   map: "Nuke",
-  smokes: [
+  lineUps: [
     {
       name: "Yard smoke from ct",
-      folder: "nuke/ct/smokes/yard-from-ct",
+      id: "yard-from-ct",
+      nadeType: "smoke",
       ticks: "64",
       throwType: "jump",
       side: "ct",
@@ -16,7 +17,8 @@ export const nukeLineups: MapLineups = {
     },
     {
       name: "Short red smoke yard (2nd smoke)",
-      folder: "nuke/t/smokes/yard-red-2nd",
+      id: "yard-red-2nd",
+      nadeType: "smoke",
       ticks: "64",
       throwType: "jump",
       side: "t",
@@ -27,7 +29,8 @@ export const nukeLineups: MapLineups = {
     },
     {
       name: "Long red smoke yard (3rd smoke)",
-      folder: "nuke/t/smokes/yard-red-3rd",
+      id: "yard-red-3rd",
+      nadeType: "smoke",
       ticks: "64/128",
       throwType: "jump",
       side: "t",
@@ -38,7 +41,8 @@ export const nukeLineups: MapLineups = {
     },
     {
       name: "Left garage smoke (no peek silo)",
-      folder: "nuke/t/smokes/left-garage-no-peek-silo",
+      id: "left-garage-no-peek-silo",
+      nadeType: "smoke",
       ticks: "64/128",
       throwType: "normal",
       side: "t",
@@ -49,7 +53,8 @@ export const nukeLineups: MapLineups = {
     },
     {
       name: "Ramp smoke from trophy",
-      folder: "nuke/t/smokes/ramp-from-trophy",
+      id: "ramp-from-trophy",
+      nadeType: "smoke",
       ticks: "64",
       throwType: "run",
       side: "t",
@@ -58,13 +63,11 @@ export const nukeLineups: MapLineups = {
         y: 384,
       },
     },
-  ],
-  fragGrenades: [],
-  molotovs: [
     {
       name: "Molo top of hut from roof",
       description: "Throw when reaching ladder on right",
-      folder: "nuke/t/molo/top-hut-from-roof",
+      nadeType: "molo",
+      id: "top-hut-from-roof",
       ticks: "64/128",
       throwType: "runjump",
       side: "t",
@@ -73,11 +76,10 @@ export const nukeLineups: MapLineups = {
         y: 566,
       },
     },
-  ],
-  flashBangs: [
     {
       name: "Flash a site heaven from t roof",
-      folder: "nuke/t/flash/a-site-heaven-from-t-roof",
+      id: "a-site-heaven-from-t-roof",
+      nadeType: "flashbang",
       ticks: "64",
       throwType: "normal",
       side: "t",
@@ -88,7 +90,8 @@ export const nukeLineups: MapLineups = {
     },
     {
       name: "Flash a through hut from lobby",
-      folder: "nuke/t/flash/a-site-via-hut-from-lobby",
+      id: "a-site-via-hut-from-lobby",
+      nadeType: "flashbang",
       ticks: "64",
       throwType: "run",
       side: "t",
@@ -99,7 +102,8 @@ export const nukeLineups: MapLineups = {
     },
     {
       name: "Flash b ramp from trophy",
-      folder: "nuke/t/flash/b-ramp-from-trophy",
+      id: "b-ramp-from-trophy",
+      nadeType: "flashbang",
       ticks: "64",
       throwType: "run",
       side: "t",

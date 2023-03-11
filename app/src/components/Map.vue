@@ -13,6 +13,30 @@ const mapName = route.params.mapName as string;
 const utilites = computed(() => {
   return allUtilities.find((x) => x.map == (mapName as string))!;
 });
+
+const smokes = computed(() => {
+  return utilites.value.lineUps.filter(
+    (x) => x.nadeType == "smoke" && x.coordinates
+  );
+});
+
+const fragGrenades = computed(() => {
+  return utilites.value.lineUps.filter(
+    (x) => x.nadeType == "frag" && x.coordinates
+  );
+});
+
+const molos = computed(() => {
+  return utilites.value.lineUps.filter(
+    (x) => x.nadeType == "molo" && x.coordinates
+  );
+});
+
+const flashBangs = computed(() => {
+  return utilites.value.lineUps.filter(
+    (x) => x.nadeType == "flashbang" && x.coordinates
+  );
+});
 let modalElement = ref<HTMLElement>();
 
 const selectedUtility = ref<UtilityLineup | undefined>();
@@ -62,26 +86,26 @@ const onToggleChecked = () => {
       <button class="close" @click="closeModal" ref="modalElement">
         &times;
       </button>
-      <Utility :utilityLineup="selectedUtility" />
+      <Utility :utilityLineup="selectedUtility" :mapName="mapName" />
     </div>
   </div>
 
   <div v-if="showList">
     <h2>Smoke Grenade</h2>
-    <div v-for="smoke in utilites.smokes">
+    <div v-for="smoke in smokes">
       <button @click="openUtility(smoke)">{{ smoke.name }}</button>
     </div>
     <h2>Molotov / Incendiary Grenade</h2>
-    <div v-for="molo in utilites.molotovs">
+    <div v-for="molo in molos">
       <button @click="openUtility(molo)">{{ molo.name }}</button>
     </div>
     <h2>Flashbang</h2>
-    <div v-for="flash in utilites.flashBangs">
+    <div v-for="flash in flashBangs">
       <button @click="openUtility(flash)">{{ flash.name }}</button>
     </div>
     <h2>Frag Grenade</h2>
-    <div v-for="nade in utilites.fragGrenades">
-      <button @click="openUtility(nade)">{{ nade.name }}</button>
+    <div v-for="fragGrenade in fragGrenades">
+      <button @click="openUtility(fragGrenade)">{{ fragGrenade.name }}</button>
     </div>
   </div>
 </template>

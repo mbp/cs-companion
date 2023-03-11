@@ -2,10 +2,11 @@ import { MapLineups } from "../components/composables/types";
 
 export const infernoLineups: MapLineups = {
   map: "Inferno",
-  smokes: [
+  lineUps: [
     {
       name: "CT smoke from banana",
-      folder: "inferno/t/smokes/ct-from-banana",
+      id: "ct-from-banana",
+      nadeType: "smoke",
       ticks: "64",
       throwType: "normal",
       side: "t",
@@ -16,7 +17,8 @@ export const infernoLineups: MapLineups = {
     },
     {
       name: "Coffin smoke from banana",
-      folder: "inferno/t/smokes/coffin-from-banana",
+      id: "coffin-from-banana",
+      nadeType: "smoke",
       ticks: "64",
       throwType: "normal",
       side: "t",
@@ -27,7 +29,8 @@ export const infernoLineups: MapLineups = {
     },
     {
       name: "Short smoke from second mid",
-      folder: "inferno/t/smokes/short-from-second-mid",
+      id: "short-from-second-mid",
+      nadeType: "smoke",
       ticks: "64",
       throwType: "normal",
       side: "t",
@@ -38,7 +41,8 @@ export const infernoLineups: MapLineups = {
     },
     {
       name: "Short smoke from t-ramp",
-      folder: "inferno/t/smokes/short-from-t-ramp",
+      id: "short-from-t-ramp",
+      nadeType: "smoke",
       ticks: "64",
       throwType: "jump",
       side: "t",
@@ -49,7 +53,8 @@ export const infernoLineups: MapLineups = {
     },
     {
       name: "Deep long smoke from second mid",
-      folder: "inferno/t/smokes/deep-long-from-second-mid",
+      id: "deep-long-from-second-mid",
+      nadeType: "smoke",
       ticks: "64",
       throwType: "normal",
       side: "t",
@@ -60,7 +65,8 @@ export const infernoLineups: MapLineups = {
     },
     {
       name: "Cross pit smoke from second mid",
-      folder: "inferno/t/smokes/cross-pit-from-second-mid",
+      id: "cross-pit-from-second-mid",
+      nadeType: "smoke",
       ticks: "64",
       throwType: "normal",
       side: "t",
@@ -71,7 +77,8 @@ export const infernoLineups: MapLineups = {
     },
     {
       name: "Moto smoke from top mid",
-      folder: "inferno/t/smokes/moto-from-top-mid",
+      id: "moto-from-top-mid",
+      nadeType: "smoke",
       ticks: "64",
       throwType: "normal",
       side: "t",
@@ -80,12 +87,10 @@ export const infernoLineups: MapLineups = {
         y: 610,
       },
     },
-  ],
-  fragGrenades: [],
-  molotovs: [
     {
       name: "Molo B dark from car",
-      folder: "inferno/t/molos/b-dark-from-car",
+      id: "b-dark-from-car",
+      nadeType: "molo",
       ticks: "64",
       throwType: "jump",
       side: "t",
@@ -96,7 +101,8 @@ export const infernoLineups: MapLineups = {
     },
     {
       name: "Molo nuke box from car",
-      folder: "inferno/t/molos/b-nuke-box-from-car",
+      id: "b-nuke-box-from-car",
+      nadeType: "molo",
       ticks: "64",
       throwType: "jump",
       side: "t",
@@ -107,7 +113,8 @@ export const infernoLineups: MapLineups = {
     },
     {
       name: "Molo short A from mid",
-      folder: "inferno/t/molos/short-a-from-mid",
+      id: "short-a-from-mid",
+      nadeType: "molo",
       ticks: "64",
       throwType: "jump",
       side: "t",
@@ -118,7 +125,8 @@ export const infernoLineups: MapLineups = {
     },
     {
       name: "Lower mid from long",
-      folder: "inferno/ct/molos/lower-mid-from-long",
+      id: "lower-mid-from-long",
+      nadeType: "molo",
       ticks: "64",
       throwType: "jump",
       side: "ct",
@@ -127,11 +135,10 @@ export const infernoLineups: MapLineups = {
         y: 638,
       },
     },
-  ],
-  flashBangs: [
     {
       name: "B site flash from car",
-      folder: "inferno/t/flash/b-site-flash-from-car",
+      id: "b-site-flash-from-car",
+      nadeType: "flashbang",
       ticks: "64/128",
       throwType: "jump",
       side: "t",
@@ -142,7 +149,8 @@ export const infernoLineups: MapLineups = {
     },
     {
       name: "Pop flash out of boiler",
-      folder: "inferno/t/flash/pop-flash-boiler-from-apps",
+      id: "pop-flash-boiler-from-apps",
+      nadeType: "flashbang",
       ticks: "64/128",
       throwType: "normal",
       side: "t",
@@ -154,7 +162,8 @@ export const infernoLineups: MapLineups = {
     {
       name: "Pit(A) flash from apps",
       description: "Must be crouched",
-      folder: "inferno/t/flash/a-site-from-apps",
+      id: "a-site-from-apps",
+      nadeType: "flashbang",
       ticks: "64/128",
       throwType: "normal",
       side: "t",

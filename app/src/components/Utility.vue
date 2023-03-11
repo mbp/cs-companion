@@ -3,10 +3,12 @@ import { computed } from "vue";
 import { UtilityLineup } from "./composables/types";
 import Image from "./Image.vue";
 
-const props = defineProps<{ utilityLineup: UtilityLineup }>();
+const props = defineProps<{ utilityLineup: UtilityLineup; mapName: String }>();
 
-const getImage = (part: string, folder: string) => {
-  return folder + "/" + part + ".png";
+const getImage = (part: string) => {
+  return `${props.mapName.toLocaleLowerCase()}/${props.utilityLineup.side}/${
+    props.utilityLineup.nadeType
+  }/${props.utilityLineup.id}/${part}.png`;
 };
 
 const getSideImage = computed(() => {
@@ -35,21 +37,15 @@ defineExpose({
         {{ utilityLineup.description }}
       </div>
       <div>
-        <Image
-          :src="getImage('result', utilityLineup.folder)"
-          :caption="'Result'"
-        />
+        <Image :src="getImage('result')" :caption="'Result'" />
       </div>
     </div>
     <div class="aim-pos-images">
       <div>
-        <Image :src="getImage('aim', utilityLineup.folder)" :caption="'Aim'" />
+        <Image :src="getImage('aim')" :caption="'Aim'" />
       </div>
       <div>
-        <Image
-          :src="getImage('pos', utilityLineup.folder)"
-          :caption="'Position'"
-        />
+        <Image :src="getImage('pos')" :caption="'Position'" />
       </div>
     </div>
   </div>

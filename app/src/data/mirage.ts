@@ -2,11 +2,12 @@ import { MapLineups } from "../components/composables/types";
 
 export const mirageLineups: MapLineups = {
   map: "Mirage",
-  smokes: [
+  lineUps: [
     {
       name: "Connector smoke from T apps",
       description: "Stand in corner, aim lower mid carpet",
-      folder: "mirage/t/smokes/connector-lower-from-t",
+      id: "connector-lower-from-t",
+      nadeType: "smoke",
       ticks: "64",
       throwType: "jump",
       side: "t",
@@ -18,7 +19,8 @@ export const mirageLineups: MapLineups = {
     {
       name: "Top connector smoke from t mid",
       description: "Stand behind boxes, aim below plant",
-      folder: "mirage/t/smokes/top-connector-from-mid",
+      id: "top-connector-from-mid",
+      nadeType: "smoke",
       ticks: "64",
       throwType: "normal",
       side: "t",
@@ -30,7 +32,8 @@ export const mirageLineups: MapLineups = {
     {
       name: "Stairs smoke from T ramp",
       description: "At small hinge. Aim middle of some lines",
-      folder: "mirage/t/smokes/stairs-from-t-ramp",
+      id: "stairs-from-t-ramp",
+      nadeType: "smoke",
       ticks: "64",
       throwType: "normal",
       side: "t",
@@ -41,7 +44,8 @@ export const mirageLineups: MapLineups = {
     },
     {
       name: "Ticket booth smoke from T ramp",
-      folder: "mirage/t/smokes/ticket-booth-from-t-ramp",
+      id: "ticket-booth-from-t-ramp",
+      nadeType: "smoke",
       ticks: "64",
       throwType: "jump",
       side: "t",
@@ -53,7 +57,8 @@ export const mirageLineups: MapLineups = {
     {
       name: "CT car platform",
       description: "Next to under stairs. Aim in the sky",
-      folder: "mirage/t/smokes/ct-car-platform",
+      id: "ct-car-platform",
+      nadeType: "smoke",
       ticks: "64",
       throwType: "normal",
       side: "t",
@@ -64,7 +69,8 @@ export const mirageLineups: MapLineups = {
     },
     {
       name: "CT mid one way smoke",
-      folder: "mirage/ct/smokes/mid-one-way",
+      id: "mid-one-way",
+      nadeType: "smoke",
       ticks: "64",
       throwType: "normal",
       side: "ct",
@@ -73,13 +79,10 @@ export const mirageLineups: MapLineups = {
         y: 471,
       },
     },
-  ],
-  fragGrenades: [],
-  molotovs: [],
-  flashBangs: [
     {
       name: "Pop flash b site",
-      folder: "mirage/t/flash/pop-flash-b-site-from-apps",
+      id: "pop-flash-b-site-from-apps",
+      nadeType: "flashbang",
       ticks: "64",
       throwType: "normal",
       side: "t",
