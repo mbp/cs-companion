@@ -1,15 +1,20 @@
 <template>
-  <img :src="getSideImage" class="side-icon-header" />
-  <div class="info-area">
-    <div class="info info-type">
-      Throw type:
+  <div class="parent info-type">
+    <div class="div1 info-cell header-cell">Throw type</div>
+    <div class="div2 info-cell">
       {{ utility.throwType }}
-      Ticks type:
+    </div>
+    <div class="div3 info-cell header-cell">Ticks</div>
+    <div class="div4 info-cell">
       {{ utility.ticks }}
     </div>
-    <div class="info info-description" v-if="utility.description">
-      {{ utility.description }}
+    <div class="div5 info-cell header-cell">Side</div>
+    <div class="div6 info-cell">
+      <img :src="getSideImage" class="side-icon-header" />
     </div>
+  </div>
+  <div class="info-description">
+    {{ utility.description }}
   </div>
 </template>
 
@@ -27,6 +32,41 @@ const getSideImage = computed(() => {
 });
 </script>
 <style scoped>
+.parent {
+  display: grid;
+  grid-template-columns: repeat(3, 1fr);
+  grid-template-rows: repeat(2, 1fr);
+  grid-column-gap: 0px;
+  grid-row-gap: 0px;
+}
+
+.info-cell {
+  border-left: 1px solid grey;
+}
+
+.header-cell {
+  font-weight: bold;
+}
+
+.div1 {
+  grid-area: 1 / 1 / 2 / 2;
+}
+.div2 {
+  grid-area: 2 / 1 / 3 / 2;
+}
+.div3 {
+  grid-area: 1 / 2 / 2 / 3;
+}
+.div4 {
+  grid-area: 2 / 2 / 3 / 3;
+}
+.div5 {
+  grid-area: 1 / 3 / 2 / 4;
+}
+.div6 {
+  grid-area: 2 / 3 / 3 / 4;
+}
+
 div.info {
   padding: 2px;
   width: 50%;
@@ -35,17 +75,15 @@ div.info {
 
 div.info-type {
   background-color: lightgreen;
-  border: 1px solid black;
   color: black;
 }
 
 div.info-description {
   background-color: orange;
-  border: 1px solid black;
   color: black;
 }
 
 .side-icon-header {
-  width: 50px;
+  width: 25px;
 }
 </style>
