@@ -65,7 +65,7 @@ export const nukeLineups: MapLineups = {
     },
     {
       name: "Molo top of hut from roof",
-      description: "Throw when reaching ladder on right",
+      description: "Throw when passing ladder on right",
       nadeType: "molo",
       id: "top-hut-from-roof",
       ticks: "64/128",
