@@ -4,13 +4,17 @@
     <div class="div2">
       <img :src="getSideImage" class="side-icon-header" />
     </div>
-    <div class="div3 info-cell">Throw type</div>
+    <div class="div3 info-cell header-cell">Throw type</div>
     <div class="div4 info-cell">
       {{ utility.throwType }}
     </div>
     <div class="div5 info-cell header-cell">Ticks</div>
     <div class="div6 info-cell">
       {{ utility.ticks }}
+    </div>
+    <div class="div7 info-cell header-cell">Movement</div>
+    <div class="div8 info-cell">
+      {{ utility.movement ?? "stand" }}
     </div>
   </div>
   <div class="info-description">
@@ -35,18 +39,10 @@ const getSideImage = computed(() => {
 .parent {
   border-radius: 15px;
   display: grid;
-  grid-template-columns: repeat(3, 1fr);
+  grid-template-columns: repeat(4, 1fr);
   grid-template-rows: repeat(2, 1fr);
   grid-column-gap: 0px;
   grid-row-gap: 0px;
-}
-
-.info-cell {
-  border-left: 1px solid grey;
-}
-
-.header-cell {
-  font-weight: bold;
 }
 
 .div1 {
@@ -66,6 +62,19 @@ const getSideImage = computed(() => {
 }
 .div6 {
   grid-area: 2 / 3 / 3 / 4;
+}
+.div7 {
+  grid-area: 1 / 4 / 2 / 5;
+}
+.div8 {
+  grid-area: 2 / 4 / 3 / 5;
+}
+.info-cell {
+  border-left: 1px solid grey;
+}
+
+.header-cell {
+  font-weight: bold;
 }
 
 div.info {
