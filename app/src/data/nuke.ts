@@ -33,7 +33,7 @@ export const nukeLineups: MapLineups = {
       id: "yard-red-3rd",
       nadeType: "smoke",
       ticks: "64/128",
-      throwType: "jump",
+      throwType: "normal",
       side: "t",
       coordinates: {
         x: 647,
