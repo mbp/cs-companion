@@ -1,16 +1,16 @@
 <template>
   <div class="parent info-type">
-    <div class="div1 header-cell">Throw type</div>
+    <div class="div1 header-cell">Side</div>
     <div class="div2">
+      <img :src="getSideImage" class="side-icon-header" />
+    </div>
+    <div class="div3 info-cell">Throw type</div>
+    <div class="div4 info-cell">
       {{ utility.throwType }}
     </div>
-    <div class="div3 info-cell header-cell">Ticks</div>
-    <div class="div4 info-cell">
-      {{ utility.ticks }}
-    </div>
-    <div class="div5 info-cell header-cell">Side</div>
+    <div class="div5 info-cell header-cell">Ticks</div>
     <div class="div6 info-cell">
-      <img :src="getSideImage" class="side-icon-header" />
+      {{ utility.ticks }}
     </div>
   </div>
   <div class="info-description">
