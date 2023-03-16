@@ -173,7 +173,7 @@ export const infernoLineups: MapLineups = {
     },
     {
       name: "Pit(A) flash from apps",
-      description: "Must be crouched",
+      movement: "crouch",
       id: "a-site-from-apps",
       nadeType: "flashbang",
       ticks: "64/128",

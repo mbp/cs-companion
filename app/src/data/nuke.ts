@@ -5,7 +5,7 @@ export const nukeLineups: MapLineups = {
   lineUps: [
     {
       name: "One way Yard smoke from ct",
-      description: "Must be crouched",
+      movement: "crouch",
       id: "one-way-yard-from-ct",
       nadeType: "smoke",
       ticks: "64",
