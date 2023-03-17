@@ -71,8 +71,8 @@ export const vertigoLineups: MapLineups = {
       throwType: "jump",
       side: "t",
       coordinates: {
-        x: 214,
-        y: 517,
+        x: 525,
+        y: 724,
       },
     },
     {
