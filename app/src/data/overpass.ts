@@ -76,7 +76,7 @@ export const overpassLineups: MapLineups = {
       },
     },
     {
-      name: "Overpass barrels flash from short tunnel",
+      name: "Barrels flash from short tunnel",
       id: "b-site-from-short-tunnel",
       nadeType: "flashbang",
       ticks: "64",
