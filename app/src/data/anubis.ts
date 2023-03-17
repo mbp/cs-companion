@@ -75,5 +75,17 @@ export const anubisLineups: MapLineups = {
         y: 431,
       },
     },
+    {
+      name: "A site from canals",
+      id: "a-site-from-canals",
+      nadeType: "flashbang",
+      ticks: "64",
+      throwType: "jump",
+      side: "t",
+      coordinates: {
+        x: 788,
+        y: 304,
+      },
+    },
   ],
 };
