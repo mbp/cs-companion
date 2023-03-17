@@ -87,5 +87,17 @@ export const overpassLineups: MapLineups = {
         y: 325,
       },
     },
+    {
+      name: "Bank from cafe",
+      id: "bank-from-cafe",
+      nadeType: "smoke",
+      ticks: "64",
+      throwType: "jump",
+      side: "t",
+      coordinates: {
+        x: 460,
+        y: 112,
+      },
+    },
   ],
 };
