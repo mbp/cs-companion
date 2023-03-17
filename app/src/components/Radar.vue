@@ -125,7 +125,7 @@ const findMatchingRectangle = (x: number, y: number) => {
 
 const drawSmokeCoordinates = (x: number, y: number, utility: UtilityLineup) => {
   const color = "grey";
-  const strokeColor = "white";
+  const strokeColor = "orange";
   const rectangle = createRectangle(x, y, utility);
   rectangles.push(rectangle);
   drawCoordinates(rectangle, color, strokeColor);
@@ -140,7 +140,7 @@ const drawMoloCoordinates = (x: number, y: number, utility: UtilityLineup) => {
 };
 
 const drawNadeCoordinates = (x: number, y: number, utility: UtilityLineup) => {
-  const color = "black";
+  const color = "green";
   const strokeColor = "white";
   const rectangle = createRectangle(x, y, utility);
   rectangles.push(rectangle);
@@ -165,14 +165,14 @@ const createRectangle = (x: number, y: number, utility: UtilityLineup) => {
       render: () => {
         document.body.style.cursor = "pointer";
         const ctx = radarCanvas.value!.getContext("2d")!;
-        ctx.strokeStyle = "blue";
+        ctx.strokeStyle = "black";
         ctx.fillStyle = "white";
         ctx.font = "15px Arial";
         ctx.beginPath();
         ctx.arc(x, y, pointSize, 0, Math.PI * 2, true);
-        ctx.fillText(utility.name, x, y);
         ctx.fill();
         ctx.stroke();
+        ctx.fillText(utility.name, x, y);
       },
     },
     utility: utility,
@@ -192,6 +192,7 @@ const drawCoordinates = (
   ctx.beginPath();
   ctx.arc(rectangle.x, rectangle.y, pointSize, 0, Math.PI * 2, true);
   ctx.strokeStyle = strokeColor;
+  ctx.lineWidth = 5;
   ctx.stroke();
   ctx.fill();
 };
