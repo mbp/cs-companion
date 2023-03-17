@@ -47,6 +47,7 @@ const openUtility = (utility: UtilityLineup) => {
     name: "Utility",
     params: {
       mapName: mapName,
+      nadeType: utility.nadeType,
       id: utility.id,
     },
   });

@@ -9,7 +9,11 @@ import { createRouter, createWebHashHistory } from "vue-router";
 const routes = [
   { path: "/", name: "Home", component: Maps },
   { path: "/map/:mapName", component: Map, name: "Map" },
-  { path: "/map/:mapName/utility/:id", component: Utility, name: "Utility" },
+  {
+    path: "/map/:mapName/utility/:nadeType/:id",
+    component: Utility,
+    name: "Utility",
+  },
 ];
 
 const router = createRouter({

@@ -9,12 +9,13 @@ import UtilityInfo from "./UtilityInfo.vue";
 const route = useRoute();
 
 const id = route.params.id as string;
+const nadeType = route.params.nadeType as string;
 const mapName = route.params.mapName as string;
 
 const utility = computed(() => {
   return allUtilities
     .find((x) => x.map == mapName)
-    ?.lineUps.find((x) => x.id == id)!;
+    ?.lineUps.find((x) => x.id == id && x.nadeType == nadeType)!;
 });
 
 const getImage = (part: string) => {
