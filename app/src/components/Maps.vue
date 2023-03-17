@@ -56,9 +56,7 @@ sv_grenade_trajectory 1;sv_grenade_trajectory_time 15;sv_showimpacts 1;sv_showim
 
     <div>
       <p class="footer">Fly command</p>
-      <pre id="fly">
-    noclip
-      </pre>
+      <pre id="fly">noclip</pre>
       <button @click="copyCmd('fly')">Copy</button>
     </div>
   </div>
