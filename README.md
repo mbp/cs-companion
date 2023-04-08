@@ -1,3 +1,3 @@
-# csgo-utility
+# cs-companion
 
-See the csgo-utility output at [GitHub pages](https://mbp.github.io/csgo-utility/)
+See the cs-companion output at [GitHub pages](https://mbp.github.io/cs-companion/)

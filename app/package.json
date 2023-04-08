@@ -1,5 +1,5 @@
 {
-  "name": "csgo-companion",
+  "name": "cs-companion",
   "private": true,
   "version": "0.0.0",
   "type": "module",
@@ -7,7 +7,7 @@
     "dev": "vite",
     "build": "vue-tsc && vite build",
     "preview": "vite preview",
-    "dist": "vue-tsc && vite build --base=/csgo-utility/ && rm -rf ../docs && mv dist ../docs"
+    "dist": "vue-tsc && vite build --base=/cs-companion/ && rm -rf ../docs && mv dist ../docs"
   },
   "dependencies": {
     "vue": "3.2.47",

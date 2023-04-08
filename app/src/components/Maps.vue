@@ -19,9 +19,9 @@ const copyCmd = async (id: string) => {
 </script>
 
 <template>
-  <h1>CSGO Companion</h1>
+  <h1>CS Companion</h1>
   <div>
-    <img src="/cs-go-1024x576.jpg" class="logo csgo" alt="CSGO" />
+    <img src="/cs-go-1024x576.jpg" class="logo csgo" alt="Counter-Strike" />
   </div>
   <div class="map-tiles">
     <button
