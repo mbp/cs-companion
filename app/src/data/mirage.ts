@@ -1,6 +1,6 @@
-import { MapLineups } from "../components/composables/types";
+import { MapScheme } from "../components/composables/types";
 
-export const mirageLineups: MapLineups = {
+export const mirageMapScheme: MapScheme = {
   map: "Mirage",
   lineUps: [
     {

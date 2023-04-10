@@ -1,7 +1,7 @@
 <script setup lang="ts">
 import { computed } from "vue";
 import { useRoute } from "vue-router";
-import { allUtilities } from "../data";
+import { allMapSchemes } from "../data";
 import Navigation from "./Navigation.vue";
 import Image from "./Image.vue";
 import UtilityInfo from "./UtilityInfo.vue";
@@ -13,7 +13,7 @@ const nadeType = route.params.nadeType as string;
 const mapName = route.params.mapName as string;
 
 const utility = computed(() => {
-  return allUtilities
+  return allMapSchemes
     .find((x) => x.map == mapName)
     ?.lineUps.find((x) => x.id == id && x.nadeType == nadeType)!;
 });

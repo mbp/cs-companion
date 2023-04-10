@@ -1,6 +1,6 @@
 <script setup lang="ts">
 import { useRouter } from "vue-router";
-import { allUtilities } from "../data";
+import { allMapSchemes } from "../data";
 
 var router = useRouter();
 
@@ -25,11 +25,11 @@ const copyCmd = async (id: string) => {
   </div>
   <div class="map-tiles">
     <button
-      v-for="utility in allUtilities"
+      v-for="mapScheme in allMapSchemes"
       class="map-tile"
-      @click="goMap(utility.map)"
+      @click="goMap(mapScheme.map)"
     >
-      {{ utility.map }}
+      {{ mapScheme.map }}
     </button>
   </div>
 

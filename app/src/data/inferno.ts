@@ -1,6 +1,6 @@
-import { MapLineups } from "../components/composables/types";
+import { MapScheme } from "../components/composables/types";
 
-export const infernoLineups: MapLineups = {
+export const infernoMapScheme: MapScheme = {
   map: "Inferno",
   lineUps: [
     {

@@ -1,6 +1,6 @@
-import { MapLineups } from "../components/composables/types";
+import { MapScheme } from "../components/composables/types";
 
-export const overpassLineups: MapLineups = {
+export const overpassMapScheme: MapScheme = {
   map: "Overpass",
   lineUps: [
     {

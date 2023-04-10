@@ -21,7 +21,7 @@ export type Coordinates = {
   y: number;
 };
 
-export type MapLineups = {
+export type MapScheme = {
   map: string;
   lineUps: UtilityLineup[];
   strats?: Strategy[];

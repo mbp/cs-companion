@@ -1,18 +1,18 @@
-import { MapLineups } from "../components/composables/types";
-import { ancientLineups } from "./ancient";
-import { anubisLineups } from "./anubis";
-import { infernoLineups } from "./inferno";
-import { mirageLineups } from "./mirage";
+import { MapScheme } from "../components/composables/types";
+import { ancientMapScheme } from "./ancient";
+import { anubisMapScheme } from "./anubis";
+import { infernoMapScheme } from "./inferno";
 import { nukeLineups } from "./nuke";
-import { overpassLineups } from "./overpass";
-import { vertigoLineups } from "./vertigo";
+import { mirageMapScheme } from "./mirage";
+import { overpassMapScheme } from "./overpass";
+import { vertigoMapScheme } from "./vertigo";
 
-export const allUtilities: MapLineups[] = [
-  anubisLineups,
-  ancientLineups,
-  infernoLineups,
+export const allMapSchemes: MapScheme[] = [
+  ancientMapScheme,
+  anubisMapScheme,
+  infernoMapScheme,
   nukeLineups,
-  mirageLineups,
-  overpassLineups,
-  vertigoLineups,
+  mirageMapScheme,
+  overpassMapScheme,
+  vertigoMapScheme,
 ];

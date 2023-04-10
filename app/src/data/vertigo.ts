@@ -1,6 +1,6 @@
-import { MapLineups } from "../components/composables/types";
+import { MapScheme } from "../components/composables/types";
 
-export const vertigoLineups: MapLineups = {
+export const vertigoMapScheme: MapScheme = {
   map: "Vertigo",
   lineUps: [
     {

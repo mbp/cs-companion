@@ -1,9 +1,9 @@
 <script setup lang="ts">
 import { computed, onMounted, ref } from "vue";
-import { MapLineups, UtilityLineup } from "../components/composables/types";
+import { MapScheme, UtilityLineup } from "../components/composables/types";
 
 interface Props {
-  utilites: MapLineups;
+  lineUps: UtilityLineup[];
   mapName: string;
 }
 
@@ -16,25 +16,19 @@ const emit = defineEmits<{
 const pointSize = 8;
 
 const smokes = computed(() => {
-  return props.utilites.lineUps.filter(
-    (x) => x.nadeType == "smoke" && x.coordinates
-  );
+  return props.lineUps.filter((x) => x.nadeType == "smoke" && x.coordinates);
 });
 
 const nades = computed(() => {
-  return props.utilites.lineUps.filter(
-    (x) => x.nadeType == "frag" && x.coordinates
-  );
+  return props.lineUps.filter((x) => x.nadeType == "frag" && x.coordinates);
 });
 
 const molos = computed(() => {
-  return props.utilites.lineUps.filter(
-    (x) => x.nadeType == "molo" && x.coordinates
-  );
+  return props.lineUps.filter((x) => x.nadeType == "molo" && x.coordinates);
 });
 
 const flashBangs = computed(() => {
-  return props.utilites.lineUps.filter(
+  return props.lineUps.filter(
     (x) => x.nadeType == "flashbang" && x.coordinates
   );
 });

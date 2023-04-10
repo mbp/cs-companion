@@ -1,6 +1,6 @@
-import { MapLineups } from "../components/composables/types";
+import { MapScheme } from "../components/composables/types";
 
-export const anubisLineups: MapLineups = {
+export const anubisMapScheme: MapScheme = {
   map: "Anubis",
   lineUps: [
     {

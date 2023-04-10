@@ -1,7 +1,7 @@
 <script setup lang="ts">
 import { computed, ref } from "vue";
 import { useRoute, useRouter } from "vue-router";
-import { allUtilities } from "../data";
+import { allMapSchemes } from "../data";
 import Radar from "./Radar.vue";
 import Toggle from "./Toggle.vue";
 import Navigation from "./Navigation.vue";
@@ -10,30 +10,30 @@ import { UtilityLineup } from "./composables/types";
 const route = useRoute();
 const router = useRouter();
 const mapName = route.params.mapName as string;
-const utilites = computed(() => {
-  return allUtilities.find((x) => x.map == (mapName as string))!;
+const mapScheme = computed(() => {
+  return allMapSchemes.find((x) => x.map == (mapName as string))!;
 });
 
 const smokes = computed(() => {
-  return utilites.value.lineUps.filter(
+  return mapScheme.value.lineUps.filter(
     (x) => x.nadeType == "smoke" && x.coordinates
   );
 });
 
 const fragGrenades = computed(() => {
-  return utilites.value.lineUps.filter(
+  return mapScheme.value.lineUps.filter(
     (x) => x.nadeType == "frag" && x.coordinates
   );
 });
 
 const molos = computed(() => {
-  return utilites.value.lineUps.filter(
+  return mapScheme.value.lineUps.filter(
     (x) => x.nadeType == "molo" && x.coordinates
   );
 });
 
 const flashBangs = computed(() => {
-  return utilites.value.lineUps.filter(
+  return mapScheme.value.lineUps.filter(
     (x) => x.nadeType == "flashbang" && x.coordinates
   );
 });
@@ -68,7 +68,7 @@ const onToggleChecked = () => {
 
   <div v-if="!showList">
     <Radar
-      :utilites="utilites"
+      :lineUps="mapScheme.lineUps"
       :mapName="mapName"
       @selectedUtility="setSelectedUtility"
     />

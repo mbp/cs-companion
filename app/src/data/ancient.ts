@@ -1,6 +1,6 @@
-import { MapLineups } from "../components/composables/types";
+import { MapScheme } from "../components/composables/types";
 
-export const ancientLineups: MapLineups = {
+export const ancientMapScheme: MapScheme = {
   map: "Ancient",
   lineUps: [
     {
