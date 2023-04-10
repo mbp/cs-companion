@@ -4,7 +4,7 @@ export const ancientMapScheme: MapScheme = {
   map: "Ancient",
   lineUps: [
     {
-      name: "Long B smoke from ruins",
+      name: "Long B from ruins",
       id: "long-b-from-ruins",
       nadeType: "smoke",
       ticks: "64/128",
@@ -16,10 +16,10 @@ export const ancientMapScheme: MapScheme = {
       },
     },
     {
-      name: "Short B smoke from ruins",
+      name: "Short B from ruins",
       id: "short-b-from-ruins",
       nadeType: "smoke",
-      ticks: "64/128",
+      ticks: "64",
       throwType: "jump",
       side: "t",
       coordinates: {
@@ -28,7 +28,7 @@ export const ancientMapScheme: MapScheme = {
       },
     },
     {
-      name: "Cave smoke from ruins",
+      name: "Cave from ruins",
       id: "cave-from-ruins",
       nadeType: "smoke",
       ticks: "64/128",
@@ -40,7 +40,7 @@ export const ancientMapScheme: MapScheme = {
       },
     },
     {
-      name: "Ancient mid smoke from t spawn",
+      name: "Mid from t spawn",
       id: "mid-from-t-spawn",
       nadeType: "smoke",
       ticks: "64/128",
@@ -52,7 +52,7 @@ export const ancientMapScheme: MapScheme = {
       },
     },
     {
-      name: "Inside donut smoke from stairs",
+      name: "Inside donut from stairs",
       id: "inside-donut-from-stairs",
       nadeType: "smoke",
       ticks: "64/128",
@@ -64,7 +64,7 @@ export const ancientMapScheme: MapScheme = {
       },
     },
     {
-      name: "CT smoke from stairs",
+      name: "CT from stairs",
       id: "ct-from-stairs",
       nadeType: "smoke",
       ticks: "64",
@@ -76,10 +76,10 @@ export const ancientMapScheme: MapScheme = {
       },
     },
     {
-      name: "Ancient wood molo from ruins",
+      name: "Ancient wood from ruins",
       id: "wood-from-ramp",
       nadeType: "molo",
-      ticks: "64",
+      ticks: "64/128",
       throwType: "normal",
       side: "t",
       coordinates: {
