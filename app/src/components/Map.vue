@@ -52,9 +52,13 @@ const openUtility = (utility: UtilityLineup) => {
     },
   });
 };
-const showList = ref(false);
-const onToggleChecked = () => {
-  showList.value = !showList.value;
+const showLineups = ref(true);
+const showLineupList = ref(false);
+const onToggleShowLineupsChecked = () => {
+  showLineups.value = !showLineups.value;
+};
+const onToggleShowLineupListChecked = () => {
+  showLineupList.value = !showLineupList.value;
 };
 </script>
 
@@ -64,32 +68,48 @@ const onToggleChecked = () => {
     :parents="[{ routeName: 'Home', title: 'Home' }]"
   />
 
-  <Toggle @checked="onToggleChecked" />
+  Show strats <Toggle @checked="onToggleShowLineupsChecked" />
 
-  <div v-if="!showList">
-    <Radar
-      :lineUps="mapScheme.lineUps"
-      :mapName="mapName"
-      @selectedUtility="setSelectedUtility"
-    />
+  <div v-if="showLineups">
+    Show list <Toggle @checked="onToggleShowLineupListChecked" />
+    <div v-if="!showLineupList">
+      <Radar
+        :lineUps="mapScheme.lineUps"
+        :mapName="mapName"
+        @selectedUtility="setSelectedUtility"
+      />
+    </div>
+
+    <div v-if="showLineupList">
+      <h2>Smoke Grenade</h2>
+      <div v-for="smoke in smokes">
+        <button @click="openUtility(smoke)">{{ smoke.name }}</button>
+      </div>
+      <h2>Molotov / Incendiary Grenade</h2>
+      <div v-for="molo in molos">
+        <button @click="openUtility(molo)">{{ molo.name }}</button>
+      </div>
+      <h2>Flashbang</h2>
+      <div v-for="flash in flashBangs">
+        <button @click="openUtility(flash)">{{ flash.name }}</button>
+      </div>
+      <h2>Frag Grenade</h2>
+      <div v-for="fragGrenade in fragGrenades">
+        <button @click="openUtility(fragGrenade)">
+          {{ fragGrenade.name }}
+        </button>
+      </div>
+    </div>
   </div>
 
-  <div v-if="showList">
-    <h2>Smoke Grenade</h2>
-    <div v-for="smoke in smokes">
-      <button @click="openUtility(smoke)">{{ smoke.name }}</button>
-    </div>
-    <h2>Molotov / Incendiary Grenade</h2>
-    <div v-for="molo in molos">
-      <button @click="openUtility(molo)">{{ molo.name }}</button>
-    </div>
-    <h2>Flashbang</h2>
-    <div v-for="flash in flashBangs">
-      <button @click="openUtility(flash)">{{ flash.name }}</button>
-    </div>
-    <h2>Frag Grenade</h2>
-    <div v-for="fragGrenade in fragGrenades">
-      <button @click="openUtility(fragGrenade)">{{ fragGrenade.name }}</button>
+  <div v-if="!showLineups">
+    <h2>Strategies</h2>
+    <div v-for="strat in mapScheme.strats">
+      <h3>{{ strat.name }}</h3>
+      ({{ strat.buyType }}, {{ strat.side }})
+      <p>
+        {{ strat.description }}
+      </p>
     </div>
   </div>
 </template>
