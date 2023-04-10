@@ -87,5 +87,17 @@ export const anubisMapScheme: MapScheme = {
         y: 304,
       },
     },
+    {
+      name: "Mid house from bridge",
+      id: "mid-house-from-bridge",
+      nadeType: "molo",
+      ticks: "64/128",
+      throwType: "normal",
+      side: "t",
+      coordinates: {
+        x: 520,
+        y: 483,
+      },
+    },
   ],
 };
