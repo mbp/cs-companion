@@ -88,4 +88,34 @@ export const ancientLineups: MapLineups = {
       },
     },
   ],
+  strats: [
+    {
+      name: "First pistol round",
+      description:
+        "All push B via ramp, get the entries, plant the bomb and position for the retake",
+      side: "t",
+      buyType: "pistols",
+    },
+    {
+      name: "Second round",
+      description:
+        "Use when first round was won or bomb was planted. Oush B via ramp, get the entries, plant the bomb and position for the retake",
+      side: "t",
+      buyType: "smg",
+    },
+    {
+      name: "Split mid",
+      description:
+        "First 3 players via mid to donut to a. Last 2 players via A main to a, try to come to A site at the same time",
+      side: "t",
+      buyType: "normal",
+    },
+    {
+      name: "Nade mid house",
+      description:
+        "One player smokes mid house from spawn. All players rushes mid and throws grenades behind smoke in mid house",
+      side: "t",
+      buyType: "full-eco",
+    },
+  ],
 };

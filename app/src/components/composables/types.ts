@@ -24,4 +24,14 @@ export type Coordinates = {
 export type MapLineups = {
   map: string;
   lineUps: UtilityLineup[];
+  strats?: Strategy[];
 };
+
+export type Strategy = {
+  side: Side;
+  name: string;
+  description: string;
+  buyType: BuyType;
+};
+
+export type BuyType = "full-eco" | "anti-eco" | "normal" | "pistols" | "smg";
