@@ -88,4 +88,13 @@ export const vertigoMapScheme: MapScheme = {
       },
     },
   ],
+  strats: [
+    {
+      buyType: "pistols",
+      name: "First decoy round",
+      description:
+        "All buy decoy, throw it on the A ramp. Immediately turn back to B and plant the bomb",
+      side: "t",
+    },
+  ],
 };
