@@ -52,6 +52,18 @@ export const ancientMapScheme: MapScheme = {
       },
     },
     {
+      name: "Mid from t spawn (2nd)",
+      id: "mid2-from-t-spawn",
+      nadeType: "smoke",
+      ticks: "64",
+      throwType: "jump",
+      side: "t",
+      coordinates: {
+        x: 484,
+        y: 404,
+      },
+    },
+    {
       name: "Inside donut from stairs",
       id: "inside-donut-from-stairs",
       nadeType: "smoke",
@@ -61,6 +73,18 @@ export const ancientMapScheme: MapScheme = {
       coordinates: {
         x: 315,
         y: 329,
+      },
+    },
+    {
+      name: "Donut mid from spawn",
+      id: "mid-donut-from-spawn",
+      nadeType: "smoke",
+      ticks: "64",
+      throwType: "jump",
+      side: "t",
+      coordinates: {
+        x: 420,
+        y: 467,
       },
     },
     {
