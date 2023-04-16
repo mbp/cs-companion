@@ -4,7 +4,7 @@ export const infernoMapScheme: MapScheme = {
   map: "Inferno",
   lineUps: [
     {
-      name: "CT smoke from banana",
+      name: "CT from banana",
       id: "ct-from-banana",
       nadeType: "smoke",
       ticks: "64",
@@ -16,7 +16,7 @@ export const infernoMapScheme: MapScheme = {
       },
     },
     {
-      name: "Coffin smoke from banana",
+      name: "Coffin from banana",
       id: "coffin-from-banana",
       nadeType: "smoke",
       ticks: "64",
@@ -28,7 +28,7 @@ export const infernoMapScheme: MapScheme = {
       },
     },
     {
-      name: "Short smoke from second mid",
+      name: "Short from second mid",
       id: "short-from-second-mid",
       nadeType: "smoke",
       ticks: "64",
@@ -40,7 +40,7 @@ export const infernoMapScheme: MapScheme = {
       },
     },
     {
-      name: "Short smoke from t-ramp",
+      name: "Short from t-ramp",
       id: "short-from-t-ramp",
       nadeType: "smoke",
       ticks: "64",
@@ -52,7 +52,7 @@ export const infernoMapScheme: MapScheme = {
       },
     },
     {
-      name: "Deep long smoke from second mid",
+      name: "Deep long from second mid",
       id: "deep-long-from-second-mid",
       nadeType: "smoke",
       ticks: "64",
@@ -64,7 +64,7 @@ export const infernoMapScheme: MapScheme = {
       },
     },
     {
-      name: "Long smoke from second mid",
+      name: "Long from second mid",
       id: "long-from-second-mid",
       nadeType: "smoke",
       ticks: "64",
@@ -76,7 +76,7 @@ export const infernoMapScheme: MapScheme = {
       },
     },
     {
-      name: "Cross pit smoke from second mid",
+      name: "Cross pit from second mid",
       id: "cross-pit-from-second-mid",
       nadeType: "smoke",
       ticks: "64",
@@ -88,7 +88,7 @@ export const infernoMapScheme: MapScheme = {
       },
     },
     {
-      name: "Moto smoke from top mid",
+      name: "Moto from top mid",
       id: "moto-from-top-mid",
       nadeType: "smoke",
       ticks: "64",
@@ -100,7 +100,7 @@ export const infernoMapScheme: MapScheme = {
       },
     },
     {
-      name: "Molo B dark from car",
+      name: "B dark from car",
       id: "b-dark-from-car",
       nadeType: "molo",
       ticks: "64",
@@ -112,7 +112,7 @@ export const infernoMapScheme: MapScheme = {
       },
     },
     {
-      name: "Molo nuke box from car",
+      name: "Nuke box from car",
       id: "b-nuke-box-from-car",
       nadeType: "molo",
       ticks: "64",
@@ -124,7 +124,7 @@ export const infernoMapScheme: MapScheme = {
       },
     },
     {
-      name: "Molo short A from mid",
+      name: "Short A from mid",
       id: "short-a-from-mid",
       nadeType: "molo",
       ticks: "64",
@@ -148,7 +148,7 @@ export const infernoMapScheme: MapScheme = {
       },
     },
     {
-      name: "B site flash from car",
+      name: "B site from car",
       id: "b-site-flash-from-car",
       nadeType: "flashbang",
       ticks: "64/128",
@@ -160,7 +160,7 @@ export const infernoMapScheme: MapScheme = {
       },
     },
     {
-      name: "Pop flash out of boiler",
+      name: "Pop out of boiler",
       id: "pop-flash-boiler-from-apps",
       nadeType: "flashbang",
       ticks: "64/128",
