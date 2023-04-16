@@ -100,6 +100,18 @@ export const infernoMapScheme: MapScheme = {
       },
     },
     {
+      name: "Apps one-way",
+      id: "apps-one-way",
+      nadeType: "smoke",
+      ticks: "64/128",
+      throwType: "normal",
+      side: "ct",
+      coordinates: {
+        x: 690,
+        y: 859,
+      },
+    },
+    {
       name: "B dark from car",
       id: "b-dark-from-car",
       nadeType: "molo",
