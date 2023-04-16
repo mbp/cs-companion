@@ -112,6 +112,18 @@ export const infernoMapScheme: MapScheme = {
       },
     },
     {
+      name: "Mexico one-way to mid",
+      id: "one-way-mexico",
+      nadeType: "smoke",
+      ticks: "64",
+      throwType: "normal",
+      side: "t",
+      coordinates: {
+        x: 490,
+        y: 648,
+      },
+    },
+    {
       name: "B dark from car",
       id: "b-dark-from-car",
       nadeType: "molo",
