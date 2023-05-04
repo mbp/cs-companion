@@ -47,7 +47,7 @@ export const infernoMapScheme: MapScheme = {
       throwType: "jump",
       side: "t",
       coordinates: {
-        x: 715,
+        x: 694,
         y: 706,
       },
     },
