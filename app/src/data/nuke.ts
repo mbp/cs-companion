@@ -53,6 +53,42 @@ export const nukeLineups: MapScheme = {
       },
     },
     {
+      name: "Close main outside",
+      id: "close-main-outside",
+      nadeType: "smoke",
+      ticks: "64",
+      throwType: "jump",
+      side: "t",
+      coordinates: {
+        x: 625,
+        y: 668,
+      },
+    },
+    {
+      name: "Far main outside",
+      id: "far-main-outside",
+      nadeType: "smoke",
+      ticks: "64",
+      throwType: "jump",
+      side: "t",
+      coordinates: {
+        x: 661,
+        y: 668,
+      },
+    },
+    {
+      name: "Garage",
+      id: "garage",
+      nadeType: "smoke",
+      ticks: "64",
+      throwType: "jump",
+      side: "t",
+      coordinates: {
+        x: 680,
+        y: 685,
+      },
+    },
+    {
       name: "Ramp smoke from trophy",
       id: "ramp-from-trophy",
       nadeType: "smoke",
