@@ -17,16 +17,28 @@ export const mirageMapScheme: MapScheme = {
       },
     },
     {
-      name: "Top connector smoke from t mid",
-      description: "Stand behind boxes, aim below plant",
-      id: "top-connector-from-mid",
+      name: "Top connector smoke from side alley",
+      id: "top-connector-from-side-alley",
       nadeType: "smoke",
       ticks: "64",
-      throwType: "normal",
+      throwType: "jump",
       side: "t",
       coordinates: {
         x: 511,
         y: 596,
+      },
+    },
+    {
+      name: "Mid window from spawn",
+      description: "Hold D while throwing",
+      id: "mid-window-from-spawn",
+      nadeType: "smoke",
+      ticks: "64",
+      throwType: "jump",
+      side: "t",
+      coordinates: {
+        x: 425,
+        y: 452,
       },
     },
     {
@@ -55,6 +67,18 @@ export const mirageMapScheme: MapScheme = {
       },
     },
     {
+      name: "Jungle from T ramp",
+      id: "jungle-from-t-ramp",
+      nadeType: "smoke",
+      ticks: "64",
+      throwType: "normal",
+      side: "t",
+      coordinates: {
+        x: 473,
+        y: 629,
+      },
+    },
+    {
       name: "CT car platform",
       description: "Next to under stairs. Aim in the sky",
       id: "ct-car-platform",
@@ -65,6 +89,18 @@ export const mirageMapScheme: MapScheme = {
       coordinates: {
         x: 234,
         y: 196,
+      },
+    },
+    {
+      name: "Market window smoke",
+      id: "market-window",
+      nadeType: "smoke",
+      ticks: "64",
+      throwType: "jump",
+      side: "t",
+      coordinates: {
+        x: 258,
+        y: 394,
       },
     },
     {
