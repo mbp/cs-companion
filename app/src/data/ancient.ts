@@ -88,6 +88,18 @@ export const ancientMapScheme: MapScheme = {
       },
     },
     {
+      name: "Tents mid from spawn",
+      id: "tents-from-spawn",
+      nadeType: "smoke",
+      ticks: "64",
+      throwType: "jump",
+      side: "t",
+      coordinates: {
+        x: 553,
+        y: 584,
+      },
+    },
+    {
       name: "CT from stairs",
       id: "ct-from-stairs",
       nadeType: "smoke",
