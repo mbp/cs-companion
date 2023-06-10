@@ -112,6 +112,18 @@ export const ancientMapScheme: MapScheme = {
       },
     },
     {
+      name: "CT from tents",
+      id: "ct-from-tents",
+      nadeType: "smoke",
+      ticks: "64",
+      throwType: "runjump",
+      side: "t",
+      coordinates: {
+        x: 385,
+        y: 230,
+      },
+    },
+    {
       name: "Ancient wood from ruins",
       id: "wood-from-ramp",
       nadeType: "molo",
