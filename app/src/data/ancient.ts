@@ -124,6 +124,18 @@ export const ancientMapScheme: MapScheme = {
       },
     },
     {
+      name: "B backline from ruins",
+      id: "b-backline-from-ruins",
+      nadeType: "smoke",
+      ticks: "64",
+      throwType: "runjump",
+      side: "t",
+      coordinates: {
+        x: 689,
+        y: 252,
+      },
+    },
+    {
       name: "Ancient wood from ruins",
       id: "wood-from-ramp",
       nadeType: "molo",
