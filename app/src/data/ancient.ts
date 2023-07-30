@@ -151,7 +151,7 @@ export const ancientMapScheme: MapScheme = {
       name: "B backline from ruins",
       id: "b-backline-from-ruins",
       nadeType: "smoke",
-      ticks: "64",
+      ticks: "64/128",
       throwType: "runjump",
       side: "t",
       coordinates: {
