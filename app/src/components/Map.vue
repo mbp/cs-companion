@@ -16,25 +16,25 @@ const mapScheme = computed(() => {
 
 const smokes = computed(() => {
   return mapScheme.value.lineUps.filter(
-    (x) => x.nadeType == "smoke" && x.coordinates
+    (x) => x.nadeType == "smoke" && x.coordinates,
   );
 });
 
 const fragGrenades = computed(() => {
   return mapScheme.value.lineUps.filter(
-    (x) => x.nadeType == "frag" && x.coordinates
+    (x) => x.nadeType == "frag" && x.coordinates,
   );
 });
 
 const molos = computed(() => {
   return mapScheme.value.lineUps.filter(
-    (x) => x.nadeType == "molo" && x.coordinates
+    (x) => x.nadeType == "molo" && x.coordinates,
   );
 });
 
 const flashBangs = computed(() => {
   return mapScheme.value.lineUps.filter(
-    (x) => x.nadeType == "flashbang" && x.coordinates
+    (x) => x.nadeType == "flashbang" && x.coordinates,
   );
 });
 

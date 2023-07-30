@@ -29,7 +29,7 @@ const molos = computed(() => {
 
 const flashBangs = computed(() => {
   return props.lineUps.filter(
-    (x) => x.nadeType == "flashbang" && x.coordinates
+    (x) => x.nadeType == "flashbang" && x.coordinates,
   );
 });
 
@@ -51,7 +51,7 @@ const drawAll = () => {
     drawFlashCoordinates(
       flashBang.coordinates!.x,
       flashBang.coordinates!.y,
-      flashBang
+      flashBang,
     );
   }
 };
@@ -179,7 +179,7 @@ const rectangles: Rectangle[] = [];
 const drawCoordinates = (
   rectangle: Rectangle,
   color: string,
-  strokeColor: string
+  strokeColor: string,
 ) => {
   const ctx = radarCanvas.value!.getContext("2d")!;
   ctx.fillStyle = color;
