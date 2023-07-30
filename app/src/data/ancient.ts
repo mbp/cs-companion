@@ -43,7 +43,19 @@ export const ancientMapScheme: MapScheme = {
       name: "Mid from t spawn",
       id: "mid-from-t-spawn",
       nadeType: "smoke",
-      ticks: "64/128",
+      ticks: "64",
+      throwType: "jump",
+      side: "t",
+      coordinates: {
+        x: 486,
+        y: 386,
+      },
+    },
+    {
+      name: "Mid from t spawn",
+      id: "mid-from-t-spawn-128",
+      nadeType: "smoke",
+      ticks: "128",
       throwType: "jump",
       side: "t",
       coordinates: {
