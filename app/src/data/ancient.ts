@@ -28,6 +28,18 @@ export const ancientMapScheme: MapScheme = {
       },
     },
     {
+      name: "Short B from ruins",
+      id: "short-b-from-ruins-128",
+      nadeType: "smoke",
+      ticks: "128",
+      throwType: "jump",
+      side: "t",
+      coordinates: {
+        x: 726,
+        y: 354,
+      },
+    },
+    {
       name: "Cave from ruins",
       id: "cave-from-ruins",
       nadeType: "smoke",
