@@ -124,6 +124,18 @@ export const ancientMapScheme: MapScheme = {
       },
     },
     {
+      name: "Donut mid from jungle",
+      id: "mid-donut-from-jungle",
+      nadeType: "smoke",
+      ticks: "64/128",
+      throwType: "normal",
+      side: "t",
+      coordinates: {
+        x: 393,
+        y: 461,
+      },
+    },
+    {
       name: "Tents mid from spawn",
       id: "tents-from-spawn",
       nadeType: "smoke",
