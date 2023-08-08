@@ -8,7 +8,7 @@ export const mirageMapScheme: MapScheme = {
       description: "Stand in corner, aim lower mid carpet",
       id: "connector-lower-from-t",
       nadeType: "smoke",
-      ticks: "64",
+      ticks: "64/128",
       throwType: "jump",
       side: "t",
       coordinates: {
@@ -46,7 +46,7 @@ export const mirageMapScheme: MapScheme = {
       description: "At small hinge. Aim middle of some lines",
       id: "stairs-from-t-ramp",
       nadeType: "smoke",
-      ticks: "64",
+      ticks: "64/128",
       throwType: "normal",
       side: "t",
       coordinates: {
@@ -70,7 +70,7 @@ export const mirageMapScheme: MapScheme = {
       name: "Jungle from T ramp",
       id: "jungle-from-t-ramp",
       nadeType: "smoke",
-      ticks: "64",
+      ticks: "64/128",
       throwType: "normal",
       side: "t",
       coordinates: {
@@ -95,7 +95,7 @@ export const mirageMapScheme: MapScheme = {
       name: "Market window smoke",
       id: "market-window",
       nadeType: "smoke",
-      ticks: "64",
+      ticks: "64/128",
       throwType: "jump",
       side: "t",
       coordinates: {
