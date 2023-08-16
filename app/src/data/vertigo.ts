@@ -7,7 +7,7 @@ export const vertigoMapScheme: MapScheme = {
       name: "Ramp from a default plant",
       id: "ramp-from-a-default-plant",
       nadeType: "smoke",
-      ticks: "64",
+      ticks: "64/128",
       throwType: "normal",
       side: "ct",
       coordinates: {
@@ -31,7 +31,7 @@ export const vertigoMapScheme: MapScheme = {
       name: "Guardian from mid",
       id: "guardian-from-mid",
       nadeType: "smoke",
-      ticks: "64",
+      ticks: "64/128",
       throwType: "normal",
       side: "t",
       coordinates: {

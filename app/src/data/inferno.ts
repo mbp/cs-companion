@@ -7,7 +7,7 @@ export const infernoMapScheme: MapScheme = {
       name: "CT from banana",
       id: "ct-from-banana",
       nadeType: "smoke",
-      ticks: "64",
+      ticks: "64/128",
       throwType: "normal",
       side: "t",
       coordinates: {
@@ -19,7 +19,7 @@ export const infernoMapScheme: MapScheme = {
       name: "Coffin from banana",
       id: "coffin-from-banana",
       nadeType: "smoke",
-      ticks: "64",
+      ticks: "64/128",
       throwType: "normal",
       side: "t",
       coordinates: {
