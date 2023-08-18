@@ -232,6 +232,18 @@ export const infernoMapScheme: MapScheme = {
       },
     },
     {
+      name: "One way hay car from pit",
+      id: "one-way-hay-car-from-pit",
+      nadeType: "smoke",
+      ticks: "64/128",
+      throwType: "normal",
+      side: "ct",
+      coordinates: {
+        x: 832,
+        y: 782,
+      },
+    },
+    {
       name: "Pit(A) flash from apps",
       movement: "crouch",
       id: "a-site-from-apps",
