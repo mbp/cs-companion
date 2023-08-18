@@ -31,7 +31,7 @@ export const infernoMapScheme: MapScheme = {
       name: "Short from second mid",
       id: "short-from-second-mid",
       nadeType: "smoke",
-      ticks: "64",
+      ticks: "64/128",
       throwType: "normal",
       side: "t",
       coordinates: {
