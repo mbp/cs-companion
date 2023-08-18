@@ -52,6 +52,18 @@ export const infernoMapScheme: MapScheme = {
       },
     },
     {
+      name: "Short from t-ramp",
+      id: "short-from-t-ramp-128",
+      nadeType: "smoke",
+      ticks: "128",
+      throwType: "jump",
+      side: "t",
+      coordinates: {
+        x: 694,
+        y: 706,
+      },
+    },
+    {
       name: "Deep long from second mid",
       id: "deep-long-from-second-mid",
       nadeType: "smoke",
@@ -115,7 +127,7 @@ export const infernoMapScheme: MapScheme = {
       name: "Mexico one-way to mid",
       id: "one-way-mexico",
       nadeType: "smoke",
-      ticks: "64",
+      ticks: "64/128",
       throwType: "normal",
       side: "t",
       coordinates: {
@@ -175,7 +187,7 @@ export const infernoMapScheme: MapScheme = {
       name: "Lower mid from long",
       id: "lower-mid-from-long",
       nadeType: "molo",
-      ticks: "64",
+      ticks: "64/128",
       throwType: "jump",
       side: "ct",
       coordinates: {
