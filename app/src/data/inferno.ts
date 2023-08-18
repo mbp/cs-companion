@@ -55,7 +55,7 @@ export const infernoMapScheme: MapScheme = {
       name: "Deep long from second mid",
       id: "deep-long-from-second-mid",
       nadeType: "smoke",
-      ticks: "64",
+      ticks: "64/128",
       throwType: "normal",
       side: "t",
       coordinates: {
