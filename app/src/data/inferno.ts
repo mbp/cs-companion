@@ -151,7 +151,7 @@ export const infernoMapScheme: MapScheme = {
       name: "Nuke box from car",
       id: "b-nuke-box-from-car",
       nadeType: "molo",
-      ticks: "64",
+      ticks: "64/128",
       throwType: "jump",
       side: "t",
       coordinates: {
