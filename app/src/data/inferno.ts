@@ -79,7 +79,7 @@ export const infernoMapScheme: MapScheme = {
       name: "Cross pit from second mid",
       id: "cross-pit-from-second-mid",
       nadeType: "smoke",
-      ticks: "64",
+      ticks: "64/128",
       throwType: "normal",
       side: "t",
       coordinates: {
@@ -163,7 +163,7 @@ export const infernoMapScheme: MapScheme = {
       name: "Short A from mid",
       id: "short-a-from-mid",
       nadeType: "molo",
-      ticks: "64",
+      ticks: "64/128",
       throwType: "jump",
       side: "t",
       coordinates: {
