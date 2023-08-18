@@ -208,6 +208,18 @@ export const infernoMapScheme: MapScheme = {
       },
     },
     {
+      name: "B car from ramp",
+      id: "b-car-flash-from-ramp",
+      nadeType: "flashbang",
+      ticks: "64/128",
+      throwType: "normal",
+      side: "t",
+      coordinates: {
+        x: 516,
+        y: 402,
+      },
+    },
+    {
       name: "Pop out of boiler",
       id: "pop-flash-boiler-from-apps",
       nadeType: "flashbang",
