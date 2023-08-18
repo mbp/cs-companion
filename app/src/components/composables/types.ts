@@ -1,5 +1,5 @@
 export type Ticks = "64" | "128" | "64/128";
-export type ThrowType = "normal" | "jump" | "runjump" | "run";
+export type ThrowType = "normal" | "jump" | "runjump" | "run" | "rightclick";
 export type Movement = "crouch" | "run" | "stand";
 export type Side = "t" | "ct";
 export type NadeType = "smoke" | "frag" | "molo" | "flashbang";

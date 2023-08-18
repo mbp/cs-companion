@@ -248,7 +248,7 @@ export const infernoMapScheme: MapScheme = {
       id: "one-way-short-from-a-site",
       nadeType: "smoke",
       ticks: "64/128",
-      throwType: "normal",
+      throwType: "rightclick",
       side: "ct",
       coordinates: {
         x: 802,
