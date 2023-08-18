@@ -136,6 +136,18 @@ export const infernoMapScheme: MapScheme = {
       },
     },
     {
+      name: "B dark from car",
+      id: "b-dark-from-car-128",
+      nadeType: "molo",
+      ticks: "128",
+      throwType: "jump",
+      side: "t",
+      coordinates: {
+        x: 433,
+        y: 138,
+      },
+    },
+    {
       name: "Nuke box from car",
       id: "b-nuke-box-from-car",
       nadeType: "molo",
