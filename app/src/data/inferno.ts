@@ -244,6 +244,18 @@ export const infernoMapScheme: MapScheme = {
       },
     },
     {
+      name: "One way short from a site",
+      id: "one-way-short-from-a-site",
+      nadeType: "smoke",
+      ticks: "64/128",
+      throwType: "normal",
+      side: "ct",
+      coordinates: {
+        x: 802,
+        y: 763,
+      },
+    },
+    {
       name: "Pit(A) flash from apps",
       movement: "crouch",
       id: "a-site-from-apps",
