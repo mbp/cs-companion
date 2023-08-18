@@ -91,7 +91,7 @@ export const infernoMapScheme: MapScheme = {
       name: "Moto from top mid",
       id: "moto-from-top-mid",
       nadeType: "smoke",
-      ticks: "64",
+      ticks: "64/128",
       throwType: "normal",
       side: "t",
       coordinates: {
