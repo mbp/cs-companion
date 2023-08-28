@@ -112,6 +112,18 @@ export const infernoMapScheme: MapScheme = {
       },
     },
     {
+      name: "Moto from mexico",
+      id: "moto-from-mexico",
+      nadeType: "smoke",
+      ticks: "128",
+      throwType: "jump",
+      side: "t",
+      coordinates: {
+        x: 894,
+        y: 637,
+      },
+    },
+    {
       name: "Apps one-way",
       id: "apps-one-way",
       nadeType: "smoke",
