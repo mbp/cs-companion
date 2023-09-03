@@ -17,18 +17,6 @@ export const ancientMapScheme: MapScheme = {
     },
     {
       name: "Short B from ruins",
-      id: "short-b-from-ruins",
-      nadeType: "smoke",
-      ticks: "64",
-      throwType: "jump",
-      side: "t",
-      coordinates: {
-        x: 726,
-        y: 354,
-      },
-    },
-    {
-      name: "Short B from ruins",
       id: "short-b-from-ruins-128",
       nadeType: "smoke",
       ticks: "128",
@@ -53,18 +41,6 @@ export const ancientMapScheme: MapScheme = {
     },
     {
       name: "Mid from t spawn",
-      id: "mid-from-t-spawn",
-      nadeType: "smoke",
-      ticks: "64",
-      throwType: "jump",
-      side: "t",
-      coordinates: {
-        x: 486,
-        y: 386,
-      },
-    },
-    {
-      name: "Mid from t spawn",
       id: "mid-from-t-spawn-128",
       nadeType: "smoke",
       ticks: "128",
@@ -73,18 +49,6 @@ export const ancientMapScheme: MapScheme = {
       coordinates: {
         x: 486,
         y: 386,
-      },
-    },
-    {
-      name: "Mid from t spawn (2nd)",
-      id: "mid2-from-t-spawn",
-      nadeType: "smoke",
-      ticks: "64",
-      throwType: "jump",
-      side: "t",
-      coordinates: {
-        x: 484,
-        y: 404,
       },
     },
     {
@@ -97,18 +61,6 @@ export const ancientMapScheme: MapScheme = {
       coordinates: {
         x: 315,
         y: 329,
-      },
-    },
-    {
-      name: "Donut mid from spawn",
-      id: "mid-donut-from-spawn",
-      nadeType: "smoke",
-      ticks: "64",
-      throwType: "jump",
-      side: "t",
-      coordinates: {
-        x: 420,
-        y: 467,
       },
     },
     {
@@ -136,18 +88,6 @@ export const ancientMapScheme: MapScheme = {
       },
     },
     {
-      name: "Tents mid from spawn",
-      id: "tents-from-spawn",
-      nadeType: "smoke",
-      ticks: "64",
-      throwType: "jump",
-      side: "t",
-      coordinates: {
-        x: 553,
-        y: 584,
-      },
-    },
-    {
       name: "CT from stairs",
       id: "ct-from-stairs",
       nadeType: "smoke",
@@ -157,18 +97,6 @@ export const ancientMapScheme: MapScheme = {
       coordinates: {
         x: 367,
         y: 221,
-      },
-    },
-    {
-      name: "CT from tents",
-      id: "ct-from-tents",
-      nadeType: "smoke",
-      ticks: "64",
-      throwType: "runjump",
-      side: "t",
-      coordinates: {
-        x: 385,
-        y: 230,
       },
     },
     {
