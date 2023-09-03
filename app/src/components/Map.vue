@@ -54,24 +54,14 @@ const openUtility = (utility: UtilityLineup) => {
 };
 const showLineups = ref(true);
 const showLineupList = ref(false);
-const show64Ticks = ref(false);
 const onToggleShowLineupsChecked = () => {
   showLineups.value = !showLineups.value;
 };
 const onToggleShowLineupListChecked = () => {
   showLineupList.value = !showLineupList.value;
 };
-const onToggleShow64TicksChecked = () => {
-  show64Ticks.value = !show64Ticks.value;
-};
 const lineUps = computed(() => {
-  if (show64Ticks.value) {
-    return mapScheme.value.lineUps.filter(
-      (x) => x.ticks == "64/128" || x.ticks == "64",
-    );
-  } else {
-    return mapScheme.value.lineUps.filter((x) => x.ticks != "64");
-  }
+  return mapScheme.value.lineUps.filter((x) => x.ticks != "64");
 });
 </script>
 
@@ -84,8 +74,7 @@ const lineUps = computed(() => {
   Show strats <Toggle @checked="onToggleShowLineupsChecked" />
 
   <div v-if="showLineups">
-    Show list <Toggle @checked="onToggleShowLineupListChecked" /> Show 64 ticks
-    <Toggle @checked="onToggleShow64TicksChecked" />
+    Show list <Toggle @checked="onToggleShowLineupListChecked" />
     <div v-if="!showLineupList">
       <Radar
         :lineUps="lineUps"
