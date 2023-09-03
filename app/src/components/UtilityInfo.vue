@@ -4,9 +4,9 @@
     <div class="div2">
       <img :src="getSideImage" class="side-icon-header" />
     </div>
-    <div class="div3 info-cell header-cell">Throw type</div>
+    <div class="div3 info-cell header-cell">Throw and click type</div>
     <div class="div4 info-cell">
-      {{ utility.throwType }}
+      {{ utility.throwType }} {{ utility.clickType }}
     </div>
     <div class="div5 info-cell header-cell">Ticks</div>
     <div class="div6 info-cell">

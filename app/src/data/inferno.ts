@@ -20,7 +20,8 @@ export const infernoMapScheme: MapScheme = {
       id: "coffin-from-banana",
       nadeType: "smoke",
       ticks: "64/128",
-      throwType: "normal",
+      throwType: "jump",
+      movement: "crouch",
       side: "t",
       coordinates: {
         x: 523,
@@ -213,6 +214,7 @@ export const infernoMapScheme: MapScheme = {
       nadeType: "flashbang",
       ticks: "64/128",
       throwType: "jump",
+      clickType: "left+right",
       side: "t",
       coordinates: {
         x: 608,
@@ -272,7 +274,8 @@ export const infernoMapScheme: MapScheme = {
       id: "one-way-short-from-a-site",
       nadeType: "smoke",
       ticks: "64/128",
-      throwType: "rightclick",
+      throwType: "normal",
+      clickType: "right",
       side: "ct",
       coordinates: {
         x: 802,
