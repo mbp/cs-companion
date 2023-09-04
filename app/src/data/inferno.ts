@@ -101,11 +101,11 @@ export const infernoMapScheme: MapScheme = {
       },
     },
     {
-      name: "Moto from top mid",
-      id: "moto-from-top-mid",
+      name: "Moto from 2nd bridge",
+      id: "moto-from-2nd-bridge",
       nadeType: "smoke",
       ticks: "64/128",
-      throwType: "normal",
+      throwType: "runjump",
       side: "t",
       coordinates: {
         x: 894,
@@ -246,8 +246,8 @@ export const infernoMapScheme: MapScheme = {
       },
     },
     {
-      name: "Hay hay car from mexico",
-      id: "hay-car-from-mexico",
+      name: "Hay hay car from 2nd bridge",
+      id: "hay-car-from-2nd-bridge",
       nadeType: "smoke",
       ticks: "128",
       throwType: "jump",
