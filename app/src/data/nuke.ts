@@ -4,24 +4,11 @@ export const nukeLineups: MapScheme = {
   map: "Nuke",
   lineUps: [
     {
-      name: "One way yard smoke from ct",
-      movement: "crouch",
-      id: "one-way-yard-from-ct",
-      nadeType: "smoke",
-      ticks: "64",
-      throwType: "jump",
-      side: "ct",
-      coordinates: {
-        x: 582,
-        y: 692,
-      },
-    },
-    {
       name: "Short red smoke yard (2nd smoke)",
       id: "yard-red-2nd",
       nadeType: "smoke",
-      ticks: "64",
-      throwType: "jump",
+      ticks: "64/128",
+      throwType: "normal",
       side: "t",
       coordinates: {
         x: 618,
@@ -45,7 +32,7 @@ export const nukeLineups: MapScheme = {
       id: "left-garage-no-peek-silo",
       nadeType: "smoke",
       ticks: "64/128",
-      throwType: "normal",
+      throwType: "jump",
       side: "t",
       coordinates: {
         x: 707,
@@ -56,7 +43,7 @@ export const nukeLineups: MapScheme = {
       name: "Close main outside",
       id: "close-main-outside",
       nadeType: "smoke",
-      ticks: "64",
+      ticks: "64/128",
       throwType: "jump",
       side: "t",
       coordinates: {
@@ -68,7 +55,7 @@ export const nukeLineups: MapScheme = {
       name: "Far main outside",
       id: "far-main-outside",
       nadeType: "smoke",
-      ticks: "64",
+      ticks: "64/128",
       throwType: "jump",
       side: "t",
       coordinates: {
@@ -80,7 +67,7 @@ export const nukeLineups: MapScheme = {
       name: "Garage",
       id: "garage",
       nadeType: "smoke",
-      ticks: "64",
+      ticks: "64/128",
       throwType: "jump",
       side: "t",
       coordinates: {
@@ -92,7 +79,7 @@ export const nukeLineups: MapScheme = {
       name: "Ramp smoke from trophy",
       id: "ramp-from-trophy",
       nadeType: "smoke",
-      ticks: "64",
+      ticks: "64/128",
       throwType: "run",
       side: "t",
       coordinates: {
@@ -129,7 +116,7 @@ export const nukeLineups: MapScheme = {
       name: "Flash a site heaven from t roof",
       id: "a-site-heaven-from-t-roof",
       nadeType: "flashbang",
-      ticks: "64",
+      ticks: "64/128",
       throwType: "normal",
       side: "t",
       coordinates: {
@@ -141,7 +128,7 @@ export const nukeLineups: MapScheme = {
       name: "Flash a through hut from lobby",
       id: "a-site-via-hut-from-lobby",
       nadeType: "flashbang",
-      ticks: "64",
+      ticks: "64/128",
       throwType: "run",
       side: "t",
       coordinates: {
@@ -153,7 +140,7 @@ export const nukeLineups: MapScheme = {
       name: "Flash b ramp from trophy",
       id: "b-ramp-from-trophy",
       nadeType: "flashbang",
-      ticks: "64",
+      ticks: "64/128",
       throwType: "run",
       side: "t",
       coordinates: {
@@ -165,7 +152,7 @@ export const nukeLineups: MapScheme = {
       name: "Flash b ramp (top) from trophy",
       id: "b-ramp-top-from-trophy",
       nadeType: "flashbang",
-      ticks: "64",
+      ticks: "64/128",
       throwType: "run",
       side: "t",
       coordinates: {
