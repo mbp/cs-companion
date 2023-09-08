@@ -91,7 +91,7 @@ export const ancientMapScheme: MapScheme = {
       name: "CT from stairs",
       id: "ct-from-stairs",
       nadeType: "smoke",
-      ticks: "64",
+      ticks: "64/128",
       throwType: "jump",
       side: "t",
       coordinates: {
