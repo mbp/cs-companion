@@ -44,18 +44,6 @@ export const infernoMapScheme: MapScheme = {
       name: "Short from t-ramp",
       id: "short-from-t-ramp",
       nadeType: "smoke",
-      ticks: "64",
-      throwType: "jump",
-      side: "t",
-      coordinates: {
-        x: 694,
-        y: 706,
-      },
-    },
-    {
-      name: "Short from t-ramp",
-      id: "short-from-t-ramp-128",
-      nadeType: "smoke",
       ticks: "128",
       throwType: "jump",
       side: "t",
@@ -80,7 +68,7 @@ export const infernoMapScheme: MapScheme = {
       name: "Long from second mid",
       id: "long-from-second-mid",
       nadeType: "smoke",
-      ticks: "64",
+      ticks: "64/128",
       throwType: "jump",
       side: "t",
       coordinates: {
@@ -152,20 +140,8 @@ export const infernoMapScheme: MapScheme = {
       name: "B dark from car",
       id: "b-dark-from-car",
       nadeType: "molo",
-      ticks: "64",
-      throwType: "jump",
-      side: "t",
-      coordinates: {
-        x: 433,
-        y: 138,
-      },
-    },
-    {
-      name: "B dark from car",
-      id: "b-dark-from-car-128",
-      nadeType: "molo",
       ticks: "128",
-      throwType: "jump",
+      throwType: "normal",
       side: "t",
       coordinates: {
         x: 433,
@@ -223,7 +199,7 @@ export const infernoMapScheme: MapScheme = {
     },
     {
       name: "B car from ramp",
-      id: "b-car-flash-from-ramp",
+      id: "b-car-flash-from-cubby",
       nadeType: "flashbang",
       ticks: "64/128",
       throwType: "normal",
