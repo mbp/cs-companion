@@ -53,18 +53,6 @@ export const infernoMapScheme: MapScheme = {
       },
     },
     {
-      name: "Deep long from second mid",
-      id: "deep-long-from-second-mid",
-      nadeType: "smoke",
-      ticks: "64/128",
-      throwType: "normal",
-      side: "t",
-      coordinates: {
-        x: 715,
-        y: 589,
-      },
-    },
-    {
       name: "Long from second mid",
       id: "long-from-second-mid",
       nadeType: "smoke",
@@ -125,18 +113,6 @@ export const infernoMapScheme: MapScheme = {
       },
     },
     {
-      name: "Mexico one-way to mid",
-      id: "one-way-mexico",
-      nadeType: "smoke",
-      ticks: "64/128",
-      throwType: "normal",
-      side: "t",
-      coordinates: {
-        x: 490,
-        y: 648,
-      },
-    },
-    {
       name: "B dark from car",
       id: "b-dark-from-car",
       nadeType: "molo",
@@ -158,30 +134,6 @@ export const infernoMapScheme: MapScheme = {
       coordinates: {
         x: 432,
         y: 260,
-      },
-    },
-    {
-      name: "Short A from mid",
-      id: "short-a-from-mid",
-      nadeType: "molo",
-      ticks: "64/128",
-      throwType: "jump",
-      side: "t",
-      coordinates: {
-        x: 712,
-        y: 790,
-      },
-    },
-    {
-      name: "Lower mid from long",
-      id: "lower-mid-from-long",
-      nadeType: "molo",
-      ticks: "64/128",
-      throwType: "jump",
-      side: "ct",
-      coordinates: {
-        x: 448,
-        y: 638,
       },
     },
     {
@@ -207,18 +159,6 @@ export const infernoMapScheme: MapScheme = {
       coordinates: {
         x: 516,
         y: 402,
-      },
-    },
-    {
-      name: "Pop out of boiler",
-      id: "pop-flash-boiler-from-apps",
-      nadeType: "flashbang",
-      ticks: "64/128",
-      throwType: "normal",
-      side: "t",
-      coordinates: {
-        x: 692,
-        y: 724,
       },
     },
     {
