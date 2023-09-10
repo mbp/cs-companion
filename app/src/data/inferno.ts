@@ -223,5 +223,29 @@ export const infernoMapScheme: MapScheme = {
         y: 810,
       },
     },
+    {
+      name: "Pit from long",
+      id: "pit-from-long",
+      nadeType: "molo",
+      ticks: "64/128",
+      throwType: "runjump",
+      side: "ct",
+      coordinates: {
+        x: 938,
+        y: 801,
+      },
+    },
+    {
+      name: "A default plant from long",
+      id: "a-default-from-long",
+      nadeType: "molo",
+      ticks: "64/128",
+      throwType: "normal",
+      side: "ct",
+      coordinates: {
+        x: 853,
+        y: 746,
+      },
+    },
   ],
 };
