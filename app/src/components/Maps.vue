@@ -19,7 +19,7 @@ const copyCmd = async (id: string) => {
 </script>
 
 <template>
-  <h1>CS Companion</h1>
+  <h1>Counter-Strike Companion</h1>
   <div>
     <img src="/logo_cs_full.svg" class="logo csgo" alt="Counter-Strike" />
   </div>
@@ -63,6 +63,9 @@ sv_grenade_trajectory 1;sv_grenade_trajectory_time 15;sv_showimpacts 1;sv_showim
 </template>
 
 <style scoped>
+h1{
+              text-shadow: 0 0 3px orange, 0 0 5px orange;
+}
 .footer {
   color: #888;
 }
