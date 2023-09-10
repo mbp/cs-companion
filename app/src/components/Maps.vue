@@ -21,7 +21,7 @@ const copyCmd = async (id: string) => {
 <template>
   <h1>CS Companion</h1>
   <div>
-    <img src="/cs-go-1024x576.jpg" class="logo csgo" alt="Counter-Strike" />
+    <img src="/logo_cs_full.svg" class="logo csgo" alt="Counter-Strike" />
   </div>
   <div class="map-tiles">
     <button
@@ -88,7 +88,7 @@ sv_grenade_trajectory 1;sv_grenade_trajectory_time 15;sv_showimpacts 1;sv_showim
   grid-template-columns: repeat(auto-fit, minmax(200px, 1fr));
 }
 .logo {
-  height: 10em;
+  height: 3em;
   padding: 1.5em;
   will-change: filter;
   transition: filter 300ms;
