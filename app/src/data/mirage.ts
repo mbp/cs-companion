@@ -20,7 +20,7 @@ export const mirageMapScheme: MapScheme = {
       name: "Top connector smoke from side alley",
       id: "top-connector-from-side-alley",
       nadeType: "smoke",
-      ticks: "64",
+      ticks: "64/128",
       throwType: "jump",
       side: "t",
       coordinates: {
@@ -30,11 +30,12 @@ export const mirageMapScheme: MapScheme = {
     },
     {
       name: "Mid window from spawn",
-      description: "Hold D while throwing",
+      description: "Go forward and throw while crouched",
       id: "mid-window-from-spawn",
       nadeType: "smoke",
-      ticks: "64",
+      ticks: "64/128",
       throwType: "jump",
+      movement: "crouch",
       side: "t",
       coordinates: {
         x: 425,
@@ -58,7 +59,7 @@ export const mirageMapScheme: MapScheme = {
       name: "Ticket booth smoke from T ramp",
       id: "ticket-booth-from-t-ramp",
       nadeType: "smoke",
-      ticks: "64",
+      ticks: "64/128",
       throwType: "jump",
       side: "t",
       coordinates: {
@@ -79,19 +80,6 @@ export const mirageMapScheme: MapScheme = {
       },
     },
     {
-      name: "CT car platform",
-      description: "Next to under stairs. Aim in the sky",
-      id: "ct-car-platform",
-      nadeType: "smoke",
-      ticks: "64",
-      throwType: "normal",
-      side: "t",
-      coordinates: {
-        x: 234,
-        y: 196,
-      },
-    },
-    {
       name: "Market window smoke",
       id: "market-window",
       nadeType: "smoke",
@@ -104,22 +92,10 @@ export const mirageMapScheme: MapScheme = {
       },
     },
     {
-      name: "CT mid one way smoke",
-      id: "mid-one-way",
-      nadeType: "smoke",
-      ticks: "64",
-      throwType: "normal",
-      side: "ct",
-      coordinates: {
-        x: 425,
-        y: 471,
-      },
-    },
-    {
       name: "Pop flash b site",
       id: "pop-flash-b-site-from-apps",
       nadeType: "flashbang",
-      ticks: "64",
+      ticks: "64/128",
       throwType: "normal",
       side: "t",
       coordinates: {
