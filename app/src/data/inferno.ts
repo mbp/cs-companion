@@ -21,7 +21,6 @@ export const infernoMapScheme: MapScheme = {
       nadeType: "smoke",
       ticks: "64/128",
       throwType: "jump",
-      movement: "crouch",
       side: "t",
       coordinates: {
         x: 523,
@@ -57,7 +56,7 @@ export const infernoMapScheme: MapScheme = {
       id: "long-from-second-mid",
       nadeType: "smoke",
       ticks: "64/128",
-      throwType: "jump",
+      throwType: "normal",
       side: "t",
       coordinates: {
         x: 714,
