@@ -63,8 +63,10 @@ sv_grenade_trajectory 1;sv_grenade_trajectory_time 15;sv_showimpacts 1;sv_showim
 </template>
 
 <style scoped>
-h1{
-              text-shadow: 0 0 3px orange, 0 0 5px orange;
+h1 {
+  text-shadow:
+    0 0 3px orange,
+    0 0 5px orange;
 }
 .footer {
   color: #888;
