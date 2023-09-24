@@ -71,10 +71,18 @@ const lineUps = computed(() => {
     :parents="[{ routeName: 'Home', title: 'Home' }]"
   />
 
-  Show strats <Toggle @checked="onToggleShowLineupsChecked" />
+  <Toggle
+    @checked="onToggleShowLineupsChecked"
+    onLabel="Map"
+    offLabel="Strats"
+  />
+  <Toggle
+    @checked="onToggleShowLineupListChecked"
+    onLabel="List"
+    offLabel="Radar"
+  />
 
   <div v-if="showLineups">
-    Show list <Toggle @checked="onToggleShowLineupListChecked" />
     <div v-if="!showLineupList">
       <Radar
         :lineUps="lineUps"
