@@ -54,14 +54,47 @@ const openUtility = (utility: UtilityLineup) => {
 };
 const showLineups = ref(true);
 const showLineupList = ref(false);
+const showSmokesOnly = ref(false);
+const showMolosOnly = ref(false);
+const showFlashBangsOnly = ref(false);
+const showFragGrenadesOnly = ref(false);
 const onToggleShowLineupsChecked = () => {
   showLineups.value = !showLineups.value;
 };
 const onToggleShowLineupListChecked = () => {
   showLineupList.value = !showLineupList.value;
 };
+const onToggleShowSmokesOnlyChecked = () => {
+  showSmokesOnly.value = !showSmokesOnly.value;
+};
+const onToggleShowMolosOnlyChecked = () => {
+  showMolosOnly.value = !showMolosOnly.value;
+};
+const onToggleShowFlashBangsOnlyChecked = () => {
+  showFlashBangsOnly.value = !showFlashBangsOnly.value;
+};
+const onToggleShowFragGrenadesOnlyChecked = () => {
+  showFragGrenadesOnly.value = !showFragGrenadesOnly.value;
+};
 const lineUps = computed(() => {
-  return mapScheme.value.lineUps.filter((x) => x.ticks != "64");
+  return mapScheme.value.lineUps.filter((x) => {
+    if (x.ticks == "64") {
+      return false;
+    }
+    if (showSmokesOnly.value) {
+      return x.nadeType == "smoke";
+    }
+    if (showMolosOnly.value) {
+      return x.nadeType == "molo";
+    }
+    if (showFlashBangsOnly.value) {
+      return x.nadeType == "flashbang";
+    }
+    if (showFragGrenadesOnly.value) {
+      return x.nadeType == "frag";
+    }
+    return true;
+  });
 });
 </script>
 
@@ -71,16 +104,13 @@ const lineUps = computed(() => {
     :parents="[{ routeName: 'Home', title: 'Home' }]"
   />
 
-  <Toggle
-    @checked="onToggleShowLineupsChecked"
-    onLabel="Map"
-    offLabel="Strats"
-  />
-  <Toggle
-    @checked="onToggleShowLineupListChecked"
-    onLabel="List"
-    offLabel="Radar"
-  />
+  <Toggle @checked="onToggleShowLineupsChecked" label="Strats" />
+  <Toggle @checked="onToggleShowLineupListChecked" label="Radar" />
+  <Toggle @checked="onToggleShowSmokesOnlyChecked" label="Smokes" />
+  <Toggle @checked="onToggleShowMolosOnlyChecked" label="Molos" />
+  <Toggle @checked="onToggleShowFlashBangsOnlyChecked" label="Flash" />
+
+  <Toggle @checked="onToggleShowFragGrenadesOnlyChecked" label="Frag" />
 
   <div v-if="showLineups">
     <div v-if="!showLineupList">
