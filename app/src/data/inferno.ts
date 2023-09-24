@@ -68,7 +68,7 @@ export const infernoMapScheme: MapScheme = {
       id: "cross-pit-from-second-mid",
       nadeType: "smoke",
       ticks: "64/128",
-      throwType: "normal",
+      throwType: "jump",
       side: "t",
       coordinates: {
         x: 889,
@@ -93,22 +93,11 @@ export const infernoMapScheme: MapScheme = {
       nadeType: "smoke",
       ticks: "128",
       throwType: "jump",
+      movement: "crouch",
       side: "t",
       coordinates: {
         x: 894,
         y: 637,
-      },
-    },
-    {
-      name: "Apps one-way",
-      id: "apps-one-way",
-      nadeType: "smoke",
-      ticks: "64/128",
-      throwType: "normal",
-      side: "ct",
-      coordinates: {
-        x: 690,
-        y: 859,
       },
     },
     {
@@ -185,25 +174,12 @@ export const infernoMapScheme: MapScheme = {
       },
     },
     {
-      name: "One way short from a site",
-      id: "one-way-short-from-a-site",
-      nadeType: "smoke",
-      ticks: "64/128",
-      throwType: "normal",
-      clickType: "right",
-      side: "ct",
-      coordinates: {
-        x: 802,
-        y: 763,
-      },
-    },
-    {
       name: "Pit(A) flash from apps",
       movement: "crouch",
       id: "a-site-from-apps",
       nadeType: "flashbang",
       ticks: "64/128",
-      throwType: "normal",
+      throwType: "jump",
       side: "t",
       coordinates: {
         x: 863,
