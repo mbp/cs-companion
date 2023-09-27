@@ -150,6 +150,18 @@ export const infernoMapScheme: MapScheme = {
       },
     },
     {
+      name: "Pit from apps",
+      id: "pit-from-apps",
+      nadeType: "molo",
+      ticks: "128",
+      throwType: "normal",
+      side: "t",
+      coordinates: {
+        x: 940,
+        y: 819,
+      },
+    },
+    {
       name: "Hay hay car from 2nd mid",
       id: "hay-car-from-second-mid",
       nadeType: "smoke",
@@ -159,6 +171,18 @@ export const infernoMapScheme: MapScheme = {
       coordinates: {
         x: 836,
         y: 806,
+      },
+    },
+    {
+      name: "Hay hay car from apps",
+      id: "hay-car-from-apps",
+      nadeType: "smoke",
+      ticks: "128",
+      throwType: "normal",
+      side: "t",
+      coordinates: {
+        x: 847,
+        y: 784,
       },
     },
     {
@@ -196,6 +220,19 @@ export const infernoMapScheme: MapScheme = {
       coordinates: {
         x: 594,
         y: 810,
+      },
+    },
+    {
+      name: "Second mid from apps",
+      id: "second-mid-from-apps",
+      nadeType: "flashbang",
+      ticks: "64/128",
+      throwType: "normal",
+      clickType: "left+right",
+      side: "ct",
+      coordinates: {
+        x: 625,
+        y: 788,
       },
     },
     {

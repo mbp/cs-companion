@@ -44,7 +44,7 @@ export const vertigoMapScheme: MapScheme = {
       id: "a-site-from-ramp",
       nadeType: "smoke",
       ticks: "64/128",
-      throwType: "jump",
+      throwType: "normal",
       side: "t",
       coordinates: {
         x: 677,
