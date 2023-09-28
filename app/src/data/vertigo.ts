@@ -88,8 +88,8 @@ export const vertigoMapScheme: MapScheme = {
       },
     },
     {
-      name: "B site headshot one-way from stairs",
-      id: "b-one-way-headshot-from-stairs",
+      name: "B site headshot from stairs",
+      id: "b-headshot-from-stairs",
       nadeType: "smoke",
       ticks: "64/128",
       throwType: "normal",
