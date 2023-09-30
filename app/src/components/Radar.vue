@@ -1,5 +1,5 @@
 <script setup lang="ts">
-import { computed, onMounted, ref } from "vue";
+import { computed, onMounted, ref, watch } from "vue";
 import { UtilityLineup } from "../components/composables/types";
 
 interface Props {
@@ -36,6 +36,16 @@ const flashBangs = computed(() => {
 onMounted(() => {
   drawAll();
 });
+
+const redrawAll = () => {
+  clearAll();
+  drawAll();
+};
+
+const clearAll = () => {
+  const ctx = radarCanvas.value!.getContext("2d")!;
+  ctx.clearRect(0, 0, 1024, 1024);
+};
 
 const drawAll = () => {
   for (const smoke of smokes.value) {
@@ -76,9 +86,7 @@ const mouseMoveRadar = (event: MouseEvent) => {
   const { x, y } = getPosition(event);
   document.body.style.cursor = "auto";
 
-  const ctx = radarCanvas.value!.getContext("2d")!;
-  ctx.clearRect(0, 0, 1024, 1024);
-  drawAll();
+  redrawAll();
 
   const rectangle = findMatchingRectangle(x, y);
   rectangle?.tooltip.render();
@@ -99,6 +107,13 @@ const contains = (rect: Rectangle, x: number, y: number) => {
     y <= rect.y + rect.height
   );
 };
+
+watch(
+  () => props.lineUps,
+  () => {
+    redrawAll();
+  },
+);
 
 type Rectangle = {
   x: number;
