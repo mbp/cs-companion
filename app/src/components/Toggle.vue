@@ -30,7 +30,6 @@ const toggle = () => {
   display: inline-block;
   vertical-align: top;
   width: 96px;
-  height: 36px;
   padding: 1px;
   border-radius: 3px;
   cursor: pointer;
@@ -43,13 +42,12 @@ const toggle = () => {
   opacity: 0;
 }
 .switch-label {
-  color: black;
+  color: white;
   position: relative;
   display: block;
   height: inherit;
-  font-size: 15px;
   text-transform: uppercase;
-  background: #fff;
+  background: #8d918d;
   border-radius: inherit;
   box-shadow:
     inset 0 1px 2px rgba(0, 0, 0, 0.12),
@@ -84,7 +82,7 @@ const toggle = () => {
   opacity: 0;
 }
 .switch-input:checked ~ .switch-label {
-  background: green;
+  background: orange;
   box-shadow:
     inset 0 1px 2px rgba(0, 0, 0, 0.15),
     inset 0 0 3px rgba(0, 0, 0, 0.2);
