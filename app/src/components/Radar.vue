@@ -1,6 +1,6 @@
 <script setup lang="ts">
 import { computed, onMounted, ref } from "vue";
-import { MapScheme, UtilityLineup } from "../components/composables/types";
+import { UtilityLineup } from "../components/composables/types";
 
 interface Props {
   lineUps: UtilityLineup[];
