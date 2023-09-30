@@ -7,7 +7,6 @@ export const overpassMapScheme: MapScheme = {
       name: "Heaven smoke from short",
       id: "heaven-from-short",
       nadeType: "smoke",
-      ticks: "64/128",
       throwType: "normal",
       side: "t",
       coordinates: {
@@ -19,7 +18,6 @@ export const overpassMapScheme: MapScheme = {
       name: "Mid toilet smoke from t spawn",
       id: "mid-toilet-from-t-spawn",
       nadeType: "smoke",
-      ticks: "64/128",
       throwType: "runjump",
       side: "t",
       coordinates: {
@@ -31,7 +29,6 @@ export const overpassMapScheme: MapScheme = {
       name: "Dumpster from divider",
       id: "dumpster-from-divider",
       nadeType: "smoke",
-      ticks: "64/128",
       throwType: "normal",
       side: "t",
       coordinates: {
@@ -43,7 +40,6 @@ export const overpassMapScheme: MapScheme = {
       name: "Barrels molo from short",
       id: "barrels-from-short",
       nadeType: "molo",
-      ticks: "64/128",
       throwType: "runjump",
       side: "t",
       coordinates: {
@@ -55,7 +51,6 @@ export const overpassMapScheme: MapScheme = {
       name: "Short tunnel molo from abc",
       id: "short-from-abc",
       nadeType: "molo",
-      ticks: "64/128",
       throwType: "normal",
       side: "ct",
       coordinates: {
@@ -67,7 +62,6 @@ export const overpassMapScheme: MapScheme = {
       name: "Barrels flash from short tunnel",
       id: "b-site-from-short-tunnel",
       nadeType: "flashbang",
-      ticks: "64/128",
       throwType: "runjump",
       side: "t",
       coordinates: {
@@ -79,7 +73,6 @@ export const overpassMapScheme: MapScheme = {
       name: "Bank from cafe",
       id: "bank-from-cafe",
       nadeType: "smoke",
-      ticks: "64/128",
       throwType: "normal",
       side: "t",
       coordinates: {

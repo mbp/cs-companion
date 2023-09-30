@@ -7,7 +7,6 @@ export const vertigoMapScheme: MapScheme = {
       name: "Ramp from a default plant",
       id: "ramp-from-a-default-plant",
       nadeType: "smoke",
-      ticks: "64/128",
       throwType: "normal",
       side: "ct",
       coordinates: {
@@ -19,7 +18,6 @@ export const vertigoMapScheme: MapScheme = {
       name: "Guardian from mid",
       id: "guardian-from-mid",
       nadeType: "smoke",
-      ticks: "64/128",
       throwType: "normal",
       side: "t",
       coordinates: {
@@ -31,7 +29,6 @@ export const vertigoMapScheme: MapScheme = {
       name: "A site headshot from ramp",
       id: "a-headshot-from-ramp",
       nadeType: "smoke",
-      ticks: "64/128",
       throwType: "normal",
       side: "t",
       coordinates: {
@@ -43,7 +40,6 @@ export const vertigoMapScheme: MapScheme = {
       name: "A site from ramp",
       id: "a-site-from-ramp",
       nadeType: "smoke",
-      ticks: "64/128",
       throwType: "normal",
       side: "t",
       coordinates: {
@@ -55,7 +51,6 @@ export const vertigoMapScheme: MapScheme = {
       name: "B site from t",
       id: "b-site-from-t",
       nadeType: "smoke",
-      ticks: "64/128",
       throwType: "normal",
       side: "t",
       coordinates: {
@@ -67,7 +62,6 @@ export const vertigoMapScheme: MapScheme = {
       name: "A short from t spawn",
       id: "a-short-from-t-spawn",
       nadeType: "smoke",
-      ticks: "64/128",
       throwType: "jump",
       side: "t",
       coordinates: {
@@ -79,7 +73,6 @@ export const vertigoMapScheme: MapScheme = {
       name: "B site from t",
       id: "b-site-from-t",
       nadeType: "flashbang",
-      ticks: "64/128",
       throwType: "normal",
       side: "t",
       coordinates: {
@@ -91,7 +84,6 @@ export const vertigoMapScheme: MapScheme = {
       name: "B site headshot from stairs",
       id: "b-headshot-from-stairs",
       nadeType: "smoke",
-      ticks: "64/128",
       throwType: "normal",
       side: "t",
       coordinates: {

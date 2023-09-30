@@ -7,7 +7,6 @@ export const anubisMapScheme: MapScheme = {
       name: "A Connector from water",
       id: "a-connector-from-water",
       nadeType: "smoke",
-      ticks: "64/128",
       throwType: "normal",
       side: "t",
       coordinates: {
@@ -19,7 +18,6 @@ export const anubisMapScheme: MapScheme = {
       name: "B Connector outside from street",
       id: "b-connector-outside-from-street",
       nadeType: "smoke",
-      ticks: "64/128",
       throwType: "jump",
       side: "t",
       coordinates: {
@@ -31,7 +29,6 @@ export const anubisMapScheme: MapScheme = {
       name: "Mid house from T spawn",
       id: "mid-house-smoke-from-t-spawn",
       nadeType: "smoke",
-      ticks: "64/128",
       throwType: "jump",
       side: "t",
       coordinates: {
@@ -43,7 +40,6 @@ export const anubisMapScheme: MapScheme = {
       name: "Palace from B outside",
       id: "palace-from-b-outside",
       nadeType: "smoke",
-      ticks: "64/128",
       throwType: "normal",
       side: "t",
       coordinates: {
@@ -55,7 +51,6 @@ export const anubisMapScheme: MapScheme = {
       name: "Connector inside from B outside",
       id: "connector-inside-from-b-outside",
       nadeType: "smoke",
-      ticks: "64/128",
       throwType: "jump",
       side: "t",
       coordinates: {
@@ -67,7 +62,6 @@ export const anubisMapScheme: MapScheme = {
       name: "CT long from B outside",
       id: "ct-long-from-b-outside",
       nadeType: "smoke",
-      ticks: "64/128",
       throwType: "normal",
       side: "t",
       coordinates: {
@@ -79,7 +73,6 @@ export const anubisMapScheme: MapScheme = {
       name: "A site from canals",
       id: "a-site-from-canals",
       nadeType: "flashbang",
-      ticks: "64/128",
       throwType: "jump",
       side: "t",
       coordinates: {
@@ -91,7 +84,6 @@ export const anubisMapScheme: MapScheme = {
       name: "Mid house from bridge",
       id: "mid-house-from-bridge",
       nadeType: "molo",
-      ticks: "64/128",
       throwType: "normal",
       side: "t",
       coordinates: {

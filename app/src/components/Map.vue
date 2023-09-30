@@ -78,9 +78,6 @@ const onToggleShowFragGrenadesOnlyChecked = () => {
 };
 const lineUps = computed(() => {
   return mapScheme.value.lineUps.filter((x) => {
-    if (x.ticks == "64") {
-      return false;
-    }
     if (showSmokesOnly.value) {
       return x.nadeType == "smoke";
     }

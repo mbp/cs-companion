@@ -7,7 +7,6 @@ export const nukeLineups: MapScheme = {
       name: "Short red smoke yard (2nd smoke)",
       id: "yard-red-2nd",
       nadeType: "smoke",
-      ticks: "64/128",
       throwType: "normal",
       side: "t",
       coordinates: {
@@ -19,7 +18,6 @@ export const nukeLineups: MapScheme = {
       name: "Long red smoke yard (3rd smoke)",
       id: "yard-red-3rd",
       nadeType: "smoke",
-      ticks: "64/128",
       throwType: "normal",
       side: "t",
       coordinates: {
@@ -31,7 +29,6 @@ export const nukeLineups: MapScheme = {
       name: "Left garage smoke (no peek silo)",
       id: "left-garage-no-peek-silo",
       nadeType: "smoke",
-      ticks: "64/128",
       throwType: "jump",
       side: "t",
       coordinates: {
@@ -43,7 +40,6 @@ export const nukeLineups: MapScheme = {
       name: "Close main outside",
       id: "close-main-outside",
       nadeType: "smoke",
-      ticks: "64/128",
       throwType: "jump",
       side: "t",
       coordinates: {
@@ -55,7 +51,6 @@ export const nukeLineups: MapScheme = {
       name: "Far main outside",
       id: "far-main-outside",
       nadeType: "smoke",
-      ticks: "64/128",
       throwType: "jump",
       side: "t",
       coordinates: {
@@ -67,7 +62,6 @@ export const nukeLineups: MapScheme = {
       name: "Garage",
       id: "garage",
       nadeType: "smoke",
-      ticks: "64/128",
       throwType: "jump",
       side: "t",
       coordinates: {
@@ -79,7 +73,6 @@ export const nukeLineups: MapScheme = {
       name: "Ramp smoke from trophy",
       id: "ramp-from-trophy",
       nadeType: "smoke",
-      ticks: "64/128",
       throwType: "run",
       side: "t",
       coordinates: {
@@ -92,7 +85,6 @@ export const nukeLineups: MapScheme = {
       description: "Throw when passing ladder on right",
       nadeType: "molo",
       id: "top-hut-from-roof",
-      ticks: "64/128",
       throwType: "runjump",
       side: "t",
       coordinates: {
@@ -104,7 +96,6 @@ export const nukeLineups: MapScheme = {
       name: "Molo silo from credit card",
       nadeType: "molo",
       id: "silo-from-credit-card",
-      ticks: "64/128",
       throwType: "jump",
       side: "ct",
       coordinates: {
@@ -116,7 +107,6 @@ export const nukeLineups: MapScheme = {
       name: "Flash a site heaven from t roof",
       id: "a-site-heaven-from-t-roof",
       nadeType: "flashbang",
-      ticks: "64/128",
       throwType: "normal",
       side: "t",
       coordinates: {
@@ -128,7 +118,6 @@ export const nukeLineups: MapScheme = {
       name: "Flash a through hut from lobby",
       id: "a-site-via-hut-from-lobby",
       nadeType: "flashbang",
-      ticks: "64/128",
       throwType: "run",
       side: "t",
       coordinates: {
@@ -140,7 +129,6 @@ export const nukeLineups: MapScheme = {
       name: "Flash b ramp from trophy",
       id: "b-ramp-from-trophy",
       nadeType: "flashbang",
-      ticks: "64/128",
       throwType: "run",
       side: "t",
       coordinates: {
@@ -152,7 +140,6 @@ export const nukeLineups: MapScheme = {
       name: "Flash b ramp (top) from trophy",
       id: "b-ramp-top-from-trophy",
       nadeType: "flashbang",
-      ticks: "64/128",
       throwType: "run",
       side: "t",
       coordinates: {

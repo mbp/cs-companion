@@ -7,7 +7,6 @@ export const infernoMapScheme: MapScheme = {
       name: "CT from banana",
       id: "ct-from-banana",
       nadeType: "smoke",
-      ticks: "64/128",
       throwType: "normal",
       side: "t",
       coordinates: {
@@ -19,7 +18,6 @@ export const infernoMapScheme: MapScheme = {
       name: "Coffin from banana",
       id: "coffin-from-banana",
       nadeType: "smoke",
-      ticks: "64/128",
       throwType: "jump",
       side: "t",
       coordinates: {
@@ -31,7 +29,6 @@ export const infernoMapScheme: MapScheme = {
       name: "Short from second mid",
       id: "short-from-second-mid",
       nadeType: "smoke",
-      ticks: "64/128",
       throwType: "normal",
       side: "t",
       coordinates: {
@@ -43,7 +40,6 @@ export const infernoMapScheme: MapScheme = {
       name: "Short from t-ramp",
       id: "short-from-t-ramp",
       nadeType: "smoke",
-      ticks: "128",
       throwType: "jump",
       side: "t",
       coordinates: {
@@ -55,7 +51,6 @@ export const infernoMapScheme: MapScheme = {
       name: "Long from second mid",
       id: "long-from-second-mid",
       nadeType: "smoke",
-      ticks: "64/128",
       throwType: "normal",
       side: "t",
       coordinates: {
@@ -67,7 +62,6 @@ export const infernoMapScheme: MapScheme = {
       name: "Cross pit from second mid",
       id: "cross-pit-from-second-mid",
       nadeType: "smoke",
-      ticks: "64/128",
       throwType: "jump",
       side: "t",
       coordinates: {
@@ -79,7 +73,6 @@ export const infernoMapScheme: MapScheme = {
       name: "Moto from second mid",
       id: "moto-from-second-mid",
       nadeType: "smoke",
-      ticks: "64/128",
       throwType: "jump",
       side: "t",
       coordinates: {
@@ -91,7 +84,6 @@ export const infernoMapScheme: MapScheme = {
       name: "Moto from mexico",
       id: "moto-from-mexico",
       nadeType: "smoke",
-      ticks: "128",
       throwType: "jump",
       movement: "crouch",
       side: "t",
@@ -104,7 +96,6 @@ export const infernoMapScheme: MapScheme = {
       name: "B dark from car",
       id: "b-dark-from-car",
       nadeType: "molo",
-      ticks: "128",
       throwType: "normal",
       side: "t",
       coordinates: {
@@ -116,7 +107,6 @@ export const infernoMapScheme: MapScheme = {
       name: "Nuke box from car",
       id: "b-nuke-box-from-car",
       nadeType: "molo",
-      ticks: "64/128",
       throwType: "jump",
       side: "t",
       coordinates: {
@@ -128,7 +118,6 @@ export const infernoMapScheme: MapScheme = {
       name: "B site from car",
       id: "b-site-flash-from-car",
       nadeType: "flashbang",
-      ticks: "64/128",
       throwType: "jump",
       clickType: "left+right",
       side: "t",
@@ -141,7 +130,6 @@ export const infernoMapScheme: MapScheme = {
       name: "B car from ramp",
       id: "b-car-flash-from-cubby",
       nadeType: "flashbang",
-      ticks: "64/128",
       throwType: "normal",
       side: "t",
       coordinates: {
@@ -153,7 +141,6 @@ export const infernoMapScheme: MapScheme = {
       name: "Pit from apps",
       id: "pit-from-apps",
       nadeType: "molo",
-      ticks: "128",
       throwType: "normal",
       side: "t",
       coordinates: {
@@ -165,7 +152,6 @@ export const infernoMapScheme: MapScheme = {
       name: "Hay hay car from 2nd mid",
       id: "hay-car-from-second-mid",
       nadeType: "smoke",
-      ticks: "128",
       throwType: "normal",
       side: "t",
       coordinates: {
@@ -177,7 +163,6 @@ export const infernoMapScheme: MapScheme = {
       name: "Hay hay car from apps",
       id: "hay-car-from-apps",
       nadeType: "smoke",
-      ticks: "128",
       throwType: "normal",
       side: "t",
       coordinates: {
@@ -189,7 +174,6 @@ export const infernoMapScheme: MapScheme = {
       name: "One way hay car from pit",
       id: "one-way-hay-car-from-pit",
       nadeType: "smoke",
-      ticks: "64/128",
       throwType: "normal",
       side: "ct",
       coordinates: {
@@ -202,7 +186,6 @@ export const infernoMapScheme: MapScheme = {
       movement: "crouch",
       id: "a-site-from-apps",
       nadeType: "flashbang",
-      ticks: "64/128",
       throwType: "jump",
       side: "t",
       coordinates: {
@@ -214,7 +197,6 @@ export const infernoMapScheme: MapScheme = {
       name: "Second mid from long",
       id: "second-mid-from-long",
       nadeType: "flashbang",
-      ticks: "64/128",
       throwType: "jump",
       side: "ct",
       coordinates: {
@@ -226,7 +208,6 @@ export const infernoMapScheme: MapScheme = {
       name: "Second mid from apps",
       id: "second-mid-from-apps",
       nadeType: "flashbang",
-      ticks: "64/128",
       throwType: "normal",
       clickType: "left+right",
       side: "ct",
@@ -239,7 +220,6 @@ export const infernoMapScheme: MapScheme = {
       name: "Pit from long",
       id: "pit-from-long",
       nadeType: "molo",
-      ticks: "64/128",
       throwType: "runjump",
       side: "ct",
       coordinates: {
@@ -251,7 +231,6 @@ export const infernoMapScheme: MapScheme = {
       name: "A default plant from long",
       id: "a-default-from-long",
       nadeType: "molo",
-      ticks: "64/128",
       throwType: "normal",
       side: "ct",
       coordinates: {

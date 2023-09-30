@@ -8,7 +8,6 @@ export const mirageMapScheme: MapScheme = {
       description: "Stand in corner, aim lower mid carpet",
       id: "connector-lower-from-t",
       nadeType: "smoke",
-      ticks: "64/128",
       throwType: "jump",
       side: "t",
       coordinates: {
@@ -20,7 +19,6 @@ export const mirageMapScheme: MapScheme = {
       name: "Top connector smoke from side alley",
       id: "top-connector-from-side-alley",
       nadeType: "smoke",
-      ticks: "64/128",
       throwType: "jump",
       side: "t",
       coordinates: {
@@ -33,7 +31,6 @@ export const mirageMapScheme: MapScheme = {
       description: "Go forward and throw while crouched",
       id: "mid-window-from-spawn",
       nadeType: "smoke",
-      ticks: "64/128",
       throwType: "jump",
       movement: "crouch",
       side: "t",
@@ -47,7 +44,6 @@ export const mirageMapScheme: MapScheme = {
       description: "At small hinge. Aim middle of some lines",
       id: "stairs-from-t-ramp",
       nadeType: "smoke",
-      ticks: "64/128",
       throwType: "normal",
       side: "t",
       coordinates: {
@@ -59,7 +55,6 @@ export const mirageMapScheme: MapScheme = {
       name: "Ticket booth smoke from T ramp",
       id: "ticket-booth-from-t-ramp",
       nadeType: "smoke",
-      ticks: "64/128",
       throwType: "jump",
       side: "t",
       coordinates: {
@@ -71,7 +66,6 @@ export const mirageMapScheme: MapScheme = {
       name: "Jungle from T ramp",
       id: "jungle-from-t-ramp",
       nadeType: "smoke",
-      ticks: "64/128",
       throwType: "normal",
       side: "t",
       coordinates: {
@@ -83,7 +77,6 @@ export const mirageMapScheme: MapScheme = {
       name: "Market window smoke",
       id: "market-window",
       nadeType: "smoke",
-      ticks: "64/128",
       throwType: "jump",
       side: "t",
       coordinates: {
@@ -95,7 +88,6 @@ export const mirageMapScheme: MapScheme = {
       name: "Pop flash b site",
       id: "pop-flash-b-site-from-apps",
       nadeType: "flashbang",
-      ticks: "64/128",
       throwType: "normal",
       side: "t",
       coordinates: {

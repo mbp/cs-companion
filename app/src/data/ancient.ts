@@ -7,7 +7,6 @@ export const ancientMapScheme: MapScheme = {
       name: "Long B from ruins",
       id: "long-b-from-ruins",
       nadeType: "smoke",
-      ticks: "64/128",
       throwType: "jump",
       side: "t",
       coordinates: {
@@ -19,7 +18,6 @@ export const ancientMapScheme: MapScheme = {
       name: "Short B from ruins",
       id: "short-b-from-ruins-128",
       nadeType: "smoke",
-      ticks: "128",
       throwType: "jump",
       side: "t",
       coordinates: {
@@ -31,7 +29,6 @@ export const ancientMapScheme: MapScheme = {
       name: "Cave from ruins",
       id: "cave-from-ruins",
       nadeType: "smoke",
-      ticks: "64/128",
       throwType: "jump",
       side: "t",
       coordinates: {
@@ -43,7 +40,6 @@ export const ancientMapScheme: MapScheme = {
       name: "Mid from t spawn",
       id: "mid-from-t-spawn-128",
       nadeType: "smoke",
-      ticks: "128",
       throwType: "jump",
       side: "t",
       coordinates: {
@@ -55,7 +51,6 @@ export const ancientMapScheme: MapScheme = {
       name: "Inside donut from stairs",
       id: "inside-donut-from-stairs",
       nadeType: "smoke",
-      ticks: "64/128",
       throwType: "jump",
       side: "t",
       coordinates: {
@@ -67,7 +62,6 @@ export const ancientMapScheme: MapScheme = {
       name: "Donut mid from spawn",
       id: "mid-donut-from-spawn-128",
       nadeType: "smoke",
-      ticks: "128",
       throwType: "jump",
       side: "t",
       coordinates: {
@@ -79,7 +73,6 @@ export const ancientMapScheme: MapScheme = {
       name: "Donut mid from jungle",
       id: "mid-donut-from-jungle",
       nadeType: "smoke",
-      ticks: "64/128",
       throwType: "normal",
       side: "t",
       coordinates: {
@@ -91,7 +84,6 @@ export const ancientMapScheme: MapScheme = {
       name: "CT from stairs",
       id: "ct-from-stairs",
       nadeType: "smoke",
-      ticks: "64/128",
       throwType: "jump",
       side: "t",
       coordinates: {
@@ -103,7 +95,6 @@ export const ancientMapScheme: MapScheme = {
       name: "B backline from ruins",
       id: "b-backline-from-ruins",
       nadeType: "smoke",
-      ticks: "64/128",
       throwType: "runjump",
       side: "t",
       coordinates: {
@@ -115,7 +106,6 @@ export const ancientMapScheme: MapScheme = {
       name: "Ancient wood from ruins",
       id: "wood-from-ramp",
       nadeType: "molo",
-      ticks: "64/128",
       throwType: "normal",
       side: "t",
       coordinates: {
