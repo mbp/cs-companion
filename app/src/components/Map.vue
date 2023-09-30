@@ -58,6 +58,8 @@ const showSmokesOnly = ref(false);
 const showMolosOnly = ref(false);
 const showFlashBangsOnly = ref(false);
 const showFragGrenadesOnly = ref(false);
+const showTerroristsOnly = ref(false);
+const showCounterTerroristsOnly = ref(false);
 const onToggleShowLineupsChecked = () => {
   showLineups.value = !showLineups.value;
 };
@@ -76,6 +78,12 @@ const onToggleShowFlashBangsOnlyChecked = () => {
 const onToggleShowFragGrenadesOnlyChecked = () => {
   showFragGrenadesOnly.value = !showFragGrenadesOnly.value;
 };
+const onToggleShowTerroristsOnlyChecked = () => {
+  showTerroristsOnly.value = !showTerroristsOnly.value;
+};
+const onToggleShowCounterTerroristsOnlyChecked = () => {
+  showCounterTerroristsOnly.value = !showCounterTerroristsOnly.value;
+};
 const lineUps = computed(() => {
   return mapScheme.value.lineUps.filter((x) => {
     if (showSmokesOnly.value) {
@@ -89,6 +97,15 @@ const lineUps = computed(() => {
     }
     if (showFragGrenadesOnly.value) {
       return x.nadeType == "frag";
+    }
+    if (showFragGrenadesOnly.value) {
+      return x.nadeType == "frag";
+    }
+    if (showTerroristsOnly.value) {
+      return x.side == "t";
+    }
+    if (showCounterTerroristsOnly.value) {
+      return x.side == "ct";
     }
     return true;
   });
@@ -106,8 +123,9 @@ const lineUps = computed(() => {
   <Toggle @checked="onToggleShowSmokesOnlyChecked" label="Smokes" />
   <Toggle @checked="onToggleShowMolosOnlyChecked" label="Molos" />
   <Toggle @checked="onToggleShowFlashBangsOnlyChecked" label="Flash" />
-
   <Toggle @checked="onToggleShowFragGrenadesOnlyChecked" label="Frag" />
+  <Toggle @checked="onToggleShowTerroristsOnlyChecked" label="T" />
+  <Toggle @checked="onToggleShowCounterTerroristsOnlyChecked" label="CT" />
 
   <div v-if="showLineups">
     <div v-if="!showLineupList">
