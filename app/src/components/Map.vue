@@ -119,7 +119,7 @@ const lineUps = computed(() => {
   />
 
   <Toggle @checked="onToggleShowLineupsChecked" label="Strats" />
-  <Toggle @checked="onToggleShowLineupListChecked" label="Radar" />
+  <Toggle @checked="onToggleShowLineupListChecked" label="List" />
   <Toggle @checked="onToggleShowSmokesOnlyChecked" label="Smokes" />
   <Toggle @checked="onToggleShowMolosOnlyChecked" label="Molos" />
   <Toggle @checked="onToggleShowFlashBangsOnlyChecked" label="Flash" />

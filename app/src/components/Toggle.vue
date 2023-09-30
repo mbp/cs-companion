@@ -26,6 +26,7 @@ const toggle = () => {
 
 <style scoped>
 .switch {
+  font-weight: bold;
   position: relative;
   display: inline-block;
   vertical-align: top;
