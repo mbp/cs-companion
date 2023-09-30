@@ -1,6 +1,6 @@
 <template>
   <label class="switch">
-    <input type="checkbox" class="switch-input" />
+    <input type="checkbox" class="switch-input" :checked="initial" />
     <span class="switch-label" @click="toggle">{{ label }}</span>
   </label>
 </template>
@@ -8,11 +8,12 @@
 <script setup lang="ts">
 import { ref } from "vue";
 
-const toggled = ref(false);
-
-defineProps<{
+const props = defineProps<{
   label: string;
+  initial: boolean;
 }>();
+
+const toggled = ref(props.initial);
 
 const emit = defineEmits<{
   (e: "checked", value: boolean): void;

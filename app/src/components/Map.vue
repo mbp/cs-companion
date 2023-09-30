@@ -5,7 +5,7 @@ import { allMapSchemes } from "../data";
 import Radar from "./Radar.vue";
 import Toggle from "./Toggle.vue";
 import Navigation from "./Navigation.vue";
-import { UtilityLineup } from "./composables/types";
+import { NadeType, Side, UtilityLineup } from "./composables/types";
 
 const route = useRoute();
 const router = useRouter();
@@ -15,25 +15,19 @@ const mapScheme = computed(() => {
 });
 
 const smokes = computed(() => {
-  return mapScheme.value.lineUps.filter(
-    (x) => x.nadeType == "smoke" && x.coordinates,
-  );
+  return lineUps.value.filter((x) => x.nadeType == "smoke" && x.coordinates);
 });
 
 const fragGrenades = computed(() => {
-  return mapScheme.value.lineUps.filter(
-    (x) => x.nadeType == "frag" && x.coordinates,
-  );
+  return lineUps.value.filter((x) => x.nadeType == "frag" && x.coordinates);
 });
 
 const molos = computed(() => {
-  return mapScheme.value.lineUps.filter(
-    (x) => x.nadeType == "molo" && x.coordinates,
-  );
+  return lineUps.value.filter((x) => x.nadeType == "molo" && x.coordinates);
 });
 
 const flashBangs = computed(() => {
-  return mapScheme.value.lineUps.filter(
+  return lineUps.value.filter(
     (x) => x.nadeType == "flashbang" && x.coordinates,
   );
 });
@@ -52,19 +46,19 @@ const openUtility = (utility: UtilityLineup) => {
     },
   });
 };
-const showLineups = ref(true);
-const showLineupList = ref(false);
-const showSmokesOnly = ref(false);
-const showMolosOnly = ref(false);
-const showFlashBangsOnly = ref(false);
-const showFragGrenadesOnly = ref(false);
-const showTerroristsOnly = ref(false);
-const showCounterTerroristsOnly = ref(false);
-const onToggleShowLineupsChecked = () => {
-  showLineups.value = !showLineups.value;
+const showStrats = ref(false);
+const showRadar = ref(true);
+const showSmokesOnly = ref(true);
+const showMolosOnly = ref(true);
+const showFlashBangsOnly = ref(true);
+const showFragGrenadesOnly = ref(true);
+const showTerroristsOnly = ref(true);
+const showCounterTerroristsOnly = ref(true);
+const onToggleShowStratsChecked = () => {
+  showStrats.value = !showStrats.value;
 };
-const onToggleShowLineupListChecked = () => {
-  showLineupList.value = !showLineupList.value;
+const onToggleShowRadarListChecked = () => {
+  showRadar.value = !showRadar.value;
 };
 const onToggleShowSmokesOnlyChecked = () => {
   showSmokesOnly.value = !showSmokesOnly.value;
@@ -86,28 +80,31 @@ const onToggleShowCounterTerroristsOnlyChecked = () => {
 };
 const lineUps = computed(() => {
   return mapScheme.value.lineUps.filter((x) => {
+    const selectedNadeTypes: NadeType[] = [];
     if (showSmokesOnly.value) {
-      return x.nadeType == "smoke";
+      selectedNadeTypes.push("smoke");
+    }
+    if (showFragGrenadesOnly.value) {
+      selectedNadeTypes.push("frag");
     }
     if (showMolosOnly.value) {
-      return x.nadeType == "molo";
+      selectedNadeTypes.push("molo");
     }
     if (showFlashBangsOnly.value) {
-      return x.nadeType == "flashbang";
+      selectedNadeTypes.push("flashbang");
     }
-    if (showFragGrenadesOnly.value) {
-      return x.nadeType == "frag";
-    }
-    if (showFragGrenadesOnly.value) {
-      return x.nadeType == "frag";
-    }
+
+    const selectedSides: Side[] = [];
     if (showTerroristsOnly.value) {
-      return x.side == "t";
+      selectedSides.push("t");
     }
     if (showCounterTerroristsOnly.value) {
-      return x.side == "ct";
+      selectedSides.push("ct");
     }
-    return true;
+
+    return (
+      selectedNadeTypes.includes(x.nadeType) && selectedSides.includes(x.side)
+    );
   });
 });
 </script>
@@ -118,17 +115,49 @@ const lineUps = computed(() => {
     :parents="[{ routeName: 'Home', title: 'Home' }]"
   />
 
-  <Toggle @checked="onToggleShowLineupsChecked" label="Strats" />
-  <Toggle @checked="onToggleShowLineupListChecked" label="List" />
-  <Toggle @checked="onToggleShowSmokesOnlyChecked" label="Smokes" />
-  <Toggle @checked="onToggleShowMolosOnlyChecked" label="Molos" />
-  <Toggle @checked="onToggleShowFlashBangsOnlyChecked" label="Flash" />
-  <Toggle @checked="onToggleShowFragGrenadesOnlyChecked" label="Frag" />
-  <Toggle @checked="onToggleShowTerroristsOnlyChecked" label="T" />
-  <Toggle @checked="onToggleShowCounterTerroristsOnlyChecked" label="CT" />
+  <Toggle
+    @checked="onToggleShowStratsChecked"
+    label="Strats"
+    :initial="false"
+  />
+  <Toggle
+    @checked="onToggleShowRadarListChecked"
+    label="Radar"
+    :initial="true"
+  />
+  <Toggle
+    @checked="onToggleShowSmokesOnlyChecked"
+    label="Smokes"
+    :initial="true"
+  />
+  <Toggle
+    @checked="onToggleShowMolosOnlyChecked"
+    label="Molos"
+    :initial="true"
+  />
+  <Toggle
+    @checked="onToggleShowFlashBangsOnlyChecked"
+    label="Flash"
+    :initial="true"
+  />
+  <Toggle
+    @checked="onToggleShowFragGrenadesOnlyChecked"
+    label="Frag"
+    :initial="true"
+  />
+  <Toggle
+    @checked="onToggleShowTerroristsOnlyChecked"
+    label="T"
+    :initial="true"
+  />
+  <Toggle
+    @checked="onToggleShowCounterTerroristsOnlyChecked"
+    label="CT"
+    :initial="true"
+  />
 
-  <div v-if="showLineups">
-    <div v-if="!showLineupList">
+  <div v-if="!showStrats">
+    <div v-if="showRadar">
       <Radar
         :lineUps="lineUps"
         :mapName="mapName"
@@ -136,7 +165,7 @@ const lineUps = computed(() => {
       />
     </div>
 
-    <div v-if="showLineupList">
+    <div v-if="!showRadar">
       <h2>Smoke Grenade</h2>
       <div v-for="smoke in smokes">
         <button @click="openUtility(smoke)">{{ smoke.name }}</button>
@@ -158,7 +187,7 @@ const lineUps = computed(() => {
     </div>
   </div>
 
-  <div v-if="!showLineups">
+  <div v-if="showStrats">
     <h2>Strategies</h2>
     <div v-for="strat in mapScheme.strats">
       <h3>{{ strat.name }}</h3>
