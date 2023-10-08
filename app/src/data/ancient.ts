@@ -37,6 +37,28 @@ export const ancientMapScheme: MapScheme = {
       },
     },
     {
+      name: "Elbow from mid house",
+      id: "elbow-from-mid-house",
+      nadeType: "molo",
+      throwType: "normal",
+      side: "ct",
+      coordinates: {
+        x: 352,
+        y: 597,
+      },
+    },
+    {
+      name: "Elbow from mid house",
+      id: "elbow-from-mid-house",
+      nadeType: "smoke",
+      throwType: "jump",
+      side: "ct",
+      coordinates: {
+        x: 377,
+        y: 593,
+      },
+    },
+    {
       name: "Mid from t spawn",
       id: "mid-from-t-spawn-128",
       nadeType: "smoke",
