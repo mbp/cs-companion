@@ -70,6 +70,18 @@ export const overpassMapScheme: MapScheme = {
       },
     },
     {
+      name: "T stairs molo from mid",
+      id: "t-stairs-from-mid",
+      description: "Jump when lamp shadow disappears",
+      nadeType: "molo",
+      throwType: "runjump",
+      side: "ct",
+      coordinates: {
+        x: 562,
+        y: 793,
+      },
+    },
+    {
       name: "Barrels flash from short tunnel",
       id: "b-site-from-short-tunnel",
       nadeType: "flashbang",
