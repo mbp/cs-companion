@@ -59,6 +59,17 @@ export const overpassMapScheme: MapScheme = {
       },
     },
     {
+      name: "Monster from A site",
+      id: "monster-from-a",
+      nadeType: "smoke",
+      throwType: "jump",
+      side: "ct",
+      coordinates: {
+        x: 834,
+        y: 475,
+      },
+    },
+    {
       name: "Barrels flash from short tunnel",
       id: "b-site-from-short-tunnel",
       nadeType: "flashbang",
