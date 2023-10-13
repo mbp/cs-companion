@@ -16,7 +16,7 @@ export const ancientMapScheme: MapScheme = {
     },
     {
       name: "Short B from ruins",
-      id: "short-b-from-ruins-128",
+      id: "short-b-from-ruins",
       nadeType: "smoke",
       throwType: "jump",
       side: "t",
@@ -71,7 +71,7 @@ export const ancientMapScheme: MapScheme = {
     },
     {
       name: "Mid from t spawn",
-      id: "mid-from-t-spawn-128",
+      id: "mid-from-t-spawn",
       nadeType: "smoke",
       throwType: "jump",
       side: "t",
@@ -93,7 +93,7 @@ export const ancientMapScheme: MapScheme = {
     },
     {
       name: "Donut mid from spawn",
-      id: "mid-donut-from-spawn-128",
+      id: "mid-donut-from-spawn",
       nadeType: "smoke",
       throwType: "jump",
       side: "t",
