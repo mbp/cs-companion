@@ -59,6 +59,17 @@ export const ancientMapScheme: MapScheme = {
       },
     },
     {
+      name: "Catwalk from t spawn",
+      id: "catwalk-from-t-spawn",
+      nadeType: "smoke",
+      throwType: "jump",
+      side: "t",
+      coordinates: {
+        x: 546,
+        y: 584,
+      },
+    },
+    {
       name: "Mid from t spawn",
       id: "mid-from-t-spawn-128",
       nadeType: "smoke",
