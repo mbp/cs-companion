@@ -48,6 +48,18 @@ export const vertigoMapScheme: MapScheme = {
       },
     },
     {
+      name: "A behind default from ramp",
+      id: "a-behind-default-from-ramp",
+      nadeType: "smoke",
+      throwType: "runjump",
+      movement: "run",
+      side: "t",
+      coordinates: {
+        x: 701,
+        y: 548,
+      },
+    },
+    {
       name: "B site from t",
       id: "b-site-from-t",
       nadeType: "smoke",
