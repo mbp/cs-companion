@@ -5,9 +5,9 @@ export const vertigoMapScheme: MapScheme = {
   lineUps: [
     {
       name: "Ramp from a default plant",
-      id: "ramp-from-a-default-plant",
+      id: "ramp-from-a-headshot",
       nadeType: "smoke",
-      throwType: "normal",
+      throwType: "jump",
       side: "ct",
       coordinates: {
         x: 595,
