@@ -70,6 +70,17 @@ export const overpassMapScheme: MapScheme = {
       },
     },
     {
+      name: "Playground from long",
+      id: "playground-from-long",
+      nadeType: "smoke",
+      throwType: "jump",
+      side: "ct",
+      coordinates: {
+        x: 335,
+        y: 791,
+      },
+    },
+    {
       name: "T stairs molo from mid",
       id: "t-stairs-from-mid",
       description: "Jump when lamp shadow disappears",
