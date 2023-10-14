@@ -28,11 +28,9 @@ export const mirageMapScheme: MapScheme = {
     },
     {
       name: "Mid window from spawn",
-      description: "Go forward and throw while crouched",
       id: "mid-window-from-spawn",
       nadeType: "smoke",
       throwType: "jump",
-      movement: "crouch",
       side: "t",
       coordinates: {
         x: 425,
