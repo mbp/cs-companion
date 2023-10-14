@@ -40,7 +40,7 @@ figcaption {
 }
 
 .click-zoom input[type="checkbox"]:checked ~ img {
-  transform: scale(2);
+  transform: scale(2.5);
   cursor: zoom-out;
 }
 </style>
