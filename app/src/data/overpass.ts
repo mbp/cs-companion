@@ -59,6 +59,18 @@ export const overpassMapScheme: MapScheme = {
       },
     },
     {
+      name: "Short tunnel molo from A short",
+      description: "Throw when leaving box",
+      id: "short-tunnel-from-a-short",
+      nadeType: "molo",
+      throwType: "run",
+      side: "ct",
+      coordinates: {
+        x: 684,
+        y: 523,
+      },
+    },
+    {
       name: "Monster from A site",
       id: "monster-from-a",
       nadeType: "smoke",
