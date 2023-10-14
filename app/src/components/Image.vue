@@ -4,32 +4,43 @@ import { ref } from "vue";
 const props = defineProps<{
   src: string;
   caption: string;
-  initialZoom: boolean;
+  initialSize: number;
 }>();
-const zoom = ref(props.initialZoom);
-const doZoom = () => {
-  zoom.value = !zoom.value;
-};
+const sizePercentage = ref(props.initialSize);
 </script>
 
 <template>
-  <img @click="doZoom" :src="src" :class="{ zoom: zoom, default: !zoom }" />
-  <figcaption>{{ caption }}</figcaption>
+  <div class="click-zoom">
+    <label>
+      <input type="checkbox" />
+      <img
+        :src="src"
+        :style="{
+          width: sizePercentage + '%',
+          'max-width': (sizePercentage / 100) * 640 + 'px',
+        }"
+      />
+      <figcaption>{{ caption }}</figcaption>
+    </label>
+  </div>
 </template>
 
 <style scoped>
-img {
-  cursor: pointer;
-}
-img.zoom {
-  width: 100%;
-  max-width: 640px;
-}
-img.default {
-  width: 50%;
-  max-width: 320px;
-}
 figcaption {
   font: italic smaller sans-serif;
+}
+
+.click-zoom input[type="checkbox"] {
+  display: none;
+}
+
+.click-zoom img {
+  transition: transform 0.25s ease;
+  cursor: zoom-in;
+}
+
+.click-zoom input[type="checkbox"]:checked ~ img {
+  transform: scale(2);
+  cursor: zoom-out;
 }
 </style>
