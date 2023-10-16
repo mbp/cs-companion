@@ -70,6 +70,17 @@ export const nukeLineups: MapScheme = {
       },
     },
     {
+      name: "Main",
+      id: "main",
+      nadeType: "smoke",
+      throwType: "jump",
+      side: "t",
+      coordinates: {
+        x: 616,
+        y: 644,
+      },
+    },
+    {
       name: "Ramp smoke from trophy",
       id: "ramp-from-trophy",
       nadeType: "smoke",
