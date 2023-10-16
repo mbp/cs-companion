@@ -126,6 +126,17 @@ export const nukeLineups: MapScheme = {
       },
     },
     {
+      name: "Smoke silo from spawn",
+      id: "a-silo",
+      nadeType: "smoke",
+      throwType: "jump",
+      side: "t",
+      coordinates: {
+        x: 589,
+        y: 510,
+      },
+    },
+    {
       name: "Flash a through hut from lobby",
       id: "a-site-via-hut-from-lobby",
       nadeType: "flashbang",
