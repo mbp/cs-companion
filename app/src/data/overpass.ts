@@ -106,7 +106,7 @@ export const overpassMapScheme: MapScheme = {
     {
       name: "T stairs molo from mid",
       id: "t-stairs-from-mid",
-      description: "Jump when lamp shadow disappears",
+      description: "Jump when passing divider wall",
       nadeType: "molo",
       throwType: "runjump",
       side: "ct",
