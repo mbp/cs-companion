@@ -182,6 +182,17 @@ export const infernoMapScheme: MapScheme = {
       },
     },
     {
+      name: "Mid from ct spawn",
+      id: "mid-from-spawn",
+      nadeType: "smoke",
+      throwType: "jump",
+      side: "ct",
+      coordinates: {
+        x: 503,
+        y: 672,
+      },
+    },
+    {
       name: "One way hay car from pit",
       id: "one-way-hay-car-from-pit",
       nadeType: "smoke",
