@@ -29,7 +29,18 @@ export const overpassMapScheme: MapScheme = {
       name: "Dumpster from divider",
       id: "dumpster-from-divider",
       nadeType: "smoke",
-      throwType: "normal",
+      throwType: "jump",
+      side: "t",
+      coordinates: {
+        x: 553,
+        y: 171,
+      },
+    },
+    {
+      name: "Dumpster from long",
+      id: "dumpster-from-long",
+      nadeType: "smoke",
+      throwType: "jump",
       side: "t",
       coordinates: {
         x: 540,
@@ -116,10 +127,21 @@ export const overpassMapScheme: MapScheme = {
       },
     },
     {
-      name: "Bank from cafe",
-      id: "bank-from-cafe",
+      name: "Bank from long",
+      id: "bank-from-long",
       nadeType: "smoke",
-      throwType: "normal",
+      throwType: "jump",
+      side: "t",
+      coordinates: {
+        x: 443,
+        y: 107,
+      },
+    },
+    {
+      name: "Bank from divider",
+      id: "bank-from-divider",
+      nadeType: "smoke",
+      throwType: "jump",
       side: "t",
       coordinates: {
         x: 460,
