@@ -51,7 +51,7 @@ export const anubisMapScheme: MapScheme = {
       name: "Connector inside from B outside",
       id: "connector-inside-from-b-outside",
       nadeType: "smoke",
-      throwType: "jump",
+      throwType: "normal",
       side: "t",
       coordinates: {
         x: 371,
