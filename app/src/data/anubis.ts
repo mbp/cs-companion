@@ -4,6 +4,17 @@ export const anubisMapScheme: MapScheme = {
   map: "Anubis",
   lineUps: [
     {
+      name: "Mid from CT spawn",
+      id: "mid-from-spawn",
+      nadeType: "smoke",
+      throwType: "jump",
+      side: "ct",
+      coordinates: {
+        x: 512,
+        y: 628,
+      },
+    },
+    {
       name: "A Connector from water",
       id: "a-connector-from-water",
       nadeType: "smoke",
