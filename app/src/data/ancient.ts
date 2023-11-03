@@ -37,14 +37,14 @@ export const ancientMapScheme: MapScheme = {
       },
     },
     {
-      name: "Elbow from mid house",
-      id: "elbow-from-mid-house",
-      nadeType: "molo",
-      throwType: "normal",
+      name: "B ramp from long",
+      id: "b-ramp-from-long",
+      nadeType: "flashbang",
+      throwType: "jump",
       side: "ct",
       coordinates: {
-        x: 352,
-        y: 597,
+        x: 838,
+        y: 553,
       },
     },
     {
