@@ -93,7 +93,7 @@ export const nukeLineups: MapScheme = {
     },
     {
       name: "Molo top of hut from roof",
-      description: "Throw when passing ladder on right",
+      description: "Throw when passing box on left side",
       nadeType: "molo",
       id: "top-hut-from-roof",
       throwType: "runjump",
