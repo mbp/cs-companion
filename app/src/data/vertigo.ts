@@ -60,6 +60,30 @@ export const vertigoMapScheme: MapScheme = {
       },
     },
     {
+      name: "B electric #1 from t",
+      id: "b-electric-1-from-t",
+      nadeType: "smoke",
+      throwType: "jump",
+      side: "t",
+      coordinates: {
+        x: 322,
+        y: 288,
+      },
+    },
+    {
+      name: "B electric #2 from t",
+      description: "hold w when throw",
+      id: "b-electric-2-from-t",
+      nadeType: "smoke",
+      throwType: "jump",
+      movement: "run",
+      side: "t",
+      coordinates: {
+        x: 322,
+        y: 217,
+      },
+    },
+    {
       name: "B site from t",
       id: "b-site-from-t",
       nadeType: "smoke",
