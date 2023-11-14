@@ -59,6 +59,19 @@ export const ancientMapScheme: MapScheme = {
       },
     },
     {
+      name: "Mid b short/long from t spawn",
+      description: "quick w run",
+      id: "mid-b-from-t-spawn",
+      nadeType: "smoke",
+      throwType: "jump",
+      movement: "run",
+      side: "t",
+      coordinates: {
+        x: 784,
+        y: 421,
+      },
+    },
+    {
       name: "Catwalk from t spawn",
       id: "catwalk-from-t-spawn",
       nadeType: "smoke",
