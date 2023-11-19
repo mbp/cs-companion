@@ -72,6 +72,28 @@ export const ancientMapScheme: MapScheme = {
       },
     },
     {
+      name: "Flash right side mid from t spawn",
+      id: "flash-right-mid-from-spawn",
+      nadeType: "flashbang",
+      throwType: "jump",
+      side: "t",
+      coordinates: {
+        x: 510,
+        y: 611,
+      },
+    },
+    {
+      name: "Flash left side mid from t spawn",
+      id: "flash-left-mid-from-spawn",
+      nadeType: "flashbang",
+      throwType: "jump",
+      side: "t",
+      coordinates: {
+        x: 453,
+        y: 616,
+      },
+    },
+    {
       name: "Catwalk from t spawn",
       id: "catwalk-from-t-spawn",
       nadeType: "smoke",
