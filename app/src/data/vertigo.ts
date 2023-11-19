@@ -4,7 +4,7 @@ export const vertigoMapScheme: MapScheme = {
   map: "Vertigo",
   lineUps: [
     {
-      name: "Ramp from a default plant",
+      name: "Ramp from a headshot",
       id: "ramp-from-a-headshot",
       nadeType: "smoke",
       throwType: "jump",
