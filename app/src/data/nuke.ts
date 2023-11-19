@@ -104,6 +104,17 @@ export const nukeLineups: MapScheme = {
       },
     },
     {
+      name: "Outside defensive smoke from t spawn",
+      nadeType: "smoke",
+      id: "outside-default-t-from-spawn",
+      throwType: "jump",
+      side: "ct",
+      coordinates: {
+        x: 522,
+        y: 724,
+      },
+    },
+    {
       name: "Molo silo from credit card",
       nadeType: "molo",
       id: "silo-from-credit-card",
