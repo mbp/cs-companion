@@ -272,4 +272,5 @@ export const infernoMapScheme: MapScheme = {
       },
     },
   ],
+  strats: [],
 };

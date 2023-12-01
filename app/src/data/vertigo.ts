@@ -130,6 +130,7 @@ export const vertigoMapScheme: MapScheme = {
   ],
   strats: [
     {
+      id: "first-decoy",
       buyType: "pistols",
       name: "First decoy round",
       description:

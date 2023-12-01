@@ -183,6 +183,7 @@ export const nukeLineups: MapScheme = {
   ],
   strats: [
     {
+      id: "pistols",
       buyType: "pistols",
       name: "Full a rush (pistols)",
       description:
@@ -190,6 +191,7 @@ export const nukeLineups: MapScheme = {
       side: "t",
     },
     {
+      id: "smg",
       buyType: "smg",
       name: "Full a rush (smgs)",
       description:
@@ -197,6 +199,7 @@ export const nukeLineups: MapScheme = {
       side: "t",
     },
     {
+      id: "normal-full-rush",
       buyType: "normal",
       name: "Full a rush (smgs)",
       description:
@@ -204,6 +207,7 @@ export const nukeLineups: MapScheme = {
       side: "t",
     },
     {
+      id: "smoke-wall",
       buyType: "normal",
       name: "Smoke wall",
       description:

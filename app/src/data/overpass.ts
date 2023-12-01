@@ -149,4 +149,5 @@ export const overpassMapScheme: MapScheme = {
       },
     },
   ],
+  strats: [],
 };

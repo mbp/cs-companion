@@ -25,14 +25,20 @@ export type Coordinates = {
 export type MapScheme = {
   map: string;
   lineUps: UtilityLineup[];
-  strats?: Strategy[];
+  strats: Strategy[];
 };
 
 export type Strategy = {
+  id: string;
   side: Side;
   name: string;
   description: string;
   buyType: BuyType;
+  playerPaths?: PlayerPath[];
 };
+
+interface PlayerPath {
+  path: Coordinates[];
+}
 
 export type BuyType = "full-eco" | "anti-eco" | "normal" | "pistols" | "smg";

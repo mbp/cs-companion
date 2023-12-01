@@ -94,4 +94,5 @@ export const mirageMapScheme: MapScheme = {
       },
     },
   ],
+  strats: [],
 };

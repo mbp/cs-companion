@@ -5,7 +5,7 @@ import { allMapSchemes } from "../data";
 import RadarLineups from "./RadarLineups.vue";
 import Toggle from "./Toggle.vue";
 import Navigation from "./Navigation.vue";
-import { NadeType, Side, UtilityLineup } from "./composables/types";
+import { NadeType, Side, Strategy, UtilityLineup } from "./composables/types";
 
 const route = useRoute();
 const router = useRouter();
@@ -43,6 +43,15 @@ const openUtility = (utility: UtilityLineup) => {
       mapName: mapName,
       nadeType: utility.nadeType,
       id: utility.id,
+    },
+  });
+};
+const openStrat = (strat: Strategy) => {
+  router.push({
+    name: "Strategy",
+    params: {
+      mapName: mapName,
+      id: strat.id,
     },
   });
 };
@@ -191,6 +200,7 @@ const lineUps = computed(() => {
     <h2>Strategies</h2>
     <div v-for="strat in mapScheme.strats">
       <h3>{{ strat.name }}</h3>
+      <a @click="openStrat(strat)">OPEN</a>
       ({{ strat.buyType }}, {{ strat.side }})
       <p>
         {{ strat.description }}

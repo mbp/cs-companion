@@ -103,4 +103,5 @@ export const anubisMapScheme: MapScheme = {
       },
     },
   ],
+  strats: [],
 };

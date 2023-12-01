@@ -4,6 +4,7 @@ import App from "./App.vue";
 import Maps from "./components/Maps.vue";
 import Map from "./components/Map.vue";
 import Utility from "./components/Utility.vue";
+import Strategy from "./components/Strategy.vue";
 import { createRouter, createWebHashHistory } from "vue-router";
 
 const routes = [
@@ -13,6 +14,11 @@ const routes = [
     path: "/map/:mapName/utility/:nadeType/:id",
     component: Utility,
     name: "Utility",
+  },
+  {
+    path: "/map/:mapName/strategy/:id",
+    component: Strategy,
+    name: "Strategy",
   },
 ];
 

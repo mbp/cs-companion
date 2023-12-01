@@ -184,6 +184,7 @@ export const ancientMapScheme: MapScheme = {
   ],
   strats: [
     {
+      id: "first-pistol",
       name: "First pistol round",
       description:
         "All push B via ramp, get the entries, plant the bomb and position for the retake",
@@ -191,6 +192,7 @@ export const ancientMapScheme: MapScheme = {
       buyType: "pistols",
     },
     {
+      id: "second-round",
       name: "Second round",
       description:
         "Use when first round was won or bomb was planted. Oush B via ramp, get the entries, plant the bomb and position for the retake",
@@ -198,13 +200,49 @@ export const ancientMapScheme: MapScheme = {
       buyType: "smg",
     },
     {
+      id: "a-split",
       name: "Split mid",
       description:
         "First 3 players via mid to donut to a. Last 2 players via A main to a, try to come to A site at the same time",
       side: "t",
       buyType: "normal",
+      playerPaths: [
+        {
+          path: [
+            {
+              x: 0,
+              y: 0,
+            },
+            {
+              x: 32,
+              y: 32,
+            },
+            {
+              x: 64,
+              y: 64,
+            },
+          ],
+        },
+        {
+          path: [
+            {
+              x: 96,
+              y: 96,
+            },
+            {
+              x: 128,
+              y: 128,
+            },
+            {
+              x: 160,
+              y: 160,
+            },
+          ],
+        },
+      ],
     },
     {
+      id: "nade-mid-house",
       name: "Nade mid house",
       description:
         "One player smokes mid house from spawn. All players rushes mid and throws grenades behind smoke in mid house",
