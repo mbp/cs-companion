@@ -2,7 +2,7 @@
 import { computed, ref } from "vue";
 import { useRoute, useRouter } from "vue-router";
 import { allMapSchemes } from "../data";
-import Radar from "./Radar.vue";
+import RadarLineups from "./RadarLineups.vue";
 import Toggle from "./Toggle.vue";
 import Navigation from "./Navigation.vue";
 import { NadeType, Side, UtilityLineup } from "./composables/types";
@@ -158,7 +158,7 @@ const lineUps = computed(() => {
 
   <div v-if="!showStrats">
     <div v-if="showRadar">
-      <Radar
+      <RadarLineups
         :lineUps="lineUps"
         :mapName="mapName"
         @selectedUtility="setSelectedUtility"
