@@ -200,7 +200,7 @@ const lineUps = computed(() => {
     <h2>Strategies</h2>
     <div v-for="strat in mapScheme.strats">
       <h3>{{ strat.name }}</h3>
-      <a @click="openStrat(strat)">OPEN</a>
+      <button @click="openStrat(strat)">OPEN</button>
       ({{ strat.buyType }}, {{ strat.side }})
       <p>
         {{ strat.description }}
