@@ -17,16 +17,16 @@ interface PlayerPath {
 }
 
 const colors = ["#eda338", "#109856", "#68a3e5", "#e6f13d", "#803ca1"];
-let play = false;
+const play = ref(false);
 const frame = ref(0);
 const seconds = computed(() => 56 - frame.value);
 
+const frameLength = props.playerPaths.reduce((max, innerArray) => {
+  return Math.max(max, innerArray.path.length);
+}, 0);
+
 const startDrawing = (context: CanvasRenderingContext2D) => {
   let timestamp = Date.now();
-
-  const frameLength = props.playerPaths.reduce((max, innerArray) => {
-      return Math.max(max, innerArray.path.length);
-  }, 0);
 
   const drawDot = (x: number, y: number, color: string) => {
     context.beginPath();
@@ -36,25 +36,29 @@ const startDrawing = (context: CanvasRenderingContext2D) => {
     context.stroke();
   };
 
+  const drawFrame = (frame: number) => {
+    clearAll();
+    let index = 0;
+    for (const playerPath of props.playerPaths) {
+      const coordinates = playerPath.path;
+      var coordinate = coordinates[frame];
+      if (coordinate !== undefined) {
+        drawDot(coordinate.x, coordinate.y, colors[index++]);
+      }
+    }
+  };
+
   const update = () => {
-    if (frame.value > frameLength) {
+    if (frame.value >= frameLength) {
       return;
     }
     if (Date.now() < timestamp + 1000) {
       return requestAnimationFrame(update);
     }
-    clearAll();
-    let index = 0;
-    for (const playerPath of props.playerPaths) {
-      const coordinates = playerPath.path;
-      var coordinate = coordinates[frame.value];
-      if (coordinate !== undefined) {
-        drawDot(coordinate.x, coordinate.y, colors[index++]);
-      }
-    }
+    drawFrame(frame.value);
     frame.value++;
     timestamp = Date.now();
-    if (play) {
+    if (play.value) {
       requestAnimationFrame(update);
     }
   };
@@ -75,12 +79,25 @@ const canvasMounted = (context: HTMLCanvasElement) => {
   startDrawing(ctx);
 };
 
-const start = () => {
-  const ctx = radarCanvas.value!.getContext("2d")!;
-  frame.value = 0;
-  play = true;
-  startDrawing(ctx);
+const startPlay = () => {
+  if (play.value) {
+    play.value = false;
+  } else {
+    const ctx = radarCanvas.value!.getContext("2d")!;
+    frame.value = 0;
+    play.value = true;
+    startDrawing(ctx);
+  }
 };
+
+const backwardFrame = () => {
+  frame.value = frame.value - 1;
+};
+
+const forwardFrame = () => {
+  frame.value = frame.value + 1;
+};
+
 const isDev = () => {
   return import.meta.env.DEV;
 };
@@ -116,12 +133,14 @@ const mouseMoveRadar = (x: number, y: number) => {
 </script>
 
 <template>
-  <p>
-    <button @click="start">START</button>
-  </p>
   <h2>
     1:<span>{{ seconds }}</span>
   </h2>
+  <p>
+    <button @click="startPlay">⏯</button>
+    <button @click="backwardFrame">⏮</button>
+    <button @click="forwardFrame">⏭</button>
+  </p>
   <Radar
     @radar-click="clickRadar"
     @radar-mouse-move="mouseMoveRadar"
