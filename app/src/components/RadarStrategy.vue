@@ -18,10 +18,15 @@ interface PlayerPath {
 
 const colors = ["#eda338", "#109856", "#68a3e5", "#e6f13d", "#803ca1"];
 let play = false;
-let frame = 0;
+const frame = ref(0);
+const seconds = computed(() => 56 - frame.value);
 
 const startDrawing = (context: CanvasRenderingContext2D) => {
   let timestamp = Date.now();
+
+  const frameLength = props.playerPaths.reduce((max, innerArray) => {
+      return Math.max(max, innerArray.path.length);
+  }, 0);
 
   const drawDot = (x: number, y: number, color: string) => {
     context.beginPath();
@@ -32,6 +37,9 @@ const startDrawing = (context: CanvasRenderingContext2D) => {
   };
 
   const update = () => {
+    if (frame.value > frameLength) {
+      return;
+    }
     if (Date.now() < timestamp + 1000) {
       return requestAnimationFrame(update);
     }
@@ -39,17 +47,16 @@ const startDrawing = (context: CanvasRenderingContext2D) => {
     let index = 0;
     for (const playerPath of props.playerPaths) {
       const coordinates = playerPath.path;
-      var coordinate = coordinates[frame];
+      var coordinate = coordinates[frame.value];
       if (coordinate !== undefined) {
         drawDot(coordinate.x, coordinate.y, colors[index++]);
-        timestamp = Date.now();
-        if (play) {
-          requestAnimationFrame(update);
-        }
       }
     }
-    frame++;
-    seconds.value--;
+    frame.value++;
+    timestamp = Date.now();
+    if (play) {
+      requestAnimationFrame(update);
+    }
   };
 
   update();
@@ -70,8 +77,7 @@ const canvasMounted = (context: HTMLCanvasElement) => {
 
 const start = () => {
   const ctx = radarCanvas.value!.getContext("2d")!;
-  frame = 0;
-  seconds.value = 55;
+  frame.value = 0;
   play = true;
   startDrawing(ctx);
 };
@@ -107,8 +113,6 @@ const mouseMoveRadar = (x: number, y: number) => {
     y: y,
   };
 };
-
-const seconds = ref(55);
 </script>
 
 <template>
