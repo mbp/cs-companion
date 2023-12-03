@@ -4,6 +4,7 @@ import { useRoute } from "vue-router";
 import { allMapSchemes } from "../data";
 import Navigation from "./Navigation.vue";
 import RadarStrategy from "./RadarStrategy.vue";
+import StrategyInfo from "./StrategyInfo.vue";
 
 const route = useRoute();
 
@@ -25,8 +26,8 @@ const strat = computed(() => {
       { routeName: 'Map', title: mapName, params: { mapName: mapName } },
     ]"
   />
-  <p>
-    {{ strat.description }}
-  </p>
-  <RadarStrategy :map-name="mapName" :player-paths="strat.playerPaths!" />
+  <div>
+    <StrategyInfo :strategy="strat" />
+    <RadarStrategy :map-name="mapName" :player-paths="strat.playerPaths!" />
+  </div>
 </template>

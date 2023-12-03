@@ -31,7 +31,9 @@ const getPosition = (event: MouseEvent) => {
 
 const clickRadar = (event: MouseEvent) => {
   const { x, y } = getPosition(event);
-  console.log("x,y", x, y);
+  if (import.meta.env.DEV) {
+    console.log("x,y", x, y);
+  }
 
   emit("radarClick", x, y);
 };

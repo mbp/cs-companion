@@ -2,32 +2,28 @@
   <div class="parent info-type">
     <div class="div1 header-cell">Side</div>
     <div class="div2">
-      <img :src="getSideImage(utility.side)" class="side-icon-header" />
+      <img :src="getSideImage(strategy.side)" class="side-icon-header" />
     </div>
-    <div class="div3 info-cell header-cell">Throw type</div>
+    <div class="div3 info-cell header-cell">Buy type</div>
     <div class="div4 info-cell">
-      {{ utility.throwType }} {{ utility.clickType }}
+      {{ strategy.buyType }}
     </div>
-    <div class="div5 info-cell header-cell">Click type</div>
-    <div class="div6 info-cell">
-      {{ utility.clickType ?? "left" }}
-    </div>
-    <div class="div7 info-cell header-cell">Movement</div>
-    <div class="div8 info-cell">
-      {{ utility.movement ?? "stand" }}
-    </div>
+    <div class="div5 info-cell header-cell">TODO</div>
+    <div class="div6 info-cell">TODO</div>
+    <div class="div7 info-cell header-cell">TODO</div>
+    <div class="div8 info-cell">TODO</div>
   </div>
   <div class="info-description">
-    {{ utility.description }}
+    {{ strategy.description }}
   </div>
 </template>
 
 <script setup lang="ts">
+import { Strategy } from "./composables/types";
 import { getSideImage } from "./composables/get-side-image";
-import { UtilityLineup } from "./composables/types";
 
 interface Props {
-  utility: UtilityLineup;
+  strategy: Strategy;
 }
 defineProps<Props>();
 </script>

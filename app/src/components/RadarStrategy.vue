@@ -16,7 +16,7 @@ interface PlayerPath {
   path: Coordinates[];
 }
 
-const colors = ["#eda338", "#109856", "#68a3e5", "#e6f13d", "#803ca1"]
+const colors = ["#eda338", "#109856", "#68a3e5", "#e6f13d", "#803ca1"];
 let play = false;
 let frame = 0;
 
@@ -32,7 +32,7 @@ const startDrawing = (context: CanvasRenderingContext2D) => {
   };
 
   const update = () => {
-    if (Date.now() < timestamp + 900) {
+    if (Date.now() < timestamp + 1000) {
       return requestAnimationFrame(update);
     }
     clearAll();
@@ -49,6 +49,7 @@ const startDrawing = (context: CanvasRenderingContext2D) => {
       }
     }
     frame++;
+    seconds.value--;
   };
 
   update();
@@ -70,19 +71,64 @@ const canvasMounted = (context: HTMLCanvasElement) => {
 const start = () => {
   const ctx = radarCanvas.value!.getContext("2d")!;
   frame = 0;
+  seconds.value = 55;
   play = true;
   startDrawing(ctx);
-}
+};
+const isDev = () => {
+  return import.meta.env.DEV;
+};
+
+const sampleCount = computed(() => allCoords.value.length);
+let sampling = false;
+const allCoords = ref<Coordinates[]>([]);
+
+const startSampling = () => {
+  if (sampling) {
+    sampling = false;
+    var json = JSON.stringify(allCoords.value);
+    navigator.clipboard.writeText(json);
+    allCoords.value = [];
+  } else {
+    sampling = true;
+  }
+};
+const clickRadar = (x: number, y: number) => {
+  if (!sampling) {
+    return;
+  }
+  allCoords.value.push(currentCoords);
+};
+
+var currentCoords: Coordinates;
+const mouseMoveRadar = (x: number, y: number) => {
+  currentCoords = {
+    x: x,
+    y: y,
+  };
+};
+
+const seconds = ref(55);
 </script>
 
 <template>
   <p>
     <button @click="start">START</button>
   </p>
+  <h2>
+    1:<span>{{ seconds }}</span>
+  </h2>
   <Radar
+    @radar-click="clickRadar"
+    @radar-mouse-move="mouseMoveRadar"
     @canvas-mounted="canvasMounted"
     :canvas="radarCanvas"
     ref="radar"
     :mapName="mapName"
   />
+  <p v-if="isDev()">
+    <button @click="startSampling" v-if="isDev()">
+      (DEV)SAMPLE {{ sampleCount }}
+    </button>
+  </p>
 </template>
