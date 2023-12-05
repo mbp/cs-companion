@@ -64,6 +64,7 @@ const startDrawing = () => {
 
   const update = () => {
     if (frame.value >= frameLength) {
+      play.value = false;
       return;
     }
     if (Date.now() < timestamp + 1000) {
@@ -93,7 +94,12 @@ const startPlay = () => {
   if (play.value) {
     play.value = false;
   } else {
-    frame.value = 0;
+    console.log(frame.value, frameLength);
+    if (frame.value == frameLength)
+    {
+      // if we reached the end, restart it
+      frame.value = 0;
+    }
     play.value = true;
     startDrawing();
   }
