@@ -1,6 +1,6 @@
 <script setup lang="ts">
 import { computed, ref } from "vue";
-import { Coordinates } from "../components/composables/types";
+import { Coordinates, PlayerPath } from "../components/composables/types";
 import Radar from "./Radar.vue";
 
 interface Props {
@@ -11,10 +11,6 @@ interface Props {
 const props = defineProps<Props>();
 
 const pointSize = 8;
-
-interface PlayerPath {
-  path: Coordinates[];
-}
 
 const colors = ["#eda338", "#109856", "#68a3e5", "#e6f13d", "#803ca1"];
 const play = ref(false);

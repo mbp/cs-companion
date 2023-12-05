@@ -37,7 +37,7 @@ export type Strategy = {
   playerPaths?: PlayerPath[];
 };
 
-interface PlayerPath {
+export interface PlayerPath {
   path: Coordinates[];
 }
 
