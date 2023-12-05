@@ -21,15 +21,17 @@ const frameLength = props.playerPaths.reduce((max, innerArray) => {
   return Math.max(max, innerArray.path.length);
 }, 0);
 
-const startDrawing = (context: CanvasRenderingContext2D) => {
+let canvasRenderingContext : CanvasRenderingContext2D;
+
+const startDrawing = () => {
   let timestamp = Date.now();
 
   const drawDot = (x: number, y: number, color: string) => {
-    context.beginPath();
-    context.arc(x, y, pointSize, 0, 2 * Math.PI);
-    context.fillStyle = color;
-    context.fill();
-    context.stroke();
+    canvasRenderingContext.beginPath();
+    canvasRenderingContext.arc(x, y, pointSize, 0, 2 * Math.PI);
+    canvasRenderingContext.fillStyle = color;
+    canvasRenderingContext.fill();
+    canvasRenderingContext.stroke();
   };
 
   const drawFrame = (frame: number) => {
@@ -63,26 +65,21 @@ const startDrawing = (context: CanvasRenderingContext2D) => {
 };
 
 const clearAll = () => {
-  const ctx = radarCanvas.value!.getContext("2d")!;
-  ctx.clearRect(0, 0, 1024, 1024);
+  canvasRenderingContext.clearRect(0, 0, 1024, 1024);
 };
 
-let radarCanvas = ref<HTMLCanvasElement>();
-
 const canvasMounted = (context: HTMLCanvasElement) => {
-  radarCanvas.value = context;
-  const ctx = radarCanvas.value!.getContext("2d")!;
-  startDrawing(ctx);
+  canvasRenderingContext = context.getContext("2d")!;
+  startDrawing();
 };
 
 const startPlay = () => {
   if (play.value) {
     play.value = false;
   } else {
-    const ctx = radarCanvas.value!.getContext("2d")!;
     frame.value = 0;
     play.value = true;
-    startDrawing(ctx);
+    startDrawing();
   }
 };
 
@@ -141,7 +138,6 @@ const mouseMoveRadar = (x: number, y: number) => {
     @radar-click="clickRadar"
     @radar-mouse-move="mouseMoveRadar"
     @canvas-mounted="canvasMounted"
-    :canvas="radarCanvas"
     ref="radar"
     :mapName="mapName"
   />
