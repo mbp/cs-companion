@@ -1,4 +1,10 @@
-import { BuyType, PlayerPath, Side } from "../../types";
+import { Coordinates, Side } from "../../types";
+
+export interface PlayerPath {
+  path: Coordinates[];
+}
+
+export type BuyType = "full-eco" | "anti-eco" | "normal" | "pistols" | "smg";
 
 export type Strategy = {
   id: string;
