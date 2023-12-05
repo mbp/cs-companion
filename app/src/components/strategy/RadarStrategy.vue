@@ -1,6 +1,6 @@
 <script setup lang="ts">
 import { computed, ref } from "vue";
-import { Coordinates, PlayerPath } from "../composables/types";
+import { Coordinates, PlayerPath } from "../types";
 import Radar from "../Radar.vue";
 
 interface Props {

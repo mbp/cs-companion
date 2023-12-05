@@ -5,7 +5,9 @@ import { allMapSchemes } from "../data";
 import RadarLineups from "./utility/RadarLineups.vue";
 import Toggle from "./Toggle.vue";
 import Navigation from "./Navigation.vue";
-import { NadeType, Side, Strategy, UtilityLineup } from "./composables/types";
+import { Side } from "./types";
+import { Strategy } from "./strategy/types";
+import { NadeType, UtilityLineup } from "./utility/types";
 
 const route = useRoute();
 const router = useRouter();

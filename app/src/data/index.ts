@@ -1,4 +1,4 @@
-import { MapScheme } from "../components/composables/types";
+import { MapScheme } from "../components/types";
 import { ancientMapScheme } from "./ancient";
 import { anubisMapScheme } from "./anubis";
 import { dust2MapScheme } from "./dust2";

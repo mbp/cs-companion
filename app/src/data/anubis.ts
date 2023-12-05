@@ -1,4 +1,4 @@
-import { MapScheme } from "../components/composables/types";
+import { MapScheme } from "../components/types";
 
 export const anubisMapScheme: MapScheme = {
   map: "Anubis",

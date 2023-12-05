@@ -1,6 +1,6 @@
 <script setup lang="ts">
 import { computed, onMounted, ref, watch } from "vue";
-import { UtilityLineup } from "../composables/types";
+import { UtilityLineup } from "./types";
 import Radar from "../Radar.vue";
 
 interface Props {
