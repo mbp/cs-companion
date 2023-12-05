@@ -21,30 +21,30 @@ const frameLength = props.playerPaths.reduce((max, innerArray) => {
   return Math.max(max, innerArray.path.length);
 }, 0);
 
-let canvasRenderingContext : CanvasRenderingContext2D;
+let canvasRenderingContext: CanvasRenderingContext2D;
+
+const drawDot = (x: number, y: number, color: string) => {
+  canvasRenderingContext.beginPath();
+  canvasRenderingContext.arc(x, y, pointSize, 0, 2 * Math.PI);
+  canvasRenderingContext.fillStyle = color;
+  canvasRenderingContext.fill();
+  canvasRenderingContext.stroke();
+};
+
+const drawFrame = (frame: number) => {
+  clearAll();
+  let index = 0;
+  for (const playerPath of props.playerPaths) {
+    const coordinates = playerPath.path;
+    var coordinate = coordinates[frame];
+    if (coordinate !== undefined) {
+      drawDot(coordinate.x, coordinate.y, colors[index++]);
+    }
+  }
+};
 
 const startDrawing = () => {
   let timestamp = Date.now();
-
-  const drawDot = (x: number, y: number, color: string) => {
-    canvasRenderingContext.beginPath();
-    canvasRenderingContext.arc(x, y, pointSize, 0, 2 * Math.PI);
-    canvasRenderingContext.fillStyle = color;
-    canvasRenderingContext.fill();
-    canvasRenderingContext.stroke();
-  };
-
-  const drawFrame = (frame: number) => {
-    clearAll();
-    let index = 0;
-    for (const playerPath of props.playerPaths) {
-      const coordinates = playerPath.path;
-      var coordinate = coordinates[frame];
-      if (coordinate !== undefined) {
-        drawDot(coordinate.x, coordinate.y, colors[index++]);
-      }
-    }
-  };
 
   const update = () => {
     if (frame.value >= frameLength) {
@@ -85,10 +85,12 @@ const startPlay = () => {
 
 const backwardFrame = () => {
   frame.value = frame.value - 1;
+  drawFrame(frame.value);
 };
 
 const forwardFrame = () => {
   frame.value = frame.value + 1;
+  drawFrame(frame.value);
 };
 
 const isDev = () => {
