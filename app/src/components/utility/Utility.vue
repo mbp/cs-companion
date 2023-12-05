@@ -3,7 +3,7 @@ import { computed } from "vue";
 import { useRoute } from "vue-router";
 import { allMapSchemes } from "../../data";
 import Navigation from "../Navigation.vue";
-import Image from "../Image.vue";
+import Image from "./Image.vue";
 import UtilityInfo from "./UtilityInfo.vue";
 
 const route = useRoute();
