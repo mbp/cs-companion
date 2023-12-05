@@ -5,8 +5,8 @@ export interface PlayerPath {
 }
 
 export interface StrategyMessage {
-  frameStart: number;
-  frameEnd: number;
+  secondStart: number;
+  secondEnd: number;
   message: string;
 }
 

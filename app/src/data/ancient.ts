@@ -209,13 +209,13 @@ export const ancientMapScheme: MapScheme = {
       events: {
         messages: [
           {
-            frameStart: 0,
-            frameEnd: 5,
+            secondStart: 0,
+            secondEnd: 5,
             message: "First 3 players run directly to mid",
           },
           {
-            frameStart: 6,
-            frameEnd: 10,
+            secondStart: 6,
+            secondEnd: 10,
             message: "Mid players run to donut and clear",
           },
         ],

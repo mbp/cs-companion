@@ -1,6 +1,6 @@
 <script setup lang="ts">
 import { computed, ref } from "vue";
-import { Coordinates, PlayerPath } from "../types";
+import { Coordinates } from "../types";
 import Radar from "../Radar.vue";
 import { StrategyEvents } from "./types";
 
@@ -15,12 +15,15 @@ const pointSize = 8;
 
 const colors = ["#eda338", "#109856", "#68a3e5", "#e6f13d", "#803ca1"];
 const play = ref(false);
-const frame = ref(0);
-const seconds = computed(() => 56 - frame.value);
+const currentFrame = ref(0);
+const playSecond = computed(() => Math.floor(currentFrame.value / 1000));
+const secondsRemaining = computed(() => 56 - playSecond.value);
+const frameStep = 1000;
+const frameLevel = 100;
 
 const frameLength = props.strategyEvents.playerPaths.reduce(
   (max, innerArray) => {
-    return Math.max(max, innerArray.path.length);
+    return Math.max(max, innerArray.path.length * frameStep);
   },
   0,
 );
@@ -45,15 +48,31 @@ const drawMessage = (message: string) => {
 const drawFrame = (frame: number) => {
   clearAll();
   let index = 0;
+  const frameDivision = (frame % frameStep) / frameLevel;
   for (const playerPath of props.strategyEvents.playerPaths) {
     const coordinates = playerPath.path;
-    var coordinate = coordinates[frame];
+    var coordinate1 = coordinates[playSecond.value];
+    var coordinate2 = coordinates[playSecond.value + 1];
+    var coordinate =
+      coordinate2 === undefined
+        ? coordinate1
+        : {
+            x:
+              coordinate1.x +
+              frameDivision * ((coordinate2.x - coordinate1.x) / 10),
+            y:
+              coordinate1.y +
+              frameDivision * ((coordinate2.y - coordinate1.y) / 10),
+          };
     if (coordinate !== undefined) {
       drawDot(coordinate.x, coordinate.y, colors[index++]);
     }
   }
   for (const message of props.strategyEvents.messages) {
-    if (frame >= message.frameStart && frame <= message.frameEnd) {
+    if (
+      playSecond.value >= message.secondStart &&
+      playSecond.value <= message.secondEnd
+    ) {
       drawMessage(message.message);
     }
   }
@@ -63,15 +82,15 @@ const startDrawing = () => {
   let timestamp = Date.now();
 
   const update = () => {
-    if (frame.value >= frameLength) {
+    if (currentFrame.value >= frameLength) {
       play.value = false;
       return;
     }
-    if (Date.now() < timestamp + 1000) {
+    if (Date.now() < timestamp + frameLevel) {
       return requestAnimationFrame(update);
     }
-    drawFrame(frame.value);
-    frame.value++;
+    drawFrame(currentFrame.value);
+    currentFrame.value = currentFrame.value + frameLevel;
     timestamp = Date.now();
     if (play.value) {
       requestAnimationFrame(update);
@@ -94,25 +113,24 @@ const startPlay = () => {
   if (play.value) {
     play.value = false;
   } else {
-    console.log(frame.value, frameLength);
-    if (frame.value == frameLength)
-    {
+    console.log(currentFrame.value, frameLength);
+    if (currentFrame.value == frameLength) {
       // if we reached the end, restart it
-      frame.value = 0;
+      currentFrame.value = 0;
     }
     play.value = true;
     startDrawing();
   }
 };
 
-const backwardFrame = () => {
-  frame.value = frame.value - 1;
-  drawFrame(frame.value);
+const backwardSecond = () => {
+  currentFrame.value = currentFrame.value - frameStep;
+  drawFrame(currentFrame.value);
 };
 
-const forwardFrame = () => {
-  frame.value = frame.value + 1;
-  drawFrame(frame.value);
+const forwardSecond = () => {
+  currentFrame.value = currentFrame.value + frameStep;
+  drawFrame(currentFrame.value);
 };
 
 const isDev = () => {
@@ -151,12 +169,12 @@ const mouseMoveRadar = (x: number, y: number) => {
 
 <template>
   <h2>
-    1:<span>{{ seconds }}</span>
+    1:<span>{{ secondsRemaining }}</span>
   </h2>
   <p>
     <button @click="startPlay">⏯</button>
-    <button @click="backwardFrame">⏮</button>
-    <button @click="forwardFrame">⏭</button>
+    <button @click="backwardSecond">⏮</button>
+    <button @click="forwardSecond">⏭</button>
   </p>
   <Radar
     @radar-click="clickRadar"
