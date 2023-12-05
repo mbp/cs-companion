@@ -4,6 +4,17 @@ export interface PlayerPath {
   path: Coordinates[];
 }
 
+export interface StrategyMessage {
+  frameStart: number;
+  frameEnd: number;
+  message: string;
+}
+
+export interface StrategyEvents {
+  playerPaths: PlayerPath[];
+  messages: StrategyMessage[];
+}
+
 export type BuyType = "full-eco" | "anti-eco" | "normal" | "pistols" | "smg";
 
 export type Strategy = {
@@ -12,5 +23,5 @@ export type Strategy = {
   name: string;
   description: string;
   buyType: BuyType;
-  playerPaths?: PlayerPath[];
+  events?: StrategyEvents;
 };

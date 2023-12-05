@@ -2,9 +2,10 @@
 import { computed, ref } from "vue";
 import { Coordinates, PlayerPath } from "../types";
 import Radar from "../Radar.vue";
+import { StrategyEvents } from "./types";
 
 interface Props {
-  playerPaths: PlayerPath[];
+  strategyEvents: StrategyEvents;
   mapName: string;
 }
 
@@ -17,9 +18,12 @@ const play = ref(false);
 const frame = ref(0);
 const seconds = computed(() => 56 - frame.value);
 
-const frameLength = props.playerPaths.reduce((max, innerArray) => {
-  return Math.max(max, innerArray.path.length);
-}, 0);
+const frameLength = props.strategyEvents.playerPaths.reduce(
+  (max, innerArray) => {
+    return Math.max(max, innerArray.path.length);
+  },
+  0,
+);
 
 let canvasRenderingContext: CanvasRenderingContext2D;
 
@@ -31,14 +35,26 @@ const drawDot = (x: number, y: number, color: string) => {
   canvasRenderingContext.stroke();
 };
 
+const drawMessage = (message: string) => {
+  canvasRenderingContext.strokeStyle = "black";
+  canvasRenderingContext.fillStyle = "white";
+  canvasRenderingContext.font = "20px Arial";
+  canvasRenderingContext.fillText(message, 50, 50);
+};
+
 const drawFrame = (frame: number) => {
   clearAll();
   let index = 0;
-  for (const playerPath of props.playerPaths) {
+  for (const playerPath of props.strategyEvents.playerPaths) {
     const coordinates = playerPath.path;
     var coordinate = coordinates[frame];
     if (coordinate !== undefined) {
       drawDot(coordinate.x, coordinate.y, colors[index++]);
+    }
+  }
+  for (const message of props.strategyEvents.messages) {
+    if (frame >= message.frameStart && frame <= message.frameEnd) {
+      drawMessage(message.message);
     }
   }
 };

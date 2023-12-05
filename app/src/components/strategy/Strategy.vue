@@ -28,6 +28,6 @@ const strat = computed(() => {
   />
   <div>
     <StrategyInfo :strategy="strat" />
-    <RadarStrategy :map-name="mapName" :player-paths="strat.playerPaths!" />
+    <RadarStrategy :map-name="mapName" :strategy-events="strat.events!" />
   </div>
 </template>
