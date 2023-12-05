@@ -23,8 +23,8 @@
 </template>
 
 <script setup lang="ts">
-import { getSideImage } from "./composables/get-side-image";
-import { UtilityLineup } from "./composables/types";
+import { getSideImage } from "../composables/get-side-image";
+import { UtilityLineup } from "../composables/types";
 
 interface Props {
   utility: UtilityLineup;

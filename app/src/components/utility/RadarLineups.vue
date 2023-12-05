@@ -1,7 +1,7 @@
 <script setup lang="ts">
 import { computed, onMounted, ref, watch } from "vue";
-import { UtilityLineup } from "../components/composables/types";
-import Radar from "./Radar.vue";
+import { UtilityLineup } from "../composables/types";
+import Radar from "../Radar.vue";
 
 interface Props {
   lineUps: UtilityLineup[];

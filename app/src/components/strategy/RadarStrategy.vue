@@ -1,7 +1,7 @@
 <script setup lang="ts">
 import { computed, ref } from "vue";
-import { Coordinates, PlayerPath } from "../components/composables/types";
-import Radar from "./Radar.vue";
+import { Coordinates, PlayerPath } from "../composables/types";
+import Radar from "../Radar.vue";
 
 interface Props {
   playerPaths: PlayerPath[];

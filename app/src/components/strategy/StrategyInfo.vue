@@ -19,8 +19,8 @@
 </template>
 
 <script setup lang="ts">
-import { Strategy } from "./composables/types";
-import { getSideImage } from "./composables/get-side-image";
+import { Strategy } from "../composables/types";
+import { getSideImage } from "../composables/get-side-image";
 
 interface Props {
   strategy: Strategy;

@@ -2,7 +2,7 @@
 import { computed, ref } from "vue";
 import { useRoute, useRouter } from "vue-router";
 import { allMapSchemes } from "../data";
-import RadarLineups from "./RadarLineups.vue";
+import RadarLineups from "./utility/RadarLineups.vue";
 import Toggle from "./Toggle.vue";
 import Navigation from "./Navigation.vue";
 import { NadeType, Side, Strategy, UtilityLineup } from "./composables/types";

@@ -3,8 +3,8 @@ import "./style.css";
 import App from "./App.vue";
 import Maps from "./components/Maps.vue";
 import Map from "./components/Map.vue";
-import Utility from "./components/Utility.vue";
-import Strategy from "./components/Strategy.vue";
+import Utility from "./components/utility/Utility.vue";
+import Strategy from "./components/strategy/Strategy.vue";
 import { createRouter, createWebHashHistory } from "vue-router";
 
 const routes = [
