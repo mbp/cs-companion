@@ -13,9 +13,3 @@ export type MapScheme = {
   lineUps: UtilityLineup[];
   strats: Strategy[];
 };
-
-export interface PlayerPath {
-  path: Coordinates[];
-}
-
-export type BuyType = "full-eco" | "anti-eco" | "normal" | "pistols" | "smg";
