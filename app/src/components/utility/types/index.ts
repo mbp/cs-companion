@@ -15,4 +15,5 @@ export type UtilityLineup = {
   side: Side;
   clickType?: ClickType;
   coordinates: Coordinates;
+  positionCoordinates?: Coordinates;
 };

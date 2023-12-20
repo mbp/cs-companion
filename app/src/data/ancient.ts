@@ -147,6 +147,10 @@ export const ancientMapScheme: MapScheme = {
         x: 263,
         y: 196,
       },
+      positionCoordinates: {
+        x: 201,
+        y: 586,
+      },
     },
     {
       name: "Donut mid from spawn",

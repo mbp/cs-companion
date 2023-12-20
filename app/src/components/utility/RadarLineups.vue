@@ -167,7 +167,21 @@ const createRectangle = (x: number, y: number, utility: UtilityLineup) => {
         ctx.arc(x, y, pointSize, 0, Math.PI * 2, true);
         ctx.fill();
         ctx.stroke();
+        ctx.closePath();
         ctx.fillText(utility.name, x, y);
+
+        if (utility.positionCoordinates) {
+          ctx.beginPath();
+          ctx.strokeStyle = "white";
+          ctx.setLineDash([5, 15]);
+          ctx.moveTo(utility.coordinates.x, utility.coordinates.y);
+          ctx.lineTo(
+            utility.positionCoordinates.x,
+            utility.positionCoordinates.y,
+          );
+          ctx.stroke();
+          ctx.closePath();
+        }
       },
     },
     utility: utility,
@@ -185,10 +199,12 @@ const drawCoordinates = (
   const ctx = radarCanvas.value!.getContext("2d")!;
   ctx.fillStyle = color;
   ctx.beginPath();
+  ctx.setLineDash([]);
   ctx.arc(rectangle.x, rectangle.y, pointSize, 0, Math.PI * 2, true);
   ctx.strokeStyle = strokeColor;
   ctx.lineWidth = 5;
   ctx.stroke();
+  ctx.closePath();
   ctx.fill();
 };
 

@@ -36,6 +36,7 @@ const drawDot = (x: number, y: number, color: string) => {
   canvasRenderingContext.fillStyle = color;
   canvasRenderingContext.fill();
   canvasRenderingContext.stroke();
+  canvasRenderingContext.closePath();
 };
 
 const drawMessage = (message: string) => {
