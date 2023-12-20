@@ -2,10 +2,13 @@
 import { computed, ref } from "vue";
 import { Coordinates } from "../types";
 import Radar from "../Radar.vue";
-import { StrategyEvents } from "./types";
+import { ActionThrow, StrategyEvents } from "./types";
+import { useDrawing } from "../composables/use-drawing";
+import { NadeType, UtilityLineup } from "../utility/types";
 
 interface Props {
   strategyEvents: StrategyEvents;
+  lineUps: UtilityLineup[];
   mapName: string;
 }
 
@@ -30,10 +33,13 @@ const frameLength = props.strategyEvents.playerPaths.reduce(
 
 let canvasRenderingContext: CanvasRenderingContext2D;
 
-const drawDot = (x: number, y: number, color: string) => {
+const drawPlayerDot = (x: number, y: number, color: string) => {
   canvasRenderingContext.beginPath();
   canvasRenderingContext.arc(x, y, pointSize, 0, 2 * Math.PI);
   canvasRenderingContext.fillStyle = color;
+  canvasRenderingContext.lineWidth = 1;
+  canvasRenderingContext.setLineDash([]);
+  canvasRenderingContext.strokeStyle = "#000";
   canvasRenderingContext.fill();
   canvasRenderingContext.stroke();
   canvasRenderingContext.closePath();
@@ -46,11 +52,26 @@ const drawMessage = (message: string) => {
   canvasRenderingContext.fillText(message, 50, 50);
 };
 
+const drawThrow = (utility: UtilityLineup) => {
+  const drawing = useDrawing(canvasRenderingContext);
+  const utilityRectangle = drawing.createUtilityRectangle(
+    utility.coordinates.x,
+    utility.coordinates.y,
+    utility,
+  );
+  drawing.drawUtilityRectangle(utilityRectangle);
+};
+
+const getNadeDuration = (nadeType: NadeType) => {
+  return nadeType == "smoke" ? 18 : nadeType == "molo" ? 7 : 5;
+};
+
 const drawFrame = (frame: number) => {
   clearAll();
   let index = 0;
   const frameDivision = (frame % frameStep) / frameLevel;
   for (const playerPath of props.strategyEvents.playerPaths) {
+    const playerColor = colors[index++];
     const coordinates = playerPath.path;
     var coordinate1 = coordinates[playSecond.value];
     var coordinate2 = coordinates[playSecond.value + 1];
@@ -66,7 +87,19 @@ const drawFrame = (frame: number) => {
               frameDivision * ((coordinate2.y - coordinate1.y) / 10),
           };
     if (coordinate !== undefined) {
-      drawDot(coordinate.x, coordinate.y, colors[index++]);
+      drawPlayerDot(coordinate.x, coordinate.y, playerColor);
+      if (playerPath.actionThrows) {
+        for (const actionThrow of playerPath.actionThrows) {
+          const utility = props.lineUps.find((x) => x.id == actionThrow.id)!;
+          const duration = getNadeDuration(utility.nadeType);
+          if (
+            playSecond.value >= actionThrow.playSecond &&
+            actionThrow.playSecond - duration < playSecond.value
+          ) {
+            drawThrow(utility);
+          }
+        }
+      }
     }
   }
   for (const message of props.strategyEvents.messages) {

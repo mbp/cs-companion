@@ -1,7 +1,13 @@
 import { Coordinates, Side } from "../../types";
 
+export interface ActionThrow {
+  id: string;
+  playSecond: number;
+}
+
 export interface PlayerPath {
   path: Coordinates[];
+  actionThrows?: ActionThrow[];
 }
 
 export interface StrategyMessage {

@@ -16,6 +16,9 @@ const strat = computed(() => {
     .find((x) => x.map == mapName)
     ?.strats.find((x) => x.id == id)!;
 });
+const lineUps = computed(() => {
+  return allMapSchemes.find((x) => x.map == mapName)?.lineUps!;
+});
 </script>
 
 <template>
@@ -28,6 +31,10 @@ const strat = computed(() => {
   />
   <div>
     <StrategyInfo :strategy="strat" />
-    <RadarStrategy :map-name="mapName" :strategy-events="strat.events!" />
+    <RadarStrategy
+      :map-name="mapName"
+      :strategy-events="strat.events!"
+      :line-ups="lineUps"
+    />
   </div>
 </template>
