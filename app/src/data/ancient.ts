@@ -13,6 +13,10 @@ export const ancientMapScheme: MapScheme = {
         x: 826,
         y: 369,
       },
+      positionCoordinates: {
+        x: 780,
+        y: 734,
+      },
     },
     {
       name: "Short B from ruins",
@@ -23,6 +27,10 @@ export const ancientMapScheme: MapScheme = {
       coordinates: {
         x: 726,
         y: 354,
+      },
+      positionCoordinates: {
+        x: 823,
+        y: 714,
       },
     },
     {
@@ -35,6 +43,10 @@ export const ancientMapScheme: MapScheme = {
         x: 708,
         y: 395,
       },
+      positionCoordinates: {
+        x: 836,
+        y: 732,
+      },
     },
     {
       name: "B ramp from long",
@@ -46,6 +58,10 @@ export const ancientMapScheme: MapScheme = {
         x: 838,
         y: 553,
       },
+      positionCoordinates: {
+        x: 842,
+        y: 382,
+      },
     },
     {
       name: "Elbow from mid house",
@@ -56,6 +72,10 @@ export const ancientMapScheme: MapScheme = {
       coordinates: {
         x: 377,
         y: 593,
+      },
+      positionCoordinates: {
+        x: 501,
+        y: 386,
       },
     },
     {
@@ -70,6 +90,10 @@ export const ancientMapScheme: MapScheme = {
         x: 784,
         y: 421,
       },
+      positionCoordinates: {
+        x: 514,
+        y: 836,
+      },
     },
     {
       name: "Flash right side mid from t spawn",
@@ -80,6 +104,10 @@ export const ancientMapScheme: MapScheme = {
       coordinates: {
         x: 510,
         y: 611,
+      },
+      positionCoordinates: {
+        x: 545,
+        y: 822,
       },
     },
     {
@@ -92,6 +120,10 @@ export const ancientMapScheme: MapScheme = {
         x: 453,
         y: 616,
       },
+      positionCoordinates: {
+        x: 442,
+        y: 840,
+      },
     },
     {
       name: "Catwalk from t spawn",
@@ -102,6 +134,10 @@ export const ancientMapScheme: MapScheme = {
       coordinates: {
         x: 546,
         y: 584,
+      },
+      positionCoordinates: {
+        x: 514,
+        y: 843,
       },
     },
     {
@@ -114,6 +150,10 @@ export const ancientMapScheme: MapScheme = {
         x: 486,
         y: 386,
       },
+      positionCoordinates: {
+        x: 514,
+        y: 843,
+      },
     },
     {
       name: "Inside donut from stairs",
@@ -125,6 +165,10 @@ export const ancientMapScheme: MapScheme = {
         x: 315,
         y: 329,
       },
+      positionCoordinates: {
+        x: 201,
+        y: 586,
+      },
     },
     {
       name: "CT from stairs",
@@ -135,6 +179,10 @@ export const ancientMapScheme: MapScheme = {
       coordinates: {
         x: 367,
         y: 221,
+      },
+      positionCoordinates: {
+        x: 201,
+        y: 586,
       },
     },
     {
@@ -162,6 +210,10 @@ export const ancientMapScheme: MapScheme = {
         x: 420,
         y: 467,
       },
+      positionCoordinates: {
+        x: 514,
+        y: 843,
+      },
     },
     {
       name: "Donut mid from jungle",
@@ -172,6 +224,10 @@ export const ancientMapScheme: MapScheme = {
       coordinates: {
         x: 393,
         y: 461,
+      },
+      positionCoordinates: {
+        x: 363,
+        y: 676,
       },
     },
     {
@@ -184,6 +240,10 @@ export const ancientMapScheme: MapScheme = {
         x: 689,
         y: 252,
       },
+      positionCoordinates: {
+        x: 833,
+        y: 732,
+      },
     },
     {
       name: "Ancient wood from ruins",
@@ -194,6 +254,10 @@ export const ancientMapScheme: MapScheme = {
       coordinates: {
         x: 726,
         y: 489,
+      },
+      positionCoordinates: {
+        x: 791,
+        y: 633,
       },
     },
   ],
