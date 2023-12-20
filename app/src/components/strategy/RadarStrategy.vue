@@ -2,8 +2,8 @@
 import { computed, ref } from "vue";
 import { Coordinates } from "../types";
 import Radar from "../Radar.vue";
-import { ActionThrow, StrategyEvents } from "./types";
-import { useDrawing } from "../composables/use-drawing";
+import { StrategyEvents } from "./types";
+import { DrawingEngine, useDrawing } from "../composables/use-drawing";
 import { NadeType, UtilityLineup } from "../utility/types";
 
 interface Props {
@@ -32,6 +32,7 @@ const frameLength = props.strategyEvents.playerPaths.reduce(
 );
 
 let canvasRenderingContext: CanvasRenderingContext2D;
+let drawing: DrawingEngine;
 
 const drawPlayerDot = (x: number, y: number, color: string) => {
   canvasRenderingContext.beginPath();
@@ -53,13 +54,12 @@ const drawMessage = (message: string) => {
 };
 
 const drawThrow = (utility: UtilityLineup) => {
-  const drawing = useDrawing(canvasRenderingContext);
-  const utilityRectangle = drawing.createUtilityRectangle(
+  const utilityRectangle = drawing.drawUtilityRectangle(
     utility.coordinates.x,
     utility.coordinates.y,
     utility,
   );
-  drawing.drawUtilityRectangle(utilityRectangle);
+  utilityRectangle.drawTravel();
 };
 
 const getNadeDuration = (nadeType: NadeType) => {
@@ -140,6 +140,7 @@ const clearAll = () => {
 
 const canvasMounted = (context: HTMLCanvasElement) => {
   canvasRenderingContext = context.getContext("2d")!;
+  drawing = useDrawing(canvasRenderingContext);
   startDrawing();
 };
 

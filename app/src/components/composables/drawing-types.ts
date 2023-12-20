@@ -9,6 +9,7 @@ export type UtilityRectangle = {
   y: number;
   width: number;
   height: number;
-  tooltip: Tooltip;
+  drawTooltip: () => void;
+  drawTravel: () => void;
   utility: UtilityLineup;
 };
