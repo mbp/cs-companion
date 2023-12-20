@@ -138,6 +138,17 @@ export const ancientMapScheme: MapScheme = {
       },
     },
     {
+      name: "Temple from stairs",
+      id: "temple-from-stairs",
+      nadeType: "smoke",
+      throwType: "jump",
+      side: "t",
+      coordinates: {
+        x: 263,
+        y: 196,
+      },
+    },
+    {
       name: "Donut mid from spawn",
       id: "mid-donut-from-spawn",
       nadeType: "smoke",
