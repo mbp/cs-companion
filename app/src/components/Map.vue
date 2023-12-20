@@ -178,25 +178,25 @@ const lineUps = computed(() => {
 
     <div v-if="!showRadar">
       <h2>Smoke Grenade</h2>
-      <div v-for="smoke in smokes">
+      <div v-for="smoke in smokes" :key="smoke.id">
         <button @click="openUtility(smoke)">
           {{ smoke.name }}
         </button>
       </div>
       <h2>Molotov / Incendiary Grenade</h2>
-      <div v-for="molo in molos">
+      <div v-for="molo in molos" :key="molo.id">
         <button @click="openUtility(molo)">
           {{ molo.name }}
         </button>
       </div>
       <h2>Flashbang</h2>
-      <div v-for="flash in flashBangs">
+      <div v-for="flash in flashBangs" :key="flash.id">
         <button @click="openUtility(flash)">
           {{ flash.name }}
         </button>
       </div>
       <h2>Frag Grenade</h2>
-      <div v-for="fragGrenade in fragGrenades">
+      <div v-for="fragGrenade in fragGrenades" :key="fragGrenade.id">
         <button @click="openUtility(fragGrenade)">
           {{ fragGrenade.name }}
         </button>
@@ -206,7 +206,7 @@ const lineUps = computed(() => {
 
   <div v-if="showStrats">
     <h2>Strategies</h2>
-    <div v-for="strat in mapScheme.strats">
+    <div v-for="strat in mapScheme.strats" :key="strat.id">
       <h3>{{ strat.name }}</h3>
       <button @click="openStrat(strat)">OPEN</button>
       ({{ strat.buyType }}, {{ strat.side }})

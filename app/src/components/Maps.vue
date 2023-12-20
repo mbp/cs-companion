@@ -26,6 +26,7 @@ const copyCmd = async (id: string) => {
   <div class="map-tiles">
     <button
       v-for="mapScheme in allMapSchemes"
+      :key="mapScheme.map"
       class="map-tile"
       @click="goMap(mapScheme.map)"
     >

@@ -1,7 +1,7 @@
 <template>
   <nav class="crumbs">
     <ol>
-      <li v-for="parent in parents" class="crumb">
+      <li v-for="parent in parents" :key="parent.title" class="crumb">
         <router-link :to="{ name: parent.routeName, params: parent.params }">
           {{ parent.title }}
         </router-link>
