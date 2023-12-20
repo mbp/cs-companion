@@ -1,12 +1,14 @@
 <template>
   <nav class="crumbs">
     <ol>
-      <li class="crumb" v-for="parent in parents">
+      <li v-for="parent in parents" class="crumb">
         <router-link :to="{ name: parent.routeName, params: parent.params }">
           {{ parent.title }}
         </router-link>
       </li>
-      <li class="crumb">{{ current }}</li>
+      <li class="crumb">
+        {{ current }}
+      </li>
     </ol>
   </nav>
 </template>

@@ -178,14 +178,14 @@ const mouseMoveRadar = (x: number, y: number) => {
     <button @click="forwardSecond">⏭</button>
   </p>
   <Radar
+    ref="radar"
+    :map-name="mapName"
     @radar-click="clickRadar"
     @radar-mouse-move="mouseMoveRadar"
     @canvas-mounted="canvasMounted"
-    ref="radar"
-    :mapName="mapName"
   />
   <p v-if="isDev()">
-    <button @click="startSampling" v-if="isDev()">
+    <button v-if="isDev()" @click="startSampling">
       (DEV)SAMPLE {{ sampleCount }}
     </button>
   </p>

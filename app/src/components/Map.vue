@@ -127,67 +127,73 @@ const lineUps = computed(() => {
   />
 
   <Toggle
-    @checked="onToggleShowStratsChecked"
     label="Strats"
     :initial="false"
+    @checked="onToggleShowStratsChecked"
   />
   <Toggle
-    @checked="onToggleShowRadarListChecked"
     label="Radar"
     :initial="true"
+    @checked="onToggleShowRadarListChecked"
   />
   <Toggle
-    @checked="onToggleShowSmokesOnlyChecked"
     label="Smokes"
     :initial="true"
+    @checked="onToggleShowSmokesOnlyChecked"
   />
   <Toggle
-    @checked="onToggleShowMolosOnlyChecked"
     label="Molos"
     :initial="true"
+    @checked="onToggleShowMolosOnlyChecked"
   />
   <Toggle
-    @checked="onToggleShowFlashBangsOnlyChecked"
     label="Flash"
     :initial="true"
+    @checked="onToggleShowFlashBangsOnlyChecked"
   />
   <Toggle
-    @checked="onToggleShowFragGrenadesOnlyChecked"
     label="Frag"
     :initial="true"
+    @checked="onToggleShowFragGrenadesOnlyChecked"
   />
   <Toggle
-    @checked="onToggleShowTerroristsOnlyChecked"
     label="T"
     :initial="true"
+    @checked="onToggleShowTerroristsOnlyChecked"
   />
   <Toggle
-    @checked="onToggleShowCounterTerroristsOnlyChecked"
     label="CT"
     :initial="true"
+    @checked="onToggleShowCounterTerroristsOnlyChecked"
   />
 
   <div v-if="!showStrats">
     <div v-if="showRadar">
       <RadarLineups
-        :lineUps="lineUps"
-        :mapName="mapName"
-        @selectedUtility="setSelectedUtility"
+        :line-ups="lineUps"
+        :map-name="mapName"
+        @selected-utility="setSelectedUtility"
       />
     </div>
 
     <div v-if="!showRadar">
       <h2>Smoke Grenade</h2>
       <div v-for="smoke in smokes">
-        <button @click="openUtility(smoke)">{{ smoke.name }}</button>
+        <button @click="openUtility(smoke)">
+          {{ smoke.name }}
+        </button>
       </div>
       <h2>Molotov / Incendiary Grenade</h2>
       <div v-for="molo in molos">
-        <button @click="openUtility(molo)">{{ molo.name }}</button>
+        <button @click="openUtility(molo)">
+          {{ molo.name }}
+        </button>
       </div>
       <h2>Flashbang</h2>
       <div v-for="flash in flashBangs">
-        <button @click="openUtility(flash)">{{ flash.name }}</button>
+        <button @click="openUtility(flash)">
+          {{ flash.name }}
+        </button>
       </div>
       <h2>Frag Grenade</h2>
       <div v-for="fragGrenade in fragGrenades">

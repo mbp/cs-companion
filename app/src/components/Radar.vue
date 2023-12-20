@@ -48,12 +48,12 @@ const radarMouseMove = (event: MouseEvent) => {
 <template>
   <canvas
     ref="radarCanvas"
-    @click="clickRadar"
-    @mousemove="radarMouseMove"
     width="1024"
     height="1024"
     :style="{ 'background-image': radarImage }"
-  ></canvas>
+    @click="clickRadar"
+    @mousemove="radarMouseMove"
+  />
 </template>
 
 <style>

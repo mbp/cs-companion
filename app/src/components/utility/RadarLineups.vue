@@ -178,11 +178,11 @@ const canvasMounted = (context: HTMLCanvasElement) => {
 
 <template>
   <Radar
+    ref="radar"
+    :canvas="radarCanvas"
+    :map-name="mapName"
     @radar-click="clickRadar"
     @radar-mouse-move="mouseMoveRadar"
     @canvas-mounted="canvasMounted"
-    :canvas="radarCanvas"
-    ref="radar"
-    :mapName="mapName"
   />
 </template>
