@@ -13,6 +13,10 @@ export const infernoMapScheme: MapScheme = {
         x: 609,
         y: 224,
       },
+      positionCoordinates: {
+        x: 487,
+        y: 469,
+      },
     },
     {
       name: "Coffin from banana",
@@ -23,6 +27,10 @@ export const infernoMapScheme: MapScheme = {
       coordinates: {
         x: 523,
         y: 145,
+      },
+      positionCoordinates: {
+        x: 487,
+        y: 469,
       },
     },
     {
@@ -35,6 +43,10 @@ export const infernoMapScheme: MapScheme = {
         x: 715,
         y: 706,
       },
+      positionCoordinates: {
+        x: 572,
+        y: 715,
+      },
     },
     {
       name: "Short from t-ramp",
@@ -45,6 +57,10 @@ export const infernoMapScheme: MapScheme = {
       coordinates: {
         x: 694,
         y: 706,
+      },
+      positionCoordinates: {
+        x: 292,
+        y: 626,
       },
     },
     {
@@ -57,6 +73,10 @@ export const infernoMapScheme: MapScheme = {
         x: 714,
         y: 659,
       },
+      positionCoordinates: {
+        x: 572,
+        y: 756,
+      },
     },
     {
       name: "Cross pit from second mid",
@@ -68,6 +88,10 @@ export const infernoMapScheme: MapScheme = {
         x: 889,
         y: 781,
       },
+      positionCoordinates: {
+        x: 471,
+        y: 818,
+      },
     },
     {
       name: "Moto from second mid",
@@ -78,6 +102,10 @@ export const infernoMapScheme: MapScheme = {
       coordinates: {
         x: 894,
         y: 610,
+      },
+      positionCoordinates: {
+        x: 511,
+        y: 840,
       },
     },
     {
@@ -91,6 +119,10 @@ export const infernoMapScheme: MapScheme = {
         x: 894,
         y: 637,
       },
+      positionCoordinates: {
+        x: 484,
+        y: 672,
+      },
     },
     {
       name: "B dark from car",
@@ -102,6 +134,10 @@ export const infernoMapScheme: MapScheme = {
         x: 433,
         y: 138,
       },
+      positionCoordinates: {
+        x: 507,
+        y: 414,
+      },
     },
     {
       name: "Nuke box from car",
@@ -112,6 +148,10 @@ export const infernoMapScheme: MapScheme = {
       coordinates: {
         x: 432,
         y: 260,
+      },
+      positionCoordinates: {
+        x: 517,
+        y: 375,
       },
     },
     {
@@ -125,6 +165,10 @@ export const infernoMapScheme: MapScheme = {
         x: 608,
         y: 238,
       },
+      positionCoordinates: {
+        x: 521,
+        y: 414,
+      },
     },
     {
       name: "B car from ramp",
@@ -135,6 +179,10 @@ export const infernoMapScheme: MapScheme = {
       coordinates: {
         x: 516,
         y: 402,
+      },
+      positionCoordinates: {
+        x: 486,
+        y: 506,
       },
     },
     {
@@ -147,6 +195,10 @@ export const infernoMapScheme: MapScheme = {
         x: 940,
         y: 819,
       },
+      positionCoordinates: {
+        x: 753,
+        y: 863,
+      },
     },
     {
       name: "Hay hay car from 2nd mid",
@@ -157,6 +209,10 @@ export const infernoMapScheme: MapScheme = {
       coordinates: {
         x: 836,
         y: 806,
+      },
+      positionCoordinates: {
+        x: 530,
+        y: 803,
       },
     },
     {
@@ -169,6 +225,10 @@ export const infernoMapScheme: MapScheme = {
         x: 847,
         y: 784,
       },
+      positionCoordinates: {
+        x: 752,
+        y: 846,
+      },
     },
     {
       name: "Ramp/mid/banana from ct spawn",
@@ -179,6 +239,10 @@ export const infernoMapScheme: MapScheme = {
       coordinates: {
         x: 448,
         y: 620,
+      },
+      positionCoordinates: {
+        x: 871,
+        y: 394,
       },
     },
     {
@@ -191,6 +255,10 @@ export const infernoMapScheme: MapScheme = {
         x: 463,
         y: 478,
       },
+      positionCoordinates: {
+        x: 871,
+        y: 394,
+      },
     },
     {
       name: "Mid from ct spawn",
@@ -202,6 +270,10 @@ export const infernoMapScheme: MapScheme = {
         x: 503,
         y: 672,
       },
+      positionCoordinates: {
+        x: 871,
+        y: 394,
+      },
     },
     {
       name: "One way hay car from pit",
@@ -212,6 +284,10 @@ export const infernoMapScheme: MapScheme = {
       coordinates: {
         x: 832,
         y: 782,
+      },
+      positionCoordinates: {
+        x: 962,
+        y: 809,
       },
     },
     {
@@ -225,6 +301,10 @@ export const infernoMapScheme: MapScheme = {
         x: 863,
         y: 868,
       },
+      positionCoordinates: {
+        x: 736,
+        y: 864,
+      },
     },
     {
       name: "Second mid from long",
@@ -235,6 +315,10 @@ export const infernoMapScheme: MapScheme = {
       coordinates: {
         x: 594,
         y: 810,
+      },
+      positionCoordinates: {
+        x: 736,
+        y: 626,
       },
     },
     {
@@ -248,6 +332,10 @@ export const infernoMapScheme: MapScheme = {
         x: 625,
         y: 788,
       },
+      positionCoordinates: {
+        x: 687,
+        y: 808,
+      },
     },
     {
       name: "Pit from long",
@@ -259,6 +347,10 @@ export const infernoMapScheme: MapScheme = {
         x: 938,
         y: 801,
       },
+      positionCoordinates: {
+        x: 830,
+        y: 533,
+      },
     },
     {
       name: "A default plant from long",
@@ -269,6 +361,10 @@ export const infernoMapScheme: MapScheme = {
       coordinates: {
         x: 853,
         y: 746,
+      },
+      positionCoordinates: {
+        x: 830,
+        y: 533,
       },
     },
   ],
