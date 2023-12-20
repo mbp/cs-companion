@@ -13,6 +13,10 @@ export const anubisMapScheme: MapScheme = {
         x: 512,
         y: 628,
       },
+      positionCoordinates: {
+        x: 464,
+        y: 182
+      }
     },
     {
       name: "A Connector from water",
@@ -24,6 +28,10 @@ export const anubisMapScheme: MapScheme = {
         x: 671,
         y: 384,
       },
+      positionCoordinates: {
+        x: 778,
+        y: 523
+      }
     },
     {
       name: "B Connector outside from street",
@@ -35,6 +43,10 @@ export const anubisMapScheme: MapScheme = {
         x: 436,
         y: 619,
       },
+      positionCoordinates: {
+        x: 666,
+        y: 811
+      }
     },
     {
       name: "Mid house from T spawn",
@@ -46,6 +58,10 @@ export const anubisMapScheme: MapScheme = {
         x: 519,
         y: 507,
       },
+      positionCoordinates: {
+        x: 504,
+        y: 970
+      }
     },
     {
       name: "Palace from B outside",
@@ -57,6 +73,10 @@ export const anubisMapScheme: MapScheme = {
         x: 357,
         y: 440,
       },
+      positionCoordinates: {
+        x: 278,
+        y: 669
+      }
     },
     {
       name: "Connector inside from B outside",
@@ -68,6 +88,10 @@ export const anubisMapScheme: MapScheme = {
         x: 371,
         y: 572,
       },
+      positionCoordinates: {
+        x: 278,
+        y: 669
+      }
     },
     {
       name: "CT long from B outside",
@@ -79,6 +103,10 @@ export const anubisMapScheme: MapScheme = {
         x: 300,
         y: 431,
       },
+      positionCoordinates: {
+        x: 278,
+        y: 669
+      }
     },
     {
       name: "A site from canals",
@@ -90,6 +118,10 @@ export const anubisMapScheme: MapScheme = {
         x: 788,
         y: 304,
       },
+      positionCoordinates: {
+        x: 709,
+        y: 497
+      }
     },
     {
       name: "Mid house from bridge",
@@ -101,6 +133,10 @@ export const anubisMapScheme: MapScheme = {
         x: 520,
         y: 483,
       },
+      positionCoordinates: {
+        x: 430,
+        y: 704
+      }
     },
   ],
   strats: [],
