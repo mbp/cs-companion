@@ -1,6 +1,6 @@
 <script setup lang="ts">
-import { computed, onMounted, ref, watch } from "vue";
-import { UtilityLineup } from "./types";
+import { onMounted, ref, watch } from "vue";
+import { NadeType, UtilityLineup } from "./types";
 import Radar from "../Radar.vue";
 
 interface Props {
@@ -16,23 +16,23 @@ const emit = defineEmits<{
 
 const pointSize = 8;
 
-const smokes = computed(() => {
-  return props.lineUps.filter((x) => x.nadeType == "smoke" && x.coordinates);
-});
+type SmokeColors = {
+  [key in NadeType]: string;
+};
 
-const nades = computed(() => {
-  return props.lineUps.filter((x) => x.nadeType == "frag" && x.coordinates);
-});
+const nadeColors: SmokeColors = {
+  smoke: "grey",
+  flashbang: "white",
+  molo: "orange",
+  frag: "green",
+};
 
-const molos = computed(() => {
-  return props.lineUps.filter((x) => x.nadeType == "molo" && x.coordinates);
-});
-
-const flashBangs = computed(() => {
-  return props.lineUps.filter(
-    (x) => x.nadeType == "flashbang" && x.coordinates,
-  );
-});
+const nadeStrokeColors: SmokeColors = {
+  smoke: "orange",
+  flashbang: "black",
+  molo: "black",
+  frag: "white",
+};
 
 onMounted(() => {
   drawAll();
@@ -49,21 +49,8 @@ const clearAll = () => {
 };
 
 const drawAll = () => {
-  for (const smoke of smokes.value) {
-    drawSmokeCoordinates(smoke.coordinates!.x, smoke.coordinates!.y, smoke);
-  }
-  for (const nade of nades.value) {
-    drawNadeCoordinates(nade.coordinates!.x, nade.coordinates!.y, nade);
-  }
-  for (const molo of molos.value) {
-    drawMoloCoordinates(molo.coordinates!.x, molo.coordinates!.y, molo);
-  }
-  for (const flashBang of flashBangs.value) {
-    drawFlashCoordinates(
-      flashBang.coordinates!.x,
-      flashBang.coordinates!.y,
-      flashBang,
-    );
+  for (const lineUp of props.lineUps) {
+    drawNadeCoordinates(lineUp.coordinates.x, lineUp.coordinates.y, lineUp);
   }
 };
 
@@ -118,33 +105,9 @@ const findMatchingRectangle = (x: number, y: number) => {
   return rectangles.find((rectangle) => contains(rectangle, x, y));
 };
 
-const drawSmokeCoordinates = (x: number, y: number, utility: UtilityLineup) => {
-  const color = "grey";
-  const strokeColor = "orange";
-  const rectangle = createRectangle(x, y, utility);
-  rectangles.push(rectangle);
-  drawCoordinates(rectangle, color, strokeColor);
-};
-
-const drawMoloCoordinates = (x: number, y: number, utility: UtilityLineup) => {
-  const color = "orange";
-  const strokeColor = "black";
-  const rectangle = createRectangle(x, y, utility);
-  rectangles.push(rectangle);
-  drawCoordinates(rectangle, color, strokeColor);
-};
-
 const drawNadeCoordinates = (x: number, y: number, utility: UtilityLineup) => {
-  const color = "green";
-  const strokeColor = "white";
-  const rectangle = createRectangle(x, y, utility);
-  rectangles.push(rectangle);
-  drawCoordinates(rectangle, color, strokeColor);
-};
-
-const drawFlashCoordinates = (x: number, y: number, utility: UtilityLineup) => {
-  const color = "white";
-  const strokeColor = "black";
+  const color = nadeColors[utility.nadeType];
+  const strokeColor = nadeStrokeColors[utility.nadeType];
   const rectangle = createRectangle(x, y, utility);
   rectangles.push(rectangle);
   drawCoordinates(rectangle, color, strokeColor);
@@ -172,7 +135,7 @@ const createRectangle = (x: number, y: number, utility: UtilityLineup) => {
 
         if (utility.positionCoordinates) {
           ctx.beginPath();
-          ctx.strokeStyle = "white";
+          ctx.strokeStyle = nadeColors[utility.nadeType];
           ctx.setLineDash([5, 15]);
           ctx.moveTo(utility.coordinates.x, utility.coordinates.y);
           ctx.lineTo(
