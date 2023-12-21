@@ -173,7 +173,7 @@ export const nukeLineups: MapScheme = {
       name: "Flash a site heaven from t roof",
       id: "a-site-heaven-from-t-roof",
       nadeType: "flashbang",
-      throwType: "normal",
+      throwType: "jump",
       side: "t",
       coordinates: {
         x: 591,
@@ -212,21 +212,6 @@ export const nukeLineups: MapScheme = {
       positionCoordinates: {
         x: 504,
         y: 545,
-      },
-    },
-    {
-      name: "Flash b ramp from trophy",
-      id: "b-ramp-from-trophy",
-      nadeType: "flashbang",
-      throwType: "run",
-      side: "t",
-      coordinates: {
-        x: 545,
-        y: 352,
-      },
-      positionCoordinates: {
-        x: 488,
-        y: 469,
       },
     },
     {
