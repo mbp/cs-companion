@@ -60,21 +60,19 @@ export const useDrawing = (
       width: utilityPointSize,
       height: utilityPointSize,
       drawTravel: () => {
-        if (utility.positionCoordinates) {
-          canvasRenderingContext.beginPath();
-          canvasRenderingContext.strokeStyle = nadeColors[utility.nadeType];
-          canvasRenderingContext.setLineDash([5, 15]);
-          canvasRenderingContext.moveTo(
-            utility.coordinates.x,
-            utility.coordinates.y,
-          );
-          canvasRenderingContext.lineTo(
-            utility.positionCoordinates.x,
-            utility.positionCoordinates.y,
-          );
-          canvasRenderingContext.stroke();
-          canvasRenderingContext.closePath();
-        }
+        canvasRenderingContext.beginPath();
+        canvasRenderingContext.strokeStyle = nadeColors[utility.nadeType];
+        canvasRenderingContext.setLineDash([5, 15]);
+        canvasRenderingContext.moveTo(
+          utility.coordinates.x,
+          utility.coordinates.y,
+        );
+        canvasRenderingContext.lineTo(
+          utility.positionCoordinates.x,
+          utility.positionCoordinates.y,
+        );
+        canvasRenderingContext.stroke();
+        canvasRenderingContext.closePath();
       },
       drawTooltip: () => {
         document.body.style.cursor = "pointer";

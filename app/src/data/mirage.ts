@@ -14,6 +14,10 @@ export const mirageMapScheme: MapScheme = {
         x: 514,
         y: 505,
       },
+      positionCoordinates: {
+        x: 871,
+        y: 207,
+      },
     },
     {
       name: "Top connector smoke from side alley",
@@ -25,6 +29,10 @@ export const mirageMapScheme: MapScheme = {
         x: 511,
         y: 596,
       },
+      positionCoordinates: {
+        x: 740,
+        y: 260,
+      },
     },
     {
       name: "Mid window from spawn",
@@ -35,6 +43,10 @@ export const mirageMapScheme: MapScheme = {
       coordinates: {
         x: 425,
         y: 452,
+      },
+      positionCoordinates: {
+        x: 932,
+        y: 328,
       },
     },
     {
@@ -48,6 +60,10 @@ export const mirageMapScheme: MapScheme = {
         x: 550,
         y: 662,
       },
+      positionCoordinates: {
+        x: 878,
+        y: 580,
+      },
     },
     {
       name: "Ticket booth smoke from T ramp",
@@ -58,6 +74,10 @@ export const mirageMapScheme: MapScheme = {
       coordinates: {
         x: 467,
         y: 816,
+      },
+      positionCoordinates: {
+        x: 863,
+        y: 543,
       },
     },
     {
@@ -70,6 +90,10 @@ export const mirageMapScheme: MapScheme = {
         x: 473,
         y: 629,
       },
+      positionCoordinates: {
+        x: 811,
+        y: 638,
+      },
     },
     {
       name: "Market window smoke",
@@ -81,6 +105,10 @@ export const mirageMapScheme: MapScheme = {
         x: 258,
         y: 394,
       },
+      positionCoordinates: {
+        x: 617,
+        y: 159,
+      },
     },
     {
       name: "Pop flash b site",
@@ -91,6 +119,10 @@ export const mirageMapScheme: MapScheme = {
       coordinates: {
         x: 313,
         y: 220,
+      },
+      positionCoordinates: {
+        x: 348,
+        y: 206,
       },
     },
   ],

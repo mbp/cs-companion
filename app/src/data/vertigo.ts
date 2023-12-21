@@ -13,6 +13,10 @@ export const vertigoMapScheme: MapScheme = {
         x: 595,
         y: 646,
       },
+      positionCoordinates: {
+        x: 762,
+        y: 532,
+      },
     },
     {
       name: "Guardian from mid",
@@ -23,6 +27,10 @@ export const vertigoMapScheme: MapScheme = {
       coordinates: {
         x: 421,
         y: 314,
+      },
+      positionCoordinates: {
+        x: 285,
+        y: 383,
       },
     },
     {
@@ -35,6 +43,10 @@ export const vertigoMapScheme: MapScheme = {
         x: 747,
         y: 548,
       },
+      positionCoordinates: {
+        x: 567,
+        y: 765,
+      },
     },
     {
       name: "A site from ramp",
@@ -45,6 +57,10 @@ export const vertigoMapScheme: MapScheme = {
       coordinates: {
         x: 677,
         y: 564,
+      },
+      positionCoordinates: {
+        x: 567,
+        y: 765,
       },
     },
     {
@@ -58,6 +74,10 @@ export const vertigoMapScheme: MapScheme = {
         x: 701,
         y: 548,
       },
+      positionCoordinates: {
+        x: 624,
+        y: 700,
+      },
     },
     {
       name: "B electric #1 from t",
@@ -68,6 +88,10 @@ export const vertigoMapScheme: MapScheme = {
       coordinates: {
         x: 322,
         y: 288,
+      },
+      positionCoordinates: {
+        x: 297,
+        y: 763,
       },
     },
     {
@@ -82,6 +106,10 @@ export const vertigoMapScheme: MapScheme = {
         x: 322,
         y: 217,
       },
+      positionCoordinates: {
+        x: 297,
+        y: 763,
+      },
     },
     {
       name: "B site from t",
@@ -92,6 +120,10 @@ export const vertigoMapScheme: MapScheme = {
       coordinates: {
         x: 214,
         y: 302,
+      },
+      positionCoordinates: {
+        x: 186,
+        y: 647,
       },
     },
     {
@@ -104,6 +136,10 @@ export const vertigoMapScheme: MapScheme = {
         x: 525,
         y: 724,
       },
+      positionCoordinates: {
+        x: 426,
+        y: 827,
+      },
     },
     {
       name: "B site from t",
@@ -115,6 +151,10 @@ export const vertigoMapScheme: MapScheme = {
         x: 204,
         y: 505,
       },
+      positionCoordinates: {
+        x: 210,
+        y: 649,
+      },
     },
     {
       name: "B site headshot from stairs",
@@ -125,6 +165,10 @@ export const vertigoMapScheme: MapScheme = {
       coordinates: {
         x: 248,
         y: 217,
+      },
+      positionCoordinates: {
+        x: 161,
+        y: 476,
       },
     },
   ],

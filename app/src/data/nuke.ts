@@ -13,6 +13,10 @@ export const nukeLineups: MapScheme = {
         x: 618,
         y: 734,
       },
+      positionCoordinates: {
+        x: 450,
+        y: 694,
+      },
     },
     {
       name: "Long red smoke yard (3rd smoke)",
@@ -23,6 +27,10 @@ export const nukeLineups: MapScheme = {
       coordinates: {
         x: 647,
         y: 734,
+      },
+      positionCoordinates: {
+        x: 450,
+        y: 694,
       },
     },
     {
@@ -35,6 +43,10 @@ export const nukeLineups: MapScheme = {
         x: 707,
         y: 627,
       },
+      positionCoordinates: {
+        x: 365,
+        y: 592,
+      },
     },
     {
       name: "Close main outside",
@@ -45,6 +57,10 @@ export const nukeLineups: MapScheme = {
       coordinates: {
         x: 625,
         y: 668,
+      },
+      positionCoordinates: {
+        x: 386,
+        y: 603,
       },
     },
     {
@@ -57,6 +73,10 @@ export const nukeLineups: MapScheme = {
         x: 661,
         y: 668,
       },
+      positionCoordinates: {
+        x: 386,
+        y: 603,
+      },
     },
     {
       name: "Garage",
@@ -67,6 +87,10 @@ export const nukeLineups: MapScheme = {
       coordinates: {
         x: 680,
         y: 685,
+      },
+      positionCoordinates: {
+        x: 362,
+        y: 578,
       },
     },
     {
@@ -79,6 +103,10 @@ export const nukeLineups: MapScheme = {
         x: 616,
         y: 644,
       },
+      positionCoordinates: {
+        x: 258,
+        y: 590,
+      },
     },
     {
       name: "Ramp smoke from trophy",
@@ -89,6 +117,10 @@ export const nukeLineups: MapScheme = {
       coordinates: {
         x: 543,
         y: 384,
+      },
+      positionCoordinates: {
+        x: 526,
+        y: 473,
       },
     },
     {
@@ -102,6 +134,10 @@ export const nukeLineups: MapScheme = {
         x: 550,
         y: 566,
       },
+      positionCoordinates: {
+        x: 426,
+        y: 572,
+      },
     },
     {
       name: "Outside defensive smoke from t spawn",
@@ -112,6 +148,10 @@ export const nukeLineups: MapScheme = {
       coordinates: {
         x: 522,
         y: 724,
+      },
+      positionCoordinates: {
+        x: 814,
+        y: 454,
       },
     },
     {
@@ -124,6 +164,10 @@ export const nukeLineups: MapScheme = {
         x: 528,
         y: 638,
       },
+      positionCoordinates: {
+        x: 705,
+        y: 655,
+      },
     },
     {
       name: "Flash a site heaven from t roof",
@@ -134,6 +178,10 @@ export const nukeLineups: MapScheme = {
       coordinates: {
         x: 591,
         y: 481,
+      },
+      positionCoordinates: {
+        x: 496,
+        y: 530,
       },
     },
     {
@@ -146,6 +194,10 @@ export const nukeLineups: MapScheme = {
         x: 589,
         y: 510,
       },
+      positionCoordinates: {
+        x: 321,
+        y: 591,
+      },
     },
     {
       name: "Flash a through hut from lobby",
@@ -156,6 +208,10 @@ export const nukeLineups: MapScheme = {
       coordinates: {
         x: 549,
         y: 531,
+      },
+      positionCoordinates: {
+        x: 504,
+        y: 545,
       },
     },
     {
@@ -168,6 +224,10 @@ export const nukeLineups: MapScheme = {
         x: 545,
         y: 352,
       },
+      positionCoordinates: {
+        x: 488,
+        y: 469,
+      },
     },
     {
       name: "Flash b ramp (top) from trophy",
@@ -178,6 +238,10 @@ export const nukeLineups: MapScheme = {
       coordinates: {
         x: 551,
         y: 405,
+      },
+      positionCoordinates: {
+        x: 526,
+        y: 473,
       },
     },
   ],
