@@ -13,6 +13,10 @@ export const overpassMapScheme: MapScheme = {
         x: 600,
         y: 251,
       },
+      positionCoordinates: {
+        x: 629,
+        y: 480,
+      },
     },
     {
       name: "Mid toilet smoke from t spawn",
@@ -23,6 +27,10 @@ export const overpassMapScheme: MapScheme = {
       coordinates: {
         x: 412,
         y: 537,
+      },
+      positionCoordinates: {
+        x: 847,
+        y: 807,
       },
     },
     {
@@ -35,6 +43,10 @@ export const overpassMapScheme: MapScheme = {
         x: 553,
         y: 171,
       },
+      positionCoordinates: {
+        x: 469,
+        y: 512,
+      },
     },
     {
       name: "Dumpster from long",
@@ -45,6 +57,10 @@ export const overpassMapScheme: MapScheme = {
       coordinates: {
         x: 540,
         y: 160,
+      },
+      positionCoordinates: {
+        x: 195,
+        y: 503,
       },
     },
     {
@@ -57,6 +73,10 @@ export const overpassMapScheme: MapScheme = {
         x: 767,
         y: 266,
       },
+      positionCoordinates: {
+        x: 595,
+        y: 477,
+      },
     },
     {
       name: "Short tunnel molo from abc",
@@ -67,6 +87,10 @@ export const overpassMapScheme: MapScheme = {
       coordinates: {
         x: 698,
         y: 524,
+      },
+      positionCoordinates: {
+        x: 545,
+        y: 323,
       },
     },
     {
@@ -80,6 +104,10 @@ export const overpassMapScheme: MapScheme = {
         x: 684,
         y: 523,
       },
+      positionCoordinates: {
+        x: 484,
+        y: 321,
+      },
     },
     {
       name: "Monster from A site",
@@ -91,6 +119,10 @@ export const overpassMapScheme: MapScheme = {
         x: 834,
         y: 475,
       },
+      positionCoordinates: {
+        x: 522,
+        y: 150,
+      },
     },
     {
       name: "Playground from long",
@@ -101,6 +133,10 @@ export const overpassMapScheme: MapScheme = {
       coordinates: {
         x: 335,
         y: 791,
+      },
+      positionCoordinates: {
+        x: 305,
+        y: 383,
       },
     },
     {
@@ -114,6 +150,10 @@ export const overpassMapScheme: MapScheme = {
         x: 562,
         y: 793,
       },
+      positionCoordinates: {
+        x: 476,
+        y: 313,
+      },
     },
     {
       name: "Barrels flash from short tunnel",
@@ -124,6 +164,10 @@ export const overpassMapScheme: MapScheme = {
       coordinates: {
         x: 734,
         y: 325,
+      },
+      positionCoordinates: {
+        x: 801,
+        y: 553,
       },
     },
     {
@@ -136,6 +180,10 @@ export const overpassMapScheme: MapScheme = {
         x: 443,
         y: 107,
       },
+      positionCoordinates: {
+        x: 195,
+        y: 503,
+      },
     },
     {
       name: "Bank from divider",
@@ -146,6 +194,10 @@ export const overpassMapScheme: MapScheme = {
       coordinates: {
         x: 460,
         y: 112,
+      },
+      positionCoordinates: {
+        x: 469,
+        y: 512,
       },
     },
   ],
