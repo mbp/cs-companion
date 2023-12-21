@@ -13,6 +13,10 @@ export const dust2MapScheme: MapScheme = {
         x: 493,
         y: 414,
       },
+      positionCoordinates: {
+        x: 466,
+        y: 958,
+      },
     },
   ],
   strats: [],
