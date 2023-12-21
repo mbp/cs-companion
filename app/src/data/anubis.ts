@@ -15,8 +15,8 @@ export const anubisMapScheme: MapScheme = {
       },
       positionCoordinates: {
         x: 464,
-        y: 182
-      }
+        y: 182,
+      },
     },
     {
       name: "A Connector from water",
@@ -30,8 +30,8 @@ export const anubisMapScheme: MapScheme = {
       },
       positionCoordinates: {
         x: 778,
-        y: 523
-      }
+        y: 523,
+      },
     },
     {
       name: "B Connector outside from street",
@@ -45,8 +45,8 @@ export const anubisMapScheme: MapScheme = {
       },
       positionCoordinates: {
         x: 666,
-        y: 811
-      }
+        y: 811,
+      },
     },
     {
       name: "Mid house from T spawn",
@@ -60,8 +60,8 @@ export const anubisMapScheme: MapScheme = {
       },
       positionCoordinates: {
         x: 504,
-        y: 970
-      }
+        y: 970,
+      },
     },
     {
       name: "Palace from B outside",
@@ -75,8 +75,8 @@ export const anubisMapScheme: MapScheme = {
       },
       positionCoordinates: {
         x: 278,
-        y: 669
-      }
+        y: 669,
+      },
     },
     {
       name: "Connector inside from B outside",
@@ -90,8 +90,8 @@ export const anubisMapScheme: MapScheme = {
       },
       positionCoordinates: {
         x: 278,
-        y: 669
-      }
+        y: 669,
+      },
     },
     {
       name: "CT long from B outside",
@@ -105,8 +105,8 @@ export const anubisMapScheme: MapScheme = {
       },
       positionCoordinates: {
         x: 278,
-        y: 669
-      }
+        y: 669,
+      },
     },
     {
       name: "A site from canals",
@@ -120,8 +120,8 @@ export const anubisMapScheme: MapScheme = {
       },
       positionCoordinates: {
         x: 778,
-        y: 523
-      }
+        y: 523,
+      },
     },
     {
       name: "A broken from canals",
@@ -135,8 +135,8 @@ export const anubisMapScheme: MapScheme = {
       },
       positionCoordinates: {
         x: 778,
-        y: 523
-      }
+        y: 523,
+      },
     },
     {
       name: "A heaven from canals",
@@ -150,8 +150,8 @@ export const anubisMapScheme: MapScheme = {
       },
       positionCoordinates: {
         x: 756,
-        y: 520
-      }
+        y: 520,
+      },
     },
     {
       name: "Mid house from bridge",
@@ -165,8 +165,8 @@ export const anubisMapScheme: MapScheme = {
       },
       positionCoordinates: {
         x: 430,
-        y: 704
-      }
+        y: 704,
+      },
     },
   ],
   strats: [],
