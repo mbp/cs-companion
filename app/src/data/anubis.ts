@@ -112,15 +112,45 @@ export const anubisMapScheme: MapScheme = {
       name: "A site from canals",
       id: "a-site-from-canals",
       nadeType: "flashbang",
+      throwType: "normal",
+      side: "t",
+      coordinates: {
+        x: 780,
+        y: 354,
+      },
+      positionCoordinates: {
+        x: 778,
+        y: 523
+      }
+    },
+    {
+      name: "A broken from canals",
+      id: "a-broken-from-water",
+      nadeType: "molo",
+      throwType: "normal",
+      side: "t",
+      coordinates: {
+        x: 694,
+        y: 326,
+      },
+      positionCoordinates: {
+        x: 778,
+        y: 523
+      }
+    },
+    {
+      name: "A heaven from canals",
+      id: "a-heaven-from-water",
+      nadeType: "smoke",
       throwType: "jump",
       side: "t",
       coordinates: {
-        x: 788,
-        y: 304,
+        x: 729,
+        y: 225,
       },
       positionCoordinates: {
-        x: 709,
-        y: 497
+        x: 756,
+        y: 520
       }
     },
     {
