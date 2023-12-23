@@ -263,24 +263,32 @@ export const ancientMapScheme: MapScheme = {
   ],
   strats: [
     {
-      id: "first-pistol",
-      name: "First pistol round",
+      id: "rush-b-pistol",
+      name: "Rush B",
       description:
         "All push B via ramp, get the entries, plant the bomb and position for the retake",
       side: "t",
       buyType: "pistols",
     },
     {
-      id: "second-round",
-      name: "Second round",
+      id: "mid-decoy",
+      name: "Mid decoy to A",
       description:
-        "Use when first round was won or bomb was planted. Oush B via ramp, get the entries, plant the bomb and position for the retake",
+        "All players push mid. All throw decoy towards catwalk. Mid is smoked and players push through smoke and go A",
+      side: "t",
+      buyType: "pistols",
+    },
+    {
+      id: "rush-b-smg",
+      name: "Rush B",
+      description:
+        "Use when first round was won or bomb was planted. Push B via ramp, get the entries, plant the bomb and position for the retake",
       side: "t",
       buyType: "smg",
     },
     {
-      id: "a-split",
-      name: "Split mid",
+      id: "split-a",
+      name: "Split A",
       description:
         "First 3 players via mid to donut to a. Last 2 players via A main to a, try to come to A site at the same time",
       side: "t",

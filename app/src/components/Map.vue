@@ -214,14 +214,14 @@ const lineUps = computed(() => {
 
   <div v-if="showStrats">
     <h2>Strategies</h2>
-    <div v-for="strat in mapScheme.strats" :key="strat.id">
-      <h3>{{ strat.name }}</h3>
-      <button @click="openStrat(strat)">OPEN</button>
-      ({{ strat.buyType }}, {{ strat.side }})
-      <p>
-        {{ strat.description }}
-      </p>
-    </div>
+    <ul>
+      <li v-for="strat in mapScheme.strats" :key="strat.id">
+        <button @click="openStrat(strat)">{{ strat.name }}</button><br />
+        ({{ strat.buyType }}, {{ strat.side }})
+        <br />
+        <br />
+      </li>
+    </ul>
   </div>
 </template>
 
