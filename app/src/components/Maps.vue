@@ -16,6 +16,10 @@ const copyCmd = async (id: string) => {
     await navigator.clipboard.writeText(text);
   }
 };
+
+const getMapIcon = (mapName: string) => {
+  return `/${mapName.toLocaleLowerCase()}/icon.svg`;
+};
 </script>
 
 <template>
@@ -24,14 +28,15 @@ const copyCmd = async (id: string) => {
     <img src="/logo_cs_full.svg" class="logo csgo" alt="Counter-Strike" />
   </div>
   <div class="map-tiles">
-    <button
+    <a
       v-for="mapScheme in allMapSchemes"
       :key="mapScheme.map"
-      class="map-tile"
       @click="goMap(mapScheme.map)"
-    >
-      {{ mapScheme.map }}
-    </button>
+      ><img
+        class="map-tile"
+        style="width: 128px"
+        :src="getMapIcon(mapScheme.map)"
+    /></a>
   </div>
 
   <div class="command-tiles">
@@ -58,6 +63,9 @@ h1 {
 .footer {
   color: #888;
 }
+a {
+  cursor: pointer;
+}
 .map-tiles {
   display: grid;
   grid-column-gap: 30px;
@@ -65,12 +73,9 @@ h1 {
   grid-template-columns: repeat(auto-fit, minmax(200px, 1fr));
 }
 .map-tile {
-  background-color: #8d918d;
-  filter: drop-shadow(0 0 1em #646cffaa);
 }
 .map-tile:hover {
-  background-color: black;
-  filter: drop-shadow(0 0 1em yellow);
+  filter: drop-shadow(0 0 1em #646cffaa);
 }
 
 .command-tiles {
