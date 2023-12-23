@@ -178,29 +178,37 @@ const lineUps = computed(() => {
 
     <div v-if="!showRadar">
       <h2>Smoke Grenade</h2>
-      <div v-for="smoke in smokes" :key="smoke.id">
-        <button @click="openUtility(smoke)">
-          {{ smoke.name }}
-        </button>
-      </div>
+      <ul>
+        <li v-for="smoke in smokes" :key="smoke.id">
+          <button @click="openUtility(smoke)">
+            {{ smoke.name }}
+          </button>
+        </li>
+      </ul>
       <h2>Molotov / Incendiary Grenade</h2>
-      <div v-for="molo in molos" :key="molo.id">
-        <button @click="openUtility(molo)">
-          {{ molo.name }}
-        </button>
-      </div>
+      <ul>
+        <li v-for="molo in molos" :key="molo.id">
+          <button @click="openUtility(molo)">
+            {{ molo.name }}
+          </button>
+        </li>
+      </ul>
       <h2>Flashbang</h2>
-      <div v-for="flash in flashBangs" :key="flash.id">
-        <button @click="openUtility(flash)">
-          {{ flash.name }}
-        </button>
-      </div>
+      <ul>
+        <li v-for="flash in flashBangs" :key="flash.id">
+          <button @click="openUtility(flash)">
+            {{ flash.name }}
+          </button>
+        </li>
+      </ul>
       <h2>Frag Grenade</h2>
-      <div v-for="fragGrenade in fragGrenades" :key="fragGrenade.id">
-        <button @click="openUtility(fragGrenade)">
-          {{ fragGrenade.name }}
-        </button>
-      </div>
+      <ul>
+        <li v-for="fragGrenade in fragGrenades" :key="fragGrenade.id">
+          <button @click="openUtility(fragGrenade)">
+            {{ fragGrenade.name }}
+          </button>
+        </li>
+      </ul>
     </div>
   </div>
 
@@ -216,3 +224,12 @@ const lineUps = computed(() => {
     </div>
   </div>
 </template>
+
+<style scoped>
+ul {
+  columns: 2;
+  margin: 0;
+  padding: 0;
+  list-style-type: none;
+}
+</style>
