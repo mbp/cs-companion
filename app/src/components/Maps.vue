@@ -18,7 +18,7 @@ const copyCmd = async (id: string) => {
 };
 
 const getMapIcon = (mapName: string) => {
-  return `/${mapName.toLocaleLowerCase()}/icon.svg`;
+  return `${mapName.toLocaleLowerCase()}/icon.svg`;
 };
 </script>
 
@@ -71,8 +71,6 @@ a {
   grid-column-gap: 30px;
   grid-row-gap: 30px;
   grid-template-columns: repeat(auto-fit, minmax(200px, 1fr));
-}
-.map-tile {
 }
 .map-tile:hover {
   filter: drop-shadow(0 0 1em #646cffaa);
