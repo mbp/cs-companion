@@ -34,7 +34,7 @@ const getMapIcon = (mapName: string) => {
       @click="goMap(mapScheme.map)"
       ><img
         class="map-tile"
-        style="width: 128px"
+        style="width: 100%"
         :src="getMapIcon(mapScheme.map)"
     /></a>
   </div>
@@ -63,7 +63,7 @@ h1 {
 .footer {
   color: #888;
 }
-a {
+.map-tiles a {
   cursor: pointer;
 }
 .map-tiles {
