@@ -186,7 +186,7 @@ const startSampling = () => {
     sampling = true;
   }
 };
-const clickRadar = (x: number, y: number) => {
+const clickRadar = () => {
   if (!sampling) {
     return;
   }

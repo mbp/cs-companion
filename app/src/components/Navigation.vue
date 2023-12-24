@@ -24,9 +24,13 @@ interface RouteParent {
 }
 
 defineProps({
-  current: String,
+  current: {
+    type: String,
+    required: true,
+  },
   parents: {
     type: Object as PropType<Array<RouteParent>>,
+    required: true,
   },
 });
 </script>
