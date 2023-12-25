@@ -78,6 +78,7 @@ export const useDrawing = (
         document.body.style.cursor = "pointer";
         canvasRenderingContext.strokeStyle = "black";
         canvasRenderingContext.fillStyle = "white";
+        canvasRenderingContext.setLineDash([]);
         canvasRenderingContext.font = "15px Arial";
         canvasRenderingContext.beginPath();
         canvasRenderingContext.arc(
