@@ -24,9 +24,6 @@ const getMapIcon = (mapName: string) => {
 
 <template>
   <h1>Counter-Strike Companion</h1>
-  <div>
-    <img src="/logo_cs_full.svg" class="logo csgo" alt="Counter-Strike" />
-  </div>
   <div class="map-tiles">
     <a
       v-for="mapScheme in allMapSchemes"
@@ -57,8 +54,8 @@ const getMapIcon = (mapName: string) => {
 <style scoped>
 h1 {
   text-shadow:
-    0 0 3px orange,
-    0 0 5px orange;
+    0 0 3px #646cffaa,
+    0 0 5px #646cffaa;
 }
 .footer {
   color: #888;

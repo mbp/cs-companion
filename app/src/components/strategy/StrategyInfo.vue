@@ -61,33 +61,4 @@ defineProps<Props>();
 .div8 {
   grid-area: 2 / 4 / 3 / 5;
 }
-.info-cell {
-  border-left: 1px solid grey;
-}
-
-.header-cell {
-  font-weight: bold;
-}
-
-div.info {
-  padding: 2px;
-  width: 50%;
-  margin: auto;
-}
-
-div.info-type {
-  background-color: #646cff;
-  color: white;
-}
-
-div.info-description {
-  background-color: #2196f3;
-  border-radius: 15px;
-  width: 95%;
-  margin: 0 auto;
-}
-
-.side-icon-header {
-  width: 25px;
-}
 </style>

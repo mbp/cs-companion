@@ -27,6 +27,9 @@ body {
   place-items: center;
   min-width: 320px;
   min-height: 100vh;
+  text-shadow:
+    0 0 3px #646cffaa,
+    0 0 5px #646cffaa;
 }
 
 h1 {
@@ -62,4 +65,34 @@ button:focus-visible {
   max-width: 1280px;
   margin: 0 auto;
   text-align: center;
+}
+
+.info-cell {
+  border-left: 1px solid grey;
+}
+
+div.info-type {
+  background-color: #5d2424;
+  color: white;
+}
+
+div.info-description {
+  background-color: #5d7824;
+  border-radius: 15px;
+  width: 95%;
+  margin: 0 auto;
+}
+
+.header-cell {
+  font-weight: bold;
+}
+
+div.info {
+  padding: 2px;
+  width: 50%;
+  margin: auto;
+}
+
+.side-icon-header {
+  width: 25px;
 }
