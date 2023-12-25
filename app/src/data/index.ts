@@ -3,8 +3,10 @@ import { ancientMapScheme } from "./ancient";
 import { anubisMapScheme } from "./anubis";
 import { dust2MapScheme } from "./dust2";
 import { infernoMapScheme } from "./inferno";
+import { italyMapScheme } from "./italy";
 import { nukeLineups } from "./nuke";
 import { mirageMapScheme } from "./mirage";
+import { officeMapScheme } from "./office";
 import { overpassMapScheme } from "./overpass";
 import { vertigoMapScheme } from "./vertigo";
 
@@ -13,8 +15,10 @@ export const allMapSchemes: MapScheme[] = [
   anubisMapScheme,
   dust2MapScheme,
   infernoMapScheme,
+  italyMapScheme,
   nukeLineups,
   mirageMapScheme,
+  officeMapScheme,
   overpassMapScheme,
   vertigoMapScheme,
 ];
