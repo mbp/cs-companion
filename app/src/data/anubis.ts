@@ -19,6 +19,36 @@ export const anubisMapScheme: MapScheme = {
       },
     },
     {
+      name: "B main from CT spawn",
+      id: "b-main-from-spawn",
+      nadeType: "smoke",
+      throwType: "jump",
+      side: "ct",
+      coordinates: {
+        x: 220,
+        y: 581,
+      },
+      positionCoordinates: {
+        x: 464,
+        y: 182,
+      },
+    },
+    {
+      name: "A main from CT spawn",
+      id: "a-main-from-spawn",
+      nadeType: "smoke",
+      throwType: "jump",
+      side: "ct",
+      coordinates: {
+        x: 772,
+        y: 475,
+      },
+      positionCoordinates: {
+        x: 464,
+        y: 182,
+      },
+    },
+    {
       name: "A Connector from water",
       id: "a-connector-from-water",
       nadeType: "smoke",
