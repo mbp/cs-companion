@@ -1,10 +1,10 @@
 <script setup lang="ts">
 import { computed } from "vue";
 import { useRoute } from "vue-router";
-import { allMapSchemes } from "../../data";
 import Navigation from "../Navigation.vue";
 import Image from "./Image.vue";
 import UtilityInfo from "./UtilityInfo.vue";
+import { getMapScheme } from "../composables/get-map-scheme";
 
 const route = useRoute();
 
@@ -13,9 +13,9 @@ const nadeType = route.params.nadeType as string;
 const mapName = route.params.mapName as string;
 
 const utility = computed(() => {
-  return allMapSchemes
-    .find((x) => x.map == mapName)
-    ?.lineUps.find((x) => x.id == id && x.nadeType == nadeType)!;
+  return getMapScheme(mapName).lineUps.find(
+    (x) => x.id == id && x.nadeType == nadeType,
+  )!;
 });
 
 const getImage = (part: string) => {
@@ -63,3 +63,4 @@ defineExpose({
   grid-template-columns: 50% 50%;
 }
 </style>
+../composables/get-map-scheme

@@ -1,20 +1,19 @@
 <script setup lang="ts">
 import { computed, ref } from "vue";
 import { useRoute, useRouter } from "vue-router";
-import { allMapSchemes } from "../data";
 import RadarLineups from "./utility/RadarLineups.vue";
 import Toggle from "./Toggle.vue";
 import Navigation from "./Navigation.vue";
 import { Side } from "./types";
 import { Strategy } from "./strategy/types";
 import { NadeType, UtilityLineup } from "./utility/types";
+import { getMapScheme } from "./composables/get-map-scheme";
 
 const route = useRoute();
 const router = useRouter();
 const mapName = route.params.mapName as string;
-const mapScheme = computed(() => {
-  return allMapSchemes.find((x) => x.map == (mapName as string))!;
-});
+
+const mapScheme = computed(() => getMapScheme(mapName));
 
 const smokes = computed(() => {
   return lineUps.value.filter((x) => x.nadeType == "smoke" && x.coordinates);
@@ -233,3 +232,4 @@ ul {
   list-style-type: none;
 }
 </style>
+./composables/get-map-scheme
