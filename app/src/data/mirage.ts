@@ -5,7 +5,6 @@ export const mirageMapScheme: MapScheme = {
   lineUps: [
     {
       name: "Connector smoke from T apps",
-      description: "Stand in corner, aim lower mid carpet",
       id: "connector-lower-from-t",
       nadeType: "smoke",
       throwType: "jump",
