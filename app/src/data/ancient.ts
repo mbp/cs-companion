@@ -64,8 +64,8 @@ export const ancientMapScheme: MapScheme = {
       },
     },
     {
-      name: "Elbow from mid house",
-      id: "elbow-from-mid-house",
+      name: "Elbow from spawn right side",
+      id: "elbow-from-spawn-right-side",
       nadeType: "smoke",
       throwType: "jump",
       side: "ct",
@@ -74,8 +74,23 @@ export const ancientMapScheme: MapScheme = {
         y: 593,
       },
       positionCoordinates: {
-        x: 501,
-        y: 386,
+        x: 461,
+        y: 182,
+      },
+    },
+    {
+      name: "Elbow from spawn left side",
+      id: "elbow-from-spawn-left-side",
+      nadeType: "smoke",
+      throwType: "jump",
+      side: "ct",
+      coordinates: {
+        x: 362,
+        y: 596,
+      },
+      positionCoordinates: {
+        x: 570,
+        y: 176,
       },
     },
     {
