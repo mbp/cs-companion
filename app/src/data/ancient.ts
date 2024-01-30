@@ -275,6 +275,21 @@ export const ancientMapScheme: MapScheme = {
         y: 633,
       },
     },
+    {
+      name: "Default from ruins",
+      id: "default-from-ruins",
+      nadeType: "molo",
+      throwType: "jump",
+      side: "t",
+      coordinates: {
+        x: 749,
+        y: 439,
+      },
+      positionCoordinates: {
+        x: 820,
+        y: 699,
+      },
+    },
   ],
   strats: [
     {
