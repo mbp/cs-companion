@@ -49,6 +49,21 @@ export const mirageMapScheme: MapScheme = {
       },
     },
     {
+      name: "Top mid from spawn",
+      id: "top-mid-from-spawn",
+      nadeType: "smoke",
+      throwType: "normal",
+      side: "t",
+      coordinates: {
+        x: 630,
+        y: 443,
+      },
+      positionCoordinates: {
+        x: 933,
+        y: 326,
+      },
+    },
+    {
       name: "Stairs smoke from T ramp",
       description: "At small hinge. Aim middle of some lines",
       id: "stairs-from-t-ramp",
