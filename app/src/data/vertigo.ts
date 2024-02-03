@@ -34,6 +34,37 @@ export const vertigoMapScheme: MapScheme = {
       },
     },
     {
+      name: "Top mid from mid",
+      id: "top-mid-from-mid",
+      nadeType: "smoke",
+      throwType: "jump",
+      movement: "run",
+      side: "t",
+      coordinates: {
+        x: 444,
+        y: 381,
+      },
+      positionCoordinates: {
+        x: 372,
+        y: 448,
+      },
+    },
+    {
+      name: "Mid from CT",
+      id: "mid-from-ct",
+      nadeType: "smoke",
+      throwType: "normal",
+      side: "ct",
+      coordinates: {
+        x: 376,
+        y: 474,
+      },
+      positionCoordinates: {
+        x: 490,
+        y: 352,
+      },
+    },
+    {
       name: "A site headshot from ramp",
       id: "a-headshot-from-ramp",
       nadeType: "smoke",
