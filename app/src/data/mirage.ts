@@ -125,6 +125,21 @@ export const mirageMapScheme: MapScheme = {
       },
     },
     {
+      name: "Market door from back alley",
+      id: "market-door-from-back-alley",
+      nadeType: "smoke",
+      throwType: "jump",
+      side: "t",
+      coordinates: {
+        x: 176,
+        y: 394,
+      },
+      positionCoordinates: {
+        x: 617,
+        y: 159,
+      },
+    },
+    {
       name: "Short from back alley",
       id: "short-from-back-alley",
       nadeType: "smoke",
