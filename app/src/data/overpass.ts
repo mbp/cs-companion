@@ -157,13 +157,13 @@ export const overpassMapScheme: MapScheme = {
     },
     {
       name: "Barrels flash from short tunnel",
-      id: "b-site-from-short-tunnel",
+      id: "b-site-from-monster",
       nadeType: "flashbang",
-      throwType: "runjump",
+      throwType: "normal",
       side: "t",
       coordinates: {
-        x: 734,
-        y: 325,
+        x: 789,
+        y: 351,
       },
       positionCoordinates: {
         x: 801,
