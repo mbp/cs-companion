@@ -79,6 +79,21 @@ export const nukeLineups: MapScheme = {
       },
     },
     {
+      name: "Heaven outside",
+      id: "outside-heaven-from-spawn",
+      nadeType: "smoke",
+      throwType: "jump",
+      side: "t",
+      coordinates: {
+        x: 679,
+        y: 487,
+      },
+      positionCoordinates: {
+        x: 386,
+        y: 603,
+      },
+    },
+    {
       name: "Garage",
       id: "garage",
       nadeType: "smoke",
