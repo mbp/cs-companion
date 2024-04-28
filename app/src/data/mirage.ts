@@ -83,15 +83,16 @@ export const mirageMapScheme: MapScheme = {
       description: "At small hinge. Aim middle of some lines",
       id: "stairs-from-t-ramp",
       nadeType: "smoke",
-      throwType: "normal",
+      throwType: "jump",
+      clickType: "left+right",
       side: "t",
       coordinates: {
         x: 550,
         y: 662,
       },
       positionCoordinates: {
-        x: 878,
-        y: 580,
+        x: 811,
+        y: 638,
       },
     },
     {
@@ -113,7 +114,7 @@ export const mirageMapScheme: MapScheme = {
       name: "Jungle from T ramp",
       id: "jungle-from-t-ramp",
       nadeType: "smoke",
-      throwType: "normal",
+      throwType: "jump",
       side: "t",
       coordinates: {
         x: 473,
