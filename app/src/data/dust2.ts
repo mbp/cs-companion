@@ -78,6 +78,21 @@ export const dust2MapScheme: MapScheme = {
         y: 511,
       },
     },
+    {
+      name: "b lurk from upper tunnels",
+      id: "b-lurk-smoke-from-upper-tunnels",
+      nadeType: "smoke",
+      throwType: "normal",
+      side: "t",
+      coordinates: {
+        x: 113,
+        y: 313,
+      },
+      positionCoordinates: {
+        x: 160,
+        y: 504,
+      },
+    },
   ],
   strats: [],
 };
