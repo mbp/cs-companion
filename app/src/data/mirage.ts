@@ -19,6 +19,21 @@ export const mirageMapScheme: MapScheme = {
       },
     },
     {
+      name: "Connector smoke from spawn",
+      id: "connector-lower-from-spawn",
+      nadeType: "smoke",
+      throwType: "jump",
+      side: "t",
+      coordinates: {
+        x: 513,
+        y: 518,
+      },
+      positionCoordinates: {
+        x: 933,
+        y: 334,
+      },
+    },
+    {
       name: "Top connector smoke from side alley",
       id: "top-connector-from-side-alley",
       nadeType: "smoke",
