@@ -185,6 +185,22 @@ export const infernoMapScheme: MapScheme = {
       },
     },
     {
+      name: "A long from bottom mid",
+      id: "a-long-from-bottom-mid",
+      nadeType: "flashbang",
+      throwType: "jump",
+      clickType: "left",
+      side: "t",
+      coordinates: {
+        x: 699,
+        y: 611,
+      },
+      positionCoordinates: {
+        x: 476,
+        y: 680,
+      },
+    },
+    {
       name: "B site from car",
       id: "b-site-flash-from-car",
       nadeType: "flashbang",
