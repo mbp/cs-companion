@@ -79,6 +79,21 @@ export const infernoMapScheme: MapScheme = {
       },
     },
     {
+      name: "Long from top mid",
+      id: "long-deep-from-top-mid",
+      nadeType: "smoke",
+      throwType: "jump",
+      side: "t",
+      coordinates: {
+        x: 706,
+        y: 586,
+      },
+      positionCoordinates: {
+        x: 619,
+        y: 704,
+      },
+    },
+    {
       name: "Long from second mid",
       id: "long-from-second-mid",
       nadeType: "smoke",
