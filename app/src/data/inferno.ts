@@ -109,6 +109,21 @@ export const infernoMapScheme: MapScheme = {
       },
     },
     {
+      name: "Moto from top mid",
+      id: "moto-from-top-mid",
+      nadeType: "smoke",
+      throwType: "normal",
+      side: "t",
+      coordinates: {
+        x: 892,
+        y: 624,
+      },
+      positionCoordinates: {
+        x: 648,
+        y: 703,
+      },
+    },
+    {
       name: "Moto from second mid",
       id: "moto-from-second-mid",
       nadeType: "smoke",
