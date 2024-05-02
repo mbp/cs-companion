@@ -93,6 +93,36 @@ export const dust2MapScheme: MapScheme = {
         y: 504,
       },
     },
+    {
+      name: "long doors 1",
+      id: "long-doors-1",
+      nadeType: "flashbang",
+      throwType: "normal",
+      side: "ct",
+      coordinates: {
+        x: 840,
+        y: 458,
+      },
+      positionCoordinates: {
+        x: 842,
+        y: 277,
+      },
+    },
+    {
+      name: "long doors 2",
+      id: "long-doors-2",
+      nadeType: "flashbang",
+      throwType: "jump",
+      side: "ct",
+      coordinates: {
+        x: 932,
+        y: 477,
+      },
+      positionCoordinates: {
+        x: 842,
+        y: 277,
+      },
+    },
   ],
   strats: [],
 };
