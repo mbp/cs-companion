@@ -94,6 +94,21 @@ export const dust2MapScheme: MapScheme = {
       },
     },
     {
+      name: "long cross smoke",
+      id: "long-cross-smoke",
+      nadeType: "smoke",
+      throwType: "jump",
+      side: "t",
+      coordinates: {
+        x: 836,
+        y: 247,
+      },
+      positionCoordinates: {
+        x: 757,
+        y: 555,
+      },
+    },
+    {
       name: "long doors 1",
       id: "long-doors-1",
       nadeType: "flashbang",
