@@ -19,6 +19,22 @@ export const dust2MapScheme: MapScheme = {
       },
     },
     {
+      name: "mid hinge from lower",
+      id: "mid-hinge-from-lower",
+      nadeType: "smoke",
+      throwType: "normal",
+      clickType: "left+right",
+      side: "t",
+      coordinates: {
+        x: 447,
+        y: 369,
+      },
+      positionCoordinates: {
+        x: 447,
+        y: 369,
+      },
+    },
+    {
       name: "long from t outside",
       id: "long-from-t-outside",
       nadeType: "flashbang",
