@@ -32,7 +32,10 @@ const getPosition = (event: MouseEvent) => {
 const clickRadar = (event: MouseEvent) => {
   const { x, y } = getPosition(event);
   if (import.meta.env.DEV) {
-    console.log("x,y", x, y);
+    const text = `x: ${x},
+        y: ${y},`;
+    console.log("copied to clipboard", text);
+    navigator.clipboard.writeText(text);
   }
 
   emit("radarClick", x, y);
