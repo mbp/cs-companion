@@ -98,6 +98,7 @@ export const dust2MapScheme: MapScheme = {
       id: "long-cross-smoke",
       nadeType: "smoke",
       throwType: "jump",
+      movement: "run",
       side: "t",
       coordinates: {
         x: 836,
