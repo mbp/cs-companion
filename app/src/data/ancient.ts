@@ -261,7 +261,7 @@ export const ancientMapScheme: MapScheme = {
       },
     },
     {
-      name: "Ancient wood from ruins",
+      name: "Wood from ruins",
       id: "wood-from-ramp",
       nadeType: "molo",
       throwType: "normal",
