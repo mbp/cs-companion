@@ -261,6 +261,21 @@ export const ancientMapScheme: MapScheme = {
       },
     },
     {
+      name: "Default from zigzag",
+      id: "default-from-zigzag",
+      nadeType: "frag",
+      throwType: "normal",
+      side: "t",
+      coordinates: {
+        x: 737,
+        y: 463,
+      },
+      positionCoordinates: {
+        x: 714,
+        y: 573,
+      },
+    },
+    {
       name: "Wood from ruins",
       id: "wood-from-ramp",
       nadeType: "molo",
