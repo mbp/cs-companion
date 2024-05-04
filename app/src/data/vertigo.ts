@@ -34,6 +34,36 @@ export const vertigoMapScheme: MapScheme = {
       },
     },
     {
+      name: "Top t stairs from mid 1",
+      id: "t-stairs-from-mid-1",
+      nadeType: "frag",
+      throwType: "jump",
+      side: "ct",
+      coordinates: {
+        x: 315,
+        y: 573,
+      },
+      positionCoordinates: {
+        x: 403,
+        y: 325,
+      },
+    },
+    {
+      name: "Top t stairs from mid 2",
+      id: "t-stairs-from-mid-2",
+      nadeType: "frag",
+      throwType: "normal",
+      side: "ct",
+      coordinates: {
+        x: 310,
+        y: 558,
+      },
+      positionCoordinates: {
+        x: 364,
+        y: 329,
+      },
+    },
+    {
       name: "Top mid from mid",
       id: "top-mid-from-mid",
       nadeType: "smoke",
