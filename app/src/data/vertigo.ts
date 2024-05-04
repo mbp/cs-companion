@@ -36,6 +36,7 @@ export const vertigoMapScheme: MapScheme = {
     {
       name: "Top t stairs from mid 1",
       id: "t-stairs-from-mid-1",
+      description: "Throw around 1:49",
       nadeType: "frag",
       throwType: "jump",
       side: "ct",
@@ -51,6 +52,7 @@ export const vertigoMapScheme: MapScheme = {
     {
       name: "Top t stairs from mid 2",
       id: "t-stairs-from-mid-2",
+      description: "Throw around 1:49",
       nadeType: "frag",
       throwType: "normal",
       side: "ct",
