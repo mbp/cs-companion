@@ -35,6 +35,36 @@ export const dust2MapScheme: MapScheme = {
       },
     },
     {
+      name: "short from catwalk",
+      id: "short-from-catwalk",
+      nadeType: "smoke",
+      throwType: "normal",
+      side: "t",
+      coordinates: {
+        x: 680,
+        y: 244,
+      },
+      positionCoordinates: {
+        x: 675,
+        y: 367,
+      },
+    },
+    {
+      name: "site from short",
+      id: "site-from-short",
+      nadeType: "molo",
+      throwType: "normal",
+      side: "t",
+      coordinates: {
+        x: 839,
+        y: 167,
+      },
+      positionCoordinates: {
+        x: 623,
+        y: 305,
+      },
+    },
+    {
       name: "long from t outside",
       id: "long-from-t-outside",
       nadeType: "flashbang",
