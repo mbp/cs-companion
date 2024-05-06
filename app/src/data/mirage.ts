@@ -80,7 +80,6 @@ export const mirageMapScheme: MapScheme = {
     },
     {
       name: "Stairs smoke from T ramp",
-      description: "At small hinge. Aim middle of some lines",
       id: "stairs-from-t-ramp",
       nadeType: "smoke",
       throwType: "jump",
