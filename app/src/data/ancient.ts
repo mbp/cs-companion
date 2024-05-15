@@ -276,6 +276,21 @@ export const ancientMapScheme: MapScheme = {
       },
     },
     {
+      name: "Site from b door",
+      id: "flash-b-from-ramp",
+      nadeType: "flashbang",
+      throwType: "jump",
+      side: "t",
+      coordinates: {
+        x: 742,
+        y: 407,
+      },
+      positionCoordinates: {
+        x: 793,
+        y: 622,
+      },
+    },
+    {
       name: "Wood from ruins",
       id: "wood-from-ramp",
       nadeType: "molo",
