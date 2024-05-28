@@ -53,17 +53,16 @@ const radarMouseMove = (event: MouseEvent) => {
     ref="radarCanvas"
     width="1024"
     height="1024"
+    :style="{ 'background-image': radarImage }"
     @click="clickRadar"
     @mousemove="radarMouseMove"
   />
 </template>
 
-<style scoped>
+<style>
 canvas {
   width: 1024px;
   height: 1024px;
   background-repeat: no-repeat;
-  background-image: v-bind("radarImage");
-  background-size: 1024px 1024px;
 }
 </style>
