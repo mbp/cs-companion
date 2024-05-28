@@ -65,9 +65,10 @@ h1 {
 }
 .map-tiles {
   display: grid;
-  grid-column-gap: 30px;
-  grid-row-gap: 30px;
-  grid-template-columns: repeat(auto-fit, minmax(200px, 1fr));
+  grid-gap: 1rem;
+  grid-template-columns: repeat(auto-fit, minmax(15%, 1fr));
+  grid-auto-rows: auto;
+  grid-auto-flow: dense;
 }
 .map-tile:hover {
   filter: drop-shadow(0 0 1em #646cffaa);
@@ -75,9 +76,10 @@ h1 {
 
 .command-tiles {
   display: grid;
-  grid-column-gap: 30px;
-  grid-row-gap: 30px;
-  grid-template-columns: repeat(auto-fit, minmax(200px, 1fr));
+  grid-gap: 1rem;
+  grid-template-columns: repeat(auto-fit, minmax(15%, 1fr));
+  grid-auto-rows: auto;
+  grid-auto-flow: dense;
 }
 .logo {
   height: 3em;
