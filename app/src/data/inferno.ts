@@ -200,6 +200,21 @@ export const infernoMapScheme: MapScheme = {
       },
     },
     {
+      name: "Coffin from car",
+      id: "coffin-from-car",
+      nadeType: "molo",
+      throwType: "jump",
+      side: "t",
+      coordinates: {
+        x: 526,
+        y: 160,
+      },
+      positionCoordinates: {
+        x: 519,
+        y: 415,
+      },
+    },
+    {
       name: "A long from bottom mid",
       id: "a-long-from-bottom-mid",
       nadeType: "flashbang",
