@@ -64,10 +64,26 @@ export const mirageMapScheme: MapScheme = {
       },
     },
     {
+      name: "Short from spawn",
+      id: "short-from-t-spawn",
+      nadeType: "smoke",
+      throwType: "jump",
+      side: "t",
+      coordinates: {
+        x: 482.5,
+        y: 393,
+      },
+      positionCoordinates: {
+        x: 933,
+        y: 326,
+      },
+    },
+    {
       name: "Top mid from spawn",
       id: "top-mid-from-spawn",
       nadeType: "smoke",
-      throwType: "normal",
+      throwType: "jump",
+      movement: "hold d",
       side: "t",
       coordinates: {
         x: 630,

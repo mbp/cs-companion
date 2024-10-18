@@ -1,7 +1,7 @@
 import { Coordinates, Side } from "../../types";
 
 export type ThrowType = "normal" | "jump" | "runjump" | "run" | "rightclick";
-export type Movement = "crouch" | "run" | "stand";
+export type Movement = "crouch" | "run" | "stand" | "hold d";
 export type NadeType = "smoke" | "frag" | "molo" | "flashbang";
 export type ClickType = "left" | "right" | "left+right";
 
