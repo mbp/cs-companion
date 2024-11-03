@@ -79,6 +79,36 @@ export const nukeLineups: MapScheme = {
       },
     },
     {
+      name: "Close main outside (alternative lineup)",
+      id: "close-main-outside-alternative",
+      nadeType: "smoke",
+      throwType: "jump",
+      side: "t",
+      coordinates: {
+        x: 637.5,
+        y: 676,
+      },
+      positionCoordinates: {
+        x: 302.5,
+        y: 563,
+      },
+    },
+    {
+      name: "Far main outside (alternative lineup)",
+      id: "far-main-outside-alternative",
+      nadeType: "smoke",
+      throwType: "jump",
+      side: "t",
+      coordinates: {
+        x: 665.5,
+        y: 690,
+      },
+      positionCoordinates: {
+        x: 302.5,
+        y: 563,
+      },
+    },
+    {
       name: "Heaven outside",
       id: "outside-heaven-from-spawn",
       nadeType: "smoke",
