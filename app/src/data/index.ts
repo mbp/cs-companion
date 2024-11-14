@@ -8,6 +8,7 @@ import { nukeLineups } from "./nuke";
 import { mirageMapScheme } from "./mirage";
 import { officeMapScheme } from "./office";
 import { overpassMapScheme } from "./overpass";
+import { trainMapScheme } from "./train";
 import { vertigoMapScheme } from "./vertigo";
 
 export const allMapSchemes: MapScheme[] = [
@@ -20,5 +21,6 @@ export const allMapSchemes: MapScheme[] = [
   mirageMapScheme,
   officeMapScheme,
   overpassMapScheme,
+  trainMapScheme,
   vertigoMapScheme,
 ];
