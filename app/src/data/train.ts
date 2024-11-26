@@ -34,6 +34,21 @@ export const trainMapScheme: MapScheme = {
       },
     },
     {
+      name: "Connector from halls",
+      id: "connector-from-halls",
+      nadeType: "smoke",
+      throwType: "jump",
+      side: "t",
+      coordinates: {
+        x: 705,
+        y: 690,
+      },
+      positionCoordinates: {
+        x: 302,
+        y: 761,
+      },
+    },
+    {
       name: "A site from outside",
       id: "a-site-from-outside",
       nadeType: "flashbang",
