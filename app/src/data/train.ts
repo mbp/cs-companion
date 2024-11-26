@@ -51,7 +51,7 @@ export const trainMapScheme: MapScheme = {
     {
       name: "Z (b side) from from alley",
       id: "z-connector-b-from-alley",
-      description: "Walk (shift) a little, then throw",
+      description: "Walk (shift), then throw at the horizontal line",
       nadeType: "smoke",
       throwType: "jump",
       movement: "walk",
