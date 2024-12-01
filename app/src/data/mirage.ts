@@ -74,8 +74,8 @@ export const mirageMapScheme: MapScheme = {
         y: 393,
       },
       positionCoordinates: {
-        x: 933,
-        y: 326,
+        x: 935,
+        y: 421,
       },
     },
     {
