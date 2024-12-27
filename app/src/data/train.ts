@@ -34,6 +34,21 @@ export const trainMapScheme: MapScheme = {
       },
     },
     {
+      name: "Sandwich from from alley",
+      id: "sandwich-from-alley",
+      nadeType: "smoke",
+      throwType: "jump",
+      side: "t",
+      coordinates: {
+        x: 613,
+        y: 410,
+      },
+      positionCoordinates: {
+        x: 105,
+        y: 145,
+      },
+    },
+    {
       name: "Connector from halls",
       id: "connector-from-halls",
       nadeType: "smoke",
