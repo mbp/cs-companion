@@ -70,12 +70,12 @@ export const trainMapScheme: MapScheme = {
       throwType: "jump",
       side: "t",
       coordinates: {
-        x: 538,
-        y: 334,
+        x: 440,
+        y: 335,
       },
       positionCoordinates: {
-        x: 352,
-        y: 191,
+        x: 365,
+        y: 133,
       },
     },
     {
