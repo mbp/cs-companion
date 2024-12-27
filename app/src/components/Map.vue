@@ -125,102 +125,108 @@ const lineUps = computed(() => {
     :parents="[{ routeName: 'Home', title: 'Home' }]"
   />
 
-  <Toggle
-    label="Strats"
-    :initial="false"
-    @checked="onToggleShowStratsChecked"
-  />
-  <Toggle
-    label="Radar"
-    :initial="true"
-    @checked="onToggleShowRadarListChecked"
-  />
-  <Toggle
-    label="Smokes"
-    :initial="true"
-    @checked="onToggleShowSmokesOnlyChecked"
-  />
-  <Toggle
-    label="Molos"
-    :initial="true"
-    @checked="onToggleShowMolosOnlyChecked"
-  />
-  <Toggle
-    label="Flash"
-    :initial="true"
-    @checked="onToggleShowFlashBangsOnlyChecked"
-  />
-  <Toggle
-    label="Frag"
-    :initial="true"
-    @checked="onToggleShowFragGrenadesOnlyChecked"
-  />
-  <Toggle
-    label="T"
-    :initial="true"
-    @checked="onToggleShowTerroristsOnlyChecked"
-  />
-  <Toggle
-    label="CT"
-    :initial="true"
-    @checked="onToggleShowCounterTerroristsOnlyChecked"
-  />
+  <div class="flex">
+    <div class="flex-grow">
+      <div v-if="!showStrats">
+        <div v-if="showRadar" class="bg-gray-900">
+          <RadarLineups
+            :line-ups="lineUps"
+            :map-name="mapName"
+            @selected-utility="setSelectedUtility"
+          />
+        </div>
 
-  <div v-if="!showStrats">
-    <div v-if="showRadar" class="bg-gray-900">
-      <RadarLineups
-        :line-ups="lineUps"
-        :map-name="mapName"
-        @selected-utility="setSelectedUtility"
+        <div v-if="!showRadar">
+          <h2>Smoke Grenade</h2>
+          <ul>
+            <li v-for="smoke in smokes" :key="smoke.id">
+              <button @click="openUtility(smoke)">
+                {{ smoke.name }}
+              </button>
+            </li>
+          </ul>
+          <h2>Molotov / Incendiary Grenade</h2>
+          <ul>
+            <li v-for="molo in molos" :key="molo.id">
+              <button @click="openUtility(molo)">
+                {{ molo.name }}
+              </button>
+            </li>
+          </ul>
+          <h2>Flashbang</h2>
+          <ul>
+            <li v-for="flash in flashBangs" :key="flash.id">
+              <button @click="openUtility(flash)">
+                {{ flash.name }}
+              </button>
+            </li>
+          </ul>
+          <h2>Frag Grenade</h2>
+          <ul>
+            <li v-for="fragGrenade in fragGrenades" :key="fragGrenade.id">
+              <button @click="openUtility(fragGrenade)">
+                {{ fragGrenade.name }}
+              </button>
+            </li>
+          </ul>
+        </div>
+      </div>
+
+      <div v-if="showStrats">
+        <h2>Strategies</h2>
+        <ul>
+          <li v-for="strat in mapScheme.strats" :key="strat.id">
+            <button @click="openStrat(strat)">{{ strat.name }}</button><br />
+            ({{ strat.buyType }}, {{ strat.side }})
+            <br />
+            <br />
+          </li>
+        </ul>
+      </div>
+    </div>
+    <div class="flex-shrink-0">
+      <Toggle
+        label="Radar"
+        :initial="true"
+        @checked="onToggleShowRadarListChecked"
+      />
+      <Toggle
+        label="Smokes"
+        :initial="true"
+        @checked="onToggleShowSmokesOnlyChecked"
+      />
+      <Toggle
+        label="Molos"
+        :initial="true"
+        @checked="onToggleShowMolosOnlyChecked"
+      />
+      <Toggle
+        label="Flash"
+        :initial="true"
+        @checked="onToggleShowFlashBangsOnlyChecked"
+      />
+      <Toggle
+        label="Frag"
+        :initial="true"
+        @checked="onToggleShowFragGrenadesOnlyChecked"
+      />
+      <Toggle
+        label="T"
+        :initial="true"
+        @checked="onToggleShowTerroristsOnlyChecked"
+      />
+      <Toggle
+        label="CT"
+        :initial="true"
+        @checked="onToggleShowCounterTerroristsOnlyChecked"
+      />
+      <hr class="px-4 py-2 border-gray-500" />
+      <Toggle
+        label="Strats"
+        :initial="false"
+        @checked="onToggleShowStratsChecked"
       />
     </div>
-
-    <div v-if="!showRadar">
-      <h2>Smoke Grenade</h2>
-      <ul>
-        <li v-for="smoke in smokes" :key="smoke.id">
-          <button @click="openUtility(smoke)">
-            {{ smoke.name }}
-          </button>
-        </li>
-      </ul>
-      <h2>Molotov / Incendiary Grenade</h2>
-      <ul>
-        <li v-for="molo in molos" :key="molo.id">
-          <button @click="openUtility(molo)">
-            {{ molo.name }}
-          </button>
-        </li>
-      </ul>
-      <h2>Flashbang</h2>
-      <ul>
-        <li v-for="flash in flashBangs" :key="flash.id">
-          <button @click="openUtility(flash)">
-            {{ flash.name }}
-          </button>
-        </li>
-      </ul>
-      <h2>Frag Grenade</h2>
-      <ul>
-        <li v-for="fragGrenade in fragGrenades" :key="fragGrenade.id">
-          <button @click="openUtility(fragGrenade)">
-            {{ fragGrenade.name }}
-          </button>
-        </li>
-      </ul>
-    </div>
-  </div>
-
-  <div v-if="showStrats">
-    <h2>Strategies</h2>
-    <ul>
-      <li v-for="strat in mapScheme.strats" :key="strat.id">
-        <button @click="openStrat(strat)">{{ strat.name }}</button><br />
-        ({{ strat.buyType }}, {{ strat.side }})
-        <br />
-        <br />
-      </li>
-    </ul>
   </div>
 </template>
 

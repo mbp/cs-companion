@@ -22,9 +22,10 @@ const goMaps = () => {
 </script>
 
 <template>
-  <div class="w-64 bg-gray-900 text-white flex flex-col">
+  <div class="w-32 bg-gray-900 text-white flex flex-col">
     <div class="p-4 text-lg font-bold cursor-pointer" @click="goHome">
-      Counter-Strike Companion
+      CS2<br />
+      Companion
     </div>
     <hr class="border-gray-700" />
     <nav class="flex-1">
