@@ -12,15 +12,17 @@ const sizePercentage = ref(props.initialSize);
 <template>
   <div class="click-zoom">
     <label>
-      <input type="checkbox" />
-      <img
-        :src="src"
-        :style="{
-          width: sizePercentage + '%',
-          'max-width': (sizePercentage / 100) * 640 + 'px',
-        }"
-      />
-      <figcaption>{{ caption }}</figcaption>
+      <figure>
+        <input type="checkbox" />
+        <img
+          :src="src"
+          :style="{
+            width: sizePercentage + '%',
+            'max-width': (sizePercentage / 100) * 640 + 'px',
+          }"
+        />
+        <figcaption>{{ caption }}</figcaption>
+      </figure>
     </label>
   </div>
 </template>
