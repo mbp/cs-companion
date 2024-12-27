@@ -39,27 +39,26 @@ defineExpose({
   />
   <div>
     <UtilityInfo :utility="utility" />
-    <div>
-      <Image :src="getImage('result')" :caption="'Result'" :initial-size="50" />
-    </div>
-    <div class="aim-pos-images">
-      <div>
-        <Image :src="getImage('aim')" :caption="'Aim'" :initial-size="100" />
-      </div>
-      <div>
+    <div class="flex flex-col items-center">
+      <div class="mb-4 h-72">
         <Image
-          :src="getImage('pos')"
-          :caption="'Position'"
-          :initial-size="100"
+          :src="getImage('result')"
+          :caption="'Result'"
+          :initial-size="75"
         />
+      </div>
+      <div class="grid grid-cols-2 gap-4 w-full">
+        <div class="flex justify-center">
+          <Image :src="getImage('aim')" :caption="'Aim'" :initial-size="100" />
+        </div>
+        <div class="flex justify-center">
+          <Image
+            :src="getImage('pos')"
+            :caption="'Position'"
+            :initial-size="100"
+          />
+        </div>
       </div>
     </div>
   </div>
 </template>
-
-<style scoped>
-.aim-pos-images {
-  display: grid;
-  grid-template-columns: 50% 50%;
-}
-</style>

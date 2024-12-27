@@ -8,72 +8,38 @@ const copyCmd = async (id: string) => {
 </script>
 
 <template>
-  <div class="command-tiles">
-    <div>
+  <div class="grid grid-cols-1 gap-4 md:grid-cols-2 lg:grid-cols-3 p-4">
+    <div class="bg-gray-600 shadow-md rounded-lg p-4">
       <p class="footer">Rethrow last grenade</p>
       <pre id="rethrow">sv_rethrow_last_grenade</pre>
-      <button @click="copyCmd('rethrow')">Copy</button>
+      <button
+        class="mt-2 bg-blue-500 text-white py-1 px-3 rounded"
+        @click="copyCmd('rethrow')"
+      >
+        Copy
+      </button>
     </div>
 
-    <div>
+    <div class="bg-gray-600 shadow-md rounded-lg p-4">
       <p class="footer">Fly command</p>
       <pre id="fly">noclip</pre>
-      <button @click="copyCmd('fly')">Copy</button>
+      <button
+        class="mt-2 bg-blue-500 text-white py-1 px-3 rounded"
+        @click="copyCmd('fly')"
+      >
+        Copy
+      </button>
+    </div>
+
+    <div class="bg-gray-600 shadow-md rounded-lg p-4">
+      <p class="footer">Remove smokes</p>
+      <pre id="remove-smokes">ent_fire smokegrenade_projectile kill</pre>
+      <button
+        class="mt-2 bg-blue-500 text-white py-1 px-3 rounded"
+        @click="copyCmd('remove-smokes')"
+      >
+        Copy
+      </button>
     </div>
   </div>
 </template>
-
-<style scoped>
-h1 {
-  text-shadow:
-    0 0 3px #646cffaa,
-    0 0 5px #646cffaa;
-}
-.footer {
-  color: #888;
-}
-.map-tiles a {
-  cursor: pointer;
-}
-.map-tiles {
-  display: grid;
-  grid-gap: 1rem;
-  grid-template-columns: repeat(auto-fit, minmax(15%, 1fr));
-  grid-auto-rows: auto;
-  grid-auto-flow: dense;
-}
-.map-tile:hover {
-  filter: drop-shadow(0 0 1em #646cffaa);
-}
-
-.command-tiles {
-  display: grid;
-  grid-gap: 1rem;
-  grid-template-columns: repeat(auto-fit, minmax(15%, 1fr));
-  grid-auto-rows: auto;
-  grid-auto-flow: dense;
-}
-.logo {
-  height: 3em;
-  padding: 1.5em;
-  will-change: filter;
-  transition: filter 300ms;
-}
-.logo:hover {
-  filter: drop-shadow(0 0 2em #646cffaa);
-}
-
-pre {
-  background-color: grey;
-  border: 1px dotted white;
-  margin: auto;
-  height: auto;
-  max-height: 200px;
-  padding: 5px;
-  overflow: auto;
-  max-width: 300px;
-  word-break: normal !important;
-  word-wrap: normal !important;
-  white-space: pre !important;
-}
-</style>

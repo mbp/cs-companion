@@ -167,7 +167,7 @@ const lineUps = computed(() => {
   />
 
   <div v-if="!showStrats">
-    <div v-if="showRadar">
+    <div v-if="showRadar" class="bg-gray-900">
       <RadarLineups
         :line-ups="lineUps"
         :map-name="mapName"

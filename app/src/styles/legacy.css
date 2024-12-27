@@ -2,15 +2,6 @@
   padding: 2em;
 }
 
-.info-cell {
-  border-left: 1px solid grey;
-}
-
-div.info-type {
-  background-color: #5d2424;
-  color: white;
-}
-
 div.info-description {
   background-color: #5d7824;
   border-radius: 15px;

@@ -17,15 +17,14 @@ const getMapIcon = (mapName: string) => {
 </script>
 
 <template>
-  <div class="map-tiles">
+  <div
+    class="map-tiles grid gap-4 grid-cols-4 sm:grid-cols-4 md:grid-cols-6 lg:grid-cols-8"
+  >
     <a
       v-for="mapScheme in allMapSchemes"
       :key="mapScheme.map"
       @click="goMap(mapScheme.map)"
-      ><img
-        class="map-tile"
-        style="width: 100%"
-        :src="getMapIcon(mapScheme.map)"
+      ><img class="w-full" style="width: 100%" :src="getMapIcon(mapScheme.map)"
     /></a>
   </div>
 </template>
@@ -36,44 +35,10 @@ h1 {
     0 0 3px #646cffaa,
     0 0 5px #646cffaa;
 }
-.footer {
-  color: #888;
-}
 .map-tiles a {
   cursor: pointer;
 }
-.map-tiles {
-  display: grid;
-  grid-gap: 1rem;
-  grid-template-columns: repeat(auto-fit, minmax(15%, 1fr));
-  grid-auto-rows: auto;
-  grid-auto-flow: dense;
-}
 .map-tile:hover {
   filter: drop-shadow(0 0 1em #646cffaa);
-}
-
-.logo {
-  height: 3em;
-  padding: 1.5em;
-  will-change: filter;
-  transition: filter 300ms;
-}
-.logo:hover {
-  filter: drop-shadow(0 0 2em #646cffaa);
-}
-
-pre {
-  background-color: grey;
-  border: 1px dotted white;
-  margin: auto;
-  height: auto;
-  max-height: 200px;
-  padding: 5px;
-  overflow: auto;
-  max-width: 300px;
-  word-break: normal !important;
-  word-wrap: normal !important;
-  white-space: pre !important;
 }
 </style>
