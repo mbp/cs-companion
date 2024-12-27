@@ -1,0 +1,33 @@
+.map-tile {
+  padding: 2em;
+}
+
+.info-cell {
+  border-left: 1px solid grey;
+}
+
+div.info-type {
+  background-color: #5d2424;
+  color: white;
+}
+
+div.info-description {
+  background-color: #5d7824;
+  border-radius: 15px;
+  width: 95%;
+  margin: 0 auto;
+}
+
+.header-cell {
+  font-weight: bold;
+}
+
+div.info {
+  padding: 2px;
+  width: 50%;
+  margin: auto;
+}
+
+.side-icon-header {
+  width: 25px;
+}
