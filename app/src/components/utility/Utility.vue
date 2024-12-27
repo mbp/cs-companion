@@ -63,4 +63,3 @@ defineExpose({
   grid-template-columns: 50% 50%;
 }
 </style>
-../composables/get-map-scheme

@@ -232,4 +232,3 @@ ul {
   list-style-type: none;
 }
 </style>
-./composables/get-map-scheme

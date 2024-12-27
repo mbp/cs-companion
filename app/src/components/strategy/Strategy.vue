@@ -36,4 +36,3 @@ const lineUps = computed(() => {
     />
   </div>
 </template>
-../composables/get-map-scheme
