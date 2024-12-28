@@ -4,7 +4,7 @@ import Header from "./components/Header.vue";
 </script>
 
 <template>
-  <div class="flex h-screen">
+  <div class="flex h-screen bg-gray-900">
     <Sidebar />
 
     <div class="flex-1 flex flex-col">

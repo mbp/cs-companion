@@ -1,5 +1,5 @@
 <template>
-  <div>
+  <div class="py-1">
     <label :for="uniqueId" class="flex items-center cursor-pointer">
       <div class="relative">
         <input
@@ -9,12 +9,12 @@
           :checked="toggled"
           @click="toggle"
         />
-        <div class="block bg-gray-600 w-10 h-6 rounded-full"></div>
+        <div class="block bg-gray-600 w-8 h-4 rounded-full"></div>
         <div
-          class="dot absolute left-1 top-1 bg-white w-4 h-4 rounded-full transition"
+          class="dot absolute left-1 top-1 bg-white w-2 h-2 rounded-full transition"
         ></div>
       </div>
-      <div class="mr-3 text-white-700 font-medium">
+      <div class="mr-3 text-white-700 font-medium pl-2">
         {{ label }}
       </div>
     </label>

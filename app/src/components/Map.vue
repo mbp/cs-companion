@@ -126,7 +126,7 @@ const lineUps = computed(() => {
   />
 
   <div class="flex">
-    <div class="flex-grow">
+    <div class="w-[1024px]">
       <div v-if="!showStrats">
         <div v-if="showRadar" class="bg-gray-900">
           <RadarLineups
@@ -184,12 +184,9 @@ const lineUps = computed(() => {
         </ul>
       </div>
     </div>
-    <div class="flex-shrink-0">
-      <Toggle
-        label="Radar"
-        :initial="true"
-        @checked="onToggleShowRadarListChecked"
-      />
+    <div class="flex-shrink-0 pl-2">
+      Utility filters
+      <hr class="px-4 py-2 border-gray-500" />
       <Toggle
         label="Smokes"
         :initial="true"
@@ -210,6 +207,8 @@ const lineUps = computed(() => {
         :initial="true"
         @checked="onToggleShowFragGrenadesOnlyChecked"
       />
+      Side filters
+      <hr class="px-4 py-2 border-gray-500" />
       <Toggle
         label="T"
         :initial="true"
@@ -220,11 +219,17 @@ const lineUps = computed(() => {
         :initial="true"
         @checked="onToggleShowCounterTerroristsOnlyChecked"
       />
+      Other filters
       <hr class="px-4 py-2 border-gray-500" />
       <Toggle
         label="Strats"
         :initial="false"
         @checked="onToggleShowStratsChecked"
+      />
+      <Toggle
+        label="Radar"
+        :initial="true"
+        @checked="onToggleShowRadarListChecked"
       />
     </div>
   </div>
