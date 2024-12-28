@@ -2,11 +2,15 @@
 import { useRouter } from "vue-router";
 import { allMapSchemes } from "../data";
 
+const props = defineProps<{
+  routeName: string;
+}>();
+
 var router = useRouter();
 
 const goMap = (mapName: string) => {
   router.push({
-    name: "Map",
+    name: props.routeName,
     params: { mapName: mapName },
   });
 };
@@ -17,10 +21,9 @@ const getMapIcon = (mapName: string) => {
 </script>
 
 <template>
-  <div
-    class="map-tiles grid gap-4 grid-cols-4 sm:grid-cols-4 md:grid-cols-6 lg:grid-cols-8"
-  >
+  <div class="map-tiles grid gap-5 grid-cols-5 max-w-screen-lg mx-auto">
     <a
+      class="map-tile"
       v-for="mapScheme in allMapSchemes"
       :key="mapScheme.map"
       @click="goMap(mapScheme.map)"
@@ -30,11 +33,6 @@ const getMapIcon = (mapName: string) => {
 </template>
 
 <style scoped>
-h1 {
-  text-shadow:
-    0 0 3px #646cffaa,
-    0 0 5px #646cffaa;
-}
 .map-tiles a {
   cursor: pointer;
 }

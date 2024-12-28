@@ -16,7 +16,7 @@ const filteredMaps = computed(() => {
 
 const goMap = (mapName: string) => {
   router.push({
-    name: "Map",
+    name: "MapUtility",
     params: { mapName: mapName },
   });
   searchQuery.value = "";

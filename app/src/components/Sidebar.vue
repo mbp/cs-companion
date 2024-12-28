@@ -1,7 +1,9 @@
 <script setup lang="ts">
-import { useRouter } from "vue-router";
+import { computed } from "vue";
+import { useRoute, useRouter } from "vue-router";
 
 var router = useRouter();
+var route = useRoute();
 
 const goHome = () => {
   router.push({
@@ -9,15 +11,24 @@ const goHome = () => {
   });
 };
 
+const goMapsUtility = () => {
+  router.push({
+    name: "MapsUtility",
+  });
+};
+const goMapsStrats = () => {
+  router.push({
+    name: "MapsStrats",
+  });
+};
 const goCommands = () => {
   router.push({
     name: "Commands",
   });
 };
-const goMaps = () => {
-  router.push({
-    name: "Home",
-  });
+
+const isActive = (name: string) => {
+  return computed(() => route.name === name);
 };
 </script>
 
@@ -30,10 +41,31 @@ const goMaps = () => {
     <hr class="border-gray-700" />
     <nav class="flex-1">
       <ul>
-        <li class="p-4 hover:bg-gray-700 cursor-pointer" @click="goMaps">
-          Maps
+        <li
+          :class="[
+            { 'bg-gray-700': isActive('MapsUtility').value },
+            'p-4 hover:bg-gray-700 cursor-pointer',
+          ]"
+          @click="goMapsUtility"
+        >
+          Utility
         </li>
-        <li class="p-4 hover:bg-gray-700 cursor-pointer" @click="goCommands">
+        <li
+          :class="[
+            { 'bg-gray-700': isActive('MapsStrats').value },
+            'p-4 hover:bg-gray-700 cursor-pointer',
+          ]"
+          @click="goMapsStrats"
+        >
+          Strats
+        </li>
+        <li
+          :class="[
+            { 'bg-gray-700': isActive('Commands').value },
+            'p-4 hover:bg-gray-700 cursor-pointer',
+          ]"
+          @click="goCommands"
+        >
           Commands
         </li>
       </ul>

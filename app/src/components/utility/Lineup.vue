@@ -34,7 +34,7 @@ defineExpose({
     :current="utility.name"
     :parents="[
       { routeName: 'Home', title: 'Home' },
-      { routeName: 'Map', title: mapName, params: { mapName: mapName } },
+      { routeName: 'MapUtility', title: mapName, params: { mapName: mapName } },
     ]"
   />
   <div>

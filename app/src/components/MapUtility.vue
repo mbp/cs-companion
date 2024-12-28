@@ -5,7 +5,6 @@ import RadarLineups from "./utility/RadarLineups.vue";
 import Toggle from "./Toggle.vue";
 import Navigation from "./Navigation.vue";
 import { Side } from "./types";
-import { Strategy } from "./strategy/types";
 import { NadeType, UtilityLineup } from "./utility/types";
 import { getMapScheme } from "./composables/get-map-scheme";
 
@@ -39,7 +38,7 @@ const setSelectedUtility = (utility: UtilityLineup) => {
 
 const openUtility = (utility: UtilityLineup) => {
   router.push({
-    name: "Utility",
+    name: "Lineup",
     params: {
       mapName: mapName,
       nadeType: utility.nadeType,
@@ -47,16 +46,6 @@ const openUtility = (utility: UtilityLineup) => {
     },
   });
 };
-const openStrat = (strat: Strategy) => {
-  router.push({
-    name: "Strategy",
-    params: {
-      mapName: mapName,
-      id: strat.id,
-    },
-  });
-};
-const showStrats = ref(false);
 const showRadar = ref(true);
 const showSmokesOnly = ref(true);
 const showMolosOnly = ref(true);
@@ -64,9 +53,6 @@ const showFlashBangsOnly = ref(true);
 const showFragGrenadesOnly = ref(true);
 const showTerroristsOnly = ref(true);
 const showCounterTerroristsOnly = ref(true);
-const onToggleShowStratsChecked = () => {
-  showStrats.value = !showStrats.value;
-};
 const onToggleShowRadarListChecked = () => {
   showRadar.value = !showRadar.value;
 };
@@ -127,59 +113,45 @@ const lineUps = computed(() => {
 
   <div class="flex">
     <div class="w-[1024px]">
-      <div v-if="!showStrats">
-        <div v-if="showRadar" class="bg-gray-900">
-          <RadarLineups
-            :line-ups="lineUps"
-            :map-name="mapName"
-            @selected-utility="setSelectedUtility"
-          />
-        </div>
-
-        <div v-if="!showRadar">
-          <h2>Smoke Grenade</h2>
-          <ul>
-            <li v-for="smoke in smokes" :key="smoke.id">
-              <button @click="openUtility(smoke)">
-                {{ smoke.name }}
-              </button>
-            </li>
-          </ul>
-          <h2>Molotov / Incendiary Grenade</h2>
-          <ul>
-            <li v-for="molo in molos" :key="molo.id">
-              <button @click="openUtility(molo)">
-                {{ molo.name }}
-              </button>
-            </li>
-          </ul>
-          <h2>Flashbang</h2>
-          <ul>
-            <li v-for="flash in flashBangs" :key="flash.id">
-              <button @click="openUtility(flash)">
-                {{ flash.name }}
-              </button>
-            </li>
-          </ul>
-          <h2>Frag Grenade</h2>
-          <ul>
-            <li v-for="fragGrenade in fragGrenades" :key="fragGrenade.id">
-              <button @click="openUtility(fragGrenade)">
-                {{ fragGrenade.name }}
-              </button>
-            </li>
-          </ul>
-        </div>
+      <div v-if="showRadar" class="bg-gray-900">
+        <RadarLineups
+          :line-ups="lineUps"
+          :map-name="mapName"
+          @selected-utility="setSelectedUtility"
+        />
       </div>
 
-      <div v-if="showStrats">
-        <h2>Strategies</h2>
+      <div v-if="!showRadar">
+        <h2>Smoke Grenade</h2>
         <ul>
-          <li v-for="strat in mapScheme.strats" :key="strat.id">
-            <button @click="openStrat(strat)">{{ strat.name }}</button><br />
-            ({{ strat.buyType }}, {{ strat.side }})
-            <br />
-            <br />
+          <li v-for="smoke in smokes" :key="smoke.id">
+            <button @click="openUtility(smoke)">
+              {{ smoke.name }}
+            </button>
+          </li>
+        </ul>
+        <h2>Molotov / Incendiary Grenade</h2>
+        <ul>
+          <li v-for="molo in molos" :key="molo.id">
+            <button @click="openUtility(molo)">
+              {{ molo.name }}
+            </button>
+          </li>
+        </ul>
+        <h2>Flashbang</h2>
+        <ul>
+          <li v-for="flash in flashBangs" :key="flash.id">
+            <button @click="openUtility(flash)">
+              {{ flash.name }}
+            </button>
+          </li>
+        </ul>
+        <h2>Frag Grenade</h2>
+        <ul>
+          <li v-for="fragGrenade in fragGrenades" :key="fragGrenade.id">
+            <button @click="openUtility(fragGrenade)">
+              {{ fragGrenade.name }}
+            </button>
           </li>
         </ul>
       </div>
@@ -221,11 +193,6 @@ const lineUps = computed(() => {
       />
       Other filters
       <hr class="px-4 py-2 border-gray-500" />
-      <Toggle
-        label="Strats"
-        :initial="false"
-        @checked="onToggleShowStratsChecked"
-      />
       <Toggle
         label="Radar"
         :initial="true"

@@ -2,28 +2,33 @@ import { createApp } from "vue";
 import "./styles/tailwind.css";
 import "./styles/legacy.css";
 import App from "./App.vue";
-import Maps from "./components/Maps.vue";
+import Home from "./components/Home.vue";
 import Commands from "./components/Commands.vue";
-import Map from "./components/Map.vue";
-import Utility from "./components/utility/Utility.vue";
+import MapUtility from "./components/MapUtility.vue";
+import MapsUtility from "./components/MapsUtility.vue";
+import MapStrats from "./components/MapStrats.vue";
+import MapsStrats from "./components/MapsStrats.vue";
+import Lineup from "./components/utility/Lineup.vue";
 import Strategy from "./components/strategy/Strategy.vue";
 import { createRouter, createWebHashHistory } from "vue-router";
 
 const routes = [
-  { path: "/", name: "Home", component: Maps },
-  { path: "/commands", name: "Commands", component: Commands },
-  { path: "/maps", name: "Maps", component: Maps },
-  { path: "/map/:mapName", component: Map, name: "Map" },
+  { path: "/", name: "Home", component: Home },
+  { path: "/utility", name: "MapsUtility", component: MapsUtility },
+  { path: "/utility/:mapName", component: MapUtility, name: "MapUtility" },
   {
-    path: "/map/:mapName/utility/:nadeType/:id",
-    component: Utility,
-    name: "Utility",
+    path: "/utility/:mapName/:nadeType/:id",
+    component: Lineup,
+    name: "Lineup",
   },
+  { path: "/strats", name: "MapsStrats", component: MapsStrats },
+  { path: "/strats/:mapName", component: MapStrats, name: "MapStrats" },
   {
-    path: "/map/:mapName/strategy/:id",
+    path: "/strats/:mapName/:id",
     component: Strategy,
     name: "Strategy",
   },
+  { path: "/commands", name: "Commands", component: Commands },
 ];
 
 const router = createRouter({

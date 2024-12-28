@@ -24,14 +24,16 @@ const lineUps = computed(() => {
     :current="strat.name"
     :parents="[
       { routeName: 'Home', title: 'Home' },
-      { routeName: 'Map', title: mapName, params: { mapName: mapName } },
+      { routeName: 'MapStrats', title: mapName, params: { mapName: mapName } },
     ]"
   />
   <div>
     <StrategyInfo :strategy="strat" />
+    <div v-if="!strat.events">No graphical available yet</div>
     <RadarStrategy
+      v-if="strat.events"
       :map-name="mapName"
-      :strategy-events="strat.events!"
+      :strategy-events="strat.events"
       :line-ups="lineUps"
     />
   </div>
