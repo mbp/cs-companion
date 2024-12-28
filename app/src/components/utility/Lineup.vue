@@ -39,25 +39,23 @@ defineExpose({
   />
   <div>
     <UtilityInfo :utility="utility" />
-    <div class="flex flex-col items-center">
-      <div class="mb-4 h-72">
+    <div class="grid grid-cols-3 gap-4 w-full py-4">
+      <div class="flex justify-center">
         <Image
           :src="getImage('result')"
           :caption="'Result'"
-          :initial-size="75"
+          :initial-size="100"
         />
       </div>
-      <div class="grid grid-cols-2 gap-4 w-full">
-        <div class="flex justify-center">
-          <Image :src="getImage('aim')" :caption="'Aim'" :initial-size="100" />
-        </div>
-        <div class="flex justify-center">
-          <Image
-            :src="getImage('pos')"
-            :caption="'Position'"
-            :initial-size="100"
-          />
-        </div>
+      <div class="flex justify-center">
+        <Image :src="getImage('aim')" :caption="'Aim'" :initial-size="100" />
+      </div>
+      <div class="flex justify-center">
+        <Image
+          :src="getImage('pos')"
+          :caption="'Position'"
+          :initial-size="100"
+        />
       </div>
     </div>
   </div>
