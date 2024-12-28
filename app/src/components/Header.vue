@@ -29,7 +29,7 @@ const goMap = (mapName: string) => {
       v-model="searchQuery"
       type="text"
       placeholder="Search..."
-      class="w-full p-2 border border-gray-600 rounded-lg bg-gray-700 text-white"
+      class="w-full p-2 border border-gray-600 rounded-lg bg-gray-700 text-white max-w-[1024px]"
     />
     <button class="ml-2 p-2 bg-blue-500 text-white rounded-lg">Search</button>
     <ul
