@@ -111,7 +111,7 @@ const lineUps = computed(() => {
     :parents="[{ routeName: 'Home', title: 'Home' }]"
   />
 
-  <div class="flex">
+  <div class="flex justify-center">
     <div class="w-[1024px]">
       <div v-if="showRadar" class="bg-gray-900">
         <RadarLineups
