@@ -95,6 +95,22 @@ export const trainMapScheme: MapScheme = {
         y: 139,
       },
     },
+    {
+      name: "Left main from z",
+      id: "left-main-from-z",
+      nadeType: "flashbang",
+      throwType: "normal",
+      side: "ct",
+      movement: "run",
+      coordinates: {
+        x: 498,
+        y: 460,
+      },
+      positionCoordinates: {
+        x: 608,
+        y: 570,
+      },
+    },
   ],
   strats: [],
 };
