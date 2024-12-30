@@ -48,7 +48,10 @@ const goCommands = () => {
 };
 
 const isActive = (name: string) => {
-  return computed(() => route.name === name);
+  return computed(() => {
+    const currentRoute = router.resolve({ name });
+    return route.path.startsWith(currentRoute.path);
+  });
 };
 </script>
 
