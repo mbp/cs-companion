@@ -39,7 +39,7 @@ export type DrawingEngine = {
 export const useDrawing = (
   canvasRenderingContext: CanvasRenderingContext2D,
 ): DrawingEngine => {
-  const utilityPointSize = 8;
+  const utilityPointSize = 12;
 
   const utilityRectangles: UtilityRectangle[] = [];
 
