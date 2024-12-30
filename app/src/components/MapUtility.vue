@@ -31,6 +31,27 @@ const flashBangs = computed(() => {
   );
 });
 
+const allUtility = computed(() => {
+  return [
+    {
+      category: "Smoke Grenade",
+      utilities: smokes.value,
+    },
+    {
+      category: "Molotov / Incendiary Grenade",
+      utilities: molos.value,
+    },
+    {
+      category: "Flashbang",
+      utilities: flashBangs.value,
+    },
+    {
+      category: "Frag Grenade",
+      utilities: fragGrenades.value,
+    },
+  ];
+});
+
 const setSelectedUtility = (utility: UtilityLineup) => {
   openUtility(utility);
 };
@@ -116,38 +137,32 @@ const lineUps = computed(() => {
       </div>
 
       <div v-if="!showRadar">
-        <h2>Smoke Grenade</h2>
-        <ul>
-          <li v-for="smoke in smokes" :key="smoke.id">
-            <button @click="openUtility(smoke)">
-              {{ smoke.name }}
-            </button>
-          </li>
-        </ul>
-        <h2>Molotov / Incendiary Grenade</h2>
-        <ul>
-          <li v-for="molo in molos" :key="molo.id">
-            <button @click="openUtility(molo)">
-              {{ molo.name }}
-            </button>
-          </li>
-        </ul>
-        <h2>Flashbang</h2>
-        <ul>
-          <li v-for="flash in flashBangs" :key="flash.id">
-            <button @click="openUtility(flash)">
-              {{ flash.name }}
-            </button>
-          </li>
-        </ul>
-        <h2>Frag Grenade</h2>
-        <ul>
-          <li v-for="fragGrenade in fragGrenades" :key="fragGrenade.id">
-            <button @click="openUtility(fragGrenade)">
-              {{ fragGrenade.name }}
-            </button>
-          </li>
-        </ul>
+        <div
+          v-for="utilityCategory in allUtility"
+          :key="utilityCategory.category"
+        >
+          <h2 class="text-xl font-bold mb-4 text-center text-white-800">
+            {{ utilityCategory.category }}
+          </h2>
+          <div class="grid grid-cols-1 gap-4 md:grid-cols-2 lg:grid-cols-3 p-4">
+            <div
+              class="bg-gray-600 shadow-md rounded-lg p-4"
+              v-for="utility in utilityCategory.utilities"
+              :key="utility.id"
+            >
+              <p class="font-bold">
+                {{ utility.name }}
+              </p>
+              <button
+                @click="openUtility(utility)"
+                class="mt-2 bg-blue-500 text-white py-1 px-3 rounded"
+              >
+                Open
+              </button>
+              <br />
+            </div>
+          </div>
+        </div>
       </div>
     </div>
     <div class="flex-shrink-0 pl-2">
