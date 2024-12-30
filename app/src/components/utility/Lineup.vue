@@ -39,7 +39,7 @@ defineExpose({
   />
   <div>
     <UtilityInfo :utility="utility" />
-    <div class="grid grid-cols-3 gap-4 w-full py-4">
+    <div class="grid grid-cols-2 gap-4 w-full py-4">
       <div class="flex justify-center">
         <Image
           :src="getImage('result')"
@@ -48,14 +48,14 @@ defineExpose({
         />
       </div>
       <div class="flex justify-center">
-        <Image :src="getImage('aim')" :caption="'Aim'" :initial-size="100" />
-      </div>
-      <div class="flex justify-center">
         <Image
           :src="getImage('pos')"
           :caption="'Position'"
           :initial-size="100"
         />
+      </div>
+      <div class="flex justify-center col-span-2">
+        <Image :src="getImage('aim')" :caption="'Aim'" :initial-size="100" />
       </div>
     </div>
   </div>
