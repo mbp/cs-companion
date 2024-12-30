@@ -50,7 +50,7 @@ const closeModal = () => {
           :src="src"
           @click="closeModal"
           class="max-w-full max-h-screen rounded-lg cursor-zoom-out"
-          style="width: 85vw; max-height: 85vw"
+          style="width: 85vw; max-height: 85vh"
         />
       </div>
     </div>
