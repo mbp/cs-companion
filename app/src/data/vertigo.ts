@@ -1,4 +1,5 @@
 import { MapScheme } from "../components/types";
+import { vertigoStrats } from "./maps/vertigo/strats";
 
 export const vertigoMapScheme: MapScheme = {
   map: "Vertigo",
@@ -235,14 +236,5 @@ export const vertigoMapScheme: MapScheme = {
       },
     },
   ],
-  strats: [
-    {
-      id: "first-decoy",
-      buyType: "pistols",
-      name: "First decoy round",
-      description:
-        "All buy decoy, throw it on the A ramp. Immediately turn back to B and plant the bomb",
-      side: "t",
-    },
-  ],
+  strats: vertigoStrats,
 };
