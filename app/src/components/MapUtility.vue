@@ -57,6 +57,7 @@ const setSelectedUtility = (utility: UtilityLineup) => {
 };
 
 const openUtility = (utility: UtilityLineup) => {
+  document.body.style.cursor = "";
   router.push({
     name: "Lineup",
     params: {
