@@ -1,6 +1,6 @@
 <script setup lang="ts">
 import { computed, ref } from "vue";
-import { useRouter } from "vue-router";
+import { useRoute, useRouter } from "vue-router";
 import { allMapSchemes } from "../data";
 
 var router = useRouter();
@@ -21,29 +21,93 @@ const goMap = (mapName: string) => {
   });
   searchQuery.value = "";
 };
+
+var router = useRouter();
+var route = useRoute();
+
+const goHome = () => {
+  router.push({
+    name: "Home",
+  });
+};
+
+const goMapsUtility = () => {
+  router.push({
+    name: "MapsUtility",
+  });
+};
+const goMapsStrats = () => {
+  router.push({
+    name: "MapsStrats",
+  });
+};
+const goCommands = () => {
+  router.push({
+    name: "Commands",
+  });
+};
+
+const isActive = (name: string) => {
+  return computed(() => route.name === name);
+};
 </script>
 
 <template>
-  <header class="bg-gray-800 text-white p-4 flex items-center relative">
-    <input
-      v-model="searchQuery"
-      type="text"
-      placeholder="Search..."
-      class="w-full p-2 border border-gray-600 rounded-lg bg-gray-700 text-white max-w-[1024px]"
-    />
-    <button class="ml-2 p-2 bg-blue-500 text-white rounded-lg">Search</button>
-    <ul
-      v-if="filteredMaps.length"
-      class="absolute top-full left-0 w-full bg-gray-700 text-white mt-1 rounded-lg shadow-lg"
-    >
-      <li
-        v-for="map in filteredMaps"
-        :key="map.map"
-        class="p-2 hover:bg-gray-600 cursor-pointer"
-        @click="goMap(map.map)"
+  <nav class="bg-gray-900 p-4">
+    <div class="container mx-auto flex justify-between items-center">
+      <div
+        class="text-white text-lg font-semibold cursor-pointer"
+        @click="goHome"
       >
-        {{ map.map }}
-      </li>
-    </ul>
-  </header>
+        Counter-Strike Companion
+      </div>
+      <div class="flex space-x-4">
+        <a
+          :class="[
+            'text-gray-300 hover:text-white cursor-pointer',
+            { 'font-bold': isActive('MapsUtility').value },
+          ]"
+          @click="goMapsUtility"
+          >Utility</a
+        >
+        <a
+          :class="[
+            'text-gray-300 hover:text-white cursor-pointer',
+            { 'font-bold': isActive('MapsStrats').value },
+          ]"
+          @click="goMapsStrats"
+          >Strategy</a
+        >
+        <a
+          :class="[
+            'text-gray-300 hover:text-white cursor-pointer',
+            { 'font-bold': isActive('Commands').value },
+          ]"
+          @click="goCommands"
+          >Commands</a
+        >
+      </div>
+      <div class="relative">
+        <input
+          v-model="searchQuery"
+          type="text"
+          class="bg-gray-700 text-white rounded-full px-4 py-2 focus:outline-none focus:ring-2 focus:ring-gray-600"
+          placeholder="Search..."
+        />
+        <ul
+          v-if="filteredMaps.length"
+          class="absolute top-full left-0 w-full bg-gray-700 text-white mt-1 rounded-lg shadow-lg"
+        >
+          <li
+            v-for="map in filteredMaps"
+            :key="map.map"
+            class="p-2 hover:bg-gray-600 cursor-pointer"
+            @click="goMap(map.map)"
+          >
+            {{ map.map }}
+          </li>
+        </ul>
+      </div>
+    </div>
+  </nav>
 </template>
