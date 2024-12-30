@@ -1,5 +1,5 @@
 <template>
-  <nav class="crumbs">
+  <nav class="bg-gray-900 p-2 mb-2">
     <ol class="flex space-x-2 text-gray-400">
       <li v-for="parent in parents.slice(1)" :key="parent.title" class="crumb">
         <router-link

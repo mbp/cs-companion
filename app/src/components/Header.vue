@@ -65,7 +65,7 @@ const isActive = (name: string) => {
         <a
           :class="[
             'text-gray-300 hover:text-white cursor-pointer',
-            { 'font-bold': isActive('MapsUtility').value },
+            { 'font-bold text-white': isActive('MapsUtility').value },
           ]"
           @click="goMapsUtility"
           >Utility</a
@@ -73,7 +73,7 @@ const isActive = (name: string) => {
         <a
           :class="[
             'text-gray-300 hover:text-white cursor-pointer',
-            { 'font-bold': isActive('MapsStrats').value },
+            { 'font-bold text-white': isActive('MapsStrats').value },
           ]"
           @click="goMapsStrats"
           >Strategy</a
@@ -81,7 +81,7 @@ const isActive = (name: string) => {
         <a
           :class="[
             'text-gray-300 hover:text-white cursor-pointer',
-            { 'font-bold': isActive('Commands').value },
+            { 'font-bold text-white': isActive('Commands').value },
           ]"
           @click="goCommands"
           >Commands</a

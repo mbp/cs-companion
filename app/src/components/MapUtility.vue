@@ -3,7 +3,6 @@ import { computed, ref } from "vue";
 import { useRoute, useRouter } from "vue-router";
 import RadarLineups from "./utility/RadarLineups.vue";
 import Toggle from "./Toggle.vue";
-import Navigation from "./Navigation.vue";
 import { Side } from "./types";
 import { NadeType, UtilityLineup } from "./utility/types";
 import { getMapScheme } from "./composables/get-map-scheme";
@@ -106,11 +105,6 @@ const lineUps = computed(() => {
 </script>
 
 <template>
-  <Navigation
-    :current="mapName"
-    :parents="[{ routeName: 'Home', title: 'Home' }]"
-  />
-
   <div class="flex justify-center">
     <div class="w-[1024px]">
       <div v-if="showRadar" class="bg-gray-900">
