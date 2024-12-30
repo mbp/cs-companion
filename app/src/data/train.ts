@@ -79,6 +79,22 @@ export const trainMapScheme: MapScheme = {
       },
     },
     {
+      name: "A site from main",
+      id: "a-site-from-main",
+      nadeType: "flashbang",
+      throwType: "normal",
+      movement: "run",
+      side: "t",
+      coordinates: {
+        x: 439,
+        y: 444,
+      },
+      positionCoordinates: {
+        x: 363,
+        y: 354,
+      },
+    },
+    {
       name: "Z (b side) from from alley",
       id: "z-connector-b-from-alley",
       description: "Walk (shift), then throw at the horizontal line",
