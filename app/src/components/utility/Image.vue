@@ -46,16 +46,11 @@ const closeModal = () => {
       @click="closeModal"
     >
       <div class="relative bg-white rounded-lg shadow-lg" @click.stop>
-        <button
-          @click="closeModal"
-          class="absolute top-2 right-2 text-gray-500 hover:text-gray-700"
-        >
-          &times;
-        </button>
         <img
           :src="src"
-          class="max-w-full max-h-screen rounded-lg"
-          style="transform: scale(1.5)"
+          @click="closeModal"
+          class="max-w-full max-h-screen rounded-lg cursor-zoom-out"
+          style="width: 85vw"
         />
       </div>
     </div>
