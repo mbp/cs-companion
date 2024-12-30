@@ -1,4 +1,4 @@
-import { MapScheme } from "../components/types";
+import { MapScheme } from "../../../components/types";
 
 export const officeMapScheme: MapScheme = {
   map: "Office",

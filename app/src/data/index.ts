@@ -1,15 +1,15 @@
 import { MapScheme } from "../components/types";
-import { ancientMapScheme } from "./ancient";
-import { anubisMapScheme } from "./anubis";
-import { dust2MapScheme } from "./dust2";
-import { infernoMapScheme } from "./inferno";
-import { italyMapScheme } from "./italy";
-import { nukeLineups } from "./nuke";
-import { mirageMapScheme } from "./mirage";
-import { officeMapScheme } from "./office";
-import { overpassMapScheme } from "./overpass";
-import { trainMapScheme } from "./train";
-import { vertigoMapScheme } from "./vertigo";
+import { ancientMapScheme } from "./maps/ancient";
+import { anubisMapScheme } from "./maps/anubis";
+import { dust2MapScheme } from "./maps/dust2";
+import { infernoMapScheme } from "./maps/inferno";
+import { italyMapScheme } from "./maps/italy";
+import { nukeMapScheme } from "./maps/nuke";
+import { mirageMapScheme } from "./maps/mirage";
+import { officeMapScheme } from "./maps/office";
+import { overpassMapScheme } from "./maps/overpass";
+import { trainMapScheme } from "./maps/train";
+import { vertigoMapScheme } from "./maps/vertigo";
 
 export const allMapSchemes: MapScheme[] = [
   ancientMapScheme,
@@ -17,7 +17,7 @@ export const allMapSchemes: MapScheme[] = [
   dust2MapScheme,
   infernoMapScheme,
   italyMapScheme,
-  nukeLineups,
+  nukeMapScheme,
   mirageMapScheme,
   officeMapScheme,
   overpassMapScheme,
