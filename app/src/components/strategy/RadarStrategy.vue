@@ -203,24 +203,47 @@ const mouseMoveRadar = (x: number, y: number) => {
 </script>
 
 <template>
-  <h2>
-    1:<span>{{ secondsRemaining }}</span>
-  </h2>
-  <p>
-    <button @click="startPlay">⏯</button>
-    <button @click="backwardSecond">⏮</button>
-    <button @click="forwardSecond">⏭</button>
-  </p>
-  <Radar
-    ref="radar"
-    :map-name="mapName"
-    @radar-click="clickRadar"
-    @radar-mouse-move="mouseMoveRadar"
-    @canvas-mounted="canvasMounted"
-  />
-  <p v-if="isDev()">
-    <button v-if="isDev()" @click="startSampling">
-      (DEV)SAMPLE {{ sampleCount }}
-    </button>
-  </p>
+  <div class="flex justify-center">
+    <div class="w-[1024px]">
+      <Radar
+        ref="radar"
+        :map-name="mapName"
+        @radar-click="clickRadar"
+        @radar-mouse-move="mouseMoveRadar"
+        @canvas-mounted="canvasMounted"
+      />
+      <p v-if="isDev()">
+        <button v-if="isDev()" @click="startSampling">
+          (DEV)SAMPLE {{ sampleCount }}
+        </button>
+      </p>
+    </div>
+    <div class="flex-shrink-0 pl-2">
+      <div class="flex flex-col items-center p-4">
+        <div class="text-xl mb-4">
+          1:<span>{{ secondsRemaining }}</span>
+        </div>
+        <div class="flex space-x-4">
+          <button
+            @click="backwardSecond"
+            class="bg-black text-white px-4 py-2 rounded hover:bg-blue-600"
+          >
+            ⏮
+          </button>
+          <button
+            @click="startPlay"
+            class="bg-black text-white px-4 py-2 rounded hover:bg-green-600"
+          >
+            {{ play ? "⏸" : "▶️" }}
+          </button>
+          <button
+            @click="forwardSecond"
+            class="bg-black text-white px-4 py-2 rounded hover:bg-blue-600"
+          >
+            ⏭
+          </button>
+        </div>
+      </div>
+    </div>
+  </div>
 </template>
