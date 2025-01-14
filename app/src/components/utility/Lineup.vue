@@ -24,8 +24,19 @@ const getImage = (part: string) => {
   }/${utility.value.id}/${part}.png`;
 };
 
+const getVideo = () => {
+  return `${mapName.toLocaleLowerCase()}/${utility.value.side}/${
+    utility.value.nadeType
+  }/${utility.value.id}/video.mp4`;
+};
+
+const hasVideo = computed(() => {
+  return utility.value.hasVideo;
+});
+
 defineExpose({
   getImage,
+  getVideo,
 });
 </script>
 
@@ -56,6 +67,12 @@ defineExpose({
       </div>
       <div class="flex justify-center col-span-2">
         <Image :src="getImage('aim')" :caption="'Aim'" :initial-size="100" />
+      </div>
+      <div v-if="hasVideo" class="flex justify-center col-span-2">
+        <video width="640" height="360" controls>
+          <source :src="getVideo()" type="video/mp4" />
+          Your browser does not support the video tag.
+        </video>
       </div>
     </div>
   </div>

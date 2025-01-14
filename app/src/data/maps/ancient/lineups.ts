@@ -318,4 +318,21 @@ export const ancientLineups = [
       y: 699,
     },
   },
+  {
+    name: "Sun room from b door",
+    id: "sun-room-from-b-doors",
+    nadeType: "molo",
+    throwType: "jump",
+    movement: "run",
+    side: "t",
+    coordinates: {
+      x: 681,
+      y: 507,
+    },
+    positionCoordinates: {
+      x: 807,
+      y: 622,
+    },
+    hasVideo: true,
+  },
 ] satisfies UtilityLineup[];
