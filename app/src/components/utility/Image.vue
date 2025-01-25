@@ -32,7 +32,7 @@ const closeModal = () => {
             class="transition-transform duration-250 ease-in-out cursor-zoom-in"
           />
           <figcaption
-            class="absolute bottom-0 w-full bg-black bg-opacity-50 text-white text-center p-2 text-m"
+            class="absolute bottom-0 w-full bg-black opacity-75 text-white text-center p-2 text-m"
           >
             {{ caption }}
           </figcaption>
@@ -42,7 +42,7 @@ const closeModal = () => {
 
     <div
       v-if="isModalOpen"
-      class="fixed inset-0 z-50 flex items-center justify-center bg-black bg-opacity-75"
+      class="fixed inset-0 z-50 flex items-center justify-center"
       @click="closeModal"
     >
       <div class="relative bg-white rounded-lg shadow-lg" @click.stop>
