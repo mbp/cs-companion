@@ -218,7 +218,7 @@ const mouseMoveRadar = (x: number, y: number) => {
         </button>
       </p>
     </div>
-    <div class="flex-shrink-0 pl-2">
+    <div class="shrink-0 pl-2">
       <div class="flex flex-col items-center p-4">
         <div class="text-xl mb-4">
           1:<span>{{ secondsRemaining }}</span>
@@ -226,19 +226,19 @@ const mouseMoveRadar = (x: number, y: number) => {
         <div class="flex space-x-4">
           <button
             @click="backwardSecond"
-            class="bg-black text-white px-4 py-2 rounded hover:bg-blue-600"
+            class="bg-black text-white px-4 py-2 rounded-sm hover:bg-blue-600"
           >
             ⏮
           </button>
           <button
             @click="startPlay"
-            class="bg-black text-white px-4 py-2 rounded hover:bg-green-600"
+            class="bg-black text-white px-4 py-2 rounded-sm hover:bg-green-600"
           >
             {{ play ? "⏸" : "▶️" }}
           </button>
           <button
             @click="forwardSecond"
-            class="bg-black text-white px-4 py-2 rounded hover:bg-blue-600"
+            class="bg-black text-white px-4 py-2 rounded-sm hover:bg-blue-600"
           >
             ⏭
           </button>

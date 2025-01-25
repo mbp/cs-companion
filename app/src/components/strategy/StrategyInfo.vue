@@ -1,6 +1,6 @@
 <template>
   <div
-    class="grid grid-cols-4 grid-rows-1 gap-0 bg-green-900 justify-items-center rounded border border-green-700"
+    class="grid grid-cols-4 grid-rows-1 gap-0 bg-green-900 justify-items-center rounded-sm border border-green-700"
   >
     <div>
       <b>Side</b><br />

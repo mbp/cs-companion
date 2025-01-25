@@ -21,7 +21,7 @@ const getMapIcon = (mapName: string) => {
 </script>
 
 <template>
-  <div class="map-tiles grid gap-5 grid-cols-5 max-w-screen-lg mx-auto">
+  <div class="map-tiles grid gap-5 grid-cols-5 max-w-(--breakpoint-lg) mx-auto">
     <a
       class="map-tile"
       v-for="mapScheme in allMapSchemes"
