@@ -22,7 +22,7 @@
 </template>
 
 <script setup lang="ts">
-import { computed, ref } from "vue";
+import { computed, ref, watch } from "vue";
 
 const props = defineProps<{
   label: string;
@@ -37,10 +37,13 @@ const emit = defineEmits<{
 }>();
 
 const toggle = () => {
-  console.log("toggled", props.label);
   toggled.value = !toggled.value;
   emit("checked", toggled.value);
 };
+
+watch(() => props.initial, (newVal) => {
+  toggled.value = newVal;
+});
 </script>
 
 <style scoped>

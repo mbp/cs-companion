@@ -1,5 +1,5 @@
 <script setup lang="ts">
-import { computed, ref } from "vue";
+import { computed, ref, onMounted } from "vue";
 import { useRoute, useRouter } from "vue-router";
 import RadarLineups from "./utility/RadarLineups.vue";
 import Toggle from "./Toggle.vue";
@@ -74,26 +74,68 @@ const showFlashBangsOnly = ref(true);
 const showFragGrenadesOnly = ref(true);
 const showTerroristsOnly = ref(true);
 const showCounterTerroristsOnly = ref(true);
+const saveFilters = () => {
+  localStorage.setItem("showRadar", JSON.stringify(showRadar.value));
+  localStorage.setItem("showSmokesOnly", JSON.stringify(showSmokesOnly.value));
+  localStorage.setItem("showMolosOnly", JSON.stringify(showMolosOnly.value));
+  localStorage.setItem("showFlashBangsOnly", JSON.stringify(showFlashBangsOnly.value));
+  localStorage.setItem("showFragGrenadesOnly", JSON.stringify(showFragGrenadesOnly.value));
+  localStorage.setItem("showTerroristsOnly", JSON.stringify(showTerroristsOnly.value));
+  localStorage.setItem("showCounterTerroristsOnly", JSON.stringify(showCounterTerroristsOnly.value));
+};
+const loadFilters = () => {
+  showRadar.value = JSON.parse(localStorage.getItem("showRadar") || "true");
+  showSmokesOnly.value = JSON.parse(localStorage.getItem("showSmokesOnly") || "true");
+  showMolosOnly.value = JSON.parse(localStorage.getItem("showMolosOnly") || "true");
+  showFlashBangsOnly.value = JSON.parse(localStorage.getItem("showFlashBangsOnly") || "true");
+  showFragGrenadesOnly.value = JSON.parse(localStorage.getItem("showFragGrenadesOnly") || "true");
+  showTerroristsOnly.value = JSON.parse(localStorage.getItem("showTerroristsOnly") || "true");
+  showCounterTerroristsOnly.value = JSON.parse(localStorage.getItem("showCounterTerroristsOnly") || "true");
+};
+const clearFilters = () => {
+  showRadar.value = true;
+  showSmokesOnly.value = true;
+  showMolosOnly.value = true;
+  showFlashBangsOnly.value = true;
+  showFragGrenadesOnly.value = true;
+  showTerroristsOnly.value = true;
+  showCounterTerroristsOnly.value = true;
+  saveFilters();
+};
+onMounted(() => {
+  loadFilters();
+});
 const onToggleShowRadarListChecked = () => {
   showRadar.value = !showRadar.value;
+  saveFilters();
 };
 const onToggleShowSmokesOnlyChecked = () => {
   showSmokesOnly.value = !showSmokesOnly.value;
+  saveFilters();
 };
 const onToggleShowMolosOnlyChecked = () => {
   showMolosOnly.value = !showMolosOnly.value;
+  saveFilters();
 };
 const onToggleShowFlashBangsOnlyChecked = () => {
   showFlashBangsOnly.value = !showFlashBangsOnly.value;
+  saveFilters();
 };
 const onToggleShowFragGrenadesOnlyChecked = () => {
   showFragGrenadesOnly.value = !showFragGrenadesOnly.value;
+  saveFilters();
 };
 const onToggleShowTerroristsOnlyChecked = () => {
   showTerroristsOnly.value = !showTerroristsOnly.value;
+  saveFilters();
 };
 const onToggleShowCounterTerroristsOnlyChecked = () => {
   showCounterTerroristsOnly.value = !showCounterTerroristsOnly.value;
+  saveFilters();
+};
+const onResetFilters = () => {
+  clearFilters();
+  loadFilters();
 };
 const lineUps = computed(() => {
   return mapScheme.value.lineUps.filter((x) => {
@@ -171,43 +213,49 @@ const lineUps = computed(() => {
       <hr class="px-4 py-2 border-gray-500" />
       <Toggle
         label="Smokes"
-        :initial="true"
+        :initial="showSmokesOnly"
         @checked="onToggleShowSmokesOnlyChecked"
       />
       <Toggle
         label="Molos"
-        :initial="true"
+        :initial="showMolosOnly"
         @checked="onToggleShowMolosOnlyChecked"
       />
       <Toggle
         label="Flash"
-        :initial="true"
+        :initial="showFlashBangsOnly"
         @checked="onToggleShowFlashBangsOnlyChecked"
       />
       <Toggle
         label="Frag"
-        :initial="true"
+        :initial="showFragGrenadesOnly"
         @checked="onToggleShowFragGrenadesOnlyChecked"
       />
       Side filters
       <hr class="px-4 py-2 border-gray-500" />
       <Toggle
         label="T"
-        :initial="true"
+        :initial="showTerroristsOnly"
         @checked="onToggleShowTerroristsOnlyChecked"
       />
       <Toggle
         label="CT"
-        :initial="true"
+        :initial="showCounterTerroristsOnly"
         @checked="onToggleShowCounterTerroristsOnlyChecked"
       />
       Other filters
       <hr class="px-4 py-2 border-gray-500" />
       <Toggle
         label="Radar"
-        :initial="true"
+        :initial="showRadar"
         @checked="onToggleShowRadarListChecked"
       />
+      <button
+      class="mt-2 bg-blue-500 text-white py-1 px-3 rounded-sm cursor-pointer"
+      @click="onResetFilters"
+    >
+      Reset filters
+    </button>
     </div>
   </div>
 </template>
