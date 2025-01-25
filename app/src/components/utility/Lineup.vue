@@ -4,6 +4,7 @@ import { useRoute } from "vue-router";
 import Navigation from "../Navigation.vue";
 import Image from "./Image.vue";
 import UtilityInfo from "./UtilityInfo.vue";
+import VideoPlayer from "../VideoPlayer.vue";
 import { getMapScheme } from "../composables/get-map-scheme";
 
 const route = useRoute();
@@ -69,17 +70,7 @@ defineExpose({
         <Image :src="getImage('aim')" :caption="'Aim'" :initial-size="100" />
       </div>
       <div v-if="hasVideo" class="flex justify-center col-span-2">
-        <video
-          width="640"
-          height="360"
-          controls
-          playsinline
-          muted
-          preload="auto"
-        >
-          <source :src="getVideo()" type="video/mp4" />
-          Your browser does not support the video tag.
-        </video>
+        <VideoPlayer :src="getVideo()" />
       </div>
     </div>
   </div>
