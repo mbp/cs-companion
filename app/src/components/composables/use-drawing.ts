@@ -169,7 +169,7 @@ export const useDrawing = (
     const invertedColor = nadeInvertedColors[utility.nadeType];
     const nadeStrokeColor = nadeStrokeColors[utility.nadeType];
 
-    let svgPath = getUtilitySvg(utility);
+    const svgPath = getUtilitySvg(utility);
 
     const path = new Path2D(svgPath);
 
