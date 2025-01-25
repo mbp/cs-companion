@@ -25,6 +25,14 @@
   >
     {{ utility.description }}
   </div>
+  <div v-if="utility.setPos">
+      <button
+        class="mt-2 bg-blue-500 text-white py-1 px-3 rounded-sm cursor-pointer"
+        @click="copySetPos(utility.setPos)"
+      >
+        Copy setpos/setang
+      </button>
+  </div>
 </template>
 
 <script setup lang="ts">
@@ -35,4 +43,8 @@ interface Props {
   utility: UtilityLineup;
 }
 defineProps<Props>();
+
+const copySetPos = async (setPosStr: string) => {
+  await navigator.clipboard.writeText(setPosStr);
+};
 </script>
