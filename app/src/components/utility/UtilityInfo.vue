@@ -26,12 +26,12 @@
     {{ utility.description }}
   </div>
   <div v-if="utility.setPos">
-      <button
-        class="mt-2 bg-blue-500 text-white py-1 px-3 rounded-sm cursor-pointer"
-        @click="copySetPos(utility.setPos)"
-      >
-        Copy setpos/setang
-      </button>
+    <button
+      class="mt-2 bg-blue-500 text-white py-1 px-3 rounded-sm cursor-pointer"
+      @click="copySetPos(utility.setPos)"
+    >
+      Copy setpos/setang
+    </button>
   </div>
 </template>
 

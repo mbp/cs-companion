@@ -15,7 +15,8 @@ export const ancientLineups = [
       x: 780,
       y: 734,
     },
-    setPos: "setpos 916.696289 -1479.972534 73.142944;setang -5.966362 83.664024 0.000000",
+    setPos:
+      "setpos 916.696289 -1479.972534 73.142944;setang -5.966362 83.664024 0.000000",
   },
   {
     name: "Short B from ruins",
