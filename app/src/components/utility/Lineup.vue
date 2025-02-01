@@ -54,20 +54,27 @@ defineExpose({
     <div class="grid grid-cols-2 gap-4 w-full py-4">
       <div class="flex justify-center">
         <Image
-          :src="getImage('result')"
-          :caption="'Result'"
+          :src="getImage('pos-thirdperson')"
+          :caption="'Position (third person)'"
           :initial-size="100"
         />
       </div>
       <div class="flex justify-center">
         <Image
           :src="getImage('pos')"
-          :caption="'Position'"
+          :caption="'Position (first person)'"
           :initial-size="100"
         />
       </div>
-      <div class="flex justify-center col-span-2">
+      <div class="flex justify-center">
         <Image :src="getImage('aim')" :caption="'Aim'" :initial-size="100" />
+      </div>
+      <div class="flex justify-center">
+        <Image
+          :src="getImage('result')"
+          :caption="'Result'"
+          :initial-size="100"
+        />
       </div>
       <div v-if="hasVideo" class="flex justify-center col-span-2">
         <VideoPlayer :src="getVideo()" />
