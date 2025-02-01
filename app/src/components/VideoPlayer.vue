@@ -1,5 +1,5 @@
 <script setup lang="ts">
-import { onMounted, onUnmounted, ref } from "vue";
+import { onBeforeUnmount, onMounted, ref } from "vue";
 
 const props = defineProps<{
   src: string;
@@ -56,7 +56,7 @@ onMounted(() => {
     progress.value = (videoPlayer.currentTime / videoPlayer.duration) * 100;
   });
 });
-onUnmounted(() => {
+onBeforeUnmount(() => {
   const videoPlayer = getVideoPlayer();
   videoPlayer.removeEventListener("timeupdate", () => {
     progress.value = (videoPlayer.currentTime / videoPlayer.duration) * 100;
