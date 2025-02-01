@@ -64,6 +64,22 @@ export const ancientLineups = [
     },
   },
   {
+    name: "B door from long",
+    id: "b-door-from-long",
+    nadeType: "smoke",
+    throwType: "normal",
+    side: "ct",
+    coordinates: {
+      x: 798,
+      y: 618,
+    },
+    positionCoordinates: {
+      x: 842,
+      y: 382,
+    },
+    setPos: "setpos 1346.043091 516.091492 193.531738;setang -17.972982 -102.127792 0.000000"
+  },
+  {
     name: "Elbow from spawn right side",
     id: "elbow-from-spawn-right-side",
     nadeType: "smoke",
