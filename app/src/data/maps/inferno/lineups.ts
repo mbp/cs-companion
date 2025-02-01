@@ -15,7 +15,8 @@ export const infernoLineups = [
       x: 487,
       y: 469,
     },
-    setPos: "setpos 277.771973 1578.176514 182.816895;setang -29.066282 62.786785 0.000000"
+    setPos:
+      "setpos 277.771973 1578.176514 182.816895;setang -29.066282 62.786785 0.000000",
   },
   {
     name: "Coffin from banana",
@@ -31,7 +32,8 @@ export const infernoLineups = [
       x: 487,
       y: 469,
     },
-    setPos: "setpos 277.878998 1578.433105 182.848618;setang -6.573469 79.418625 0.000000"
+    setPos:
+      "setpos 277.878998 1578.433105 182.848618;setang -6.573469 79.418625 0.000000",
   },
   {
     name: "Short from second mid",
@@ -62,7 +64,8 @@ export const infernoLineups = [
       x: 292,
       y: 626,
     },
-    setPos: "setpos -638.450195 787.880798 39.871250;setang -14.071080 -10.420755 0.000000"
+    setPos:
+      "setpos -638.450195 787.880798 39.871250;setang -14.071080 -10.420755 0.000000",
   },
   {
     name: "Long from t-ramp",

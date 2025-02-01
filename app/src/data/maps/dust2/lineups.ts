@@ -15,7 +15,8 @@ export const dust2Lineups = [
       x: 446,
       y: 887,
     },
-    setPos: "setpos -509.755371 -662.247742 185.032471;setang -4.699211 84.306198 0.000000"
+    setPos:
+      "setpos -509.755371 -662.247742 185.032471;setang -4.699211 84.306198 0.000000",
   },
   {
     name: "mid hinge from lower",
@@ -32,7 +33,8 @@ export const dust2Lineups = [
       x: 447,
       y: 369,
     },
-    setPos: "setpos -489.968719 1582.369629 -61.521904;setang -79.563698 112.580475 0.000000"
+    setPos:
+      "setpos -489.968719 1582.369629 -61.521904;setang -79.563698 112.580475 0.000000",
   },
   {
     name: "short from catwalk",
@@ -48,7 +50,8 @@ export const dust2Lineups = [
       x: 675,
       y: 367,
     },
-    setPos: "setpos 489.970245 1596.060791 64.977936;setang -29.482504 133.410065 0.000000"
+    setPos:
+      "setpos 489.970245 1596.060791 64.977936;setang -29.482504 133.410065 0.000000",
   },
   {
     name: "site from short",
@@ -64,7 +67,8 @@ export const dust2Lineups = [
       x: 623,
       y: 305,
     },
-    setPos: "setpos 273.033325 1890.115479 161.672607;setang -18.130596 34.066082 0.000000"
+    setPos:
+      "setpos 273.033325 1890.115479 161.672607;setang -18.130596 34.066082 0.000000",
   },
   {
     name: "long from t outside",
@@ -80,7 +84,8 @@ export const dust2Lineups = [
       x: 650,
       y: 821,
     },
-    setPos: "setpos 363.963013 -384.576965 65.660561;setang -6.699233 49.826427 0.000000"
+    setPos:
+      "setpos 363.963013 -384.576965 65.660561;setang -6.699233 49.826427 0.000000",
   },
   {
     name: "b from upper tunnels",
@@ -96,7 +101,8 @@ export const dust2Lineups = [
       x: 198,
       y: 517,
     },
-    setPos: "setpos -1624.097778 934.039368 95.876968;setang -19.951962 125.821915 0.000000"
+    setPos:
+      "setpos -1624.097778 934.039368 95.876968;setang -19.951962 125.821915 0.000000",
   },
   {
     name: "mid from xbox",
@@ -112,7 +118,8 @@ export const dust2Lineups = [
       x: 503,
       y: 422,
     },
-    setPos: "setpos -275.031738 1345.644897 -59.174896;setang -38.352898 60.191353 0.000000"
+    setPos:
+      "setpos -275.031738 1345.644897 -59.174896;setang -38.352898 60.191353 0.000000",
   },
   {
     name: "b doors from upper tunnels",
@@ -128,7 +135,8 @@ export const dust2Lineups = [
       x: 142,
       y: 511,
     },
-    setPos: "setpos -1837.968750 982.031250 103.707550;setang -61.373886 67.890854 0.000000"
+    setPos:
+      "setpos -1837.968750 982.031250 103.707550;setang -61.373886 67.890854 0.000000",
   },
   {
     name: "b lurk from upper tunnels",
@@ -144,7 +152,8 @@ export const dust2Lineups = [
       x: 160,
       y: 504,
     },
-    setPos: "setpos -1765.570312 993.930786 102.072281;setang -4.719554 111.714699 0.00000"
+    setPos:
+      "setpos -1765.570312 993.930786 102.072281;setang -4.719554 111.714699 0.00000",
   },
   {
     name: "long cross smoke",
@@ -160,7 +169,8 @@ export const dust2Lineups = [
       x: 768.984375,
       y: 488,
     },
-    setPos: "setpos 905.530273 1070.956909 64.627533;setang -56.173458 82.826088 0.000000"
+    setPos:
+      "setpos 905.530273 1070.956909 64.627533;setang -56.173458 82.826088 0.000000",
   },
   {
     name: "long doors 1",
@@ -176,7 +186,8 @@ export const dust2Lineups = [
       x: 842,
       y: 277,
     },
-    setPos: "setpos 1258.121704 2038.029541 64.967323;setang -43.026218 -83.979073 0.000000"
+    setPos:
+      "setpos 1258.121704 2038.029541 64.967323;setang -43.026218 -83.979073 0.000000",
   },
   {
     name: "long doors 2",
@@ -192,6 +203,7 @@ export const dust2Lineups = [
       x: 842,
       y: 277,
     },
-    setPos: "setpos 1265.076050 2038.031982 64.584915;setang -4.033603 -65.578377 0.000000"
+    setPos:
+      "setpos 1265.076050 2038.031982 64.584915;setang -4.033603 -65.578377 0.000000",
   },
 ] satisfies UtilityLineup[];

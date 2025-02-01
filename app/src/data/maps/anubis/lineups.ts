@@ -15,7 +15,8 @@ export const anubisLineups = [
       x: 464,
       y: 182,
     },
-    setPos: "setpos -368.945190 2360.769287 87.871391;setang -31.997078 -82.263206 0.000000"
+    setPos:
+      "setpos -368.945190 2360.769287 87.871391;setang -31.997078 -82.263206 0.000000",
   },
   {
     name: "B main from CT spawn",
@@ -31,7 +32,8 @@ export const anubisLineups = [
       x: 464,
       y: 182,
     },
-    setPos: "setpos -368.945190 2360.894287 87.871391;setang -29.805769 -119.064720 -0.000000"
+    setPos:
+      "setpos -368.945190 2360.894287 87.871391;setang -29.805769 -119.064720 -0.000000",
   },
   {
     name: "A main from CT spawn",
@@ -47,7 +49,8 @@ export const anubisLineups = [
       x: 464,
       y: 182,
     },
-    setPos: "setpos -368.938660 2360.878174 87.871391;setang -49.553234 -43.455391 0.000000"
+    setPos:
+      "setpos -368.938660 2360.878174 87.871391;setang -49.553234 -43.455391 0.000000",
   },
   {
     name: "A Connector from water",
@@ -63,7 +66,8 @@ export const anubisLineups = [
       x: 778,
       y: 523,
     },
-    setPos: "setpos 1259.968750 600.034546 -52.128754;setang -22.070673 125.399040 0.000000"
+    setPos:
+      "setpos 1259.968750 600.034546 -52.128754;setang -22.070673 125.399040 0.000000",
   },
   {
     name: "B Connector outside from street",
@@ -79,7 +83,8 @@ export const anubisLineups = [
       x: 666,
       y: 811,
     },
-    setPos: "setpos 683.963379 -969.141602 51.871250;setang -6.521149 127.088608 0.000000"
+    setPos:
+      "setpos 683.963379 -969.141602 51.871250;setang -6.521149 127.088608 0.000000",
   },
   {
     name: "Mid house from T spawn",
@@ -95,7 +100,8 @@ export const anubisLineups = [
       x: 504,
       y: 970,
     },
-    setPos: "setpos -121.786560 -1723.968750 65.871246;setang -7.524118 88.132690 0.000000"
+    setPos:
+      "setpos -121.786560 -1723.968750 65.871246;setang -7.524118 88.132690 0.000000",
   },
   {
     name: "Palace from B outside",
@@ -111,7 +117,8 @@ export const anubisLineups = [
       x: 278,
       y: 669,
     },
-    setPos: "setpos -1267.961304 -314.806641 67.945084;setang -45.118256 70.355042 0.000000"
+    setPos:
+      "setpos -1267.961304 -314.806641 67.945084;setang -45.118256 70.355042 0.000000",
   },
   {
     name: "Connector inside from B outside",
@@ -127,7 +134,8 @@ export const anubisLineups = [
       x: 278,
       y: 669,
     },
-    setPos: "setpos -1267.961304 -314.806641 67.945084;setang -49.315765 66.843727 0.000000"
+    setPos:
+      "setpos -1267.961304 -314.806641 67.945084;setang -49.315765 66.843727 0.000000",
   },
   {
     name: "CT long from B outside",
@@ -143,7 +151,8 @@ export const anubisLineups = [
       x: 278,
       y: 669,
     },
-    setPos: "setpos -1267.968750 -314.810669 67.945808;setang -48.154064 81.919167 0.000000"
+    setPos:
+      "setpos -1267.968750 -314.810669 67.945808;setang -48.154064 81.919167 0.000000",
   },
   {
     name: "A site from canals",
@@ -159,7 +168,8 @@ export const anubisLineups = [
       x: 778,
       y: 523,
     },
-    setPos: "setpos 1259.967651 600.031067 -52.128754;setang -25.661030 106.022301 0.000000"
+    setPos:
+      "setpos 1259.967651 600.031067 -52.128754;setang -25.661030 106.022301 0.000000",
   },
   {
     name: "A broken from canals",
@@ -175,7 +185,8 @@ export const anubisLineups = [
       x: 778,
       y: 523,
     },
-    setPos: "setpos 1259.965942 600.031250 -52.128754;setang -19.879389 123.499283 0.000000"
+    setPos:
+      "setpos 1259.965942 600.031250 -52.128754;setang -19.879389 123.499283 0.000000",
   },
   {
     name: "A heaven from canals",
@@ -191,7 +202,8 @@ export const anubisLineups = [
       x: 756,
       y: 520,
     },
-    setPos: "setpos 1149.967896 610.031250 -124.993622;setang -2.904269 94.776199 0.000000"
+    setPos:
+      "setpos 1149.967896 610.031250 -124.993622;setang -2.904269 94.776199 0.000000",
   },
   {
     name: "Mid house from bridge",
@@ -207,6 +219,7 @@ export const anubisLineups = [
       x: 430,
       y: 704,
     },
-    setPos: "setpos -526.290161 -340.337463 130.031250;setang -16.288691 63.942471 0.000000"
+    setPos:
+      "setpos -526.290161 -340.337463 130.031250;setang -16.288691 63.942471 0.000000",
   },
 ] satisfies UtilityLineup[];
