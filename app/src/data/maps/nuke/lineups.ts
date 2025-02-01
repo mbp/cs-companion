@@ -15,6 +15,7 @@ export const nukeLineups = [
       x: 450,
       y: 694,
     },
+    setPos: "setpos -422.756714 -1747.776855 -352.128754;setang -16.552589 -20.275122 0.000000"
   },
   {
     name: "Long red smoke yard (3rd smoke)",
@@ -30,6 +31,7 @@ export const nukeLineups = [
       x: 450,
       y: 694,
     },
+    setPos: "setpos -422.756592 -1747.776855 -352.128754;setang -16.684587 -17.054365 0.000000"
   },
   {
     name: "Left garage smoke (no peek silo)",
@@ -93,6 +95,7 @@ export const nukeLineups = [
       x: 302.5,
       y: 563,
     },
+    setPos: "setpos -1350.442383 -1037.812378 -352.128754;setang -43.480793 -19.774431 0.000000"
   },
   {
     name: "Far main outside (alternative lineup)",
@@ -108,6 +111,7 @@ export const nukeLineups = [
       x: 302.5,
       y: 563,
     },
+    setPos: "setpos -1350.442383 -1037.812378 -352.128754;setang -26.532055 -22.546450 0.000000"
   },
   {
     name: "Heaven outside",
@@ -269,6 +273,7 @@ export const nukeLineups = [
       x: 504,
       y: 545,
     },
+    setPos: "setpos 78.298874 -779.347046 -352.128754;setang -3.775466 -60.704952 0.000000"
   },
   {
     name: "Flash b ramp (top) from trophy",
@@ -284,5 +289,6 @@ export const nukeLineups = [
       x: 526,
       y: 473,
     },
+    setPos: "setpos 251.970642 -387.830017 -352.128754;setang -2.455349 109.347916 0.000000"
   },
 ] satisfies UtilityLineup[];
