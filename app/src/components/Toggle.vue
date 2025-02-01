@@ -41,9 +41,12 @@ const toggle = () => {
   emit("checked", toggled.value);
 };
 
-watch(() => props.initial, (newVal) => {
-  toggled.value = newVal;
-});
+watch(
+  () => props.initial,
+  (newVal) => {
+    toggled.value = newVal;
+  },
+);
 </script>
 
 <style scoped>

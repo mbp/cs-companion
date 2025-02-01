@@ -6,6 +6,7 @@ import Toggle from "./Toggle.vue";
 import { Side } from "./types";
 import { NadeType, UtilityLineup } from "./utility/types";
 import { getMapScheme } from "./composables/get-map-scheme";
+import { useLocalStorage } from "@vueuse/core";
 
 const route = useRoute();
 const router = useRouter();
@@ -67,31 +68,17 @@ const openUtility = (utility: UtilityLineup) => {
     },
   });
 };
-const showRadar = ref(true);
-const showSmokesOnly = ref(true);
-const showMolosOnly = ref(true);
-const showFlashBangsOnly = ref(true);
-const showFragGrenadesOnly = ref(true);
-const showTerroristsOnly = ref(true);
-const showCounterTerroristsOnly = ref(true);
-const saveFilters = () => {
-  localStorage.setItem("showRadar", JSON.stringify(showRadar.value));
-  localStorage.setItem("showSmokesOnly", JSON.stringify(showSmokesOnly.value));
-  localStorage.setItem("showMolosOnly", JSON.stringify(showMolosOnly.value));
-  localStorage.setItem("showFlashBangsOnly", JSON.stringify(showFlashBangsOnly.value));
-  localStorage.setItem("showFragGrenadesOnly", JSON.stringify(showFragGrenadesOnly.value));
-  localStorage.setItem("showTerroristsOnly", JSON.stringify(showTerroristsOnly.value));
-  localStorage.setItem("showCounterTerroristsOnly", JSON.stringify(showCounterTerroristsOnly.value));
-};
-const loadFilters = () => {
-  showRadar.value = JSON.parse(localStorage.getItem("showRadar") || "true");
-  showSmokesOnly.value = JSON.parse(localStorage.getItem("showSmokesOnly") || "true");
-  showMolosOnly.value = JSON.parse(localStorage.getItem("showMolosOnly") || "true");
-  showFlashBangsOnly.value = JSON.parse(localStorage.getItem("showFlashBangsOnly") || "true");
-  showFragGrenadesOnly.value = JSON.parse(localStorage.getItem("showFragGrenadesOnly") || "true");
-  showTerroristsOnly.value = JSON.parse(localStorage.getItem("showTerroristsOnly") || "true");
-  showCounterTerroristsOnly.value = JSON.parse(localStorage.getItem("showCounterTerroristsOnly") || "true");
-};
+const showRadar = useLocalStorage("showRadar", true);
+const showSmokesOnly = useLocalStorage("showSmokesOnly", true);
+const showMolosOnly = useLocalStorage("showMolosOnly", true);
+const showFlashBangsOnly = useLocalStorage("showFlashBangsOnly", true);
+const showFragGrenadesOnly = useLocalStorage("showFragGrenadesOnly", true);
+const showTerroristsOnly = useLocalStorage("showTerroristsOnly", true);
+const showCounterTerroristsOnly = useLocalStorage(
+  "showCounterTerroristsOnly",
+  true,
+);
+
 const clearFilters = () => {
   showRadar.value = true;
   showSmokesOnly.value = true;
@@ -100,42 +87,30 @@ const clearFilters = () => {
   showFragGrenadesOnly.value = true;
   showTerroristsOnly.value = true;
   showCounterTerroristsOnly.value = true;
-  saveFilters();
 };
-onMounted(() => {
-  loadFilters();
-});
 const onToggleShowRadarListChecked = () => {
   showRadar.value = !showRadar.value;
-  saveFilters();
 };
 const onToggleShowSmokesOnlyChecked = () => {
   showSmokesOnly.value = !showSmokesOnly.value;
-  saveFilters();
 };
 const onToggleShowMolosOnlyChecked = () => {
   showMolosOnly.value = !showMolosOnly.value;
-  saveFilters();
 };
 const onToggleShowFlashBangsOnlyChecked = () => {
   showFlashBangsOnly.value = !showFlashBangsOnly.value;
-  saveFilters();
 };
 const onToggleShowFragGrenadesOnlyChecked = () => {
   showFragGrenadesOnly.value = !showFragGrenadesOnly.value;
-  saveFilters();
 };
 const onToggleShowTerroristsOnlyChecked = () => {
   showTerroristsOnly.value = !showTerroristsOnly.value;
-  saveFilters();
 };
 const onToggleShowCounterTerroristsOnlyChecked = () => {
   showCounterTerroristsOnly.value = !showCounterTerroristsOnly.value;
-  saveFilters();
 };
 const onResetFilters = () => {
   clearFilters();
-  loadFilters();
 };
 const lineUps = computed(() => {
   return mapScheme.value.lineUps.filter((x) => {
@@ -198,7 +173,7 @@ const lineUps = computed(() => {
               </p>
               <button
                 @click="openUtility(utility)"
-        class="mt-2 bg-teal-800 text-white py-1 px-3 rounded-sm cursor-pointer hover:bg-teal-600 hover:shadow-lg"
+                class="mt-2 bg-teal-800 text-white py-1 px-3 rounded-sm cursor-pointer hover:bg-teal-600 hover:shadow-lg"
               >
                 Open
               </button>
@@ -252,10 +227,10 @@ const lineUps = computed(() => {
       />
       <button
         class="mt-2 bg-teal-800 text-white py-1 px-3 rounded-sm cursor-pointer hover:bg-teal-600 hover:shadow-lg"
-      @click="onResetFilters"
-    >
-      Reset filters
-    </button>
+        @click="onResetFilters"
+      >
+        Reset filters
+      </button>
     </div>
   </div>
 </template>
