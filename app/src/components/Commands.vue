@@ -37,7 +37,7 @@ const copyCmd = async (id: string) => {
       <p>{{ command.name }}</p>
       <pre :id="command.id">{{ command.command }}</pre>
       <button
-        class="mt-2 bg-blue-500 text-white py-1 px-3 rounded-sm cursor-pointer"
+        class="mt-2 bg-teal-800 text-white py-1 px-3 rounded-sm cursor-pointer hover:bg-teal-600 hover:shadow-lg"
         @click="copyCmd(command.id)"
       >
         Copy

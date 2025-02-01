@@ -22,7 +22,7 @@
       <b>setpos</b><br />
       <button
         v-if="utility.setPos"
-        class="mt-2 bg-blue-500 text-white py-1 px-3 rounded-sm cursor-pointer"
+        class="mt-2 bg-teal-800 text-white py-1 px-3 rounded-sm cursor-pointer hover:bg-teal-600 hover:shadow-lg"
         @click="copySetPos(utility.setPos)"
       >
         <svg

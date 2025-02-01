@@ -198,7 +198,7 @@ const lineUps = computed(() => {
               </p>
               <button
                 @click="openUtility(utility)"
-                class="mt-2 bg-blue-500 text-white py-1 px-3 rounded-sm"
+        class="mt-2 bg-teal-800 text-white py-1 px-3 rounded-sm cursor-pointer hover:bg-teal-600 hover:shadow-lg"
               >
                 Open
               </button>
@@ -251,7 +251,7 @@ const lineUps = computed(() => {
         @checked="onToggleShowRadarListChecked"
       />
       <button
-      class="mt-2 bg-blue-500 text-white py-1 px-3 rounded-sm cursor-pointer"
+        class="mt-2 bg-teal-800 text-white py-1 px-3 rounded-sm cursor-pointer hover:bg-teal-600 hover:shadow-lg"
       @click="onResetFilters"
     >
       Reset filters
