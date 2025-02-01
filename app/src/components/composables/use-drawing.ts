@@ -2,35 +2,13 @@ import {
   flashbangSvg,
   fragGrenadeSvg,
   moloSvg,
+  nadeColors,
+  nadeInvertedColors,
+  nadeStrokeColors,
   smokeSvg,
 } from "../../inline-assets/utility";
-import { NadeType, UtilityLineup } from "../utility/types";
+import { UtilityLineup } from "../utility/types";
 import { UtilityRectangle } from "./drawing-types";
-
-type SmokeColors = {
-  [key in NadeType]: string;
-};
-
-const nadeColors: SmokeColors = {
-  smoke: "grey",
-  flashbang: "white",
-  molo: "orange",
-  frag: "green",
-};
-
-const nadeInvertedColors: SmokeColors = {
-  smoke: "white",
-  flashbang: "gray",
-  molo: "yellow",
-  frag: "darkgreen",
-};
-
-const nadeStrokeColors: SmokeColors = {
-  smoke: "black",
-  flashbang: "black",
-  molo: "black",
-  frag: "black",
-};
 
 export type DrawingEngine = {
   findMatchingRectangle: (x: number, y: number) => UtilityRectangle | undefined;

@@ -1,3 +1,5 @@
+import { NadeType } from "../components/utility/types";
+
 export const smokeSvg = `
         M32,2
         a30,30 0 1,0 0,60
@@ -53,3 +55,28 @@ export const moloSvg = `
         l-5,10
         l-5,-10
         z`;
+
+type SmokeColors = {
+  [key in NadeType]: string;
+};
+
+export const nadeColors: SmokeColors = {
+  smoke: "grey",
+  flashbang: "white",
+  molo: "orange",
+  frag: "green",
+};
+
+export const nadeInvertedColors: SmokeColors = {
+  smoke: "white",
+  flashbang: "gray",
+  molo: "yellow",
+  frag: "darkgreen",
+};
+
+export const nadeStrokeColors: SmokeColors = {
+  smoke: "black",
+  flashbang: "black",
+  molo: "black",
+  frag: "black",
+};
