@@ -1,6 +1,7 @@
-import { NadeType } from "../components/utility/types";
-
-export const smokeSvg = `
+const smokeSvg: Svg = {
+  paths: [
+    {
+      content: `
         M32,2
         a30,30 0 1,0 0,60
         a30,30 0 1,0 0,-60
@@ -14,9 +15,18 @@ export const smokeSvg = `
         v24
         h-16
         z
-      `;
+      `,
+      fill: "gray",
+      invertedFill: "white",
+      stroke: "black",
+    },
+  ],
+};
 
-export const flashbangSvg = `
+const flashbangSvg: Svg = {
+  paths: [
+    {
+      content: `
         M32,2
         a30,30 0 1,0 0,60
         a30,30 0 1,0 0,-60
@@ -30,18 +40,36 @@ export const flashbangSvg = `
         v5
         h-8
         z
-      `;
+      `,
+      fill: "white",
+      invertedFill: "lightblue",
+      stroke: "black",
+    },
+  ],
+};
 
-export const fragGrenadeSvg = `
+const fragGrenadeSvg: Svg = {
+  paths: [
+    {
+      content: `
         M32,2
         a30,30 0 1,0 0,60
         a30,30 0 1,0 0,-60
         M32,20
         a10,10 0 1,0 0,20
         a10,10 0 1,0 0,-20
-      `;
+      `,
+      fill: "green",
+      invertedFill: "lightgreen",
+      stroke: "black",
+    },
+  ],
+};
 
-export const moloSvg = `
+const moloSvg: Svg = {
+  paths: [
+    {
+      content: `
         M32,2
         a30,30 0 1,0 0,60
         a30,30 0 1,0 0,-60
@@ -54,29 +82,40 @@ export const moloSvg = `
         l5,10
         l-5,10
         l-5,-10
-        z`;
-
-type SmokeColors = {
-  [key in NadeType]: string;
+        z`,
+      fill: "orange",
+      invertedFill: "yellow",
+      stroke: "black",
+    },
+  ],
 };
 
-export const nadeColors: SmokeColors = {
-  smoke: "grey",
-  flashbang: "white",
-  molo: "orange",
-  frag: "green",
-};
+export const nadeSvgs = [
+  {
+    nadeType: "smoke",
+    svg: smokeSvg,
+  },
+  {
+    nadeType: "flashbang",
+    svg: flashbangSvg,
+  },
+  {
+    nadeType: "molo",
+    svg: moloSvg,
+  },
+  {
+    nadeType: "frag",
+    svg: fragGrenadeSvg,
+  },
+];
 
-export const nadeInvertedColors: SmokeColors = {
-  smoke: "white",
-  flashbang: "gray",
-  molo: "yellow",
-  frag: "darkgreen",
-};
+interface SvgPath {
+  content: string;
+  fill: string;
+  stroke: string;
+  invertedFill: string;
+}
 
-export const nadeStrokeColors: SmokeColors = {
-  smoke: "black",
-  flashbang: "black",
-  molo: "black",
-  frag: "black",
-};
+export interface Svg {
+  paths: SvgPath[];
+}

@@ -8,13 +8,7 @@ import { NadeType, UtilityLineup } from "./utility/types";
 import { getMapScheme } from "./composables/get-map-scheme";
 import { useLocalStorage } from "@vueuse/core";
 import { getSideImage } from "./composables/get-side-image";
-import {
-  flashbangSvg,
-  fragGrenadeSvg,
-  moloSvg,
-  nadeColors,
-  smokeSvg,
-} from "../inline-assets/utility";
+import { nadeSvgs } from "../inline-assets/utility";
 
 const route = useRoute();
 const router = useRouter();
@@ -39,6 +33,10 @@ const flashBangs = computed(() => {
     (x) => x.nadeType == "flashbang" && x.coordinates,
   );
 });
+
+const getNadeSvg = (nadeType: string) => {
+  return nadeSvgs.find((x) => x.nadeType == nadeType)?.svg;
+};
 
 const allUtility = computed(() => {
   return [
@@ -206,29 +204,25 @@ const getSelectedSides = computed(() => {
       <hr class="px-4 py-2 border-gray-500" />
       <Toggle
         label="Smokes"
-        :svg="smokeSvg"
-        :svgColor="nadeColors['smoke']"
+        :svg="getNadeSvg('smoke')"
         :initial="showSmokesOnly"
         @checked="onToggleShowSmokesOnlyChecked"
       />
       <Toggle
         label="Molos"
-        :svg="moloSvg"
-        :svgColor="nadeColors['molo']"
+        :svg="getNadeSvg('molo')"
         :initial="showMolosOnly"
         @checked="onToggleShowMolosOnlyChecked"
       />
       <Toggle
         label="Flash"
-        :svg="flashbangSvg"
-        :svgColor="nadeColors['flashbang']"
+        :svg="getNadeSvg('flashbang')"
         :initial="showFlashBangsOnly"
         @checked="onToggleShowFlashBangsOnlyChecked"
       />
       <Toggle
         label="Frag"
-        :svg="fragGrenadeSvg"
-        :svgColor="nadeColors['frag']"
+        :svg="getNadeSvg('frag')"
         :initial="showFragGrenadesOnly"
         @checked="onToggleShowFragGrenadesOnlyChecked"
       />

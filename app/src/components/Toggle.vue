@@ -24,7 +24,12 @@
           xmlns="http://www.w3.org/2000/svg"
           class="w-6 h-6 space-x-2"
         >
-          <path :d="svg" :fill="svgColor" />
+          <path
+            v-for="path in svg.paths"
+            :d="path.content"
+            :fill="path.fill"
+            :stroke="path.stroke"
+          />
         </svg>
         <span class="pl-2">
           {{ label }}
@@ -36,12 +41,12 @@
 
 <script setup lang="ts">
 import { computed, ref, watch } from "vue";
+import { Svg } from "../inline-assets/utility";
 
 const props = defineProps<{
   label: string;
   img?: string;
-  svg?: string;
-  svgColor?: string;
+  svg?: Svg;
   initial: boolean;
 }>();
 

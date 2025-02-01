@@ -1,12 +1,4 @@
-import {
-  flashbangSvg,
-  fragGrenadeSvg,
-  moloSvg,
-  nadeColors,
-  nadeInvertedColors,
-  nadeStrokeColors,
-  smokeSvg,
-} from "../../inline-assets/utility";
+import { nadeSvgs } from "../../inline-assets/utility";
 import { UtilityLineup } from "../utility/types";
 import { UtilityRectangle } from "./drawing-types";
 
@@ -52,7 +44,7 @@ export const useDrawing = (
       height: utilityPointSize,
       drawTravel: () => {
         canvasRenderingContext.beginPath();
-        canvasRenderingContext.strokeStyle = nadeColors[utility.nadeType];
+        canvasRenderingContext.strokeStyle = "orange";
         canvasRenderingContext.setLineDash([5, 15]);
         canvasRenderingContext.moveTo(
           utility.coordinates.x,
@@ -80,18 +72,13 @@ export const useDrawing = (
   };
 
   const getUtilitySvg = (utility: UtilityLineup) => {
-    switch (utility.nadeType) {
-      case "smoke":
-        return smokeSvg;
-      case "flashbang":
-        return flashbangSvg;
-      case "frag":
-        return fragGrenadeSvg;
-      case "molo":
-        return moloSvg;
-      default:
-        throw new Error(`unsupported nade type ${utility.nadeType}`);
+    const nadeSvg = nadeSvgs.find(
+      (nadeSvg) => nadeSvg.nadeType === utility.nadeType,
+    );
+    if (nadeSvg === undefined) {
+      throw new Error(`unsupported nade type ${utility.nadeType}`);
     }
+    return nadeSvg.svg;
   };
 
   const drawUtility = (
@@ -100,27 +87,30 @@ export const useDrawing = (
     utility: UtilityLineup,
     inverted: boolean,
   ) => {
-    const color = nadeColors[utility.nadeType];
-    const invertedColor = nadeInvertedColors[utility.nadeType];
-    const nadeStrokeColor = nadeStrokeColors[utility.nadeType];
+    const svg = getUtilitySvg(utility);
 
-    const svgPath = getUtilitySvg(utility);
+    for (const svgPath of svg.paths) {
+      const path = new Path2D(svgPath.content);
 
-    const path = new Path2D(svgPath);
+      canvasRenderingContext.save();
+      canvasRenderingContext.translate(x, y);
+      canvasRenderingContext.scale(
+        utilityPointSize / 32,
+        utilityPointSize / 32,
+      );
+      canvasRenderingContext.translate(-32, -32);
 
-    canvasRenderingContext.save();
-    canvasRenderingContext.translate(x, y);
-    canvasRenderingContext.scale(utilityPointSize / 32, utilityPointSize / 32);
-    canvasRenderingContext.translate(-32, -32);
+      canvasRenderingContext.fillStyle = inverted
+        ? svgPath.invertedFill
+        : svgPath.fill;
+      canvasRenderingContext.fill(path);
 
-    canvasRenderingContext.fillStyle = inverted ? invertedColor : color;
-    canvasRenderingContext.fill(path);
+      canvasRenderingContext.strokeStyle = svgPath.stroke;
+      canvasRenderingContext.lineWidth = 2;
+      canvasRenderingContext.stroke(path);
 
-    canvasRenderingContext.strokeStyle = nadeStrokeColor;
-    canvasRenderingContext.lineWidth = 2;
-    canvasRenderingContext.stroke(path);
-
-    canvasRenderingContext.restore();
+      canvasRenderingContext.restore();
+    }
   };
 
   const drawUtilityRectangle = (
