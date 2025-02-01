@@ -115,7 +115,7 @@ export const ancientLineups = [
     setPos: "setpos -66.043579 1290.032837 94.725143;setang -36.796463 -112.951561 0.000000"
   },
   {
-    name: "Mid b short/long from t spawn",
+    name: "Mid/long from t spawn",
     description: "quick w run",
     id: "mid-b-from-t-spawn",
     nadeType: "smoke",
