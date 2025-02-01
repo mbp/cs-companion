@@ -2,8 +2,8 @@ import { UtilityLineup } from "../../../components/utility/types";
 
 export const trainLineups = [
   {
-    name: "Ivy from alley",
-    id: "ivy-from-alley",
+    name: "Camera from alley",
+    id: "camera-from-alley",
     nadeType: "smoke",
     throwType: "jump",
     side: "t",
@@ -15,6 +15,7 @@ export const trainLineups = [
       x: 172.5,
       y: 144,
     },
+    setPos: "setpos -1499.031250 1479.967896 -108.128754;setang -25.449415 -29.192505 0.000000"
   },
   {
     name: "Z from from alley",
@@ -30,6 +31,7 @@ export const trainLineups = [
       x: 172.5,
       y: 144,
     },
+    setPos: "setpos -1499.031250 1479.967896 -108.128754;setang -30.940601 -45.798126 0.000000"
   },
   {
     name: "Sandwich from from alley",
@@ -45,6 +47,7 @@ export const trainLineups = [
       x: 105,
       y: 145,
     },
+    setPos: "setpos -1755.031250 1479.968384 -108.128754;setang -20.195826 -27.133234 0.000000"
   },
   {
     name: "Connector from halls",
@@ -60,6 +63,7 @@ export const trainLineups = [
       x: 302,
       y: 761,
     },
+    setPos: "setpos -1040.968750 -1112.474121 -90.128754;setang 4.409046 10.961668 0.000000"
   },
   {
     name: "A site from outside",
@@ -75,6 +79,7 @@ export const trainLineups = [
       x: 365,
       y: 133,
     },
+    setPos: "setpos -678.041504 1552.719604 -150.100311;setang -6.652642 -73.545013 0.000000"
   },
   {
     name: "A site from main",
@@ -91,6 +96,7 @@ export const trainLineups = [
       x: 363,
       y: 354,
     },
+    setPos: "setpos -847.760498 594.288208 -152.128754;setang -12.143903 -50.947269 0.000000"
   },
   {
     name: "Z (b side) from from alley",
@@ -108,10 +114,12 @@ export const trainLineups = [
       x: 347,
       y: 139,
     },
+    setPos: "setpos -840.421631 1511.928833 -148.221481;setang -25.423033 -58.745258 0.000000"
   },
   {
     name: "Left main from z",
     id: "left-main-from-z",
+    description: "Throw the flash running, then go on the right side of eletric and peek main",
     nadeType: "flashbang",
     throwType: "normal",
     side: "ct",
@@ -124,5 +132,6 @@ export const trainLineups = [
       x: 608,
       y: 570,
     },
+    setPos: "setpos 145.233185 -246.222778 -152.128754;setang -5.966216 133.430527 0.000000"
   },
 ] satisfies UtilityLineup[];
