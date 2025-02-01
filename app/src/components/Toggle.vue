@@ -24,7 +24,7 @@
           xmlns="http://www.w3.org/2000/svg"
           class="w-6 h-6 space-x-2"
         >
-          <path :d="svg" fill="currentColor" />
+          <path :d="svg" :fill="svgColor" />
         </svg>
         <span class="pl-2">
           {{ label }}
@@ -41,6 +41,7 @@ const props = defineProps<{
   label: string;
   img?: string;
   svg?: string;
+  svgColor?: string;
   initial: boolean;
 }>();
 

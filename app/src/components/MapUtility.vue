@@ -12,6 +12,7 @@ import {
   flashbangSvg,
   fragGrenadeSvg,
   moloSvg,
+  nadeColors,
   smokeSvg,
 } from "../inline-assets/utility";
 
@@ -206,24 +207,28 @@ const getSelectedSides = computed(() => {
       <Toggle
         label="Smokes"
         :svg="smokeSvg"
+        :svgColor="nadeColors['smoke']"
         :initial="showSmokesOnly"
         @checked="onToggleShowSmokesOnlyChecked"
       />
       <Toggle
         label="Molos"
         :svg="moloSvg"
+        :svgColor="nadeColors['molo']"
         :initial="showMolosOnly"
         @checked="onToggleShowMolosOnlyChecked"
       />
       <Toggle
         label="Flash"
         :svg="flashbangSvg"
+        :svgColor="nadeColors['flashbang']"
         :initial="showFlashBangsOnly"
         @checked="onToggleShowFlashBangsOnlyChecked"
       />
       <Toggle
         label="Frag"
         :svg="fragGrenadeSvg"
+        :svgColor="nadeColors['frag']"
         :initial="showFragGrenadesOnly"
         @checked="onToggleShowFragGrenadesOnlyChecked"
       />
