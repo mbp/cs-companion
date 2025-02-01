@@ -134,4 +134,20 @@ export const trainLineups = [
     },
     setPos: "setpos 145.233185 -246.222778 -152.128754;setang -5.966216 133.430527 0.000000"
   },
+  {
+    name: "Main nade from z",
+    id: "main-nade-from-z",
+    nadeType: "frag",
+    throwType: "jump",
+    side: "ct",
+    coordinates: {
+      x: 356.984375,
+      y: 361,
+    },
+    positionCoordinates: {
+      x: 561.984375,
+      y: 563,
+    },
+    setPos: "setpos 18.031458 -267.968750 -152.128754;setang 9.768274 138.287872 0.000000"
+ },
 ] satisfies UtilityLineup[];
