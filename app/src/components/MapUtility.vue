@@ -7,6 +7,13 @@ import { Side } from "./types";
 import { NadeType, UtilityLineup } from "./utility/types";
 import { getMapScheme } from "./composables/get-map-scheme";
 import { useLocalStorage } from "@vueuse/core";
+import { getSideImage } from "./composables/get-side-image";
+import {
+  flashbangSvg,
+  fragGrenadeSvg,
+  moloSvg,
+  smokeSvg,
+} from "../inline-assets/utility";
 
 const route = useRoute();
 const router = useRouter();
@@ -198,21 +205,25 @@ const getSelectedSides = computed(() => {
       <hr class="px-4 py-2 border-gray-500" />
       <Toggle
         label="Smokes"
+        :svg="smokeSvg"
         :initial="showSmokesOnly"
         @checked="onToggleShowSmokesOnlyChecked"
       />
       <Toggle
         label="Molos"
+        :svg="moloSvg"
         :initial="showMolosOnly"
         @checked="onToggleShowMolosOnlyChecked"
       />
       <Toggle
         label="Flash"
+        :svg="flashbangSvg"
         :initial="showFlashBangsOnly"
         @checked="onToggleShowFlashBangsOnlyChecked"
       />
       <Toggle
         label="Frag"
+        :svg="fragGrenadeSvg"
         :initial="showFragGrenadesOnly"
         @checked="onToggleShowFragGrenadesOnlyChecked"
       />
@@ -220,11 +231,13 @@ const getSelectedSides = computed(() => {
       <hr class="px-4 py-2 border-gray-500" />
       <Toggle
         label="T"
+        :img="getSideImage('t')"
         :initial="showTerroristsOnly"
         @checked="onToggleShowTerroristsOnlyChecked"
       />
       <Toggle
         label="CT"
+        :img="getSideImage('ct')"
         :initial="showCounterTerroristsOnly"
         @checked="onToggleShowCounterTerroristsOnlyChecked"
       />

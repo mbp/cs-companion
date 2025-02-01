@@ -14,8 +14,21 @@
           class="dot absolute left-1 top-1 bg-white w-2 h-2 rounded-full transition"
         ></div>
       </div>
-      <div class="mr-3 text-white-700 font-medium pl-2">
-        {{ label }}
+      <div class="mr-3 text-white-700 font-medium pl-2 flex items-center">
+        <img v-if="img" :src="img" class="w-6 h-6 space-x-2" />
+        <svg
+          v-if="svg"
+          width="8"
+          height="8"
+          viewBox="0 0 64 64"
+          xmlns="http://www.w3.org/2000/svg"
+          class="w-6 h-6 space-x-2"
+        >
+          <path :d="svg" fill="currentColor" />
+        </svg>
+        <span class="pl-2">
+          {{ label }}
+        </span>
       </div>
     </label>
   </div>
@@ -26,6 +39,8 @@ import { computed, ref, watch } from "vue";
 
 const props = defineProps<{
   label: string;
+  img?: string;
+  svg?: string;
   initial: boolean;
 }>();
 
