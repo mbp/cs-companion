@@ -112,34 +112,44 @@ const onToggleShowCounterTerroristsOnlyChecked = () => {
 const onResetFilters = () => {
   clearFilters();
 };
+
 const lineUps = computed(() => {
   return mapScheme.value.lineUps.filter((x) => {
-    const selectedNadeTypes: NadeType[] = [];
-    if (showSmokesOnly.value) {
-      selectedNadeTypes.push("smoke");
-    }
-    if (showFragGrenadesOnly.value) {
-      selectedNadeTypes.push("frag");
-    }
-    if (showMolosOnly.value) {
-      selectedNadeTypes.push("molo");
-    }
-    if (showFlashBangsOnly.value) {
-      selectedNadeTypes.push("flashbang");
-    }
-
-    const selectedSides: Side[] = [];
-    if (showTerroristsOnly.value) {
-      selectedSides.push("t");
-    }
-    if (showCounterTerroristsOnly.value) {
-      selectedSides.push("ct");
-    }
+    const selectedSides = getSelectedSides.value;
+    const selectedNadeTypes = getSelectedNadeTypes.value;
 
     return (
       selectedNadeTypes.includes(x.nadeType) && selectedSides.includes(x.side)
     );
   });
+});
+
+const getSelectedNadeTypes = computed(() => {
+  const selectedNadeTypes: NadeType[] = [];
+  if (showSmokesOnly.value) {
+    selectedNadeTypes.push("smoke");
+  }
+  if (showFragGrenadesOnly.value) {
+    selectedNadeTypes.push("frag");
+  }
+  if (showMolosOnly.value) {
+    selectedNadeTypes.push("molo");
+  }
+  if (showFlashBangsOnly.value) {
+    selectedNadeTypes.push("flashbang");
+  }
+  return selectedNadeTypes;
+});
+
+const getSelectedSides = computed(() => {
+  const selectedSides: Side[] = [];
+  if (showTerroristsOnly.value) {
+    selectedSides.push("t");
+  }
+  if (showCounterTerroristsOnly.value) {
+    selectedSides.push("ct");
+  }
+  return selectedSides;
 });
 </script>
 
