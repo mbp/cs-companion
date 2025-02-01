@@ -2,21 +2,6 @@ import { UtilityLineup } from "../../../components/utility/types";
 
 export const mirageLineups = [
   {
-    name: "Connector smoke from T apps",
-    id: "connector-lower-from-t",
-    nadeType: "smoke",
-    throwType: "jump",
-    side: "t",
-    coordinates: {
-      x: 514,
-      y: 505,
-    },
-    positionCoordinates: {
-      x: 871,
-      y: 207,
-    },
-  },
-  {
     name: "Connector smoke from spawn",
     id: "connector-lower-from-spawn",
     nadeType: "smoke",
