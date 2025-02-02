@@ -27,7 +27,7 @@ const routes = [
     meta: { title: "Utility - Map" },
   },
   {
-    path: "/utility/:mapName/:nadeType/:id",
+    path: "/utility/:mapName/:id",
     component: Lineup,
     name: "Lineup",
     meta: { title: "Lineup" },
