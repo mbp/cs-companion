@@ -1,18 +1,14 @@
 <template>
   <div
-    class="grid grid-cols-5 grid-rows-1 gap-0 bg-green-900 justify-items-center rounded-2x1 border border-green-700"
+    class="grid grid-cols-4 grid-rows-1 gap-0 bg-green-900 justify-items-center rounded-2x1 border border-green-700"
   >
     <div>
       <b>Side</b><br />
       <img :src="getSideImage(utility.side)" class="side-icon-header" />
     </div>
     <div>
-      <b>Throw type</b><br />
-      {{ utility.throwType }} {{ utility.clickType }}
-    </div>
-    <div>
-      <b>Click type</b><br />
-      {{ utility.clickType ?? "left" }}
+      <b>Technique</b><br />
+      {{ utility.clickType ?? "left" }} click + {{ utility.throwType }} throw
     </div>
     <div>
       <b>Movement</b><br />
