@@ -36,21 +36,6 @@ export const infernoLineups = [
       "setpos 277.878998 1578.433105 182.848618;setang -6.573469 79.418625 0.000000",
   },
   {
-    name: "Short from second mid",
-    id: "short-from-second-mid",
-    nadeType: "smoke",
-    throwType: "normal",
-    side: "t",
-    coordinates: {
-      x: 715,
-      y: 706,
-    },
-    positionCoordinates: {
-      x: 572,
-      y: 715,
-    },
-  },
-  {
     name: "Short from t-ramp",
     id: "short-from-t-ramp",
     nadeType: "smoke",
@@ -81,21 +66,8 @@ export const infernoLineups = [
       x: 344,
       y: 604,
     },
-  },
-  {
-    name: "Long from top mid",
-    id: "long-deep-from-top-mid",
-    nadeType: "smoke",
-    throwType: "jump",
-    side: "t",
-    coordinates: {
-      x: 706,
-      y: 586,
-    },
-    positionCoordinates: {
-      x: 619,
-      y: 704,
-    },
+    setPos:
+      "setpos -422.968750 914.333008 46.210793;setang -45.803921 -3.796000 0.000000",
   },
   {
     name: "Long from second mid",
@@ -111,6 +83,8 @@ export const infernoLineups = [
       x: 572,
       y: 756,
     },
+    setPos:
+      "setpos 729.034180 69.236710 149.884109;setang -59.056442 45.220798 0.000000",
   },
   {
     name: "Cross pit from second mid",
@@ -126,6 +100,8 @@ export const infernoLineups = [
       x: 471,
       y: 818,
     },
+    setPos:
+      "setpos 91.468750 -195.213135 114.035713;setang -27.719564 2.707429 0.000000",
   },
   {
     name: "Moto from top mid",
@@ -141,6 +117,8 @@ export const infernoLineups = [
       x: 648,
       y: 703,
     },
+    setPos:
+      "setpos 1102.672363 447.034088 169.233841;setang -38.094765 14.745974 0.000000",
   },
   {
     name: "Moto from second mid",
@@ -156,22 +134,8 @@ export const infernoLineups = [
       x: 511,
       y: 840,
     },
-  },
-  {
-    name: "Moto from mexico",
-    id: "moto-from-mexico",
-    nadeType: "smoke",
-    throwType: "jump",
-    movement: "crouch",
-    side: "t",
-    coordinates: {
-      x: 894,
-      y: 637,
-    },
-    positionCoordinates: {
-      x: 484,
-      y: 672,
-    },
+    setPos:
+      "setpos 407.574310 -264.963257 160.317337;setang -20.195494 24.513836 0.000000",
   },
   {
     name: "B dark from car",
@@ -202,6 +166,8 @@ export const infernoLineups = [
       x: 517,
       y: 375,
     },
+    setPos:
+      "setpos 479.024902 2016.968750 199.871201;setang -9.741008 123.696121 0.000000",
   },
   {
     name: "Coffin from car",
@@ -217,6 +183,8 @@ export const infernoLineups = [
       x: 519,
       y: 415,
     },
+    setPos:
+      "setpos 457.267639 1833.312378 199.871216;setang 0.739838 84.965492 0.000000",
   },
   {
     name: "A long from bottom mid",
@@ -233,6 +201,8 @@ export const infernoLineups = [
       x: 476,
       y: 680,
     },
+    setPos:
+      "setpos 230.410965 526.031311 147.642776;setang -3.642592 7.332904 0.000000",
   },
   {
     name: "B site from car",
@@ -249,6 +219,8 @@ export const infernoLineups = [
       x: 521,
       y: 414,
     },
+    setPos:
+      "setpos 457.268311 1833.312622 199.871216;setang -2.428223 75.013512 0.000000",
   },
   {
     name: "B car from ramp",
@@ -264,6 +236,8 @@ export const infernoLineups = [
       x: 486,
       y: 506,
     },
+    setPos:
+      "setpos 248.953323 1238.031616 171.358246;setang -21.119425 97.090981 0.000000",
   },
   {
     name: "Pit from apps",
@@ -279,24 +253,11 @@ export const infernoLineups = [
       x: 753,
       y: 863,
     },
+    setPos:
+      "setpos 1570.470337 -377.969360 319.871246;setang -0.448286 23.670662 0.000000",
   },
   {
-    name: "Hay hay car from 2nd mid",
-    id: "hay-car-from-second-mid",
-    nadeType: "smoke",
-    throwType: "normal",
-    side: "t",
-    coordinates: {
-      x: 836,
-      y: 806,
-    },
-    positionCoordinates: {
-      x: 530,
-      y: 803,
-    },
-  },
-  {
-    name: "Hay hay car from apps",
+    name: "Hay car from apps",
     id: "hay-car-from-apps",
     nadeType: "smoke",
     throwType: "normal",
@@ -309,6 +270,8 @@ export const infernoLineups = [
       x: 752,
       y: 846,
     },
+    setPos:
+      "setpos 1607.590698 -274.534546 319.871246;setang -9.735859 -47.055763 0.000000",
   },
   {
     name: "Ramp/mid/banana from ct spawn",
@@ -324,6 +287,8 @@ export const infernoLineups = [
       x: 871,
       y: 394,
     },
+    setPos:
+      "setpos 2214.031250 1926.968384 200.714767;setang -31.996775 -158.419937 0.000000",
   },
   {
     name: "Banana from ct spawn",
@@ -339,6 +304,8 @@ export const infernoLineups = [
       x: 871,
       y: 394,
     },
+    setPos:
+      "setpos 2186.617676 1914.966797 201.503433;setang -33.575333 -167.211227 0.000000",
   },
   {
     name: "Mid from ct spawn",
@@ -354,21 +321,8 @@ export const infernoLineups = [
       x: 871,
       y: 394,
     },
-  },
-  {
-    name: "One way hay car from pit",
-    id: "one-way-hay-car-from-pit",
-    nadeType: "smoke",
-    throwType: "normal",
-    side: "ct",
-    coordinates: {
-      x: 832,
-      y: 782,
-    },
-    positionCoordinates: {
-      x: 962,
-      y: 809,
-    },
+    setPos:
+      "setpos 2214.031250 1926.968384 200.714767;setang -27.323996 -144.428162 0.000000",
   },
   {
     name: "Pit(A) flash from apps",
@@ -387,21 +341,6 @@ export const infernoLineups = [
     },
   },
   {
-    name: "Second mid from long",
-    id: "second-mid-from-long",
-    nadeType: "flashbang",
-    throwType: "jump",
-    side: "ct",
-    coordinates: {
-      x: 594,
-      y: 810,
-    },
-    positionCoordinates: {
-      x: 736,
-      y: 626,
-    },
-  },
-  {
     name: "Second mid from apps",
     id: "second-mid-from-apps",
     nadeType: "flashbang",
@@ -416,21 +355,8 @@ export const infernoLineups = [
       x: 687,
       y: 808,
     },
-  },
-  {
-    name: "Pit from long",
-    id: "pit-from-long",
-    nadeType: "molo",
-    throwType: "runjump",
-    side: "ct",
-    coordinates: {
-      x: 938,
-      y: 801,
-    },
-    positionCoordinates: {
-      x: 830,
-      y: 533,
-    },
+    setPos:
+      "setpos 1276.968750 -99.968750 319.871246;setang -5.591290 147.882202 0.000000",
   },
   {
     name: "A default plant from long",
@@ -446,5 +372,7 @@ export const infernoLineups = [
       x: 830,
       y: 533,
     },
+    setPos:
+      "setpos 1941.909302 1235.966431 283.031250;setang -12.613514 -82.450317 0.000000",
   },
 ] satisfies UtilityLineup[];
