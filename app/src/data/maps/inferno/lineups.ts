@@ -288,7 +288,7 @@ export const infernoLineups = [
       y: 394,
     },
     setPos:
-      "setpos 2214.031250 1926.968384 200.714767;setang -31.996775 -158.419937 0.000000",
+      "setpos 2035.968750 1914.967041 200.335876;setang -43.454445 -154.990372 0.000000",
   },
   {
     name: "Banana from ct spawn",
