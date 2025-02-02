@@ -63,7 +63,7 @@ const isHomeRoute = computed(() => route.name === "Home");
 const breadcrumbs = computed(() => {
   const paths = route.path.split("/").filter(Boolean);
   const breadcrumbPaths = paths.map((path, index) => ({
-    text: path.charAt(0).toUpperCase() + path.slice(1),
+    text: (path.charAt(0).toUpperCase() + path.slice(1)).replace(/-/g, " "),
     to: "/" + paths.slice(0, index + 1).join("/"),
   }));
   return [{ text: "🏠 Home", to: "/" }, ...breadcrumbPaths];
