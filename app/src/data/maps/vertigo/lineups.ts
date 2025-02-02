@@ -204,7 +204,7 @@ export const vertigoLineups = [
   },
   {
     name: "B site from t",
-    id: "b-site-from-t",
+    id: "b-stairs-from-t",
     nadeType: "flashbang",
     throwType: "normal",
     side: "t",
