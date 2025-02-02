@@ -53,10 +53,21 @@ const isActive = (name: string) => {
     return route.path.startsWith(currentRoute.path);
   });
 };
+
+const isHomeRoute = computed(() => route.name === "Home");
+
+const breadcrumbs = computed(() => {
+  const paths = route.path.split("/").filter(Boolean);
+  const breadcrumbPaths = paths.map((path, index) => ({
+    text: path.charAt(0).toUpperCase() + path.slice(1),
+    to: "/" + paths.slice(0, index + 1).join("/"),
+  }));
+  return [{ text: "🏠 Home", to: "/" }, ...breadcrumbPaths];
+});
 </script>
 
 <template>
-  <nav class="bg-gray-900 p-4">
+  <nav class="bg-gray-900 px-4 py-2">
     <div class="container mx-auto flex justify-between items-center">
       <div
         class="text-white text-lg font-semibold cursor-pointer"
@@ -111,6 +122,26 @@ const isActive = (name: string) => {
           </li>
         </ul>
       </div>
+    </div>
+    <div v-if="!isHomeRoute" class="container mx-auto mt-2">
+      <nav class="text-gray-400">
+        <ul class="flex space-x-2">
+          <li
+            v-for="(breadcrumb, index) in breadcrumbs"
+            :key="index"
+            class="flex items-center"
+          >
+            <router-link :to="breadcrumb.to" class="hover:text-white">
+              {{ breadcrumb.text }}
+            </router-link>
+            <span
+              v-if="index < breadcrumbs.length - 1"
+              class="mx-2 text-gray-500"
+              >/</span
+            >
+          </li>
+        </ul>
+      </nav>
     </div>
   </nav>
 </template>

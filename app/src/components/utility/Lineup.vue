@@ -1,7 +1,6 @@
 <script setup lang="ts">
 import { computed } from "vue";
 import { useRoute } from "vue-router";
-import Navigation from "../Navigation.vue";
 import Image from "./Image.vue";
 import UtilityInfo from "./UtilityInfo.vue";
 import VideoPlayer from "../VideoPlayer.vue";
@@ -42,13 +41,6 @@ defineExpose({
 </script>
 
 <template>
-  <Navigation
-    :current="utility.name"
-    :parents="[
-      { routeName: 'Home', title: 'Home' },
-      { routeName: 'MapUtility', title: mapName, params: { mapName: mapName } },
-    ]"
-  />
   <div>
     <UtilityInfo :utility="utility" />
     <div class="grid grid-cols-2 gap-4 w-full py-4">

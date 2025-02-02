@@ -1,7 +1,6 @@
 <script setup lang="ts">
 import { computed } from "vue";
 import { useRoute } from "vue-router";
-import Navigation from "../Navigation.vue";
 import RadarStrategy from "./RadarStrategy.vue";
 import StrategyInfo from "./StrategyInfo.vue";
 import { getMapScheme } from "../composables/get-map-scheme";
@@ -20,13 +19,6 @@ const lineUps = computed(() => {
 </script>
 
 <template>
-  <Navigation
-    :current="strat.name"
-    :parents="[
-      { routeName: 'Home', title: 'Home' },
-      { routeName: 'MapStrats', title: mapName, params: { mapName: mapName } },
-    ]"
-  />
   <div>
     <StrategyInfo :strategy="strat" />
     <div v-if="!strat.events">No graphical available yet</div>
