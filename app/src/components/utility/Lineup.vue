@@ -12,9 +12,7 @@ const id = route.params.id as string;
 const mapName = route.params.mapName as string;
 
 const utility = computed(() => {
-  return getMapScheme(mapName).lineUps.find(
-    (x) => x.id == id
-  )!;
+  return getMapScheme(mapName).lineUps.find((x) => x.id == id)!;
 });
 
 const getImage = (part: string) => {
