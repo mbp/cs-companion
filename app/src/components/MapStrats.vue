@@ -3,6 +3,7 @@ import { useRoute, useRouter } from "vue-router";
 import { Strategy } from "./strategy/types";
 import { computed } from "vue";
 import { getMapScheme } from "./composables/get-map-scheme";
+import { getSideImage } from "./composables/get-side-image";
 
 const route = useRoute();
 const router = useRouter();
@@ -42,7 +43,14 @@ const openStrat = (strat: Strategy) => {
       </button>
       <br />
       <ul>
-        <li>Side: {{ strat.side }}</li>
+        <li>
+          Side:
+          <img
+            :src="getSideImage(strat.side)"
+            class="side-icon-header"
+            style="display: inline-block"
+          />
+        </li>
         <li>Buy: {{ strat.buyType }}</li>
       </ul>
     </div>
