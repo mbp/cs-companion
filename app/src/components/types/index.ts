@@ -10,6 +10,7 @@ export type Coordinates = {
 
 export type MapScheme = {
   map: string;
+  activeDuty: boolean;
   lineUps: UtilityLineup[];
   strats: Strategy[];
 };

@@ -4,6 +4,7 @@ import { vertigoStrats } from "./strats";
 
 export const vertigoMapScheme: MapScheme = {
   map: "Vertigo",
+  activeDuty: false,
   lineUps: vertigoLineups,
   strats: vertigoStrats,
 };
