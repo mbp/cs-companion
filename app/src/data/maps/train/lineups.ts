@@ -102,7 +102,7 @@ export const trainLineups = [
       y: 354,
     },
     setPos:
-      "setpos -847.760498 594.288208 -152.128754;setang -12.143903 -50.947269 0.000000",
+      "setpos -873.967957 684.250793 -152.128754;setang -13.278583 -53.988525 0.000000",
   },
   {
     name: "Z (b side) from from alley",
@@ -159,5 +159,22 @@ export const trainLineups = [
     },
     setPos:
       "setpos 18.031458 -267.968750 -152.128754;setang 9.768274 138.287872 0.000000",
+  },
+  {
+    name: "Main molo from z",
+    id: "main-molo-from-z",
+    nadeType: "molo",
+    throwType: "jump",
+    side: "ct",
+    coordinates: {
+      x: 424.984375,
+      y: 385,
+    },
+    positionCoordinates: {
+      x: 561.984375,
+      y: 563,
+    },
+    setPos:
+      "setpos 18.027657 -267.968689 -152.128754;setang 10.507810 139.286179 0.000000",
   },
 ] satisfies UtilityLineup[];
