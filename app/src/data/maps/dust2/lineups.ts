@@ -206,4 +206,21 @@ export const dust2Lineups = [
     setPos:
       "setpos 1265.076050 2038.031982 64.584915;setang -4.033603 -65.578377 0.000000",
   },
+  {
+    name: "b site retake",
+    id: "b-retake",
+    nadeType: "flashbang",
+    throwType: "normal",
+    side: "ct",
+    coordinates: {
+      x: 253,
+      y: 217,
+    },
+    positionCoordinates: {
+      x: 426,
+      y: 265,
+    },
+    setPos:
+      "setpos -569.965210 2080.552734 -55.386681;setang -35.825039 170.836838 0.000000",
+  },
 ] satisfies UtilityLineup[];
