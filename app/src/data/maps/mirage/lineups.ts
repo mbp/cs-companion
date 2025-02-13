@@ -102,7 +102,7 @@ export const mirageLineups = [
       y: 638,
     },
     setPos:
-      "setpos 814.776001 -1549.177124 -45.128754;setang -4.804682 -178.480637 0.000000",
+      "setpos 814.949646 -1548.975220 -45.128754;setang -4.012906 -178.471329 0.000000",
   },
   {
     name: "Ticket booth smoke from T ramp",
@@ -128,15 +128,15 @@ export const mirageLineups = [
     throwType: "jump",
     side: "t",
     coordinates: {
-      x: 473,
-      y: 629,
+      x: 507.984375,
+      y: 664,
     },
     positionCoordinates: {
       x: 811,
       y: 638,
     },
     setPos:
-      "setpos 814.776001 -1549.177124 -45.128754;setang -4.804682 -178.480637 0.000000",
+      "setpos 814.949646 -1548.975220 -45.128754;setang -4.012906 -178.471329 0.000000",
   },
   {
     name: "Market window from back alley",
