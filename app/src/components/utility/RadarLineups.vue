@@ -1,11 +1,13 @@
 <script setup lang="ts">
-import { onMounted, watch } from "vue";
+import { computed, onMounted, watch } from "vue";
 import { UtilityLineup } from "./types";
 import Radar from "../Radar.vue";
 import { DrawingEngine, useDrawing } from "../composables/use-drawing";
+import { MapCallout } from "../types/callout";
 
 interface Props {
   lineUps: UtilityLineup[];
+  callouts: MapCallout[];
   mapName: string;
 }
 
@@ -32,6 +34,13 @@ const drawAll = () => {
   for (const lineUp of props.lineUps) {
     drawNadeCoordinates(lineUp.coordinates.x, lineUp.coordinates.y, lineUp);
   }
+  for (const callout of props.callouts) {
+    drawing.drawText(
+      callout.coordinates.x,
+      callout.coordinates.y,
+      callout.name.toLocaleUpperCase(),
+    );
+  }
 };
 
 const clickRadar = (x: number, y: number) => {
@@ -52,7 +61,7 @@ const mouseMoveRadar = (x: number, y: number) => {
 };
 
 watch(
-  () => props.lineUps,
+  () => [props.lineUps, props.callouts],
   () => {
     redrawAll();
   },

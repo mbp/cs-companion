@@ -10,6 +10,8 @@ export type DrawingEngine = {
     y: number,
     utility: UtilityLineup,
   ) => UtilityRectangle;
+
+  drawText: (x: number, y: number, text: string) => void;
 };
 
 export const useDrawing = (
@@ -126,8 +128,17 @@ export const useDrawing = (
     return utilityRectangle;
   };
 
+  const drawText = (x: number, y: number, text: string) => {
+    canvasRenderingContext.save();
+    canvasRenderingContext.font = "bold 16px Arial";
+    canvasRenderingContext.fillStyle = "white";
+    canvasRenderingContext.fillText(text, x, y);
+    canvasRenderingContext.restore();
+  };
+
   return {
     findMatchingRectangle,
     drawUtilityRectangle,
+    drawText,
   };
 };

@@ -75,6 +75,7 @@ const openUtility = (utility: UtilityLineup) => {
   });
 };
 const showRadar = useLocalStorage("showRadar", true);
+const showCallouts = useLocalStorage("showCallouts", true);
 const showSmokesOnly = useLocalStorage("showSmokesOnly", true);
 const showMolosOnly = useLocalStorage("showMolosOnly", true);
 const showFlashBangsOnly = useLocalStorage("showFlashBangsOnly", true);
@@ -87,6 +88,7 @@ const showCounterTerroristsOnly = useLocalStorage(
 
 const clearFilters = () => {
   showRadar.value = true;
+  showCallouts.value = true;
   showSmokesOnly.value = true;
   showMolosOnly.value = true;
   showFlashBangsOnly.value = true;
@@ -96,6 +98,9 @@ const clearFilters = () => {
 };
 const onToggleShowRadarListChecked = () => {
   showRadar.value = !showRadar.value;
+};
+const onToggleShowCalloutsListChecked = () => {
+  showCallouts.value = !showCallouts.value;
 };
 const onToggleShowSmokesOnlyChecked = () => {
   showSmokesOnly.value = !showSmokesOnly.value;
@@ -118,6 +123,13 @@ const onToggleShowCounterTerroristsOnlyChecked = () => {
 const onResetFilters = () => {
   clearFilters();
 };
+
+const callouts = computed(() => {
+  if (!showCallouts.value) {
+    return [];
+  }
+  return mapScheme.value.callouts;
+});
 
 const lineUps = computed(() => {
   return mapScheme.value.lineUps.filter((x) => {
@@ -164,6 +176,7 @@ const getSelectedSides = computed(() => {
     <div class="w-[1024px]">
       <div v-if="showRadar" class="bg-gray-900">
         <RadarLineups
+          :callouts="callouts"
           :line-ups="lineUps"
           :map-name="mapName"
           @selected-utility="setSelectedUtility"
@@ -242,6 +255,11 @@ const getSelectedSides = computed(() => {
       />
       Other filters
       <hr class="px-4 py-2 border-gray-500" />
+      <Toggle
+        label="Callouts"
+        :initial="showCallouts"
+        @checked="onToggleShowCalloutsListChecked"
+      />
       <Toggle
         label="Radar"
         :initial="showRadar"
