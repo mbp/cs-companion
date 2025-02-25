@@ -39,6 +39,7 @@ const drawAll = () => {
       callout.coordinates.x,
       callout.coordinates.y,
       callout.name.toLocaleUpperCase(),
+      callout.angle ?? 0,
     );
   }
 };

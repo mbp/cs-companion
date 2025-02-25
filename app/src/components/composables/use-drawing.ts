@@ -11,7 +11,7 @@ export type DrawingEngine = {
     utility: UtilityLineup,
   ) => UtilityRectangle;
 
-  drawText: (x: number, y: number, text: string) => void;
+  drawText: (x: number, y: number, text: string, angle: number) => void;
 };
 
 export const useDrawing = (
@@ -128,11 +128,13 @@ export const useDrawing = (
     return utilityRectangle;
   };
 
-  const drawText = (x: number, y: number, text: string) => {
+  const drawText = (x: number, y: number, text: string, angle: number) => {
     canvasRenderingContext.save();
+    canvasRenderingContext.translate(x, y);
+    canvasRenderingContext.rotate((angle * Math.PI) / 180);
     canvasRenderingContext.font = "bold 16px Arial";
     canvasRenderingContext.fillStyle = "white";
-    canvasRenderingContext.fillText(text, x, y);
+    canvasRenderingContext.fillText(text, 0, 0);
     canvasRenderingContext.restore();
   };
 
