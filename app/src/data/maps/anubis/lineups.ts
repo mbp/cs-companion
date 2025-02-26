@@ -138,6 +138,23 @@ export const anubisLineups = [
       "setpos -1267.961304 -314.806641 67.945084;setang -49.315765 66.843727 0.000000",
   },
   {
+    name: "Connector outside from B outside",
+    id: "b-connector-from-outside",
+    nadeType: "molo",
+    throwType: "jump",
+    side: "t",
+    coordinates: {
+      x: 349.984375,
+      y: 568,
+    },
+    positionCoordinates: {
+      x: 278,
+      y: 669,
+    },
+    setPos:
+      "setpos -1267.968018 -313.264038 67.923004;setang -26.452497 89.853821 0.000000",
+  },
+  {
     name: "CT long from B outside",
     id: "ct-long-from-b-outside",
     nadeType: "smoke",
