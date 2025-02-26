@@ -97,6 +97,8 @@ export const vertigoLineups = [
       x: 490,
       y: 352,
     },
+    setPos:
+      "setpos -1187.968384 359.480835 11839.871094;setang 6.198313 -157.615662 0.000000",
   },
   {
     name: "A site headshot from ramp",
@@ -110,8 +112,10 @@ export const vertigoLineups = [
     },
     positionCoordinates: {
       x: 567,
-      y: 765,
+      y: 669,
     },
+    setPos:
+      "setpos -876.968445 -929.615967 11688.763672;setang -71.259247 35.951496 0.000000",
   },
   {
     name: "A site from ramp",
@@ -145,6 +149,8 @@ export const vertigoLineups = [
       x: 624,
       y: 700,
     },
+    setPos:
+      "setpos -656.031860 -1016.968750 11710.601562;setang -12.017509 142.827774 0.000000",
   },
   {
     name: "B electric #1 from t",
@@ -160,6 +166,8 @@ export const vertigoLineups = [
       x: 297,
       y: 763,
     },
+    setPos:
+      "setpos -1919.968750 -1196.032227 11606.728516;setang -51.485344 87.493340 0.000000",
   },
   {
     name: "B electric #2 from t",
@@ -177,6 +185,8 @@ export const vertigoLineups = [
       x: 297,
       y: 763,
     },
+    setPos:
+      "setpos -1919.968750 -1196.032227 11606.728516;setang -51.485344 85.355064 0.000000",
   },
   {
     name: "B site from t",
@@ -192,6 +202,8 @@ export const vertigoLineups = [
       x: 186,
       y: 647,
     },
+    setPos:
+      "setpos -1418.033447 -1599.968750 11552.871094;setang -81.185326 55.893276 0.000000",
   },
   {
     name: "A short from t spawn",
@@ -224,6 +236,8 @@ export const vertigoLineups = [
       x: 210,
       y: 649,
     },
+    setPos:
+      "setpos -2352.968506 -616.563049 11551.871094;setang -54.727470 85.471016 0.000000",
   },
   {
     name: "B site headshot from stairs",
@@ -239,5 +253,7 @@ export const vertigoLineups = [
       x: 161,
       y: 476,
     },
+    setPos:
+      "setpos -2528.968750 -186.352417 11615.871094;setang -53.354507 54.362278 0.000000",
   },
 ] satisfies UtilityLineup[];
