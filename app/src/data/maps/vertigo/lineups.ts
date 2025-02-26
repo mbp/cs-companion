@@ -127,6 +127,8 @@ export const vertigoLineups = [
       x: 567,
       y: 765,
     },
+    setPos:
+      "setpos -880.020630 -1295.968628 11711.871094;setang -71.997749 53.807880 0.000000",
   },
   {
     name: "A behind default from ramp",
@@ -205,6 +207,8 @@ export const vertigoLineups = [
       x: 426,
       y: 827,
     },
+    setPos:
+      "setpos -1418.033447 -1599.968750 11552.871094;setang -81.185326 55.893276 0.000000",
   },
   {
     name: "B site from t",
