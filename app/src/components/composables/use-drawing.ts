@@ -2,6 +2,8 @@ import { nadeSvgs } from "../../inline-assets/utility";
 import { UtilityLineup } from "../utility/types";
 import { UtilityRectangle } from "./drawing-types";
 
+const DefaultFont = "bold 16px Arial";
+
 export type DrawingEngine = {
   findMatchingRectangle: (x: number, y: number) => UtilityRectangle | undefined;
 
@@ -62,11 +64,14 @@ export const useDrawing = (
       drawTooltip: () => {
         document.body.style.cursor = "pointer";
         canvasRenderingContext.strokeStyle = "black";
+        canvasRenderingContext.font = DefaultFont;
+        canvasRenderingContext.lineWidth = 3;
+        const offset = 15;
+        canvasRenderingContext.strokeText(utility.name, x + offset, y + offset);
         canvasRenderingContext.fillStyle = "white";
+        canvasRenderingContext.fillText(utility.name, x + offset, y + offset);
         canvasRenderingContext.setLineDash([]);
-        canvasRenderingContext.font = "15px Arial";
         drawUtility(x, y, utility, true);
-        canvasRenderingContext.fillText(utility.name, x, y);
       },
       utility: utility,
     };
@@ -132,7 +137,7 @@ export const useDrawing = (
     canvasRenderingContext.save();
     canvasRenderingContext.translate(x, y);
     canvasRenderingContext.rotate((angle * Math.PI) / 180);
-    canvasRenderingContext.font = "bold 16px Arial";
+    canvasRenderingContext.font = DefaultFont;
     canvasRenderingContext.strokeStyle = "black";
     canvasRenderingContext.lineWidth = 3;
     canvasRenderingContext.strokeText(text, 0, 0);
