@@ -172,6 +172,40 @@ export const anubisLineups = [
       "setpos -1267.968750 -314.810669 67.945808;setang -48.154064 81.919167 0.000000",
   },
   {
+    name: "Pillar left side from B outside",
+    id: "pillar-left-side-from-b-outside",
+    nadeType: "smoke",
+    throwType: "jump",
+    side: "t",
+    coordinates: {
+      x: 299.984375,
+      y: 499,
+    },
+    positionCoordinates: {
+      x: 278,
+      y: 669,
+    },
+    setPos:
+      "setpos -1267.967529 -314.758789 67.944916;setang -26.399792 87.756073 0.000000",
+  },
+  {
+    name: "Pillar right side from B outside",
+    id: "pillar-right-side-from-b-outside",
+    nadeType: "smoke",
+    throwType: "jump",
+    side: "t",
+    coordinates: {
+      x: 356.984375,
+      y: 530,
+    },
+    positionCoordinates: {
+      x: 278,
+      y: 669,
+    },
+    setPos:
+      "setpos -1267.968750 -314.819519 67.945946;setang -26.426291 89.901390 0.000000",
+  },
+  {
     name: "A site from canals",
     id: "a-site-from-canals",
     nadeType: "flashbang",
