@@ -50,6 +50,8 @@ export const vertigoLineups = [
       x: 403,
       y: 325,
     },
+    setPos:
+      "setpos -1551.970215 443.968750 11938.031250;setang 14.361709 -115.083542 0.000000",
   },
   {
     name: "Top t stairs from mid 2",
@@ -66,6 +68,8 @@ export const vertigoLineups = [
       x: 355,
       y: 405,
     },
+    setPos:
+      "setpos -1756.113403 155.035355 11839.871094;setang -15.153348 -112.127899 0.000000",
   },
   {
     name: "Top mid from mid",
@@ -82,6 +86,8 @@ export const vertigoLineups = [
       x: 372,
       y: 448,
     },
+    setPos:
+      "setpos -1680.031250 -58.163208 11839.871094;setang 0.633850 166.021896 0.000000",
   },
   {
     name: "Mid from CT",
