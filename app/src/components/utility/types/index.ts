@@ -16,6 +16,6 @@ export type UtilityLineup = {
   clickType?: ClickType;
   coordinates: Coordinates;
   positionCoordinates: Coordinates;
-  setPos?: string;
+  setPos: string;
   hasVideo?: boolean;
 };
