@@ -151,6 +151,8 @@ export const infernoLineups = [
       x: 507,
       y: 414,
     },
+    setPos:
+      "setpos 395.474182 1846.722168 289.871246;setang -16.811275 103.966446 0.00000"
   },
   {
     name: "Nuke box from car",
@@ -271,7 +273,7 @@ export const infernoLineups = [
       y: 846,
     },
     setPos:
-      "setpos 1607.590698 -274.534546 319.871246;setang -9.735859 -47.055763 0.000000",
+      "setpos 1607.640137 -274.531372 319.871246;setang -9.213514 -47.014729 0.000000",
   },
   {
     name: "Ramp/mid/banana from ct spawn",
@@ -329,7 +331,7 @@ export const infernoLineups = [
     movement: "crouch",
     id: "a-site-from-apps",
     nadeType: "flashbang",
-    throwType: "jump",
+    throwType: "normal",
     side: "t",
     coordinates: {
       x: 863,
@@ -339,6 +341,8 @@ export const infernoLineups = [
       x: 736,
       y: 864,
     },
+    setPos:
+      "setpos 1580.331299 -377.968750 301.871246;setang -26.478891 -29.600475 0.000000",
   },
   {
     name: "Second mid from apps",
