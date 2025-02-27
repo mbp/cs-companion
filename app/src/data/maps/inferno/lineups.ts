@@ -156,7 +156,7 @@ export const infernoLineups = [
     name: "Nuke box from car",
     id: "b-nuke-box-from-car",
     nadeType: "molo",
-    throwType: "jump",
+    throwType: "normal",
     side: "t",
     coordinates: {
       x: 432,
@@ -167,7 +167,7 @@ export const infernoLineups = [
       y: 375,
     },
     setPos:
-      "setpos 479.024902 2016.968750 199.871201;setang -9.741008 123.696121 0.000000",
+      "setpos 479.028046 2016.938477 199.871201;setang -37.461796 123.055046 0.000000",
   },
   {
     name: "Coffin from car",
