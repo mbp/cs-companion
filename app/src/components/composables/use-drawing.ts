@@ -133,6 +133,9 @@ export const useDrawing = (
     canvasRenderingContext.translate(x, y);
     canvasRenderingContext.rotate((angle * Math.PI) / 180);
     canvasRenderingContext.font = "bold 16px Arial";
+    canvasRenderingContext.strokeStyle = "black";
+    canvasRenderingContext.lineWidth = 3;
+    canvasRenderingContext.strokeText(text, 0, 0);
     canvasRenderingContext.fillStyle = "white";
     canvasRenderingContext.fillText(text, 0, 0);
     canvasRenderingContext.restore();
