@@ -26,8 +26,12 @@ export const infernoCallouts = [
   {
     name: "Coffins",
     coordinates: {
-      x: 534,
-      y: 146,
+      x: 440.484375,
+      y: 74,
+    },
+    arrow: {
+      from: { x: 478.984375, y: 90 },
+      to: { x: 528.984375, y: 150 },
     },
   },
   {

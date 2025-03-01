@@ -14,6 +14,10 @@ export type DrawingEngine = {
   ) => UtilityRectangle;
 
   drawText: (x: number, y: number, text: string, angle: number) => void;
+  drawArrow: (
+    from: { x: number; y: number },
+    to: { x: number; y: number },
+  ) => void;
 };
 
 export const useDrawing = (
@@ -146,9 +150,34 @@ export const useDrawing = (
     canvasRenderingContext.restore();
   };
 
+  const drawArrow = (
+    from: { x: number; y: number },
+    to: { x: number; y: number },
+  ) => {
+    canvasRenderingContext.strokeStyle = "white";
+    canvasRenderingContext.beginPath();
+    canvasRenderingContext.moveTo(from.x, from.y);
+    canvasRenderingContext.lineTo(to.x, to.y);
+    canvasRenderingContext.stroke();
+
+    const angle = Math.atan2(to.y - from.y, to.x - from.x);
+    const headLength = 10;
+    canvasRenderingContext.lineTo(
+      to.x - headLength * Math.cos(angle - Math.PI / 6),
+      to.y - headLength * Math.sin(angle - Math.PI / 6),
+    );
+    canvasRenderingContext.moveTo(to.x, to.y);
+    canvasRenderingContext.lineTo(
+      to.x - headLength * Math.cos(angle + Math.PI / 6),
+      to.y - headLength * Math.sin(angle + Math.PI / 6),
+    );
+    canvasRenderingContext.stroke();
+  };
+
   return {
     findMatchingRectangle,
     drawUtilityRectangle,
     drawText,
+    drawArrow,
   };
 };

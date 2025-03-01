@@ -1,5 +1,5 @@
 <script setup lang="ts">
-import { computed, onMounted, watch } from "vue";
+import { computed, onMounted, ref, watch } from "vue";
 import { UtilityLineup } from "./types";
 import Radar from "../Radar.vue";
 import { DrawingEngine, useDrawing } from "../composables/use-drawing";
@@ -11,7 +11,12 @@ interface Props {
   mapName: string;
 }
 
+const startPoint = ref<{ x: number; y: number } | null>(null);
+const currentMousePos = ref<{ x: number; y: number } | null>(null);
+
 const props = defineProps<Props>();
+
+const isDev = import.meta.env.DEV;
 
 const emit = defineEmits<{
   (e: "selectedUtility", utility: UtilityLineup): void;
@@ -35,6 +40,12 @@ const drawAll = () => {
     drawNadeCoordinates(lineUp.coordinates.x, lineUp.coordinates.y, lineUp);
   }
   for (const callout of props.callouts) {
+    if (callout.arrow) {
+      drawing.drawArrow(
+        { x: callout.arrow.from.x, y: callout.arrow.from.y },
+        { x: callout.arrow.to.x, y: callout.arrow.to.y },
+      );
+    }
     drawing.drawText(
       callout.coordinates.x,
       callout.coordinates.y,
@@ -42,12 +53,27 @@ const drawAll = () => {
       callout.angle ?? 0,
     );
   }
+  if (isDev) {
+    if (startPoint.value && currentMousePos.value) {
+      drawing.drawArrow(startPoint.value, currentMousePos.value);
+    }
+  }
 };
 
-const clickRadar = (x: number, y: number) => {
+const clickRadar = (x: number, y: number, event: MouseEvent) => {
   const rectangle = drawing.findMatchingRectangle(x, y);
   if (rectangle) {
     emit("selectedUtility", rectangle.utility);
+  }
+  if (isDev) {
+    if (startPoint.value) {
+      copyArrowToClipboard(startPoint.value, { x, y });
+      startPoint.value = null;
+      currentMousePos.value = null;
+    }
+    if (event.ctrlKey && !startPoint.value) {
+      startPoint.value = { x, y };
+    }
   }
 };
 
@@ -59,6 +85,20 @@ const mouseMoveRadar = (x: number, y: number) => {
   const rectangle = drawing.findMatchingRectangle(x, y);
   rectangle?.drawTravel();
   rectangle?.drawTooltip();
+
+  if (isDev) {
+    currentMousePos.value = { x, y };
+    drawAll();
+  }
+};
+
+const copyArrowToClipboard = (
+  from: { x: number; y: number },
+  to: { x: number; y: number },
+) => {
+  const text = `from: { x: ${from.x}, y: ${from.y} }, to: { x: ${to.x}, y: ${to.y} }`;
+  console.log("copied to clipboard", text);
+  navigator.clipboard.writeText(text);
 };
 
 watch(

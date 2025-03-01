@@ -37,7 +37,7 @@ const clickRadar = (event: MouseEvent) => {
     copyToClipboard(x, y);
   }
 
-  emit("radarClick", x, y);
+  emit("radarClick", x, y, event);
 };
 
 const copyToClipboard = (x: number, y: number) => {
