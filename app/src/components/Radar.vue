@@ -24,8 +24,8 @@ onMounted(() => {
 
 const getPosition = (event: MouseEvent) => {
   var rect = radarCanvas.value!.getBoundingClientRect();
-  var x = event.clientX - rect.left;
-  var y = event.clientY - rect.top;
+  var x = Math.floor(event.clientX - rect.left);
+  var y = Math.floor(event.clientY - rect.top);
   return { x, y };
 };
 
