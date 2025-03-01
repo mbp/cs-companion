@@ -2,6 +2,7 @@
 import { computed, ref } from "vue";
 import { useRoute, useRouter } from "vue-router";
 import { allMapSchemes } from "../data";
+import { Icon } from "@iconify/vue";
 
 var router = useRouter();
 
@@ -109,8 +110,9 @@ const breadcrumbs = computed(() => {
         <span
           class="text-gray-300 hover:text-white cursor-pointer"
           @click="toggleSearch"
-          >🔍</span
         >
+          <Icon icon="ri:search-line" />
+        </span>
         <input
           v-if="isSearchActive"
           v-model="searchQuery"

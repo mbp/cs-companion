@@ -5,6 +5,7 @@ import Radar from "../Radar.vue";
 import { StrategyEvents } from "./types";
 import { DrawingEngine, useDrawing } from "../composables/use-drawing";
 import { NadeType, UtilityLineup } from "../utility/types";
+import { Icon } from "@iconify/vue";
 
 interface Props {
   strategyEvents: StrategyEvents;
@@ -228,19 +229,20 @@ const mouseMoveRadar = (x: number, y: number) => {
             @click="backwardSecond"
             class="bg-black text-white px-4 py-2 rounded-sm hover:bg-blue-600"
           >
-            ⏮
+            <Icon icon="ri:rewind-start-fill" />
           </button>
           <button
             @click="startPlay"
             class="bg-black text-white px-4 py-2 rounded-sm hover:bg-green-600"
           >
-            {{ play ? "⏸" : "▶️" }}
+            <Icon v-if="!play" icon="ri:play-large-fill" />
+            <Icon v-if="play" icon="ri:pause-large-fill" />
           </button>
           <button
             @click="forwardSecond"
             class="bg-black text-white px-4 py-2 rounded-sm hover:bg-blue-600"
           >
-            ⏭
+            <Icon icon="ri:forward-end-fill" />
           </button>
         </div>
       </div>
