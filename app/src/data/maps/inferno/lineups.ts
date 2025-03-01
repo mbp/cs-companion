@@ -152,7 +152,7 @@ export const infernoLineups = [
       y: 414,
     },
     setPos:
-      "setpos 395.474182 1846.722168 289.871246;setang -16.811275 103.966446 0.00000"
+      "setpos 395.474182 1846.722168 289.871246;setang -16.811275 103.966446 0.00000",
   },
   {
     name: "Nuke box from car",
