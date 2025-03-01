@@ -29,16 +29,22 @@ const getPosition = (event: MouseEvent) => {
   return { x, y };
 };
 
+const isDev = import.meta.env.DEV;
+
 const clickRadar = (event: MouseEvent) => {
   const { x, y } = getPosition(event);
-  if (import.meta.env.DEV) {
-    const text = `x: ${x},
-        y: ${y},`;
-    console.log("copied to clipboard", text);
-    navigator.clipboard.writeText(text);
+  if (isDev) {
+    copyToClipboard(x, y);
   }
 
   emit("radarClick", x, y);
+};
+
+const copyToClipboard = (x: number, y: number) => {
+  const text = `x: ${x},
+        y: ${y},`;
+  console.log("copied to clipboard", text);
+  navigator.clipboard.writeText(text);
 };
 
 const radarMouseMove = (event: MouseEvent) => {
