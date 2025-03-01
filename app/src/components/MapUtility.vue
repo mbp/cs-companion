@@ -256,14 +256,15 @@ const getSelectedSides = computed(() => {
       Other filters
       <hr class="px-4 py-2 border-gray-500" />
       <Toggle
-        label="Callouts"
-        :initial="showCallouts"
-        @checked="onToggleShowCalloutsListChecked"
-      />
-      <Toggle
         label="Radar"
         :initial="showRadar"
         @checked="onToggleShowRadarListChecked"
+      />
+      <Toggle
+        v-if="showRadar"
+        label="Callouts"
+        :initial="showCallouts"
+        @checked="onToggleShowCalloutsListChecked"
       />
       <button
         class="mt-2 bg-teal-800 text-white py-1 px-3 rounded-sm cursor-pointer hover:bg-teal-600 hover:shadow-lg"
