@@ -87,8 +87,6 @@ const showCounterTerroristsOnly = useLocalStorage(
 );
 
 const clearFilters = () => {
-  showRadar.value = true;
-  showCallouts.value = true;
   showSmokesOnly.value = true;
   showMolosOnly.value = true;
   showFlashBangsOnly.value = true;
@@ -213,8 +211,23 @@ const getSelectedSides = computed(() => {
       </div>
     </div>
     <div class="shrink-0 pl-2">
+      Side filters
+      <hr class="border-gray-500" />
+      <Toggle
+        label="T"
+        :img="getSideImage('t')"
+        :initial="showTerroristsOnly"
+        @checked="onToggleShowTerroristsOnlyChecked"
+      />
+      <Toggle
+        label="CT"
+        :img="getSideImage('ct')"
+        :initial="showCounterTerroristsOnly"
+        @checked="onToggleShowCounterTerroristsOnlyChecked"
+      />
+      <br />
       Utility filters
-      <hr class="px-4 py-2 border-gray-500" />
+      <hr class="border-gray-500" />
       <Toggle
         label="Smokes"
         :svg="getNadeSvg('smoke')"
@@ -239,22 +252,16 @@ const getSelectedSides = computed(() => {
         :initial="showFragGrenadesOnly"
         @checked="onToggleShowFragGrenadesOnlyChecked"
       />
-      Side filters
-      <hr class="px-4 py-2 border-gray-500" />
-      <Toggle
-        label="T"
-        :img="getSideImage('t')"
-        :initial="showTerroristsOnly"
-        @checked="onToggleShowTerroristsOnlyChecked"
-      />
-      <Toggle
-        label="CT"
-        :img="getSideImage('ct')"
-        :initial="showCounterTerroristsOnly"
-        @checked="onToggleShowCounterTerroristsOnlyChecked"
-      />
-      Other filters
-      <hr class="px-4 py-2 border-gray-500" />
+      <button
+        class="mt-2 bg-teal-800 text-white py-1 px-3 rounded-sm cursor-pointer hover:bg-teal-600 hover:shadow-lg"
+        @click="onResetFilters"
+      >
+        Reset filters
+      </button>
+      <br />
+      <br />
+      Features
+      <hr class="border-gray-500" />
       <Toggle
         label="Radar"
         :initial="showRadar"
@@ -266,12 +273,6 @@ const getSelectedSides = computed(() => {
         :initial="showCallouts"
         @checked="onToggleShowCalloutsListChecked"
       />
-      <button
-        class="mt-2 bg-teal-800 text-white py-1 px-3 rounded-sm cursor-pointer hover:bg-teal-600 hover:shadow-lg"
-        @click="onResetFilters"
-      >
-        Reset filters
-      </button>
     </div>
   </div>
 </template>
