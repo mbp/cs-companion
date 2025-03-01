@@ -11,8 +11,12 @@ export const infernoCallouts = [
   {
     name: "Graveyard",
     coordinates: {
-      x: 922,
-      y: 707,
+      x: 916,
+      y: 640,
+    },
+    arrow: {
+      from: { x: 968.984375, y: 649 },
+      to: { x: 934.984375, y: 732 },
     },
   },
   {
@@ -26,8 +30,8 @@ export const infernoCallouts = [
   {
     name: "Coffins",
     coordinates: {
-      x: 440.484375,
-      y: 74,
+      x: 440,
+      y: 80,
     },
     arrow: {
       from: { x: 478.984375, y: 90 },
@@ -39,6 +43,35 @@ export const infernoCallouts = [
     coordinates: {
       x: 547,
       y: 673,
+    },
+  },
+  {
+    name: "Car",
+    coordinates: {
+      x: 448,
+      y: 338,
+    },
+    arrow: {
+      from: { x: 473.984375, y: 348 },
+      to: { x: 508.984375, y: 370 },
+    },
+  },
+  {
+    name: "Library",
+    coordinates: {
+      x: 945,
+      y: 496,
+    },
+    arrow: {
+      from: { x: 989.984375, y: 507 },
+      to: { x: 939.984375, y: 559 },
+    },
+  },
+  {
+    name: "2nd mid",
+    coordinates: {
+      x: 500,
+      y: 810,
     },
   },
 ] satisfies MapCallout[];
