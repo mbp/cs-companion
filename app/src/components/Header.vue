@@ -111,7 +111,7 @@ const breadcrumbs = computed(() => {
           class="text-gray-300 hover:text-white cursor-pointer"
           @click="toggleSearch"
         >
-          <Icon icon="ri:search-line" />
+          <Icon style="display: inline-block" icon="ri:search-line" />
         </span>
         <input
           v-if="isSearchActive"
