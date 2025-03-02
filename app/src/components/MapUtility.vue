@@ -9,6 +9,7 @@ import { getMapScheme } from "./composables/get-map-scheme";
 import { useLocalStorage } from "@vueuse/core";
 import { getSideImage } from "./composables/get-side-image";
 import { nadeSvgs } from "../inline-assets/utility";
+import { Icon } from "@iconify/vue";
 
 const route = useRoute();
 const router = useRouter();
@@ -256,7 +257,7 @@ const getSelectedSides = computed(() => {
         class="mt-2 bg-teal-800 text-white py-1 px-3 rounded-sm cursor-pointer hover:bg-teal-600 hover:shadow-lg"
         @click="onResetFilters"
       >
-        Reset filters
+        <Icon icon="ri:reset-left-fill" width="24" height="24" />
       </button>
       <br />
       <br />

@@ -9,10 +9,20 @@
           :checked="toggled"
           @click="toggle"
         />
-        <div class="block bg-gray-600 w-8 h-4 rounded-full"></div>
-        <div
-          class="dot absolute left-1 top-1 bg-white w-2 h-2 rounded-full transition"
-        ></div>
+        <Icon
+          v-if="toggled"
+          icon="ri:toggle-fill"
+          width="24"
+          height="24"
+          style="color: green"
+        />
+        <Icon
+          v-if="!toggled"
+          icon="ri:toggle-line"
+          width="24"
+          height="24"
+          style="color: gray"
+        />
       </div>
       <div class="mr-3 text-white-700 font-medium pl-2 flex items-center">
         <img v-if="img" :src="img" class="w-6 h-6 space-x-2" />
@@ -42,6 +52,7 @@
 <script setup lang="ts">
 import { computed, ref, watch } from "vue";
 import { Svg } from "../inline-assets/utility";
+import { Icon } from "@iconify/vue";
 
 const props = defineProps<{
   label: string;
@@ -69,13 +80,3 @@ watch(
   },
 );
 </script>
-
-<style scoped>
-input:checked + .block {
-  background-color: #14532d;
-}
-
-input:checked + .block .dot {
-  transform: translateX(6rem);
-}
-</style>
