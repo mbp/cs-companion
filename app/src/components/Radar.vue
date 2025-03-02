@@ -42,7 +42,7 @@ const clickRadar = (event: MouseEvent) => {
 
 const copyToClipboard = (x: number, y: number) => {
   const text = `x: ${x},
-        y: ${y},`;
+      y: ${y},`;
   console.log("copied to clipboard", text);
   navigator.clipboard.writeText(text);
 };

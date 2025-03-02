@@ -96,7 +96,7 @@ const copyArrowToClipboard = (
   from: { x: number; y: number },
   to: { x: number; y: number },
 ) => {
-  const text = `from: { x: ${from.x}, y: ${from.y} }, to: { x: ${to.x}, y: ${to.y} }`;
+  const text = `from: { x: ${from.x}, y: ${from.y} },\nto: { x: ${to.x}, y: ${to.y} },`;
   console.log("copied to clipboard", text);
   navigator.clipboard.writeText(text);
 };
