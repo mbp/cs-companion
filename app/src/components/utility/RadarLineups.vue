@@ -80,16 +80,15 @@ const clickRadar = (x: number, y: number, event: MouseEvent) => {
 const mouseMoveRadar = (x: number, y: number) => {
   document.body.style.cursor = "auto";
 
+  if (isDev) {
+    currentMousePos.value = { x, y };
+  }
+
   redrawAll();
 
   const rectangle = drawing.findMatchingRectangle(x, y);
   rectangle?.drawTravel();
   rectangle?.drawTooltip();
-
-  if (isDev) {
-    currentMousePos.value = { x, y };
-    drawAll();
-  }
 };
 
 const copyArrowToClipboard = (
