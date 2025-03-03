@@ -145,7 +145,7 @@ export const useDrawing = (
     canvasRenderingContext.strokeStyle = "black";
     canvasRenderingContext.lineWidth = 3;
     canvasRenderingContext.strokeText(text, 0, 0);
-    canvasRenderingContext.fillStyle = "white";
+    canvasRenderingContext.fillStyle = "rgba(255, 255, 255, 0.90)";
     canvasRenderingContext.fillText(text, 0, 0);
     canvasRenderingContext.restore();
   };
