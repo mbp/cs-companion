@@ -70,7 +70,21 @@ export const useDrawing = (
         canvasRenderingContext.strokeStyle = "black";
         canvasRenderingContext.font = DefaultFont;
         canvasRenderingContext.lineWidth = 3;
-        const offset = 15;
+        const offset = 30;
+        const textWidth = canvasRenderingContext.measureText(
+          utility.name,
+        ).width;
+        const textHeight = 16; // Approximate height of the text
+        const padding = 10;
+
+        canvasRenderingContext.fillStyle = "rgba(0, 0, 0, 0.5)";
+        canvasRenderingContext.fillRect(
+          x + offset - padding,
+          y + offset - textHeight - padding,
+          textWidth + 2 * padding,
+          textHeight + 2 * padding,
+        );
+
         canvasRenderingContext.strokeText(utility.name, x + offset, y + offset);
         canvasRenderingContext.fillStyle = "white";
         canvasRenderingContext.fillText(utility.name, x + offset, y + offset);
