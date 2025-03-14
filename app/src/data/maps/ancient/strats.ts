@@ -11,6 +11,18 @@ export const ancientStrats = [
     ],
   },
   {
+    id: "cave-push-b",
+    name: "Cave push",
+    side: "t",
+    buyType: "pistols",
+    steps: [
+      "4 players rush cave on B no stop",
+      "1 player buys smoke and 2 flashes",
+      "Smoke short and flash site when team come out of cave",
+    ],
+    tips: ["Careful long and close site tucked in the corner"],
+  },
+  {
     id: "mid-decoy",
     name: "Mid decoy to A",
     side: "t",

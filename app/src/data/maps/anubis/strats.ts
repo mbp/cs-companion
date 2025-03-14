@@ -11,4 +11,15 @@ export const anubisStrats = [
       "They get the attention of everyone. 3 remaining players have been waiting outside B and ready to activate and run into B.",
     ],
   },
+  {
+    id: "fake-mid-push",
+    name: "Fake mid push",
+    side: "t",
+    buyType: "pistols",
+    steps: [
+      "4 players fake mid hard, and drop down water to connector and go B",
+      "1 person smokes mid dark and drops the flashes to team",
+      "The 1 that smoked has bomb and lurks outside B, pushes when team gets to connector",
+    ],
+  },
 ] satisfies Strategy[];
