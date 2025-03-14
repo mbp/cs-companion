@@ -6,7 +6,7 @@ export const nukeStrats = [
     name: "Full a rush (pistols)",
     side: "t",
     buyType: "pistols",
-    descriptions: [
+    steps: [
       "3 first (with bomb) goes through hut.",
       "2 last goes through squeaky door.",
       "The first player nades the door and one of the other players smokes main entrance. A flash is thrown inside A via squeaky.",
@@ -17,7 +17,7 @@ export const nukeStrats = [
     name: "Full a rush (smgs)",
     side: "t",
     buyType: "smg",
-    descriptions: [
+    steps: [
       "3 first (with bomb) goes through hut.",
       "2 last goes through squeaky door.",
       "The first player nades the door and one of the other players smokes main entrance. A flash is thrown inside A via squeaky.",
@@ -28,7 +28,7 @@ export const nukeStrats = [
     name: "Full a rush (smgs)",
     side: "t",
     buyType: "normal",
-    descriptions: [
+    steps: [
       "If successful with 2 previous strats, now do a fake A rush by throwing the nades, but going ramp to B instead",
     ],
   },
@@ -37,7 +37,7 @@ export const nukeStrats = [
     name: "Smoke wall",
     side: "t",
     buyType: "normal",
-    descriptions: [
+    steps: [
       "Throw smoke wall outside",
       "All rush secret and plant the bomb B site",
     ],

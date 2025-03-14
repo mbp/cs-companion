@@ -6,7 +6,7 @@ export const anubisStrats = [
     name: "Pistol fast B site crunch",
     side: "t",
     buyType: "pistols",
-    descriptions: [
+    steps: [
       "2 players run under through water, to connector to B. They push with their guns.",
       "They get the attention of everyone. 3 remaining players have been waiting outside B and ready to activate and run into B.",
     ],

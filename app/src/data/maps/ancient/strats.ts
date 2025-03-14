@@ -6,7 +6,7 @@ export const ancientStrats = [
     name: "Rush B",
     side: "t",
     buyType: "pistols",
-    descriptions: [
+    steps: [
       "All push B via ramp, get the entries, plant the bomb and position for the retake",
     ],
   },
@@ -15,7 +15,7 @@ export const ancientStrats = [
     name: "Mid decoy to A",
     side: "t",
     buyType: "pistols",
-    descriptions: [
+    steps: [
       "All players push mid. All throw decoy towards catwalk. Mid is smoked and players push through smoke and go A",
     ],
   },
@@ -24,7 +24,7 @@ export const ancientStrats = [
     name: "Rush B",
     side: "t",
     buyType: "smg",
-    descriptions: [
+    steps: [
       "Use when first round was won or bomb was planted. Push B via ramp, get the entries, plant the bomb and position for the retake",
     ],
   },
@@ -33,7 +33,7 @@ export const ancientStrats = [
     name: "Split A",
     side: "t",
     buyType: "normal",
-    descriptions: [
+    steps: [
       "First 3 players via mid to donut to a. Last 2 players via A main to a, try to come to A site at the same time",
     ],
     events: {
@@ -93,7 +93,7 @@ export const ancientStrats = [
     name: "Nade mid house",
     side: "t",
     buyType: "full-eco",
-    descriptions: [
+    steps: [
       "One player smokes mid house from spawn. All players rushes mid and throws grenades behind smoke in mid house",
     ],
   },

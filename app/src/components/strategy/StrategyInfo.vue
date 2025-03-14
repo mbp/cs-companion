@@ -15,8 +15,8 @@
     <div class="w-3/4 bg-green-800 p-4 border border-green-700 rounded-xl">
       <h2 class="text-xl font-bold mb-4">Steps</h2>
       <ol class="list-decimal ps-4">
-        <li v-for="description in strategy.descriptions" :key="description">
-          {{ description }}
+        <li v-for="step in strategy.steps" :key="step">
+          {{ step }}
         </li>
       </ol>
     </div>

@@ -28,6 +28,6 @@ export type Strategy = {
   name: string;
   side: Side;
   buyType: BuyType;
-  descriptions: string[];
+  steps: string[];
   events?: StrategyEvents;
 };

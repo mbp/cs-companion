@@ -6,7 +6,7 @@ export const trainStrats = [
     name: "Pistol late A site crunch",
     side: "t",
     buyType: "pistols",
-    descriptions: [
+    steps: [
       "4 players walk towards B.",
       "1 player hides and lurks in A main",
       "Take control over the area above popdog and near heaven. Look for entries.",
