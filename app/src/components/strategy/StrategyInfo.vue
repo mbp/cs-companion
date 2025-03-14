@@ -1,20 +1,25 @@
 <template>
   <div
-    class="grid grid-cols-4 grid-rows-1 gap-0 bg-green-900 justify-items-center rounded-sm border border-green-700"
+    class="flex flex-row bg-green-900 rounded-sm border border-green-700 p-4"
   >
-    <div>
-      <b>Side</b><br />
-      <img :src="getSideImage(strategy.side)" class="side-icon-header" />
+    <div class="w-1/4 pr-4">
+      <div class="mb-4">
+        <b>Side</b><br />
+        <img :src="getSideImage(strategy.side)" class="side-icon-header" />
+      </div>
+      <div class="mb-4">
+        <b>Buy type</b><br />
+        {{ strategy.buyType }}
+      </div>
     </div>
-    <div>
-      <b>Buy type</b><br />
-      {{ strategy.buyType }}
+    <div class="w-3/4 bg-green-800 p-4 border border-green-700 rounded-xl">
+      <h2 class="text-xl font-bold mb-4">Steps</h2>
+      <ol class="list-decimal ps-4">
+        <li v-for="description in strategy.descriptions" :key="description">
+          {{ description }}
+        </li>
+      </ol>
     </div>
-  </div>
-  <div class="bg-green-800 m-2 p-2 border border-green-700 rounded-xl">
-    <ul v-for="description in strategy.descriptions">
-      <li>{{ description }}</li>
-    </ul>
   </div>
 </template>
 
