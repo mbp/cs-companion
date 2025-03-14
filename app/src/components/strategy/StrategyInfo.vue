@@ -11,11 +11,10 @@
       {{ strategy.buyType }}
     </div>
   </div>
-  <div
-    v-if="strategy.description"
-    class="bg-green-800 m-2 p-2 border border-green-700 rounded-xl"
-  >
-    {{ strategy.description }}
+  <div class="bg-green-800 m-2 p-2 border border-green-700 rounded-xl">
+    <ul v-for="description in strategy.descriptions">
+      <li>{{ description }}</li>
+    </ul>
   </div>
 </template>
 

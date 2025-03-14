@@ -3,34 +3,43 @@ import { Strategy } from "../../../components/strategy/types";
 export const nukeStrats = [
   {
     id: "pistols",
-    buyType: "pistols",
     name: "Full a rush (pistols)",
-    description:
-      "3 first (with bomb) goes through hut. 2 last goes through squeaky door. The first player nades the door and one of the other players smokes main entrance. A flash is thrown inside A via squeaky.",
     side: "t",
+    buyType: "pistols",
+    descriptions: [
+      "3 first (with bomb) goes through hut.",
+      "2 last goes through squeaky door.",
+      "The first player nades the door and one of the other players smokes main entrance. A flash is thrown inside A via squeaky.",
+    ],
   },
   {
     id: "smg",
-    buyType: "smg",
     name: "Full a rush (smgs)",
-    description:
-      "3 first (with bomb) goes through hut. 2 last goes through squeaky door. The first player nades the door and one of the other players smokes main entrance. A flash is thrown inside A via squeaky.",
     side: "t",
+    buyType: "smg",
+    descriptions: [
+      "3 first (with bomb) goes through hut.",
+      "2 last goes through squeaky door.",
+      "The first player nades the door and one of the other players smokes main entrance. A flash is thrown inside A via squeaky.",
+    ],
   },
   {
     id: "normal-full-rush",
-    buyType: "normal",
     name: "Full a rush (smgs)",
-    description:
-      "If successful with 2 previous strats, now do a fake A rush by throwing the nades, but going ramp to B instead",
     side: "t",
+    buyType: "normal",
+    descriptions: [
+      "If successful with 2 previous strats, now do a fake A rush by throwing the nades, but going ramp to B instead",
+    ],
   },
   {
     id: "smoke-wall",
-    buyType: "normal",
     name: "Smoke wall",
-    description:
-      "Throw smoke wall outside and all go secret to plant the bomb under",
     side: "t",
+    buyType: "normal",
+    descriptions: [
+      "Throw smoke wall outside",
+      "All rush secret and plant the bomb B site",
+    ],
   },
 ] as Strategy[];

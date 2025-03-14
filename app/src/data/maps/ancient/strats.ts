@@ -4,34 +4,38 @@ export const ancientStrats = [
   {
     id: "rush-b-pistol",
     name: "Rush B",
-    description:
-      "All push B via ramp, get the entries, plant the bomb and position for the retake",
     side: "t",
     buyType: "pistols",
+    descriptions: [
+      "All push B via ramp, get the entries, plant the bomb and position for the retake",
+    ],
   },
   {
     id: "mid-decoy",
     name: "Mid decoy to A",
-    description:
-      "All players push mid. All throw decoy towards catwalk. Mid is smoked and players push through smoke and go A",
     side: "t",
     buyType: "pistols",
+    descriptions: [
+      "All players push mid. All throw decoy towards catwalk. Mid is smoked and players push through smoke and go A",
+    ],
   },
   {
     id: "rush-b-smg",
     name: "Rush B",
-    description:
-      "Use when first round was won or bomb was planted. Push B via ramp, get the entries, plant the bomb and position for the retake",
     side: "t",
     buyType: "smg",
+    descriptions: [
+      "Use when first round was won or bomb was planted. Push B via ramp, get the entries, plant the bomb and position for the retake",
+    ],
   },
   {
     id: "split-a",
     name: "Split A",
-    description:
-      "First 3 players via mid to donut to a. Last 2 players via A main to a, try to come to A site at the same time",
     side: "t",
     buyType: "normal",
+    descriptions: [
+      "First 3 players via mid to donut to a. Last 2 players via A main to a, try to come to A site at the same time",
+    ],
     events: {
       messages: [
         {
@@ -87,9 +91,10 @@ export const ancientStrats = [
   {
     id: "nade-mid-house",
     name: "Nade mid house",
-    description:
-      "One player smokes mid house from spawn. All players rushes mid and throws grenades behind smoke in mid house",
     side: "t",
     buyType: "full-eco",
+    descriptions: [
+      "One player smokes mid house from spawn. All players rushes mid and throws grenades behind smoke in mid house",
+    ],
   },
 ] satisfies Strategy[];

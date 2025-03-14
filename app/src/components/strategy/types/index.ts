@@ -25,9 +25,9 @@ export type BuyType = "full-eco" | "anti-eco" | "normal" | "pistols" | "smg";
 
 export type Strategy = {
   id: string;
-  side: Side;
   name: string;
-  description: string;
+  side: Side;
   buyType: BuyType;
+  descriptions: string[];
   events?: StrategyEvents;
 };
