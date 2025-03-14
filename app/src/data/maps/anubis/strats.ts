@@ -22,4 +22,15 @@ export const anubisStrats = [
       "The 1 that smoked has bomb and lurks outside B, pushes when team gets to connector",
     ],
   },
+  {
+    id: "fake-a-push",
+    name: "Fake A push",
+    side: "t",
+    buyType: "pistols",
+    steps: [
+      "5 players push A main and throw decoys inside A main",
+      "The first player continues going to A site, but the 4 remaining players go immediately back to B connector",
+      "You will often find a CT rotating water and B bomb site will be clear due to rotations",
+    ],
+  },
 ] satisfies Strategy[];
