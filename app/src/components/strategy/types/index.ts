@@ -29,5 +29,6 @@ export type Strategy = {
   side: Side;
   buyType: BuyType;
   steps: string[];
+  tips?: string[];
   events?: StrategyEvents;
 };

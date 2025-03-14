@@ -19,6 +19,14 @@
           {{ step }}
         </li>
       </ol>
+      <div v-if="strategy.tips">
+        <h2 class="text-xl font-bold mb-4 pt-4">Tips</h2>
+        <ol class="list-decimal ps-4">
+          <li v-for="tip in strategy.tips" :key="tip">
+            {{ tip }}
+          </li>
+        </ol>
+      </div>
     </div>
   </div>
 </template>
