@@ -17,13 +17,19 @@ const props = defineProps<Props>();
 
 const pointSize = 8;
 
+const roundStartTime = 56;
 const colors = ["#eda338", "#109856", "#68a3e5", "#e6f13d", "#803ca1"];
 const play = ref(false);
 const currentFrame = ref(0);
 const playSecond = computed(() => Math.floor(currentFrame.value / 1000));
-const secondsRemaining = computed(() => 56 - playSecond.value);
+const secondsRemaining = computed(() => getRoundTime(playSecond.value));
+const events = ref<Record<number, string[]>>({});
 const frameStep = 1000;
 const frameLevel = 100;
+
+const getRoundTime = (playSecond: number) => {
+  return roundStartTime - playSecond;
+};
 
 const frameLength = props.strategyEvents.playerPaths.reduce(
   (max, innerArray) => {
@@ -47,13 +53,6 @@ const drawPlayerDot = (x: number, y: number, color: string) => {
   canvasRenderingContext.closePath();
 };
 
-const drawMessage = (message: string) => {
-  canvasRenderingContext.strokeStyle = "black";
-  canvasRenderingContext.fillStyle = "white";
-  canvasRenderingContext.font = "20px Arial";
-  canvasRenderingContext.fillText(message, 50, 50);
-};
-
 const drawThrow = (utility: UtilityLineup) => {
   const utilityRectangle = drawing.drawUtilityRectangle(
     utility.coordinates.x,
@@ -69,6 +68,7 @@ const getNadeDuration = (nadeType: NadeType) => {
 
 const drawFrame = (frame: number) => {
   clearAll();
+  const messages = [];
   let index = 0;
   const frameDivision = (frame % frameStep) / frameLevel;
   for (const playerPath of props.strategyEvents.playerPaths) {
@@ -98,19 +98,20 @@ const drawFrame = (frame: number) => {
             actionThrow.playSecond - duration < playSecond.value
           ) {
             drawThrow(utility);
+            if (playSecond.value === actionThrow.playSecond) {
+              messages.push("Throwing " + utility.nadeType);
+            }
           }
         }
       }
     }
   }
   for (const message of props.strategyEvents.messages) {
-    if (
-      playSecond.value >= message.secondStart &&
-      playSecond.value <= message.secondEnd
-    ) {
-      drawMessage(message.message);
+    if (playSecond.value === message.secondStart) {
+      messages.push(message.message);
     }
   }
+  events.value[playSecond.value] = messages;
 };
 
 const startDrawing = () => {
@@ -244,6 +245,18 @@ const mouseMoveRadar = (x: number, y: number) => {
           >
             <Icon icon="ri:forward-end-fill" />
           </button>
+        </div>
+        <div
+          class="w-full bg-green-800 p-4 border border-green-700 rounded-xl my-4"
+        >
+          <h2 class="text-xl font-bold mb-4">Events</h2>
+          <ol class="list-none ps-4">
+            <div v-for="(items, key) in events" :key="key">
+              <li v-for="(item, index) in items" :key="index">
+                {{ "1:" + getRoundTime(key) + " - " + item }}
+              </li>
+            </div>
+          </ol>
         </div>
       </div>
     </div>
