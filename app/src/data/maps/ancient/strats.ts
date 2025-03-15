@@ -46,7 +46,9 @@ export const ancientStrats = [
     side: "t",
     buyType: "normal",
     steps: [
-      "First 3 players via mid to donut to a. Last 2 players via A main to a, try to come to A site at the same time",
+      "First 3 players push mid to donut",
+      "Last 2 players push A main",
+      "The 5 players continue their run into A, finding entries and clearing site for plant",
     ],
     events: {
       messages: [
