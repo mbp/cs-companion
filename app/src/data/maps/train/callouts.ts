@@ -36,4 +36,18 @@ export const trainCallouts = [
       y: 582,
     },
   },
+  {
+    name: "CT spawn",
+    coordinates: {
+      x: 860,
+      y: 809,
+    },
+  },
+  {
+    name: "Main",
+    coordinates: {
+      x: 357,
+      y: 392,
+    },
+  },
 ] satisfies MapCallout[];
