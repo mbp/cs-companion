@@ -33,4 +33,14 @@ export const anubisStrats = [
       "You will often find a CT rotating water and B bomb site will be clear due to rotations",
     ],
   },
+  {
+    id: "fake-b-push",
+    name: "Fake B push",
+    side: "t",
+    buyType: "pistols",
+    steps: [
+      "All 5 players throw a decoy outside B main. First player continues pushing B site alone",
+      "The 4 remaining playersa walk mid (no steps). When mid starts to rotate, the 4 players push mid to A",
+    ],
+  },
 ] satisfies Strategy[];
