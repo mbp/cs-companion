@@ -98,4 +98,11 @@ export const anubisCallouts = [
       y: 545,
     },
   },
+  {
+    name: "B main",
+    coordinates: {
+      x: 215,
+      y: 570,
+    },
+  },
 ] satisfies MapCallout[];

@@ -33,7 +33,7 @@ export const trainCallouts = [
     name: "Popdog",
     coordinates: {
       x: 315,
-      y: 582,
+      y: 585,
     },
   },
   {
@@ -48,6 +48,34 @@ export const trainCallouts = [
     coordinates: {
       x: 357,
       y: 392,
+    },
+  },
+  {
+    name: "Sandwich",
+    coordinates: {
+      x: 550,
+      y: 400,
+    },
+  },
+  {
+    name: "Blue",
+    coordinates: {
+      x: 510,
+      y: 752,
+    },
+  },
+  {
+    name: "Headshot",
+    coordinates: {
+      x: 704,
+      y: 910,
+    },
+  },
+  {
+    name: "Oil",
+    coordinates: {
+      x: 600,
+      y: 875,
     },
   },
 ] satisfies MapCallout[];
