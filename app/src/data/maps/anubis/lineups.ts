@@ -152,7 +152,7 @@ export const anubisLineups = [
       y: 669,
     },
     setPos:
-      "setpos -1267.968018 -313.264038 67.923004;setang -26.452497 89.853821 0.000000",
+      "setpos -1267.968262 -314.071899 67.934906;setang -23.443020 67.653633 0.000000",
   },
   {
     name: "CT long from B outside",
