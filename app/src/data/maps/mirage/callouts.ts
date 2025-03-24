@@ -84,4 +84,77 @@ export const mirageCallouts = [
     },
     angle: 90,
   },
+  {
+    name: "T spawn",
+    coordinates: {
+      x: 865,
+      y: 370,
+    },
+  },
+  {
+    name: "CT spawn",
+    coordinates: {
+      x: 245,
+      y: 725,
+    },
+  },
+  {
+    name: "Underpass",
+    coordinates: {
+      x: 438,
+      y: 280,
+    },
+    angle: 90,
+  },
+  {
+    name: "Ladder",
+    arrow: {
+      from: { x: 378, y: 362 },
+      to: { x: 410, y: 377 },
+    },
+    coordinates: {
+      x: 345,
+      y: 350,
+    },
+  },
+  {
+    name: "Triple box",
+    arrow: {
+      from: { x: 466, y: 736 },
+      to: { x: 519, y: 754 },
+    },
+    coordinates: {
+      x: 380,
+      y: 731,
+    },
+  },
+  {
+    name: "Market",
+    coordinates: {
+      x: 203,
+      y: 454,
+    },
+  },
+  {
+    name: "Short",
+    coordinates: {
+      x: 460,
+      y: 290,
+    },
+    angle: 45,
+  },
+  {
+    name: "Top mid",
+    coordinates: {
+      x: 703,
+      y: 477,
+    },
+  },
+  {
+    name: "Chair",
+    coordinates: {
+      x: 570,
+      y: 525,
+    },
+  },
 ] satisfies MapCallout[];
