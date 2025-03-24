@@ -50,7 +50,7 @@ export const mirageLineups = [
       y: 328,
     },
     setPos:
-      "setpos 1389.472412 70.968803 -104.128754;setang -29.435963 -164.091446 0.000000",
+      "setpos 1422.968506 -55.968750 -104.128754;setang -20.644539 -168.514923 0.000000",
   },
   {
     name: "Short from spawn",
