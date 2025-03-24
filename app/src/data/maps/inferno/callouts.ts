@@ -9,6 +9,56 @@ export const infernoCallouts = [
     },
   },
   {
+    name: "CT spawn",
+    coordinates: {
+      x: 895,
+      y: 335,
+    },
+  },
+  {
+    name: "Short",
+    coordinates: {
+      x: 730,
+      y: 785,
+    },
+  },
+  {
+    name: "Ramp",
+    coordinates: {
+      x: 376,
+      y: 623,
+    },
+  },
+  {
+    name: "Church",
+    coordinates: {
+      x: 613,
+      y: 143,
+    },
+  },
+  {
+    name: "Dark",
+    arrow: {
+      from: { x: 389, y: 92 },
+      to: { x: 431, y: 134 },
+    },
+    coordinates: {
+      x: 360,
+      y: 85,
+    },
+  },
+  {
+    name: "Sand bags",
+    arrow: {
+      from: { x: 590, y: 451 },
+      to: { x: 577, y: 411 },
+    },
+    coordinates: {
+      x: 563,
+      y: 473,
+    },
+  },
+  {
     name: "Graveyard",
     coordinates: {
       x: 916,
