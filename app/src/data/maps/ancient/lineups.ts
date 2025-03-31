@@ -208,6 +208,42 @@ export const ancientLineups = [
       "setpos -391.942139 -2055.482422 -91.128769;setang -25.153559 92.508904 0.000000",
   },
   {
+    name: "Mid from t spawn - instant spawn 2",
+    id: "mid-from-t-spawn-instant-spawn-2",
+    nadeType: "smoke",
+    throwType: "jump",
+    movement: "crouch+w",
+    side: "t",
+    coordinates: {
+      x: 473,
+      y: 390,
+    },
+    positionCoordinates: {
+      x: 510,
+      y: 867,
+    },
+    setPos:
+      "setpos -392.054504 -2224.069580 -99.415771;setang -29.044418 92.196594 0.000000",
+  },
+  {
+    name: "Mid from t spawn - instant spawn 5",
+    id: "mid-from-t-spawn-instant-spawn-5",
+    nadeType: "smoke",
+    movement: "walk",
+    throwType: "jump",
+    side: "t",
+    coordinates: {
+      x: 499,
+      y: 390,
+    },
+    positionCoordinates: {
+      x: 516,
+      y: 891,
+    },
+    setPos:
+      "setpos -328.000000 -2288.000000 -99.415771;setang -31.437042 93.980835 0.000000",
+  },
+  {
     name: "Inside donut from stairs",
     id: "inside-donut-from-stairs",
     nadeType: "smoke",
