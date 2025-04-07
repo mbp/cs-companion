@@ -144,7 +144,7 @@ export const vertigoLineups = [
     name: "A behind default from ramp",
     id: "a-behind-default-from-ramp",
     nadeType: "smoke",
-    throwType: "runjump",
+    throwType: "jump",
     movement: "run",
     side: "t",
     coordinates: {

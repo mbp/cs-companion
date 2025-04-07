@@ -328,7 +328,7 @@ export const infernoLineups = [
   },
   {
     name: "Pit(A) flash from apps",
-    movement: "crouch",
+    position: "crouch",
     id: "a-site-from-apps",
     nadeType: "flashbang",
     throwType: "normal",

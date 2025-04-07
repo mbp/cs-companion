@@ -12,7 +12,8 @@
     </div>
     <div>
       <b>Movement</b><br />
-      {{ utility.movement ?? "stand" }}
+      {{ utility.position ?? "stand" }}
+      <span v-if="utility.movement">+ {{ utility.movement }}</span>
     </div>
     <div>
       <b>setpos</b><br />

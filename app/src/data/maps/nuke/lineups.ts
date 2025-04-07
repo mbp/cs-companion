@@ -175,7 +175,8 @@ export const nukeLineups = [
     name: "Ramp smoke from trophy",
     id: "ramp-from-trophy",
     nadeType: "smoke",
-    throwType: "run",
+    movement: "run",
+    throwType: "normal",
     side: "t",
     coordinates: {
       x: 543,
@@ -194,7 +195,8 @@ export const nukeLineups = [
       "Throw when passing box on left side. Remember to shoot windows first",
     nadeType: "molo",
     id: "top-hut-from-roof",
-    throwType: "runjump",
+    movement: "run",
+    throwType: "jump",
     side: "t",
     coordinates: {
       x: 550,
@@ -211,7 +213,8 @@ export const nukeLineups = [
     name: "Outside defensive smoke from t spawn",
     nadeType: "smoke",
     id: "outside-default-t-from-spawn",
-    throwType: "runjump",
+    movement: "run",
+    throwType: "jump",
     side: "ct",
     coordinates: {
       x: 522,
@@ -280,7 +283,8 @@ export const nukeLineups = [
     name: "Flash a through hut from lobby",
     id: "a-site-via-hut-from-lobby",
     nadeType: "flashbang",
-    throwType: "run",
+    movement: "run",
+    throwType: "normal",
     side: "t",
     coordinates: {
       x: 549,
@@ -297,7 +301,8 @@ export const nukeLineups = [
     name: "Flash b ramp (top) from trophy",
     id: "b-ramp-top-from-trophy",
     nadeType: "flashbang",
-    throwType: "run",
+    movement: "run",
+    throwType: "normal",
     side: "t",
     coordinates: {
       x: 551,

@@ -212,7 +212,8 @@ export const ancientLineups = [
     id: "mid-from-t-spawn-instant-spawn-2",
     nadeType: "smoke",
     throwType: "jump",
-    movement: "crouch+w",
+    position: "crouch",
+    movement: "walk",
     side: "t",
     coordinates: {
       x: 473,
@@ -229,6 +230,7 @@ export const ancientLineups = [
     name: "Mid from t spawn - instant spawn 5",
     id: "mid-from-t-spawn-instant-spawn-5",
     nadeType: "smoke",
+    position: "crouch",
     movement: "walk",
     throwType: "jump",
     side: "t",
@@ -332,7 +334,8 @@ export const ancientLineups = [
     name: "B backline from ruins",
     id: "b-backline-from-ruins",
     nadeType: "smoke",
-    throwType: "runjump",
+    movement: "run",
+    throwType: "jump",
     side: "t",
     coordinates: {
       x: 689,

@@ -22,7 +22,8 @@ export const overpassLineups = [
     name: "Mid toilet smoke from t spawn",
     id: "mid-toilet-from-t-spawn",
     nadeType: "smoke",
-    throwType: "runjump",
+    movement: "run",
+    throwType: "jump",
     side: "t",
     coordinates: {
       x: 412,
@@ -73,7 +74,8 @@ export const overpassLineups = [
     name: "Barrels molo from short",
     id: "barrels-from-short",
     nadeType: "molo",
-    throwType: "runjump",
+    movement: "run",
+    throwType: "jump",
     side: "t",
     coordinates: {
       x: 767,
@@ -142,7 +144,8 @@ export const overpassLineups = [
     id: "t-stairs-from-mid",
     description: "Jump when passing first divider wall",
     nadeType: "molo",
-    throwType: "runjump",
+    movement: "run",
+    throwType: "normal",
     side: "ct",
     coordinates: {
       x: 562,
