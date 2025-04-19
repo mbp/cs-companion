@@ -2,7 +2,7 @@ import { UtilityLineup } from "../../../components/utility/types";
 
 export const anubisLineups = [
   {
-    name: "Mid from CT spawn",
+    name: "Top mid from CT spawn",
     id: "mid-from-spawn",
     nadeType: "smoke",
     throwType: "jump",
@@ -17,6 +17,23 @@ export const anubisLineups = [
     },
     setPos:
       "setpos -368.945190 2360.769287 87.871391;setang -31.997078 -82.263206 0.000000",
+  },
+  {
+    name: "Stairs from CT spawn",
+    id: "stairs-from-spawn",
+    nadeType: "smoke",
+    throwType: "jump",
+    side: "ct",
+    coordinates: {
+      x: 668,
+      y: 628,
+    },
+    positionCoordinates: {
+      x: 464,
+      y: 182,
+    },
+    setPos:
+      "setpos -371.798584 2358.933838 87.871384;setang -34.267269 -65.976273 0.000000",
   },
   {
     name: "B main from CT spawn",
