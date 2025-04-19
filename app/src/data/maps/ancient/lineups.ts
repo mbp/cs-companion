@@ -212,7 +212,7 @@ export const ancientLineups = [
     id: "mid-from-t-spawn-instant-spawn-2",
     nadeType: "smoke",
     throwType: "jump",
-    position: "crouch",
+    position: "stand",
     movement: "walk",
     side: "t",
     coordinates: {
@@ -224,13 +224,13 @@ export const ancientLineups = [
       y: 867,
     },
     setPos:
-      "setpos -392.054504 -2224.069580 -99.415771;setang -29.044418 92.196594 0.000000",
+      "setpos -392.054504 -2224.069580 -99.415741;setang -27.275644 92.407776 0.000000",
   },
   {
     name: "Mid from t spawn - instant spawn 5",
     id: "mid-from-t-spawn-instant-spawn-5",
     nadeType: "smoke",
-    position: "crouch",
+    position: "stand",
     movement: "walk",
     throwType: "jump",
     side: "t",
