@@ -105,4 +105,11 @@ export const anubisCallouts = [
       y: 570,
     },
   },
+  {
+    name: "Stairs",
+    coordinates: {
+      x: 683,
+      y: 662,
+    },
+  },
 ] satisfies MapCallout[];
