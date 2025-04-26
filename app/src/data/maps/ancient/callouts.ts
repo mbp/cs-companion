@@ -23,6 +23,14 @@ export const ancientCallouts = [
     },
   },
   {
+    name: "Ramp",
+    coordinates: {
+      x: 850,
+      y: 540,
+    },
+    angle: 270,
+  },
+  {
     name: "T spawn",
     coordinates: {
       x: 460,
@@ -118,9 +126,10 @@ export const ancientCallouts = [
   {
     name: "Short",
     coordinates: {
-      x: 705,
-      y: 315,
+      x: 715,
+      y: 285,
     },
+    angle: 90,
   },
   {
     name: "Long",
@@ -128,6 +137,7 @@ export const ancientCallouts = [
       x: 830,
       y: 301,
     },
+    angle: 90,
   },
   {
     name: "Red",
