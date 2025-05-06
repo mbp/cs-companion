@@ -53,40 +53,6 @@ export const trainLineups = [
       "setpos -1755.031250 1479.968384 -108.128754;setang -20.195826 -27.133234 0.000000",
   },
   {
-    name: "Sandwich from from alley - alternative",
-    id: "sandwich-from-alley-alternative",
-    nadeType: "smoke",
-    throwType: "jump",
-    side: "t",
-    coordinates: {
-      x: 615,
-      y: 415,
-    },
-    positionCoordinates: {
-      x: 71,
-      y: 142,
-    },
-    setPos:
-      "setpos -2011.029785 1479.926636 -108.128754;setang -19.879309 -27.140028 0.000000",
-  },
-  {
-    name: "Sandwich from from alley - instant spawn 5",
-    id: "sandwich-from-alley-instant-spawn-5",
-    nadeType: "smoke",
-    throwType: "jump",
-    side: "t",
-    coordinates: {
-      x: 620,
-      y: 391,
-    },
-    positionCoordinates: {
-      x: 91,
-      y: 177,
-    },
-    setPos:
-      "setpos -2033.000000 1362.233032 -108.128754;setang -43.903240 -22.688053 0.000000",
-  },
-  {
     name: "Connector from halls",
     id: "connector-from-halls",
     nadeType: "smoke",
