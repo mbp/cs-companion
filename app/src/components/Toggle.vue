@@ -14,7 +14,7 @@
           icon="ri:toggle-fill"
           width="24"
           height="24"
-          style="color: green"
+          style="color: deepskyblue"
         />
         <Icon
           v-if="!toggled"

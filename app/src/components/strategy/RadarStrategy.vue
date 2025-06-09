@@ -234,7 +234,7 @@ const mouseMoveRadar = (x: number, y: number) => {
           </button>
           <button
             @click="startPlay"
-            class="bg-black text-white px-4 py-2 rounded-sm hover:bg-green-600"
+            class="bg-black text-white px-4 py-2 rounded-sm hover:bg-sky-600"
           >
             <Icon v-if="!play" icon="ri:play-large-fill" />
             <Icon v-if="play" icon="ri:pause-large-fill" />
@@ -247,7 +247,7 @@ const mouseMoveRadar = (x: number, y: number) => {
           </button>
         </div>
         <div
-          class="w-full bg-green-800 p-4 border border-green-700 rounded-xl my-4"
+          class="w-full bg-sky-800 p-4 border border-sky-700 rounded-xl my-4"
         >
           <h2 class="text-xl font-bold mb-4">Events</h2>
           <ol class="list-none ps-4">

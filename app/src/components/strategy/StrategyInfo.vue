@@ -1,6 +1,6 @@
 <template>
   <div
-    class="flex flex-row bg-green-900 rounded-sm border border-green-700 p-4"
+    class="flex flex-row bg-sky-900 rounded-sm border border-sky-700 p-4"
   >
     <div class="w-1/4 pr-4">
       <div class="mb-4">
@@ -12,7 +12,7 @@
         {{ strategy.buyType }}
       </div>
     </div>
-    <div class="w-3/4 bg-green-800 p-4 border border-green-700 rounded-xl">
+    <div class="w-3/4 bg-sky-800 p-4 border border-sky-700 rounded-xl">
       <h2 class="text-xl font-bold mb-4">Steps</h2>
       <ol class="list-decimal ps-4">
         <li v-for="step in strategy.steps" :key="step">
