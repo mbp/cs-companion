@@ -191,6 +191,23 @@ export const ancientLineups = [
       "setpos -391.956299 -2055.315918 -91.128769;setang -19.905575 82.886139 0.000000",
   },
   {
+    name: "Catwalk from t (instant spawn 5)",
+    id: "catwalk-from-t-instant-spawn-5",
+    nadeType: "smoke",
+    throwType: "jump",
+    side: "t",
+    coordinates: {
+      x: 578,
+      y: 585,
+    },
+    positionCoordinates: {
+      x: 531,
+      y: 891,
+    },
+    setPos:
+      "setpos -328.000000 -2288.000000 -99.415741;setang -34.974751 80.939270 0.000000",
+  },
+  {
     name: "Mid from t spawn",
     id: "mid-from-t-spawn",
     nadeType: "smoke",
