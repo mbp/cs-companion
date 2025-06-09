@@ -36,6 +36,23 @@ export const nukeLineups = [
       "setpos -422.756592 -1747.776855 -352.128754;setang -16.684587 -17.054365 0.000000",
   },
   {
+    name: "Long red smoke yard (3rd smoke) - alternative",
+    id: "yard-red-3rd-alt",
+    nadeType: "smoke",
+    throwType: "jump",
+    side: "t",
+    coordinates: {
+      x: 661,
+      y: 737,
+    },
+    positionCoordinates: {
+      x: 362,
+      y: 578,
+    },
+    setPos:
+      "setpos -917.862183 -1142.965942 -352.128754;setang -14.652141 -24.223288 0.000000",
+  },
+  {
     name: "Left garage smoke (no peek silo)",
     id: "left-garage-no-peek-silo",
     nadeType: "smoke",
