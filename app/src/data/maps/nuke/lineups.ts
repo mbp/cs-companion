@@ -182,11 +182,11 @@ export const nukeLineups = [
       y: 644,
     },
     positionCoordinates: {
-      x: 258,
-      y: 590,
+      x: 325,
+      y: 580,
     },
     setPos:
-      "setpos -1754.500610 -1243.268188 -344.128754;setang -26.531881 -10.104750 0.000000",
+      "setpos -1180.029175 -1193.595093 -303.283783;setang -47.678123 -13.364635 0.000000",
   },
   {
     name: "Ramp smoke from trophy",
