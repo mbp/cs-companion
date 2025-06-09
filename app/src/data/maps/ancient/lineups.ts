@@ -121,6 +121,24 @@ export const ancientLineups = [
       "setpos -66.043579 1290.032837 94.725143;setang -36.796463 -112.951561 0.000000",
   },
   {
+    name: "Elbow from spawn instant spawn 3",
+    id: "elbow-from-instant-spawn-3",
+    nadeType: "smoke",
+    throwType: "jump",
+    movement: "run",
+    side: "ct",
+    coordinates: {
+      x: 347,
+      y: 596,
+    },
+    positionCoordinates: {
+      x: 519,
+      y: 98,
+    },
+    setPos:
+      "setpos -352.000000 1728.000000 91.548355;setang -24.376251 -105.312195 0.000000",
+  },
+  {
     name: "Mid/long from t spawn",
     description: "quick w run",
     id: "mid-b-from-t-spawn",
