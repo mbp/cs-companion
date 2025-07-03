@@ -87,6 +87,24 @@ export const anubisLineups = [
       "setpos 1259.968750 600.034546 -52.128754;setang -22.070673 125.399040 0.000000",
   },
   {
+    name: "B Connector one way to stairs",
+    id: "b-connector-one-way-to-stairs",
+    nadeType: "smoke",
+    throwType: "normal",
+    clickType: "left+right",
+    side: "ct",
+    coordinates: {
+      x: 419,
+      y: 615,
+    },
+    positionCoordinates: {
+      x: 389,
+      y: 568,
+    },
+    setPos:
+      "setpos 683.963379 -969.141602 51.871250;setang -6.521149 127.088608 0.000000",
+  },
+  {
     name: "B Connector outside from street",
     id: "b-connector-outside-from-street",
     nadeType: "smoke",
