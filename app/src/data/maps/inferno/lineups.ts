@@ -225,6 +225,24 @@ export const infernoLineups = [
       "setpos 457.268311 1833.312622 199.871216;setang -2.428223 75.013512 0.000000",
   },
   {
+    name: "B site from barrels",
+    id: "b-site-flash-from-barrels",
+    nadeType: "flashbang",
+    throwType: "jump",
+    clickType: "left",
+    side: "t",
+    coordinates: {
+      x: 533,
+      y: 239,
+    },
+    positionCoordinates: {
+      x: 451,
+      y: 462,
+    },
+    setPos:
+      "setpos 120.588974 1593.891602 169.533569;setang -1.578533 61.589909 0.000000",
+  },
+  {
     name: "B car from ramp",
     id: "b-car-flash-from-cubby",
     nadeType: "flashbang",
