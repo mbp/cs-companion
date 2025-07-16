@@ -5,7 +5,7 @@ import { anubisStrats } from "./strats";
 
 export const anubisMapScheme: MapScheme = {
   map: "Anubis",
-  activeDuty: true,
+  activeDuty: false,
   callouts: anubisCallouts,
   lineUps: anubisLineups,
   strats: anubisStrats,
