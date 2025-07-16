@@ -83,27 +83,27 @@ export const trainCallouts = [
     coordinates: {
       x: 439,
       y: 913,
-    }
+    },
   },
   {
     name: "Bomb train",
     coordinates: {
       x: 593,
       y: 528,
-    }
+    },
   },
   {
     name: "Bomb train",
     coordinates: {
       x: 496,
       y: 811,
-    }
+    },
   },
   {
     name: "Connector",
     coordinates: {
       x: 612,
       y: 650,
-    }
+    },
   },
 ] satisfies MapCallout[];

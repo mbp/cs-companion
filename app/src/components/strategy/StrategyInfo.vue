@@ -1,7 +1,5 @@
 <template>
-  <div
-    class="flex flex-row bg-sky-900 rounded-sm border border-sky-700 p-4"
-  >
+  <div class="flex flex-row bg-sky-900 rounded-sm border border-sky-700 p-4">
     <div class="w-1/4 pr-4">
       <div class="mb-4">
         <b>Side</b><br />
