@@ -121,6 +121,25 @@ export const ancientLineups = [
       "setpos -66.043579 1290.032837 94.725143;setang -36.796463 -112.951561 0.000000",
   },
   {
+    name: "Door from spawn instant spawn 1",
+    id: "door-from-instant-spawn-1",
+    description: "Run until crosshair on green plants",
+    nadeType: "smoke",
+    throwType: "jump",
+    movement: "run",
+    side: "ct",
+    coordinates: {
+      x: 811,
+      y: 616,
+    },
+    positionCoordinates: {
+      x: 559,
+      y: 107,
+    },
+    setPos:
+      "setpos -192.000000 1696.000000 88.765556;setang -18.984871 -51.401253 0.000000",
+  },
+  {
     name: "Elbow from spawn instant spawn 5",
     id: "elbow-from-instant-spawn-5",
     nadeType: "smoke",
