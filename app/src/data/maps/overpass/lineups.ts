@@ -34,7 +34,7 @@ export const overpassLineups = [
       y: 807,
     },
     setPos:
-      "setpos -418.031250 -2395.468750 219.871246;setang -23.047026 148.531662 0.000000",
+      "setpos -713.781433 -2388.528320 213.000015;setang -27.429398 142.828857 0.000000",
   },
   {
     name: "Dumpster from divider",
