@@ -165,17 +165,18 @@ export const trainLineups = [
     id: "main-molo-from-z",
     nadeType: "molo",
     throwType: "jump",
+    hasVideo: true,
     side: "ct",
     coordinates: {
       x: 424.984375,
       y: 385,
     },
     positionCoordinates: {
-      x: 561.984375,
-      y: 563,
+      x: 626,
+      y: 635,
     },
     setPos:
-      "setpos 18.027657 -267.968689 -152.128754;setang 10.507810 139.286179 0.000000",
+      "setpos 405.677765 -616.776428 -151.968750;setang -16.209105 128.792282 0.000000",
   },
   {
     name: "Deep main from bomb train",
