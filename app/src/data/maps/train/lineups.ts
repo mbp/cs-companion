@@ -181,6 +181,7 @@ export const trainLineups = [
   {
     name: "Deep main from bomb train",
     id: "main-smoke-from-bomb-train",
+    description: "Can also be used for molotovs and nades",
     nadeType: "smoke",
     throwType: "jump",
     side: "ct",
