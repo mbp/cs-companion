@@ -177,4 +177,21 @@ export const trainLineups = [
     setPos:
       "setpos 18.027657 -267.968689 -152.128754;setang 10.507810 139.286179 0.000000",
   },
+  {
+    name: "Deep main from bomb train",
+    id: "main-smoke-from-bomb-train",
+    nadeType: "smoke",
+    throwType: "jump",
+    side: "ct",
+    coordinates: {
+      x: 352,
+      y: 335,
+    },
+    positionCoordinates: {
+      x: 625,
+      y: 546,
+    },
+    setPos:
+      "setpos 287.822205 -196.049805 -151.968750;setang 9.055356 143.681290 0.000000",
+  },
 ] satisfies UtilityLineup[];
