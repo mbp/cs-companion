@@ -430,11 +430,11 @@ export const ancientLineups = [
       y: 407,
     },
     positionCoordinates: {
-      x: 793,
-      y: 622,
+      x: 822,
+      y: 615,
     },
     setPos:
-      "setpos 1058.147217 -935.966309 67.368248;setang -4.144608 106.013855 0.000000",
+      "setpos 1159.971802 -919.186340 68.776123;setang -4.250280 113.370049 0.000000",
   },
   {
     name: "Wood from ruins",
