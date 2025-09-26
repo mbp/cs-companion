@@ -36,6 +36,23 @@ export const infernoLineups = [
       "setpos 277.878998 1578.433105 182.848618;setang -6.573469 79.418625 0.000000",
   },
   {
+    name: "CT from ramp",
+    id: "ct-from-ramp",
+    nadeType: "smoke",
+    throwType: "jump",
+    side: "t",
+    coordinates: {
+      x: 591,
+      y: 231,
+    },
+    positionCoordinates: {
+      x: 353,
+      y: 637,
+    },
+    setPos:
+      "setpos -374.646973 759.532349 56.046303;setang -39.969559 57.266392 0.000000",
+  },
+  {
     name: "Short from t-ramp",
     id: "short-from-t-ramp",
     nadeType: "smoke",
@@ -300,15 +317,15 @@ export const infernoLineups = [
     throwType: "jump",
     side: "ct",
     coordinates: {
-      x: 448,
-      y: 620,
+      x: 436,
+      y: 640,
     },
     positionCoordinates: {
-      x: 871,
-      y: 394,
+      x: 831,
+      y: 539,
     },
     setPos:
-      "setpos 2035.968750 1914.967041 200.335876;setang -43.454445 -154.990372 0.000000",
+      "setpos 1946.033203 1235.960327 235.596283;setang -19.668184 -166.363297 0.000000",
   },
   {
     name: "Banana from ct spawn",
