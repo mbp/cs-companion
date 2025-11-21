@@ -18,7 +18,7 @@ const routes = [
     path: "/utility",
     name: "MapsUtility",
     component: MapsUtility,
-    meta: { title: "Utility " },
+    meta: { title: "Utility" },
   },
   {
     path: "/utility/:mapName",
@@ -36,7 +36,7 @@ const routes = [
     path: "/strats",
     name: "MapsStrats",
     component: MapsStrats,
-    meta: { title: "Strats " },
+    meta: { title: "Strats" },
   },
   {
     path: "/strats/:mapName",
@@ -54,7 +54,7 @@ const routes = [
     path: "/commands",
     name: "Commands",
     component: Commands,
-    meta: { title: "Commands " },
+    meta: { title: "Commands" },
   },
 ];
 
