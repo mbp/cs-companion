@@ -5,9 +5,10 @@ interface Props {
   mapName: string;
 }
 
+const props = defineProps<Props>();
+
 const radarCanvas = ref<HTMLCanvasElement>();
 
-const props = defineProps<Props>();
 const radarImage = computed(() => {
   return "url(" + (props.mapName as string).toLowerCase() + "/radar.webp" + ")";
 });
