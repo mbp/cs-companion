@@ -10,7 +10,7 @@ const props = defineProps<Props>();
 const radarCanvas = ref<HTMLCanvasElement>();
 
 const radarImage = computed(() => {
-  return `/` + props.mapName.toLowerCase() + `/radar.webp`;
+  return "url(" + (props.mapName as string).toLowerCase() + "/radar.webp" + ")";
 });
 
 defineExpose({
@@ -60,7 +60,7 @@ const radarMouseMove = (event: MouseEvent) => {
     ref="radarCanvas"
     width="1024"
     height="1024"
-    :style="{ backgroundImage: `url(${radarImage})` }"
+    :style="{ 'background-image': radarImage }"
     @click="clickRadar"
     @mousemove="radarMouseMove"
   />
