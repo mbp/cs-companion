@@ -138,6 +138,23 @@ export const infernoLineups = [
       "setpos 1102.672363 447.034088 169.233841;setang -38.094765 14.745974 0.000000",
   },
   {
+    name: "Short site from mid",
+    id: "short-site-from-mid",
+    nadeType: "smoke",
+    throwType: "jump",
+    side: "t",
+    coordinates: {
+      x: 827,
+      y: 747,
+    },
+    positionCoordinates: {
+      x: 539,
+      y: 646,
+    },
+    setPos:
+      "setpos 546.049255 705.968750 160.830688;setang -5.200757 -14.198192 0.000000",
+  },
+  {
     name: "Moto from second mid",
     id: "moto-from-second-mid",
     nadeType: "smoke",
@@ -378,6 +395,24 @@ export const infernoLineups = [
     },
     setPos:
       "setpos 1580.331299 -377.968750 301.871246;setang -26.478891 -29.600475 0.000000",
+  },
+  {
+    name: "Mid from long",
+    id: "mid-from-long",
+    nadeType: "flashbang",
+    throwType: "normal",
+    clickType: "left",
+    side: "ct",
+    coordinates: {
+      x: 610,
+      y: 659,
+    },
+    positionCoordinates: {
+      x: 734,
+      y: 623,
+    },
+    setPos:
+      "setpos 1509.196411 820.074158 203.330978;setang -42.134438 -157.867569 0.000000",
   },
   {
     name: "Second mid from apps",
