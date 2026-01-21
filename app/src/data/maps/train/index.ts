@@ -5,7 +5,7 @@ import { trainStrats } from "./strats";
 
 export const trainMapScheme: MapScheme = {
   map: "Train",
-  activeDuty: true,
+  activeDuty: false,
   callouts: trainCallouts,
   lineUps: trainLineups,
   strats: trainStrats,
