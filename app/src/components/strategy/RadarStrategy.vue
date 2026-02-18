@@ -253,7 +253,7 @@ const mouseMoveRadar = (x: number, y: number) => {
           <ol class="list-none ps-4">
             <div v-for="(items, key) in events" :key="key">
               <li v-for="(item, index) in items" :key="index">
-                {{ "1:" + getRoundTime(key) + " - " + item }}
+                {{ "1:" + getRoundTime(Number(key)) + " - " + item }}
               </li>
             </div>
           </ol>
