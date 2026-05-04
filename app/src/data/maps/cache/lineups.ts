@@ -70,4 +70,21 @@ export const cacheLineups = [
     setPos:
       "setpos 1315.947876 1587.969971 1768.000000;setang -47.335148 -174.261642 0.000000",
   },
+  {
+    name: "B god flash",
+    id: "b-god",
+    nadeType: "flashbang",
+    throwType: "normal",
+    side: "t",
+    coordinates: {
+      x: 401,
+      y: 802,
+    },
+    positionCoordinates: {
+      x: 554,
+      y: 854,
+    },
+    setPos:
+      "setpos 1315.947876 1587.969971 1768.000000;setang -47.335148 -174.261642 0.000000",
+  },
 ] satisfies UtilityLineup[];
