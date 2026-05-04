@@ -53,4 +53,21 @@ export const cacheLineups = [
     setPos:
       "setpos 1728.944458 295.970032 1676.000000;setang -11.114330 -174.272110 0.000000",
   },
+  {
+    name: "A back site",
+    id: "back-a-site",
+    nadeType: "smoke",
+    throwType: "normal",
+    side: "t",
+    coordinates: {
+      x: 317,
+      y: 329,
+    },
+    positionCoordinates: {
+      x: 597,
+      y: 306,
+    },
+    setPos:
+      "setpos 1315.947876 1587.969971 1768.000000;setang -47.335148 -174.261642 0.000000",
+  },
 ] satisfies UtilityLineup[];
