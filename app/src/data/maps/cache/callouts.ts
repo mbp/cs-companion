@@ -51,4 +51,68 @@ export const cacheCallouts = [
       y: 471,
     },
   },
+  {
+    name: "Vents",
+    coordinates: {
+      x: 420,
+      y: 642,
+    },
+  },
+  {
+    name: "Checkers",
+    coordinates: {
+      x: 318,
+      y: 655,
+    },
+  },
+  {
+    name: "A main",
+    coordinates: {
+      x: 467,
+      y: 288,
+    },
+  },
+  {
+    name: "Shroud",
+    coordinates: {
+      x: 424,
+      y: 241,
+    },
+  },
+  {
+    name: "Quad",
+    coordinates: {
+      x: 296,
+      y: 197,
+    },
+  },
+  {
+    name: "Heaven",
+    coordinates: {
+      x: 374,
+      y: 350,
+    },
+  },
+  {
+    name: "Tree",
+    coordinates: {
+      x: 233,
+      y: 762,
+    },
+  },
+  {
+    name: "Heaven",
+    coordinates: {
+      x: 270,
+      y: 722,
+    },
+  },
+  {
+    name: "Headshot",
+    coordinates: {
+      x: 285,
+      y: 780,
+    },
+    angle: 90,
+  },
 ] satisfies MapCallout[];
