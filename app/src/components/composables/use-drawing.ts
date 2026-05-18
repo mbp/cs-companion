@@ -65,6 +65,40 @@ export const useDrawing = (
     return 1 - Math.pow(1 - value, 3);
   };
 
+  const getUtilityIconStyle = (utility: UtilityLineup) => {
+    switch (utility.nadeType) {
+      case "smoke":
+        return {
+          glow: "rgba(116, 217, 255, 0.75)",
+          gradientStart: "rgba(102, 194, 241, 0.70)",
+          gradientEnd: "rgba(212, 248, 255, 0.95)",
+          ring: "rgba(175, 241, 255, 0.85)",
+        };
+      case "flashbang":
+        return {
+          glow: "rgba(255, 249, 191, 0.80)",
+          gradientStart: "rgba(255, 232, 124, 0.72)",
+          gradientEnd: "rgba(255, 255, 245, 0.98)",
+          ring: "rgba(255, 255, 220, 0.92)",
+        };
+      case "frag":
+        return {
+          glow: "rgba(255, 132, 90, 0.75)",
+          gradientStart: "rgba(220, 86, 55, 0.68)",
+          gradientEnd: "rgba(255, 184, 113, 0.95)",
+          ring: "rgba(255, 194, 129, 0.88)",
+        };
+      case "molo":
+      default:
+        return {
+          glow: "rgba(255, 156, 82, 0.80)",
+          gradientStart: "rgba(209, 86, 32, 0.70)",
+          gradientEnd: "rgba(255, 204, 120, 0.98)",
+          ring: "rgba(255, 211, 145, 0.90)",
+        };
+    }
+  };
+
   const stopTravelAnimation = () => {
     if (activeTravelAnimationId !== undefined) {
       cancelAnimationFrame(activeTravelAnimationId);
@@ -250,27 +284,75 @@ export const useDrawing = (
     inverted: boolean,
   ) => {
     const svg = getUtilitySvg(utility);
+    const iconStyle = getUtilityIconStyle(utility);
+    const pulseScale = inverted ? 1 + Math.sin(Date.now() / 120) * 0.05 : 1;
+    const baseScale = (utilityPointSize / 32) * pulseScale;
 
     for (const svgPath of svg.paths) {
       const path = new Path2D(svgPath.content);
 
       canvasRenderingContext.save();
       canvasRenderingContext.translate(x, y);
-      canvasRenderingContext.scale(
-        utilityPointSize / 32,
-        utilityPointSize / 32,
-      );
+      canvasRenderingContext.scale(baseScale, baseScale);
       canvasRenderingContext.translate(-32, -32);
+
+      // Soft silhouette glow behind the icon.
+      canvasRenderingContext.save();
+      canvasRenderingContext.shadowBlur = inverted ? 12 : 8;
+      canvasRenderingContext.shadowColor = iconStyle.glow;
+      canvasRenderingContext.fillStyle = iconStyle.glow;
+      canvasRenderingContext.globalAlpha = inverted ? 0.35 : 0.22;
+      canvasRenderingContext.fill(path);
+      canvasRenderingContext.restore();
 
       canvasRenderingContext.fillStyle = inverted
         ? svgPath.invertedFill
         : svgPath.fill;
       canvasRenderingContext.fill(path);
 
+      // Add a color-tinted gradient to make the icon feel less flat.
+      const gradient = canvasRenderingContext.createLinearGradient(10, 8, 56, 56);
+      gradient.addColorStop(0, iconStyle.gradientStart);
+      gradient.addColorStop(1, iconStyle.gradientEnd);
+      canvasRenderingContext.save();
+      canvasRenderingContext.globalCompositeOperation = "source-atop";
+      canvasRenderingContext.globalAlpha = inverted ? 0.68 : 0.52;
+      canvasRenderingContext.fillStyle = gradient;
+      canvasRenderingContext.fill(path);
+      canvasRenderingContext.restore();
+
+      // Specular highlight pass for a subtle glossy finish.
+      const highlight = canvasRenderingContext.createRadialGradient(
+        18,
+        16,
+        1,
+        18,
+        16,
+        26,
+      );
+      highlight.addColorStop(0, "rgba(255, 255, 255, 0.55)");
+      highlight.addColorStop(1, "rgba(255, 255, 255, 0)");
+      canvasRenderingContext.save();
+      canvasRenderingContext.globalCompositeOperation = "lighter";
+      canvasRenderingContext.fillStyle = highlight;
+      canvasRenderingContext.fill(path);
+      canvasRenderingContext.restore();
+
       canvasRenderingContext.strokeStyle = svgPath.stroke;
-      canvasRenderingContext.lineWidth = 2;
+      canvasRenderingContext.lineWidth = inverted ? 2.2 : 2;
       canvasRenderingContext.stroke(path);
 
+      canvasRenderingContext.restore();
+    }
+
+    if (inverted) {
+      canvasRenderingContext.save();
+      canvasRenderingContext.beginPath();
+      canvasRenderingContext.strokeStyle = iconStyle.ring;
+      canvasRenderingContext.lineWidth = 1.5;
+      canvasRenderingContext.globalAlpha = 0.9;
+      canvasRenderingContext.arc(x, y, utilityPointSize * 0.95, 0, 2 * Math.PI);
+      canvasRenderingContext.stroke();
       canvasRenderingContext.restore();
     }
   };
