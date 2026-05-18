@@ -387,14 +387,18 @@ export const useDrawing = (
     from: { x: number; y: number },
     to: { x: number; y: number },
   ) => {
+    const angle = Math.atan2(to.y - from.y, to.x - from.x);
+    const headLength = 10;
+
+    canvasRenderingContext.save();
     canvasRenderingContext.strokeStyle = "white";
+    canvasRenderingContext.lineWidth = 2;
+    canvasRenderingContext.lineCap = "round";
+    canvasRenderingContext.lineJoin = "round";
     canvasRenderingContext.beginPath();
     canvasRenderingContext.moveTo(from.x, from.y);
     canvasRenderingContext.lineTo(to.x, to.y);
-    canvasRenderingContext.stroke();
-
-    const angle = Math.atan2(to.y - from.y, to.x - from.x);
-    const headLength = 10;
+    canvasRenderingContext.moveTo(to.x, to.y);
     canvasRenderingContext.lineTo(
       to.x - headLength * Math.cos(angle - Math.PI / 6),
       to.y - headLength * Math.sin(angle - Math.PI / 6),
@@ -405,6 +409,7 @@ export const useDrawing = (
       to.y - headLength * Math.sin(angle + Math.PI / 6),
     );
     canvasRenderingContext.stroke();
+    canvasRenderingContext.restore();
   };
 
   return {
