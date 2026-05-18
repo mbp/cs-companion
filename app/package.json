@@ -13,24 +13,24 @@
   "dependencies": {
     "@vueuse/core": "14.3.0",
     "vue": "3.5.34",
-    "vue-router": "5.0.6"
+    "vue-router": "5.0.7"
   },
   "devDependencies": {
     "@eslint/js": "10.0.1",
     "@iconify-json/ri": "1.2.10",
     "@iconify/vue": "5.0.1",
     "@tailwindcss/postcss": "4.3.0",
-    "@vitejs/plugin-vue": "6.0.6",
-    "eslint": "10.3.0",
+    "@vitejs/plugin-vue": "6.0.7",
+    "eslint": "10.4.0",
     "eslint-config-prettier": "10.1.8",
     "eslint-plugin-vue": "10.9.1",
     "postcss": "8.5.14",
     "prettier": "3.8.3",
-    "tailwindcss": "4.2.4",
+    "tailwindcss": "4.3.0",
     "typescript": "6.0.3",
-    "typescript-eslint": "8.59.2",
+    "typescript-eslint": "8.59.3",
     "unplugin-icons": "23.0.1",
-    "vite": "8.0.12",
-    "vue-tsc": "3.2.8"
+    "vite": "8.0.13",
+    "vue-tsc": "3.3.0"
   }
 }
