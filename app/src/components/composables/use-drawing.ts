@@ -27,6 +27,44 @@ export const useDrawing = (
   const utilityPointSize = 12;
   let activeTravelAnimationId: number | undefined;
 
+  const getTravelStyle = (utility: UtilityLineup) => {
+    switch (utility.nadeType) {
+      case "smoke":
+        return {
+          glow: "rgba(99, 209, 255, 0.65)",
+          gradientStart: "rgba(80, 170, 220, 0.60)",
+          gradientEnd: "rgba(180, 245, 255, 0.98)",
+          head: "rgba(200, 250, 255, 1)",
+        };
+      case "flashbang":
+        return {
+          glow: "rgba(255, 248, 181, 0.75)",
+          gradientStart: "rgba(255, 233, 122, 0.55)",
+          gradientEnd: "rgba(255, 255, 240, 1)",
+          head: "rgba(255, 255, 255, 1)",
+        };
+      case "frag":
+        return {
+          glow: "rgba(255, 125, 82, 0.65)",
+          gradientStart: "rgba(227, 88, 55, 0.55)",
+          gradientEnd: "rgba(255, 170, 90, 0.98)",
+          head: "rgba(255, 210, 160, 1)",
+        };
+      case "molo":
+      default:
+        return {
+          glow: "rgba(255, 145, 64, 0.72)",
+          gradientStart: "rgba(209, 86, 32, 0.58)",
+          gradientEnd: "rgba(255, 189, 99, 1)",
+          head: "rgba(255, 220, 145, 1)",
+        };
+    }
+  };
+
+  const easeOutCubic = (value: number) => {
+    return 1 - Math.pow(1 - value, 3);
+  };
+
   const stopTravelAnimation = () => {
     if (activeTravelAnimationId !== undefined) {
       cancelAnimationFrame(activeTravelAnimationId);
@@ -54,23 +92,74 @@ export const useDrawing = (
     y: number,
     utility: UtilityLineup,
   ) => {
-    const drawTravelPath = (progress: number) => {
+    const drawTravelPath = (progress: number, elapsedMs: number) => {
       const clampedProgress = Math.max(0, Math.min(1, progress));
+      const startX = utility.positionCoordinates.x;
+      const startY = utility.positionCoordinates.y;
+      const targetX = utility.coordinates.x;
+      const targetY = utility.coordinates.y;
       const endX =
-        utility.coordinates.x +
-        (utility.positionCoordinates.x - utility.coordinates.x) * clampedProgress;
+        startX + (targetX - startX) * clampedProgress;
       const endY =
-        utility.coordinates.y +
-        (utility.positionCoordinates.y - utility.coordinates.y) * clampedProgress;
+        startY + (targetY - startY) * clampedProgress;
+      const style = getTravelStyle(utility);
 
+      canvasRenderingContext.save();
       canvasRenderingContext.beginPath();
-      canvasRenderingContext.strokeStyle = "orange";
-      canvasRenderingContext.setLineDash([5, 15]);
-      canvasRenderingContext.moveTo(utility.coordinates.x, utility.coordinates.y);
+      canvasRenderingContext.moveTo(startX, startY);
       canvasRenderingContext.lineTo(endX, endY);
+      canvasRenderingContext.strokeStyle = style.glow;
+      canvasRenderingContext.lineWidth = 8;
+      canvasRenderingContext.shadowBlur = 14;
+      canvasRenderingContext.shadowColor = style.glow;
+      canvasRenderingContext.lineCap = "round";
       canvasRenderingContext.stroke();
-      canvasRenderingContext.closePath();
-      canvasRenderingContext.setLineDash([]);
+      canvasRenderingContext.restore();
+
+      const gradient = canvasRenderingContext.createLinearGradient(
+        startX,
+        startY,
+        endX,
+        endY,
+      );
+      gradient.addColorStop(0, style.gradientStart);
+      gradient.addColorStop(1, style.gradientEnd);
+      const dashOffset = -elapsedMs / 18;
+
+      canvasRenderingContext.save();
+      canvasRenderingContext.beginPath();
+      canvasRenderingContext.moveTo(startX, startY);
+      canvasRenderingContext.lineTo(endX, endY);
+      canvasRenderingContext.strokeStyle = gradient;
+      canvasRenderingContext.lineWidth = 3;
+      canvasRenderingContext.setLineDash([10, 8]);
+      canvasRenderingContext.lineDashOffset = dashOffset;
+      canvasRenderingContext.lineCap = "round";
+      canvasRenderingContext.stroke();
+      canvasRenderingContext.restore();
+
+      canvasRenderingContext.save();
+      const headRadius = 5;
+      const headGlow = canvasRenderingContext.createRadialGradient(
+        endX,
+        endY,
+        1,
+        endX,
+        endY,
+        12,
+      );
+      headGlow.addColorStop(0, style.head);
+      headGlow.addColorStop(1, "rgba(255, 255, 255, 0)");
+      canvasRenderingContext.fillStyle = headGlow;
+      canvasRenderingContext.beginPath();
+      canvasRenderingContext.arc(endX, endY, 12, 0, 2 * Math.PI);
+      canvasRenderingContext.fill();
+
+      canvasRenderingContext.fillStyle = style.head;
+      canvasRenderingContext.beginPath();
+      canvasRenderingContext.arc(endX, endY, headRadius, 0, 2 * Math.PI);
+      canvasRenderingContext.fill();
+      canvasRenderingContext.restore();
     };
 
     const rectangle: UtilityRectangle = {
@@ -83,7 +172,8 @@ export const useDrawing = (
 
         if (!animate) {
           stopTravelAnimation();
-          drawTravelPath(1);
+          options?.beforeDraw?.();
+          drawTravelPath(1, 0);
           return;
         }
 
@@ -98,10 +188,12 @@ export const useDrawing = (
           }
 
           const elapsed = timestamp - startTime;
-          const progress = Math.min(1, elapsed / durationMs);
-          drawTravelPath(progress);
+          const normalizedProgress = Math.min(1, elapsed / durationMs);
+          const progress = easeOutCubic(normalizedProgress);
+          options?.beforeDraw?.();
+          drawTravelPath(progress, elapsed);
 
-          if (progress < 1) {
+          if (normalizedProgress < 1) {
             activeTravelAnimationId = requestAnimationFrame(animateTravel);
           } else {
             activeTravelAnimationId = undefined;

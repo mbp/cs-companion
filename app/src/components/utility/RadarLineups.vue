@@ -13,6 +13,11 @@ interface Props {
 
 const startPoint = ref<{ x: number; y: number } | null>(null);
 const currentMousePos = ref<{ x: number; y: number } | null>(null);
+const travelAnimationDurationMs = 500;
+
+let hoveredUtilityId: UtilityLineup["id"] | null = null;
+let animatingUtilityId: UtilityLineup["id"] | null = null;
+let travelAnimationEndsAt = 0;
 
 const props = defineProps<Props>();
 
@@ -88,12 +93,37 @@ const mouseMoveRadar = (x: number, y: number) => {
 
   const rectangle = drawing.findMatchingRectangle(x, y);
   if (!rectangle) {
+    if (hoveredUtilityId !== null) {
+      hoveredUtilityId = null;
+    }
     drawing.stopTravelAnimation();
+    animatingUtilityId = null;
+    travelAnimationEndsAt = 0;
     return;
   }
 
-  rectangle?.drawTravel({ animated: true, durationMs: 350 });
-  rectangle?.drawTooltip();
+  const isSameRectangle = hoveredUtilityId === rectangle.utility.id;
+  const now = Date.now();
+
+  hoveredUtilityId = rectangle.utility.id;
+
+  if (!isSameRectangle) {
+    rectangle.drawTravel({
+      animated: true,
+      durationMs: travelAnimationDurationMs,
+      beforeDraw: redrawAll,
+    });
+    animatingUtilityId = rectangle.utility.id;
+    travelAnimationEndsAt = now + travelAnimationDurationMs;
+  } else {
+    const isAnimatingCurrentRectangle =
+      animatingUtilityId === rectangle.utility.id && now < travelAnimationEndsAt;
+
+    if (!isAnimatingCurrentRectangle) {
+      rectangle.drawTravel();
+    }
+  }
+  rectangle.drawTooltip();
 };
 
 const copyArrowToClipboard = (
