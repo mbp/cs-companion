@@ -28,7 +28,7 @@ export const cacheCallouts = [
       x: 250,
       y: 554,
     },
-    angle: 45
+    angle: 45,
   },
   {
     name: "Squeaky",

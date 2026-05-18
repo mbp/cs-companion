@@ -132,10 +132,8 @@ export const useDrawing = (
       const startY = utility.positionCoordinates.y;
       const targetX = utility.coordinates.x;
       const targetY = utility.coordinates.y;
-      const endX =
-        startX + (targetX - startX) * clampedProgress;
-      const endY =
-        startY + (targetY - startY) * clampedProgress;
+      const endX = startX + (targetX - startX) * clampedProgress;
+      const endY = startY + (targetY - startY) * clampedProgress;
       const style = getTravelStyle(utility);
 
       canvasRenderingContext.save();
@@ -311,7 +309,12 @@ export const useDrawing = (
       canvasRenderingContext.fill(path);
 
       // Add a color-tinted gradient to make the icon feel less flat.
-      const gradient = canvasRenderingContext.createLinearGradient(10, 8, 56, 56);
+      const gradient = canvasRenderingContext.createLinearGradient(
+        10,
+        8,
+        56,
+        56,
+      );
       gradient.addColorStop(0, iconStyle.gradientStart);
       gradient.addColorStop(1, iconStyle.gradientEnd);
       canvasRenderingContext.save();

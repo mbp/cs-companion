@@ -120,7 +120,8 @@ const mouseMoveRadar = (x: number, y: number) => {
     travelAnimationEndsAt = now + travelAnimationDurationMs;
   } else {
     const isAnimatingCurrentRectangle =
-      animatingUtilityId === rectangle.utility.id && now < travelAnimationEndsAt;
+      animatingUtilityId === rectangle.utility.id &&
+      now < travelAnimationEndsAt;
 
     if (!isAnimatingCurrentRectangle) {
       rectangle.drawTravel();
