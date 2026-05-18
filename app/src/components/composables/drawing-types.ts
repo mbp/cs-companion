@@ -6,6 +6,6 @@ export type UtilityRectangle = {
   width: number;
   height: number;
   drawTooltip: () => void;
-  drawTravel: () => void;
+  drawTravel: (options?: { animated?: boolean; durationMs?: number }) => void;
   utility: UtilityLineup;
 };

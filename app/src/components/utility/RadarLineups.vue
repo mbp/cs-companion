@@ -87,7 +87,12 @@ const mouseMoveRadar = (x: number, y: number) => {
   redrawAll();
 
   const rectangle = drawing.findMatchingRectangle(x, y);
-  rectangle?.drawTravel();
+  if (!rectangle) {
+    drawing.stopTravelAnimation();
+    return;
+  }
+
+  rectangle?.drawTravel({ animated: true, durationMs: 350 });
   rectangle?.drawTooltip();
 };
 

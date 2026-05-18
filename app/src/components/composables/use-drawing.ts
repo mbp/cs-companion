@@ -18,12 +18,21 @@ export type DrawingEngine = {
     from: { x: number; y: number },
     to: { x: number; y: number },
   ) => void;
+  stopTravelAnimation: () => void;
 };
 
 export const useDrawing = (
   canvasRenderingContext: CanvasRenderingContext2D,
 ): DrawingEngine => {
   const utilityPointSize = 12;
+  let activeTravelAnimationId: number | undefined;
+
+  const stopTravelAnimation = () => {
+    if (activeTravelAnimationId !== undefined) {
+      cancelAnimationFrame(activeTravelAnimationId);
+      activeTravelAnimationId = undefined;
+    }
+  };
 
   const utilityRectangles: UtilityRectangle[] = [];
 
@@ -45,25 +54,61 @@ export const useDrawing = (
     y: number,
     utility: UtilityLineup,
   ) => {
+    const drawTravelPath = (progress: number) => {
+      const clampedProgress = Math.max(0, Math.min(1, progress));
+      const endX =
+        utility.coordinates.x +
+        (utility.positionCoordinates.x - utility.coordinates.x) * clampedProgress;
+      const endY =
+        utility.coordinates.y +
+        (utility.positionCoordinates.y - utility.coordinates.y) * clampedProgress;
+
+      canvasRenderingContext.beginPath();
+      canvasRenderingContext.strokeStyle = "orange";
+      canvasRenderingContext.setLineDash([5, 15]);
+      canvasRenderingContext.moveTo(utility.coordinates.x, utility.coordinates.y);
+      canvasRenderingContext.lineTo(endX, endY);
+      canvasRenderingContext.stroke();
+      canvasRenderingContext.closePath();
+      canvasRenderingContext.setLineDash([]);
+    };
+
     const rectangle: UtilityRectangle = {
       x: x,
       y: y,
       width: utilityPointSize,
       height: utilityPointSize,
-      drawTravel: () => {
-        canvasRenderingContext.beginPath();
-        canvasRenderingContext.strokeStyle = "orange";
-        canvasRenderingContext.setLineDash([5, 15]);
-        canvasRenderingContext.moveTo(
-          utility.coordinates.x,
-          utility.coordinates.y,
-        );
-        canvasRenderingContext.lineTo(
-          utility.positionCoordinates.x,
-          utility.positionCoordinates.y,
-        );
-        canvasRenderingContext.stroke();
-        canvasRenderingContext.closePath();
+      drawTravel: (options) => {
+        const animate = options?.animated ?? false;
+
+        if (!animate) {
+          stopTravelAnimation();
+          drawTravelPath(1);
+          return;
+        }
+
+        stopTravelAnimation();
+
+        const durationMs = Math.max(1, options?.durationMs ?? 400);
+        let startTime: number | null = null;
+
+        const animateTravel = (timestamp: number) => {
+          if (startTime === null) {
+            startTime = timestamp;
+          }
+
+          const elapsed = timestamp - startTime;
+          const progress = Math.min(1, elapsed / durationMs);
+          drawTravelPath(progress);
+
+          if (progress < 1) {
+            activeTravelAnimationId = requestAnimationFrame(animateTravel);
+          } else {
+            activeTravelAnimationId = undefined;
+          }
+        };
+
+        activeTravelAnimationId = requestAnimationFrame(animateTravel);
       },
       drawTooltip: () => {
         document.body.style.cursor = "pointer";
@@ -193,5 +238,6 @@ export const useDrawing = (
     drawUtilityRectangle,
     drawText,
     drawArrow,
+    stopTravelAnimation,
   };
 };
