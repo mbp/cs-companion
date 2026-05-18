@@ -217,12 +217,14 @@ const getSelectedSides = computed(() => {
       <Toggle
         label="T"
         :img="getSideImage('t')"
+        tone="t"
         :initial="showTerroristsOnly"
         @checked="onToggleShowTerroristsOnlyChecked"
       />
       <Toggle
         label="CT"
         :img="getSideImage('ct')"
+        tone="ct"
         :initial="showCounterTerroristsOnly"
         @checked="onToggleShowCounterTerroristsOnlyChecked"
       />
@@ -232,24 +234,28 @@ const getSelectedSides = computed(() => {
       <Toggle
         label="Smokes"
         :svg="getNadeSvg('smoke')"
+        tone="smoke"
         :initial="showSmokesOnly"
         @checked="onToggleShowSmokesOnlyChecked"
       />
       <Toggle
         label="Molos"
         :svg="getNadeSvg('molo')"
+        tone="molo"
         :initial="showMolosOnly"
         @checked="onToggleShowMolosOnlyChecked"
       />
       <Toggle
         label="Flash"
         :svg="getNadeSvg('flashbang')"
+        tone="flashbang"
         :initial="showFlashBangsOnly"
         @checked="onToggleShowFlashBangsOnlyChecked"
       />
       <Toggle
         label="Frag"
         :svg="getNadeSvg('frag')"
+        tone="frag"
         :initial="showFragGrenadesOnly"
         @checked="onToggleShowFragGrenadesOnlyChecked"
       />
