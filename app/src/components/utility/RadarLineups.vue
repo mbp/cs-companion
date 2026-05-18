@@ -111,7 +111,10 @@ const mouseMoveRadar = (x: number, y: number) => {
     rectangle.drawTravel({
       animated: true,
       durationMs: travelAnimationDurationMs,
-      beforeDraw: redrawAll,
+      beforeDraw: () => {
+        redrawAll();
+        rectangle.drawTooltip();
+      },
     });
     animatingUtilityId = rectangle.utility.id;
     travelAnimationEndsAt = now + travelAnimationDurationMs;
