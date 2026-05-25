@@ -223,4 +223,21 @@ export const dust2Lineups = [
     setPos:
       "setpos -569.965210 2080.552734 -55.386681;setang -35.825039 170.836838 0.000000",
   },
+  {
+    name: "ct from xbox",
+    id: "ct-from-xbox",
+    nadeType: "smoke",
+    throwType: "jump",
+    side: "t",
+    coordinates: {
+      x: 515,
+      y: 253,
+    },
+    positionCoordinates: {
+      x: 501,
+      y: 428,
+    },
+    setPos:
+      "setpos -275.029419 1345.361084 -76.990356;setang -11.985704 130.904510 0.000000",
+  },
 ] satisfies UtilityLineup[];
