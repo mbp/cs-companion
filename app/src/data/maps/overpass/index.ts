@@ -4,7 +4,7 @@ import { overpassLineups } from "./lineups";
 
 export const overpassMapScheme: MapScheme = {
   map: "Overpass",
-  activeDuty: true,
+  activeDuty: false,
   callouts: overpassCallouts,
   lineUps: overpassLineups,
   strats: [],

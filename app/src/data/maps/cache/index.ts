@@ -4,7 +4,7 @@ import { cacheLineups } from "./lineups";
 
 export const cacheMapScheme: MapScheme = {
   map: "Cache",
-  activeDuty: false,
+  activeDuty: true,
   callouts: cacheCallouts,
   lineUps: cacheLineups,
   strats: [],
