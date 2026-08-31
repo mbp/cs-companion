@@ -70,23 +70,6 @@ export const anubisLineups = [
       "setpos -368.938660 2360.878174 87.871391;setang -49.553234 -43.455391 0.000000",
   },
   {
-    name: "A Connector from water",
-    id: "a-connector-from-water",
-    nadeType: "smoke",
-    throwType: "normal",
-    side: "t",
-    coordinates: {
-      x: 671,
-      y: 384,
-    },
-    positionCoordinates: {
-      x: 778,
-      y: 523,
-    },
-    setPos:
-      "setpos 1259.968750 600.034546 -52.128754;setang -22.070673 125.399040 0.000000",
-  },
-  {
     name: "B Connector one way to stairs",
     id: "b-connector-one-way-to-stairs",
     nadeType: "smoke",
@@ -275,8 +258,8 @@ export const anubisLineups = [
       "setpos 1259.965942 600.031250 -52.128754;setang -19.879389 123.499283 0.000000",
   },
   {
-    name: "A heaven from canals",
-    id: "a-heaven-from-water",
+    name: "A heaven from carpet",
+    id: "a-heaven-from-carpet",
     nadeType: "smoke",
     throwType: "jump",
     side: "t",
@@ -285,11 +268,47 @@ export const anubisLineups = [
       y: 225,
     },
     positionCoordinates: {
-      x: 756,
-      y: 520,
+      x: 819,
+      y: 620,
     },
     setPos:
-      "setpos 1149.967896 610.031250 -124.993622;setang -2.904269 94.776199 0.000000",
+      "setpos 1493.967896 157.031250 64.000000;setang -16.341528 103.768295 0.000000",
+  },
+  {
+    name: "A plateau close from carpet",
+    id: "a-plateau-close-from-carpet",
+    nadeType: "smoke",
+    throwType: "jump",
+    clickType: "left+right",
+    side: "t",
+    coordinates: {
+      x: 742,
+      y: 357,
+    },
+    positionCoordinates: {
+      x: 819,
+      y: 620,
+    },
+    setPos:
+      "setpos 1493.971924 157.061096 64.000000;setang -10.586022 110.886917 0.000000",
+  },
+  {
+    name: "A plateau far from carpet",
+    id: "a-plateau-far-from-carpet",
+    nadeType: "smoke",
+    throwType: "jump",
+    clickType: "left",
+    side: "t",
+    coordinates: {
+      x: 711,
+      y: 329,
+    },
+    positionCoordinates: {
+      x: 819,
+      y: 620,
+    },
+    setPos:
+      "setpos 1493.971924 157.061096 64.000000;setang 7.841188 121.314972 0.000000",
   },
   {
     name: "Mid house from bridge",
